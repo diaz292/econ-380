@@ -1,0 +1,563 @@
+\documentclass[pdf]{beamer}
+\usetheme{Frankfurt}  
+\usecolortheme{whale}
+\usepackage{tikz} 
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}              % used for \eqref{} in this document
+\usepackage{dsfont}
+\usepackage{hyperref}
+\usepackage{threeparttable}
+\usepackage{multirow}
+\graphicspath{{Figures/}}
+\usepackage{booktabs}
+\usepackage{tikz}
+\newtheorem{exmp}{Example}[section]
+\usepackage{subcaption}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage[mathscr]{euscript}
+\usepackage{remreset}% tiny package containing just the \@removefromreset command
+\makeatletter
+\@removefromreset{subsection}{section}
+\makeatother
+\setcounter{subsection}{1}
+
+
+
+\section{Labor Mobility}
+
+%% preamble
+\title{Part VI: Labor Mobility}
+\author[David A. D\'iaz]{David A. D\'iaz}
+\institute{UNC Chapel Hill}
+\date{}
+
+\AtBeginSection[] %Section links on slides
+
+\begin{document}
+	
+	
+	\begin{frame}
+		
+		\titlepage
+		
+	\end{frame}
+	
+	\begin{frame}{Table of Contents}
+		
+		\tableofcontents
+	\end{frame}
+
+\begin{frame}{Labor Mobility}
+\begin{itemize}
+	\item Most economic analysis of migration decisions view migration as a human capital investment
+	\item Similar framework to school choice decision outlined earlier
+	\begin{itemize}
+		\item Worker compares $NPV$ of future income earned by staying in current location to $NPV$ of future income earned in new location
+		\item Moving has some cost $C$ 
+		\begin{itemize}
+			\item Includes both explicit costs (e.g., moving costs, visa costs, etc)
+			and implicit costs (e.g., psychic costs of stress, being away from family, etc)
+			\item One-time cost incurred at the time of migration 
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Labor Mobility}
+	\begin{itemize}
+		\item Wage in home country: $w^H$
+		\item Net present value of earnings:
+		\[NPV^H = \sum_{t=0}^{T} \frac{w_t^H}{(1+r)^t} = w_0^H + \frac{w_1^H}{(1+r)} + \frac{w_2^H}{(1+r)^2} + \cdots + \frac{w_T^H}{(1+r)^T}\]
+		\item Wage in foreign country: $w^F$
+		\item Net present value of earnings:
+		 \[NPV^F = \sum_{t=0}^{T} \frac{w_t^F}{(1+r)^t} = w_0^F + \frac{w_1^F}{(1+r)} + \frac{w_2^F}{(1+r)^2} + \cdots + \frac{w_T^F}{(1+r)^T}\]
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Labor Mobility}
+	\begin{itemize}
+		\item Net gain to migration: 
+		
+		
+		\[NPV^F - NPV^H - C\]
+		\item Worker will choose to migrate if the net gain is positive:
+		
+		\[\underbrace{NPV^F - NPV^H}_{\text{Marginal Benefit of migrating}} > \underbrace{C}_{\text{Marginal cost of migrating}}\]
+		\begin{enumerate}
+			\item Better economic opportunities in the destination country increases the net gains to migration $\Rightarrow$ more likely to migrate (\textbf{Pull factors})
+			\item Worse economic opportunities in the host country increases the net gains to migration $\Rightarrow$ more likely to migrate (\textbf{Push factors})
+			\item Increased migration costs lowers net gains to migration $\Rightarrow$ less likely to migrate
+		\end{enumerate}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Application: Angelucci (2015)}
+\begin{itemize}
+	\item Migration and Financial Constraints: Evidence from Mexico
+	\item Motivation: Cash transfer program in Mexico could potentially induce migration by relaxing financial constraints (either through a direct effect or by allowing for borrowing)
+	\item Oportunidades is a conditional cash transfer program
+	targeting poor Mexican households.
+	\item 506 poor rural villages selected based on eligibility for
+	Oportunidades.
+	\item Randomization of transfers (at village level) for the first 18
+	months introduces exogenous variation needed to analyze
+	program effects.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Application: Angelucci (2015)}
+	\begin{itemize}
+			\item Individuals with varying skills $s$ and two locations: home ($h$)
+			or away ($a$).
+			\item Present value of lifetime earnings: $w(s)^h$ and $w(s)^a$: Both
+			increasing in $s$. 
+			\item Migration costs $K(s)$ are decreasing in $s$.
+			\item Individuals migrate if the net benefits are positive:
+			\[\underbrace{\Delta w}_{w(s)^a - w(s)^h}  > K(s)\]
+			\item $\Delta w$ increasing in $s$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Application: Angelucci (2015)}
+\begin{figure}
+	\centering 
+	\includegraphics[scale=.55]{08A_2}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Application: Angelucci (2015)}
+	\begin{itemize}
+		\item Model implication: Lowering migration costs will induce more low-skill individuals to migrate 
+		\item Results: 
+		\begin{itemize}
+		\item Migration rates in treatment villages are significantly larger
+		than that in control villages (50\% increase).
+		\item Absolute migration rates remain low. Increases from .7\% to
+		1.1\% and the average treatment effect is .36\%.
+		\item Transfer is mostly consumed and there is little evidence that
+		trips are financed through dissaving.
+		\item Data on loans is used to show that entitlement to program
+		transfers enhances household ability to obtain loans $\Rightarrow$ greater ability to borrow is likely the mechanism through which the program increases propensity to migrate
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Migration}
+	\begin{exmp}
+		Suppose that an individual just turned 18 years old and is choosing whether to migrate. If she migrates, she will earn a salary of \$45,000 each year until she retires at age 60. Assume she gets paid in one lump-sum at the end of each year. She will pay a one-time migration cost of \$38,000 at the time of migration. If she decides to stay, she will earn \$34,000 each year. Assume her discount rate is 5\%.
+		\begin{enumerate}[(a)]
+			\item What is the net present value of her earnings if she chooses to migrate?
+			\item What is the net present value of her earnings if she chooses to stay?
+			\item What is her optimal decision?
+		\end{enumerate}
+	\end{exmp}
+\end{frame}
+
+\begin{frame}{Labor Mobility in the US}
+\begin{itemize}
+	\item Demographic characteristics also seem to play a large role in migration decisions
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.7]{08A_1}
+	\end{figure}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Labor Mobility in the US}
+	\begin{itemize}
+		\item Return migration is very common. Why?
+		\begin{enumerate}
+			\item Uncertainty in the migration decision $\Rightarrow$ lower than expected earnings, bad economic conditions, etc
+			\item Might actually maximize present value of lifetime earnings $\Rightarrow$ accumulate HC in one area, returns in other areas may increase as well
+		\end{enumerate}
+		\item Question: If regional wage gaps are persistent, why isn't there more migration?
+		\begin{itemize}
+		\item High migration costs very likely the inhibiting factor
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Family Migration}
+	\begin{itemize}
+		\item So far we've modeled the migration decision as an individual choice
+		\item Individual moves as long as $NPV^F - NPV^H - C > 0$
+		\item However, migration decisions are often not made at the individual level, but at the household level
+		\item Similar decision rule: Only migrate if the whole family will be better off
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Family Migration}
+	\begin{itemize}
+		\item Set up:
+		\begin{itemize}
+			\item $\Delta PV^H$: Change present value of husband's earnings stream if he were to move (includes migration costs)
+			\item $\Delta PV^W$: Change present value of wife's earnings stream if she were to move (includes migration costs)
+		\end{itemize}
+		\item Individually, each would migrate if $\Delta PV^i > 0$
+		\item As a family unit, migrate if and only if
+		\[\Delta PV^H + \Delta PV^W > 0\]
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Family Migration}
+	\begin{itemize}
+		\item Optimal decision for the family is not necessarily the same as the optimal choice for an individual (see graph)
+		\item Tied stayer: Family member who stays because net family gains are negative, even though individual gains would be positive
+		\item Tied mover: Family member who moves because net family gains are positive, even though individual gains would are negative
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Readings}
+	\begin{itemize}
+		\item Borjas 8.1-8.3
+	\end{itemize}
+\end{frame}
+
+
+\section{Assimilation}
+	
+	\begin{frame}{Economic Assimilation}
+		\begin{itemize}
+			\item Question: How do migrants perform in the U.S. labor market?
+			\item Typical equation estimated (in cross-section):
+			
+			\[w_{i} = \beta\mathbf{X}_{i} + \delta LOS_{i} +  +  \varepsilon_{i} \]
+			
+			\begin{itemize}
+				\item $w_{i}$: Wages earned by individual $i$ 
+				\item $\color{red}LOS$: Length of stay (Age at survey minus age at migration)
+				\item $X$: Observed characteristics (age, experience, schooling, etc.)
+				\item $\delta$: Captures how earnings grow with the assimilation process
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Economic Assimilation}
+		\begin{itemize}
+			\item Chiswick (1978): \textit{The Effect of Americanization on the Earnings of Foreign-born Men}
+			\item Early study that used U.S. Census (cross-section) to trace the age-earnings profiles of immigrants and compared it to that of natives
+			\begin{itemize}
+				\item Cross-section: One-time snapshot of current status
+				\item Allows for comparison of current earnings of new migrants to current earnings of previous migrants to current earnings of native workers 
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Economic Assimilation}
+		\begin{itemize}
+			\item Why might the wages of natives and foreign workers be different?
+			\begin{itemize}
+				\item Recent arrivals have less knowledge about customs, language, job opportunities, and less country/firm-specific training
+				\item As time passes, migrants attain more knowledge, skills, and other human capital that allows their wages to grow
+				\item Over time, economic assimilation occurs $\Rightarrow$ migrant earnings begin to converge to the earnings of natives
+				\begin{itemize}
+					\item Only happens if age-earnings profile for migrants is steeper than that of natives
+				\end{itemize}
+			\end{itemize}
+			\item Both the initial earnings deficiency and steepness of earnings profile depend on similarity of the home and foreign country
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Economic Assimilation}
+		\begin{figure}
+			\centering 
+			\includegraphics[scale=.90]{08B_1}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}{Economic Assimilation}
+		\begin{itemize}
+			\item Observe both an earnings deficiency for recent migrants and a steeper age-earnings profile
+			\item Why do we see that migrant earnings overtake that of natives?
+			\begin{itemize}
+				\item Possibly a ``positive selection'' story: Individuals that choose to migrate are more skilled, motivated, etc. compared to those that choose to not migrate
+				\item More on self-selection later
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Economic Assimilation}
+		\begin{itemize}
+			\item Many other cross-section studies also found a significant and positive effect of length of stay on wages ($\delta > 0$)
+			\item Issue with cross-sectional studies: We are comparing the earnings of individuals who migrated years ago to those who migrated more recently
+			\begin{itemize}
+				\item Assumption that economic experience of newer migrants will be identical to that of previous cohorts is likely not reasonable
+				\item Migrant cohorts may differ in their observable and unobservable characteristics 
+			\end{itemize}
+			\item As a result, estimates of $\delta$ are likely biased
+			\begin{itemize}
+				\item Upward bias: Average ``quality'' of cohorts decreased over time
+				\item Downward bias: Average ``quality'' increased over time
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Economic Assimilation}
+		\begin{itemize}
+			\item To illustrative, consider the following example:
+			\begin{itemize}
+				\item 1960 cohort: Highly productive, age-earnings profile above that of natives
+				\item 1980 cohort: Equally productive, age-earnings profile equivalent to that of natives
+				\item 2000 cohort: Lowly productive, age-earnings profile below that of natives
+				\item For simplicity, assume there is no wage convergence (age-earnings profiles are parallel) and all migrants arrived at age 20
+			\end{itemize}
+			\item What happens if we use 2000 Census data to compare earnings of migrants and natives?
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Economic Assimilation}
+		\begin{itemize}
+			\item Borjas (1985): \textit{Assimilation, Changes in Cohort Quality, and the Earnings of Immigrants}
+			\item Uses two waves of census data to study earnings growth of \underline{specific} immigrant cohorts
+			\item Empirical model:
+			\[w_{it} = \beta \mathbf{X}_{it} + \delta LOS_{it} + \phi_t + C_i + \varepsilon_{it} \]
+			\begin{itemize}
+				\item $\phi$: Time-trend capturing economic fluctuations
+				\item $C$: Captures cohort-specific unobserved heterogeneity 
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Economic Assimilation}
+		\begin{itemize}
+			\item Finding: Within-cohort wage growth is significantly smaller that what was predicted by cross-sectional studies
+			\item Likely driver: Declining quality of migrant cohorts admitted to the U.S.
+			\item Can also be caused by selective return migration
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Economic Assimilation}
+		\begin{figure}
+			\centering 
+			\includegraphics[scale=1]{08B_2}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}{Economic Assimilation}
+		\begin{figure}
+			\centering 
+			\includegraphics[scale=1]{08B_3}
+		\end{figure}
+	\end{frame}
+
+\begin{frame}{Readings}
+	\begin{itemize}
+	\item Borjas 8.4-8.5
+	\end{itemize}
+\end{frame}
+
+\section{Self-Selection}
+
+
+\begin{frame}{Self-Selection}
+	\begin{itemize}
+		\item Much variation in migrant labor market performance depending on country of origin
+		\item Likely driven by degree of skill transferability between home and host country
+	\end{itemize}
+	\begin{figure}
+		\centering 
+		\includegraphics[scale=.6]{08C_2}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Self-Selection}
+	\begin{itemize}
+		\item Migrants are not a randomly selected subset of the home country's population
+		\item Question: Which subset of workers in a given source country finds it worthwhile to migrate to the United States?
+		\begin{itemize}
+			\item What factors drive this ``self-selection'' into migration?
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Self-Selection}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.45]{08C_1}
+		\caption{MXFLS Migration Stats}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Self-Selection}
+	\begin{itemize}
+		\item Widely used model of self-selection: The Roy model (Roy 1951)
+		\item Model widely applicable to wide set of situations where self-selection is present (e.g., migration, college choice, etc)
+		\item Applied to migration context in seminal paper by Borjas (1987) 	
+		\item Goal: Determine what factors drive positive or negative selection in terms of immigrant flows
+		\item Positive selection: Immigrants have above-average skills relative to home country population
+		\item  Negative selection: Immigrants have above-average skills relative to home country population
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Self-Selection}
+	\begin{itemize}
+		\item Assumptions:
+		\begin{itemize}
+			\item Earnings in home and host country only depend on skill level $s$
+			\item Skills are perfectly transferable across countries 
+		\end{itemize}
+		\item As always, each worker makes migration decision by comparing earnings in the home and host country (net of migration costs)
+		\item For now, assume migration costs are zero
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Self-Selection}
+	\begin{itemize}
+		\item Case 1: Rate of return to skills is greater in the host country
+		\item Translation: Payoff to an an additional unit of ``skill'' (i.e., human capital) is higher in the host country vs the home country
+		\item Result: Wage-skills line is steeper for the host country
+		\item Implications for selection?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Self-Selection}
+	\begin{itemize}
+		\item Case 2: Rate of return to skills is greater in the home country
+		\item Translation: Payoff to an an additional unit of ``skill'' (i.e., human capital) is higher in the home country vs the host country
+		\item Result: Wage-skills line is steeper for the home country
+		\item Implications for selection? 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Self-Selection}
+	\begin{itemize}
+		\item Key implication: The \underline{relative} payoff for skills across countries is what drives the composition of the immigrant workforce 
+		\item Evidence tends to back this: Negative correlation between home country's level of income inequality and earnings of migrants in the US
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Self-Selection}
+	\begin{itemize}
+		\item What happens if we change ``base level'' of income in either the home or host country?
+		\item Result: Selection process remains the same!
+		\item However, magnitude of migrant flows will change
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Self-Selection}
+	\begin{itemize}
+		\item What about including migration costs?
+		\item For simplicity, assume migration costs are constant regardless of skill level (reasonable?)
+		\item Migration costs essentially act to shift down the wage-skills line in the host country
+		\item Acts just like a decrease in the income level in the host country (no change in selection process, but will change magnitude of migrant flow)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Self-Selection}
+	\begin{itemize}
+		\item Thus, parallel shifts of wage-skill lines (of either country) do not change direction of selection
+		\item Only changes in returns to skills (in either country) will (potentially) change the direction of the selection process
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Readings}
+	\begin{itemize}
+		\item Borjas 8.6
+	\end{itemize}
+\end{frame}
+
+
+\section{Economic Benefits from Immigration}
+
+
+\begin{frame}{Case 1: Perfect Substitutes}
+\begin{itemize}
+	\item We've already seen how immigrants can adversely impact the surplus of native workers with similar skills
+	\item Additionally, we saw that perfect substitute immigration increased the surplus of native firms by driving wages down
+	\item Overall, the net impact on total surplus was positive
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Case 1: Perfect Substitutes}
+	\begin{itemize}
+		\item Now, we will focus on analyzing the magnitude of gains from immigration in the host country
+		\item What factors impact this gain?
+		\item Do these effects last in the long run?
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Case 1: Perfect Substitutes}
+\begin{itemize}
+	\item Consider the case of perfect substitutes if labor is supplied inelastically
+	\item Effect of $M$ immigrants on employment and wages? 
+	\begin{itemize}
+		\item $E^* \uparrow$
+		\item $w^* \downarrow$ 
+	\end{itemize}
+	\item Effect on surplus?
+	\begin{itemize}
+		\item $\downarrow$ Native WS
+		\item $\uparrow$ Native FS
+		\item $\uparrow$ Total surplus
+	\end{itemize}
+	\item Increase in national income accruing to natives if called the \textbf{immigration surplus}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Case 1: Perfect Substitutes}
+	\begin{itemize}
+		\item Immigration surplus arises because the wage rate equals the productivity of the \textit{last} immigrant hired
+		\item Essentially, immigrants contribute at least as much as they are paid
+		\item What factors impact the size of the surplus?
+		\begin{itemize}
+			\item Number of immigrants
+			\item Elasticity of labor demand curve
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Case 1: Perfect Substitutes}
+	\begin{itemize}
+		\item How much does immigration add to national income?
+		\[\frac{\text{Immigration Surplus}}{\text{National Income}} = \frac{1}{2} \times \%\Delta w \times \%\Delta E \times (\text{labor's share of income}) \]
+		\item Note that the estimate of immigration surplus is for the short-run
+		\item In the long-run, return to capital and wage rate are not affected by immigration 
+		\item Thus, in long-run the immigration surplus is zero
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Case 2: Complements}
+	\begin{itemize}
+		\item What about the case of complements?
+		\item Migration of high-skill individuals may generate human capital externalities or spillovers
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Case 2: Complements}
+	\begin{itemize}
+		\item In the case of complements, the $VMP_E$ of native workers increases $\rightarrow$ labor demand shifts right
+		\item Assume spillover effect is greater than labor supply effect $\rightarrow$ labor demand increases more than labor supply
+		\item Effect on employment and wages?
+		\begin{itemize}
+			\item $\uparrow E^*$
+			\item $ \uparrow w^*$
+		\end{itemize}
+		\item Effect on surplus?
+		\begin{itemize}
+			\item $\uparrow $ Native WS
+			\item $\uparrow $ Native FS
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Readings}
+	\begin{itemize}
+		\item Borjas 8.7-8.8
+	\end{itemize}
+\end{frame}
+	
+\end{document}

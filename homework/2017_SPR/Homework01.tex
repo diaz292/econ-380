@@ -1,0 +1,248 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{sgamevar}
+\usepackage{sgame}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah (blank next two lines out for no solutions, unblank #3)
+%\printanswers
+%\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+%\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+\newcommand{\dd}[1]{}  
+\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+
+
+\title{\textbf{Homework 1 \dd{\\Solutions}} \\ \vspace{2 mm} {\large ECON 380} \\ \large{UNC Chapel Hill}}
+\date{}
+\maketitle
+
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\\
+
+\makebox[\textwidth]{ONYEN:\enspace\hrulefill}
+\\
+
+\begin{center}
+	\fbox{\fbox{\parbox{5.5in}{\centering
+				This homework is due on \textbf{January 23} by \textbf{12:05PM}. You must turn in your work on a printed copy of this document in order for it to be graded. Your assignment must be stapled and in the correct order. Non-stapled assignments will automatically receive a 10 point deduction. There are a total of 50 available points.}}}
+\end{center}
+
+\ddp{Pretty straight forward to grade this one I think. Answers are in red and a few notes for grading purposes are in green. Make sure to actually take off points if assignments are not stapled!}
+	
+\subsection*{The Econ 101 Story (with Algebra)}
+
+\begin{questions}
+
+\question Suppose that the labor supply in a certain market is given by $Q_S = 30w - 50$ and labor demand is given by $Q_D = 200 - 10w$, where $w$ is the hourly wage rate.
+
+\begin{parts}
+	\part[4] If the wage rate is \$7/hour, what is the quantity of labor supplied and demanded? Is this the equilibrium wage? If not, is the equilibrium wage higher or lower than \$7/hour? Explain why.
+	\begin{solution}[1in]
+		$Q_S(w=7)= 30(7) - 50 =160$. $Q_D(w=7) = 200 - 10(7) = 130$. There is a surplus of labor since $Q_S > Q_D$. Thus, the equilibrium wage is \underline{lower} than \$7 because as workers compete for scarce jobs, they will bid down the wage.
+	\end{solution}
+	\ddp{Points: (1) $Q_D$, (1) $Q_S$, (1) eq. wage is lower than \$7, (1) explanation. Some students might just say that the equilibrium wage is lower because they found it to be \$6.25 in (b), but that is not a sufficient explanation. They should state that a surplus of labor will drive the price of labor down.}
+	\part[4] If there are no policies in place preventing the market from operating freely, what will be the equilibrium wage and quantity of labor employed in the market?
+	\begin{solution}[1in]
+		The equilibrium wage is the wage such that $Q_S = Q_D \Rightarrow 30w - 50 = 200 - 10w \Rightarrow w^* = $ \$6.25/hour. Plug this into either $Q_S$ or $Q_D$ to find $Q_E^* =  137.5$.
+	\end{solution} 
+	\ddp{Points: (1) Set $Q_S = Q_D$, (1) showing work, (1) $w^*$, (1) $Q_E^*$. 
+		Rounding $Q^*$ (up or down) is fine as long as they went through the process correctly}
+	\part[3] Suppose the government imposes a \$5.50/hour minimum wage on this market. How many workers are employed? Are there any involuntarily unemployed workers? If so, how many?
+	\begin{solution}
+		Since $w^* > \bar{w}$, the minimum wage is not binding. As such, the wage rate in the labor market will remain at \$6.25/hr, employment will remain at 137.5 workers, and there will be no involuntary unemployment.
+	\end{solution}
+	\ddp{Points: (1) $Q_E^* = 137.5$, (1) $Q_U = 0$, (1) Explanation}
+\end{parts}
+
+\end{questions}
+
+\newpage
+\subsection*{Labor Force Accounting}
+	
+\begin{questions}
+	
+\question Determine the labor force status (employed, unemployed, or out of the labor force) of the following individuals. \textbf{[2 pts each]}
+
+\ddp{All or nothing on these problems.}
+
+\begin{parts}
+	\part Eddie retired from working when he turned 55 and has spent the last 5 years traveling the world.
+	\begin{solution}[.4in]
+	Out of the labor force
+	\end{solution}
+	\part Josh just graduated college and is going backpacking across Europe for the summer.
+		\begin{solution}[.4in]
+	Out of the labor force
+		\end{solution}
+	\part Natalie was recently laid-off from her previous position as a welder.  She has searched for work actively since her dismissal.
+	\begin{solution}[.4in]
+		Unemployed
+	\end{solution}
+	\part Shannon works as a school teacher earning a salary paid for by Watauga county.
+	\begin{solution}[.4in]
+	Employed
+	\end{solution}
+	\part Michael was just released from jail and immediately starts looking for work.
+		\begin{solution}[.4in]
+			Unemployed
+		\end{solution}
+\end{parts}
+
+\question Suppose there are 12,500 individuals over age 16 in Waxhaw. Of these individuals,
+
+\begin{itemize}
+	\item 3,500 work full-time in the private sector \dd{E}
+	\item 2,000 work full-time in the public sector (non-military) \dd{E}
+	\item 2,000 work part-time in the private sector \dd{E}. Of these part-time workers, 20\% are working part-time for economic reasons and would prefer full-time work. \dd{400 part-time for economic reasons}
+	\item 1,500 individuals were laid off 6 months ago due to a plant closing. Of these laid off individuals, 1,000 have actively sought work since being laid off, while 500 searched for work immediately after being laid off, but not in the last four weeks. \dd{1000 U, 500 O (marginally attached workers)}
+	\item 1,000 do not have formal employment and instead choose to stay home to care for children \dd{O}
+	\item 2,500 are retired from work and neither have nor seek employment. \dd{O}
+\end{itemize}
+
+Use this information to answer the following questions. \textbf{[2 pts each]}
+
+\begin{parts}
+	\part How many employed persons are there in Waxhaw?
+	\begin{solution}[.6in]
+		$E = 3,500 + 2,000 + 2,000 = 7,500$
+	\end{solution}
+	\part How many unemployed persons are there in Waxhaw?
+		\begin{solution}[.6in]
+			$U = 1,000$
+		\end{solution}
+	\part What is the labor force participation rate?
+	\begin{solution}[.6in]
+		$LFPR = LF/P = (E + U)/P = 8,500/12,500 = 68\%$.
+	\end{solution}
+	\ddp{Full credit should be given if they plugged in incorrect answers from (a) or (b) into the correct equation.}
+	\part What is the unemployment rate?
+	\begin{solution}[.6in]
+		$UR= U/LF = 1000/8500 = 11.76\%$.
+	\ddp{Full credit should be given if they plugged in incorrect answers from (a), (b), or (c) into the correct equation.}
+	\end{solution}
+	\part If we decide to calculate the U6 unemployment rate as defined by the Bureau of Labor Statistics, what would be this unemployment rate?
+	\begin{solution}[.6in]
+		$U' = 1,000 + 500 + 400 = 1,900.$ $LF' = 8,500 + 500 = 9,000 \Rightarrow U6 = 1,900/9,000 = 21.11\%$
+	\end{solution}
+	\ddp{Points: (1) each for $U'$ and $LF'$}
+\end{parts}
+
+\end{questions}
+
+
+\subsection*{Unemployment}
+
+\begin{questions}
+
+
+\question For each of the following, determine which type of unemployment is present: frictional, seasonal, structural, or cyclical. \textbf{[2 pts each]}
+
+\ddp{All or nothing on these problems.}
+
+\begin{parts}
+	\part Boone, NC experiences low unemployment during the winter due to increased labor demand from ski resorts.
+		\begin{solution}[.6in]
+			Seasonal unemployment
+		\end{solution}
+	\part Jack quit his job a few months ago due to poor work conditions. He is currently seeking work, but it is taking time for him to fill out applications and hear back from interested firms.
+	\begin{solution}[.6in]
+		Frictional unemployment
+	\end{solution}
+	\part NBC lays off all workers under its page program because robots are now able to perform their tasks.
+	\begin{solution}[.6in]
+		Structural unemployment
+	\end{solution}
+	\part Jack has looked for work as an accountant for some time. While demand for accountants doesn't appear to be falling, there seems to be more people applying than there are jobs available.
+	\begin{solution}[.6in]
+		Structural unemployment
+	\end{solution}
+	\part Maya worked as a stockbroker before a recession began, but was laid off. She is looking for work, but demand for labor in the financial industry is low.
+	\begin{solution}[.6in]
+		Cyclical unemployment
+	\end{solution}
+\end{parts}
+
+\end{questions}
+
+\newpage
+
+\subsection*{Worker Preferences}
+
+Note: This section is intended more as a math review and will be graded for effort.
+\\
+
+\ddp{Grade these for effort. Full credit for setting up and simplifying (not necessarily correctly), half for barely attempting, none for just setting it up or showing no work. If you spot a mistake and could point it out (without taking off points) that'd be swell!}
+
+\begin{questions}
+	
+\question Frank's preferences are represented by the following utility function:  $U(C,L)=4C^{2/5} L^{3/5}$.
+
+\begin{parts}
+	\part[3] Frank's marginal utility of consumption is $MU_C = \frac{8L^{3/5}}{5C^{3/5}}$ and his marginal utility of leisure is $MU_L = \frac{12C^{2/5}}{5L^{2/5}}$. Determine his marginal rate of substitution between leisure and consumption, $MRS_{L,C}$, and simplify your answer where possible.
+	\begin{solution}[1in]
+		\[MRS_{L,C} = \frac{MU_L}{MU_C} = \frac{\frac{12C^{2/5}}{5L^{2/5}}}{\frac{8L^{3/5}}{5C^{3/5}}} =  \frac{12C^{2/5}}{5L^{2/5}} \times \frac{5C^{3/5}}{8L^{3/5}} = \frac{60(C^{2/5} \times C^{3/5})}{40(L^{2/5}\times L^{3/5})} = \frac{3C}{2L}\]
+	\end{solution}
+	\part[2] Find the equation representing his indifference curve for the utility level $\overline{U} = 40$, solved for $C$.
+	\begin{solution}[1in]
+		Set $\overline{U} = 40 = 4C^{2/5}L^{3/5}$. Solving for $C$:
+		\[10 = C^{2/5}L^{3/5} \Rightarrow 10L^{-3/5} = C^{2/5} \Rightarrow C = 10^{5/2} L^{(-3/5)(5/2)} \Rightarrow C = 10^{5/2}L^{-3/2} = \Big(\frac{100,000}{L^3}\Big)^{1/2}  \]
+	\end{solution}
+\end{parts}
+
+\question Sweet Dee's preferences are represented by the utility function $U(C,L) = 8(C^{2/5} + L^{3/5})^5$.
+
+	\begin{parts}
+		\part[2] Do Dee's preferences satisfy the property of ``strict monotonicity?'' Why or why not?
+		\begin{solution}[1in]
+			Yes. Increasing $C$ and holding $L$ constant will increase $U(C,L)$, while increasing $L$ and holding $C$ constant will also increase $U(C,L)$. Increasing both $C$ and $L$ will also increase $U(C,L)$.
+			\\
+			
+			Example: $U(1,1) = 256$, $U(2,1) = 537.12$, $U(1,2) = 806.12$. We have both (i) $U(2,1) > U(1,1)$ and (ii) $U(1,2) > U(1,1)$. 
+		\end{solution}
+			\ddp{Since we don't use calculus in this course, they don't have to be very rigorous here. In class we showed strict monotonicity by starting with some bundle (e.g., (1,1)) and showing that $U$ increased both when the bundle was, say, $(2,1)$ or when the bundle was $(1,2)$. This is probably what they will do here, so just make sure that they keep one of $C$ or $L$ constant while increasing the other variable to show that $U$ increases in both cases. If they increase both or increase one and decrease the other, give them 1/2 credit.}
+		\part[2] Find the equation representing her indifference curve for the utility level $\overline{U} = 20$, solved for $C$.
+		\begin{solution}[1in]
+		Set $\overline{U} = 20 = 8(C^{2/5}+L^{3/5})^5$. Solving for $C$:
+		\[\frac{20}{8} = (C^{2/5} + L^{3/5})^5 \Rightarrow 2.5^{1/5} = C^{2/5} + L^{3/5} \Rightarrow C^{2/5} = 2.5^{1/5} - L^{3/5} \Rightarrow C = (2.5^{1/5} - L^{3/5})^{5/2}\]
+		\end{solution}	
+	\end{parts}
+\end{questions}
+
+
+\end{document}

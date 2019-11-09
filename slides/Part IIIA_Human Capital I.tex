@@ -1,0 +1,606 @@
+\documentclass[pdf]{beamer}
+\usetheme{Frankfurt}  
+\usecolortheme{whale}
+\usepackage{tikz} 
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}              % used for \eqref{} in this document
+\usepackage{dsfont}
+\usepackage{hyperref}
+\usepackage{threeparttable}
+\usepackage{multirow}
+\graphicspath{{Figures/}}
+\usepackage{booktabs}
+\usepackage{tikz}
+\newtheorem{exmp}{Example}[section]
+\usepackage{subcaption}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage[mathscr]{euscript}
+\usepackage{remreset}% tiny package containing just the \@removefromreset command
+\makeatletter
+\@removefromreset{subsection}{section}
+\makeatother
+\setcounter{subsection}{1}
+
+
+\section{Human Capital}
+
+%% preamble
+\title{Part IIIA: Human Capital Models}
+\author[David A. D\'iaz]{David A. D\'iaz}
+\institute{UNC Chapel Hill}
+\date{}
+
+
+\AtBeginSection[] %Section links on slides
+
+
+\begin{document}
+	
+	\begin{frame}
+		
+		\titlepage
+		
+	\end{frame}
+	
+
+\begin{frame}{Human Capital}
+\begin{itemize}
+	\item So far, we have largely discussed competitive labor markets where there was a single equilibrium wage
+	\begin{itemize}
+		\item Assumption: Homogeneous firms and workers 
+	\end{itemize}
+	\item Real-world labor markets: workers and jobs are different
+	\begin{itemize}
+		\item Jobs differ in their characteristics
+		\item Workers differ in their skills
+	\end{itemize}
+	\item Thus, wages will vary among workers
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Human Capital Intro}
+\begin{itemize}
+	\item Human capital: The set of skills and abilities each individual brings to the workforce
+	\item Basic idea: Through education, training, experience, we acquire knowledge and skills that increase our productivity
+	\item Key questions:
+	\begin{itemize}
+		\item Why do some workers obtain a lot of schooling?
+		\item Is the money spent on schooling a good investment?
+		\item How much are individuals compensated for schooling?
+		\item Why are they compensated for schooling?
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Human Capital Intro}
+	\begin{itemize}
+		\item Major topic in labor econ:  Returns to skill
+		\begin{itemize}
+			\item Education
+			\item Certification \& training (CPA, RN, etc.) 
+			\item Experience 
+		\end{itemize}
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.4]{01C_7.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Education in the U.S.}
+\begin{figure}
+	\centering
+	\includegraphics[scale=.35]{05_1.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Education in the U.S.}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.5]{05_2.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Education in the U.S.}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.5]{05_3.png}
+		\caption{Labor Market Characteristics by Education Group, 2013}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Education in the U.S. - Trends}
+	\begin{figure}
+	\centering
+	\includegraphics[scale=.4]{05A_4.png}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Education in the U.S. - Trends}
+	\begin{figure}
+	\centering
+	\includegraphics[scale=.4]{05A_6.png}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Education in the U.S. - Trends}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.3]{05A_7.png}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}{Education in the U.S. - Trends}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.4]{05A_8.png}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}{Education in Other Developed Nations}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.7]{05A_9.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Education in Other Developed Nations}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.7]{05A_10.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Education Trends}
+\begin{itemize}
+	\item As economists, great interest in understanding
+	\begin{itemize}
+		\item Why are individuals with college degrees paid more?
+		\item Why have tuition and debt have risen faster than inflation?
+		\item Why does attendance continue to rise, despite rising costs?
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Human Capital Theory - Intro}
+	\begin{itemize}
+		\item Gary Becker: Choose educational attainment based on long-term costs and benefits
+		\item Investments often give payoffs far into the future 
+		\item Decisions must take account of ``time-value'' of money
+		\item Example: Give up \$1,000 today, get \$1,100 next year. Good deal?
+		\item Depends on individual's time-preference
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Human Capital Theory - Intro}
+\begin{itemize}
+	\item Present-value of payment $X$ received $t$ years in the future:
+	\[PV_t = \frac{X}{(1+r)^t}\]
+	\item Net present value of income ``stream'' with payouts at $t=0,\dots,T$
+	\[NPV_t = \sum_{t=0}^{T}\frac{X}{(1+r)^t}\]
+	\item Important: $t$ represents the number of periods we are discounting, not necessarily the period the payment is received.
+	\item $r$ is the ``rate of return,'' ``discount rate,'' or ``interest rate''
+	\item $\uparrow  r \Rightarrow \downarrow PV/NPV$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Human Capital Theory - Intro}
+\begin{itemize}
+	\item Consider a simple two-period model:
+	\begin{itemize}
+		\item Individuals can borrow/lend at rate $r\ge 0$
+		\item College educated workers are paid $W_C$ at the \underline{beginning} of each period they work
+		\item Non-college educated workers are paid $W_N$ at the \underline{beginning} of each period they work
+		\item Cost of college is \$$c$ and is paid at beginning of period before starting school
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Human Capital Theory - Intro}
+\begin{itemize}
+	\item Value of attending college:
+	\[V(C) = -c + \frac{W_C}{(1+r)}\]
+	\item Value of not attending college:
+	\[V(N) = W_N + \frac{W_N}{(1+r)}\]
+	\item What would change if payments were made at the end of each period?
+	\item Individual only attends college if $V(C) \ge V(N)$
+	\item Relationship between $r$ and college choice?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Human Capital Theory - Intro}
+		\begin{exmp} 
+			\tiny (Borjas 6.1) Debbie is about to choose a career path. She has narrowed her options to two alternatives.
+			She can become either a marine biologist or a concert pianist. Debbie lives
+			two periods. In the first, she gets an education. In the second, she works in the labor
+			market. If Debbie becomes a marine biologist, she will spend \$15,000 on education
+			in the first period and earn \$472,000 in the second period. If she becomes a
+			concert pianist, she will spend \$40,000 on education in the first period and then earn
+			\$500,000 in the second period. All payments are made at the beginning of each period.
+			\begin{enumerate}
+				\item Suppose Debbie can lend and borrow money at a 5 percent rate of interest
+				between the two periods. Which career will she pursue? What if she can lend
+				and borrow money at a 15 percent rate of interest? 
+				\item Suppose musical conservatories raise their tuition so that it now costs Debbie
+				\$60,000 to become a concert pianist. What career will Debbie pursue if the interest rate is 5 percent?
+			\end{enumerate}
+		\end{exmp}
+\end{frame}
+
+\begin{frame}{Human Capital Theory - Intro}
+\begin{itemize}
+	\item What would change if payments were made at the end of each period?
+	\item Relationship between $r$ and college choice?
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Readings}
+\begin{itemize}
+	\item Borjas 6.1-6.2
+\end{itemize}
+\end{frame}
+	
+\section{The Schooling Model}
+
+
+
+\begin{frame}{The Schooling Model}
+	\begin{itemize}
+		\item If higher levels of education are associated with higher earnings, why don't all workers choose to get the highest level of education possible?
+		\item Goal: Develop a model of lifetime schooling accumulation
+		\begin{itemize}
+			\item When is the optimal stopping point?
+			\item How does ability affect optimal schooling attainment?
+			\item Assumption: Workers acquire education level that maximizes their utility from the present value of lifetime earnings
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Schooling Model}
+	\begin{itemize}
+		\item Choice: How much time to spend in school
+		\item Individuals have rational preferences over wages, $U(w)$, where $MU_w > 0$ (i.e., $\uparrow w \Rightarrow \uparrow U(w)$)
+		\item Implication:
+		\begin{itemize}
+			\item Individuals do not receive any utility from schooling outside of its effect on wages
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Schooling Model}
+	\begin{itemize}
+		\item In reality, expected future wages are just one of the many determinants of our schooling path
+		\item Other costs/benefits of schooling
+		\begin{itemize}
+			\item ``Nicer'' occupations
+			\item Psychological costs of schooling
+			\item Social benefits
+			\item Etc.
+		\end{itemize}
+		\item A more general approach would assume workers choose education/skill level to maximize lifetime utility
+		\item For now, only focus on monetary rewards of school
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Schooling Model}
+	\begin{itemize}
+		\item The market wage individuals receive is a function of an individual's ability level ($A$) and level of schooling ($S$)
+		\[ w = w(S;A)\]
+		\item $S$ is an individual choice
+		\item $A$ is taken as given by each individual
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Schooling Model}
+	\begin{itemize}
+		\item What is ability?
+		\item Hard to define
+		\item Generally, can be thought of as some uncontrollable stock of raw talent each individual is born with
+		\item Key: Exogenously determined, so individuals take this as given
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Schooling Model}
+	\begin{itemize}
+		\item Wage-schooling locus: Shows salary level employers are willing to pay a particular worker for every level of schooling
+		\item Notice that this may vary across workers
+		\item The slope of the locus tells us the wage increase associated with an additional year of schooling
+		\item Properties:
+		\begin{itemize}
+			\item Locus is upward sloping
+			\item Locus is concave (diminishing returns to education)
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Schooling Model}
+	\begin{itemize}
+		\item Using wage-schooling locus, can define the marginal benefit from one additional year of schooling similar to a ``return on investment''
+		\[MB \equiv MRR = \frac{\%\Delta w}{\Delta S} = \frac{\Delta w}{\Delta S} \times \frac{1}{w_0} \]
+		\item Properties:
+		\begin{itemize}
+			\item $MRR > 0$
+			\item $MRR$ is decreasing
+		\end{itemize}
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}{The Schooling Model}
+	\begin{itemize}
+		\item What is the marginal cost of schooling?
+		\item Harder to define in practice
+		\item Suppose tuition is \$20,000/year, and financed as follows:
+		\begin{itemize}
+			\item \$10,000/year paid by outside source (parents/college fund/etc.)
+			\item \$1,000/year paid by work-study job
+			\item \$9,000/year paid through student loans
+		\end{itemize}
+		\item What is the ‘cost’ borne by the student?  When do they pay this?
+		\begin{itemize}
+			\item Small amount (\$1,000) paid through working during school.
+			\item Large amount (\$9,000/year) paid throughout life after school.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Schooling Model}
+	\begin{itemize}
+		\item To simplify, suppose each worker has a constant rate of discount $r$:
+		\[MC \equiv r\]
+		\item Intuition: Higher interest rate $\Rightarrow$ higher opportunity cost of delaying earnings
+		\item For our purposes, we will assume the discount rate for individuals is equal to the market interest rate offered by financial institutions 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Schooling Model}
+	\begin{itemize}
+		\item Decision rule: Continue schooling until $MRR = r$
+		\item What if an individual stopped at a schooling level where $MRR > r$?
+		\item What if an individual continued schooling at levels where $MRR < r$?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Schooling Model}
+	\begin{exmp}
+		(Borjas 6.6) Suppose Carl's wage-schooling locus is given by
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{cc}
+				Years of Schooling & Earnings  \\
+				\midrule
+				9 & \$18,500\\
+				10 & \$20,350\\
+				11 & \$22,000\\
+				12 & \$23,100\\
+				13 & \$23,900\\
+				14 & \$24,000\\
+			\end{tabular}
+			\label{SA1}
+		\end{table}
+		When will Carl quit school if his discount rate is 4 percent? What if the discount rate is 9 percent?
+	\end{exmp}
+\end{frame}	
+
+
+
+
+\begin{frame}{Readings}
+	\begin{itemize}
+		\item Borjas 6.3
+	\end{itemize}
+\end{frame}
+
+\section{The Returns to Schooling}
+
+\begin{frame}{Schooling Model - Recap}
+	\begin{itemize}
+		\item Recall the schooling model from last time:
+		\begin{itemize}
+			\item Individuals choose their schooling level, $S$
+			\item Wages are a function of schooling and ability: $w = w(S;A)$, where ability is taken as given
+			\item Each particular individual continues to acquire schooling until their $MRR$ (determined by \textit{their own} wage-schooling locus) equals their discount rate $r$
+		\end{itemize}
+		\item Implication: Individuals will differ in their school attainment due to differences in either their (i) discount rate or (ii) $MRR$ schedules (and potentially both)
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Differences in the Rate of Discount}
+	\begin{itemize}
+		\item Consider two workers, $A$ and $B$ who face the same $MRR$ curve, but differ in their rates of discount
+		\item Without loss of generality, assume $r_A > r_B$
+		\item Which individual will attain more schooling?
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Differences in the Rate of Discount}
+	\begin{itemize}
+		\item As we noted earlier, a higher rate of discount will decrease schooling years
+		\begin{itemize}
+			\item Individuals with a higher discount rate do not value future earnings as highly and are more ``present-oriented'' 
+		\end{itemize}
+		\item Thinking about $r$ as an interest rate, the intuition is:
+		\begin{itemize}
+			\item Higher $r \Rightarrow$ higher cost of loans
+			\item Higher $r \Rightarrow$ greater cost of forgone interest income from earnings
+		\end{itemize}
+		\item Standard price effect: $\uparrow r \Rightarrow \downarrow S$
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Differences in the Rate of Discount}
+	\begin{itemize}
+		\item Since we are assuming the two individuals face the same $MRR$ schedule, this implies they have the same wage-schooling locus
+		\item Thus, differences in $r$ simply put the workers at two different points on their \textit{common} locus
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Differences in the Rate of Discount}
+\begin{itemize}
+	\item Individual $B$ attains more schooling and ends up at a higher point on the locus, where she earns more
+	\item Implication: We can estimate the rate of return to schooling from the observed (school choice, wage outcome) for each individual without bias
+	\begin{itemize}
+		\item Predicted impacts of a given policy would be correct
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Differences in Ability}
+	\begin{itemize}
+		\item Now, suppose two individuals, $C$ and $D$ have the same rate of discount, but individual $C$ has a higher ability level: $A^C > A^D$
+		\item Assumption: Individuals with a higher ability level have higher returns on education 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Differences in Ability}
+\begin{itemize}
+	\item In effect, the higher ability individual will have an $MRR$ schedule to the right of a lower ability individual
+	\begin{itemize}
+		\item Equivalently, we can say their wage-schooling locus is above that of a lower ability individual
+	\end{itemize}
+	\item Implications for schooling decision?
+	\begin{itemize}
+		\item Higher return, same discount rate $\Rightarrow$ High ability individual chooses more schooling
+		\item Lower  return, same discount rate $\Rightarrow$ Low ability individual choose less schooling 
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Differences in Ability}
+	\begin{itemize}
+		\item Recall that ability is seldom observed
+		\item Data would show us $(S_C, w_C)$ and ($S_D, w_D)$, but not $A^C$ or $A^D$
+		\item Naive estimate of rate of return to schooling:
+		\[\widehat{MRR} = \frac{w_C - w_D}{s_C - s_D} \times \frac{1}{w_D}\]
+	
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Differences in Ability}
+\begin{itemize}
+	\item However, this assumes that both individuals are on the \textit{same} wage-schooling locus, which we know is not true
+	\item Thus, the observed data on earnings and schooling do not allow us to accurately estimate the rate of return to schooling (i.e., the estimate is biased)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ability Bias}
+	\begin{itemize}
+		\item The differences in the earnings of individuals $C$ and $D$ were due to 
+		\begin{enumerate}
+			\item Differences in schooling
+			\item Differences in innate ability 
+		\end{enumerate}
+		\item Because ability is unobserved, earnings differentials across workers do not accurately estimate the returns to education (\textbf{ability bias})
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Ability Bias}
+\begin{itemize}
+	\item Direction of bias?
+	\begin{enumerate}
+		\item Higher ability individuals face lower costs of schooling (less effort) and obtain more schooling $\Rightarrow$ upward bias
+		\item Higher ability individuals may be more productive and earn more independent of schooling $\Rightarrow$ downward bias
+	\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Estimating Returns to Schooling}
+	\begin{itemize}
+		\item Raw premium for college: $\sim$80\% for four-year degree in 2015 \begin{itemize}
+			\item $\Rightarrow \sim$ 16\% return on education per year (unrealistic)
+		\end{itemize}
+		\item General empirical model used to estimate returns to education: 
+		\[\log wage = \beta_0 + \beta_1 S + \text{other variables}\]
+		\item $\widehat{\beta_1}$ is the estimate of the returns to education
+		\item Controlling for race, gender, industry, and other observable factors likely influencing wages, the estimate is around $\sim$11-12\% per year
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Estimating Returns to Schooling}
+	\begin{itemize}
+		\item How to account for ability bias?
+		\begin{itemize}
+			\item Including IQ, AFQT as proxy for ability. Good solution?
+			\item Twin or sibling studies to control for unobserved ability. Issues?
+			\item Instrumental variables for schooling
+			\begin{itemize}
+				\item Need to find ``instrument'' (e.g., a policy) that is correlated with schooling, but uncorrelated with any unobserved characteristics that affect wages
+				\item Examples: Compulsory schooling laws, school construction initiatives, tuition changes, college proximity 
+				\item Potential issues?
+			\end{itemize}
+		\end{itemize}
+		\item Controlling for relevant factors \textit{and} ability bias, estimate is around $\sim$9-11\% per year 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Estimating Returns to Schooling - Other Issues}
+	\begin{itemize}
+		
+		\item Variable choice: What should we include in ``other variables''?
+		\begin{itemize}
+			\item Typically included: Experience, experience squared, occupation, etc.
+			\item Potentially omitted: ability variable
+		\end{itemize}
+		\item Measurement error
+		\begin{itemize}
+			\item Earnings, schooling, and other variables may be measured with error 
+		\end{itemize}
+		\item Selection bias
+		\begin{itemize}
+			\item Self-selection into schooling is not random
+			\item Self-selection into labor force is not random
+		\end{itemize}
+		\item Reverse causality
+		\begin{itemize}
+			\item School choice may respond to anticipated wages
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Estimating Returns to Schooling - Other Issues}
+	\begin{itemize}
+		\item Distributional effects
+		\begin{itemize}
+			\item $\beta_1$ assumed constant in empirical model $\Rightarrow$ estimating the average return to college for all individuals
+			\item Do returns to schooling vary across the wage distribution?
+		\end{itemize}
+		\item Time effects
+		\begin{itemize}
+			\item Do returns to schooling vary over time and over the life cycle?
+		\end{itemize}
+		\item Are we observing an individual's true optimal school choice?
+		\begin{itemize}
+			\item Remember individuals choose $S^*$ such that $MRR = r$ at $S^*$
+			\item This assumes individuals know the true $MRR$
+			\item Is this a reasonable assumption?
+		\end{itemize}
+		\item What do returns to schooling measure?
+		\begin{itemize}
+			\item Productivity effect of schooling?
+			\item Signaling value of schooling on the labor market?
+			\item Both?
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Readings}
+	\begin{itemize}
+		\item Borjas 6.4-6.5
+	\end{itemize}
+\end{frame}
+
+
+	
+\end{document}

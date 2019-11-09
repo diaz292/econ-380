@@ -1,0 +1,181 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\usepackage{threeparttable}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{sgamevar}
+\usepackage{sgame}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah (blank next two lines out for no solutions, unblank #3)
+%\printanswers
+%\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+%\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+\newcommand{\dd}[1]{}  
+\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+
+
+\title{\textbf{Homework 6 \dd{\\Solutions}} \\ \vspace{2 mm} {\large ECON 380} \\ \large{UNC Chapel Hill}}
+\date{}
+\maketitle
+
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\\
+
+\makebox[\textwidth]{ONYEN:\enspace\hrulefill}
+\\
+
+\begin{center}
+	\fbox{\fbox{\parbox{5.5in}{\centering
+				This homework is due on \textbf{November 14} by \textbf{2:15PM}. You must turn in your work on a printed copy of this document in order for it to be graded. Your assignment must be stapled and in the correct order. Non-stapled assignments will automatically receive a 10 point deduction. There are a total of 50 available points.}}}
+\end{center}
+	
+
+\begin{questions}
+	
+\question Suppose a firm's production function is given by 
+\[q = 4(E_M + E_F)^{1/2}\] 
+
+where $E_M$ is the number of males and $E_F$ is the number of females employed by the firm, respectively. Suppose the wage rates for males and females are $w_M = \$25$ and $w_F = \$20$. The price of each unit of output is \$30.
+
+\begin{parts}
+	
+	\part[4] How many units of output does the firm produce if it hires 18 male workers and 18 female workers? How many units of output does it produce if it hires 12 male workers and 24 female workers?
+	\begin{solution}[.75in]
+		\[q(18,18) = 4(18 + 18)^{1/2} = 24\]
+		\[q(12,24) = 4(12 + 24)^{1/2} = 24\]
+	\end{solution}
+	\ddp{(2) points each}
+	\part[3] Based on the firm's production function and your work in part (a), what is the relationship between male and female labor (complements, substitutes, perfect complements, or perfect substitutes)?
+	\begin{solution}[.5in]
+		Perfect substitutes
+	\end{solution}
+	\part[3] Suppose that this firm is non-discriminatory. What proportion of its labor will come from male workers?
+	\begin{solution}[.5in]
+		$w_F < w_M \Rightarrow$ firm will only hire female workers. 0\% of its labor will come from male workers.
+	\end{solution}
+\newpage
+\uplevel{It can be shown that the marginal product of labor with this production function is 
+\[MP_E = \frac{2}{(E_M + E_F)^{1/2}}\]}
+	\part[5] How many workers would a firm hire if it does not discriminate? How much
+	profit does this non-discriminatory firm earn if there are no other costs?
+	\begin{solution}[2in]
+		$E_M = 0$. Optimal quantity of female labor, $E_F^*$ where $VMP_E = p\times MP_E = w_F$:
+		\[30\Bigg(\frac{2}{E_F^{1/2}}\Bigg) = 20 \Rightarrow 20 E_F^{1/2} = 60 \Rightarrow E_F^* = \Bigg(\frac{60}{20}\Bigg)^2 = 9\]
+		
+		Output produced: $q = 4(9)^{1/2} = 12$
+		
+		Profit:
+		\[\Pi = pq - w_FE_F = \$30(12) - \$20(9) = \$180\]
+	\end{solution}
+	\ddp{(2) optimal employment, (2) profit, (1) work}
+	\part[3] Now, suppose the firm is discriminatory and has a discrimination coefficient of 0.3 attached to female workers, and a discrimination coefficient of 0 attached to male workers. What proportion of the firm's labor will come from male workers?
+		\begin{solution}[.75in]
+		Utility-adjusted female wage: $w_F' = \$20(1+.3) = \$26$
+		\\
+		$w_M < w_F' \Rightarrow$ firm will only hire male workers. 100\% of its labor will come from male workers.
+	\end{solution}
+	\part[5] How many workers does this firm hire? How much profit does it earn?
+		\begin{solution}[2in]
+			$E_F = 0$. Optimal quantity of male labor, $E_M^*$ where $VMP_E = p\times MP_E = w_M$:
+		\[30\Bigg(\frac{2}{E_M^{1/2}}\Bigg) = 25 \Rightarrow 25 E_M^{1/2} = 60 \Rightarrow E_M^* = \Bigg(\frac{60}{25}\Bigg)^2 = 5.76\]
+		
+		Output produced: $q = 4(5.76)^{1/2} = 9.6$
+		
+		Profit:
+		\[\Pi = pq - w_FE_F = \$30(9.6) - \$25(5.76) = \$144\]
+	\end{solution}
+	\ddp{(2) optimal employment, (2) profit, (1) work}
+	\part[5] Based on your results, explain in 3-4 sentences why we might expect discriminatory firms to exit the market in the long-run, while non-discriminatory firms remain in the market in the long-run.
+		\begin{solution}[1.5in]
+		In a competitive market, economic profits in the long-run should be driven to zero as more firms enter the market. Discriminatory firms earn lower profits than non-discriminatory firms. Non-discriminatory firms should continue to enter the market until there are no longer profit opportunities; when a non-discriminatory firms' economic profits are driven to zero by competition, discriminatory firms should be earning negative profits, leading them to exit the market. Over time, discriminatory firms exit the market, and the market becomes entirely composed of non-discriminatory firms, decreasing the wage gap over time.
+	\end{solution}
+	\ddp{(5) for complete answer mentioning zero profits in the long-run due to entry of firms driving profits of discriminatory firms negative and thus driving them out of the market. (4) for a good answer, (3) for okay answer, etc.}
+\end{parts}
+
+\question[5] Assume there are two demographic groups in the population. In year 1950, black workers have low average education levels and low average wage levels. In year 1950, white workers have high average education levels and high average wage levels. Using the concept of statistical discrimination, explain why both (i) the wage gap and (ii) the education gap can persist into the future.
+\begin{solution}[2.5in]
+\begin{enumerate}
+	\item Under statistical discrimination, workers are paid according to both group average skills and workers' own skills.
+	\item White workers earn higher return on education due to group's higher average education.
+	\item Black workers earn lower return on education due to group's lower average education.
+	\item Next generation:  white workers get more education than black workers, hence both wage gap and education gap persist.
+	
+\end{enumerate}
+\ddp{(5) for complete answer, (4) good, etc.}
+\end{solution}
+
+\question[5] Fryer, Pager, and Spenkuch (2011) estimate that at least one-third of the black-white wage gap is explained by labor market discrimination. Paraphrasing, they find that black workers receive low initial wage offers, but see their wages grow quickly as they spend time at firms, possibly indicating that firms are learning about their productivity. Explain why this pattern is consistent with statistical discrimination.
+
+\begin{solution}[2.5in]
+Statistical discrimination is based on the idea that firms use characteristics of a demographic group in the wage determination process because they lack information about individuals.  In this case, when a firm first meets a worker it has limited information about the individual and offers a wage based on the individual's race.  However, as the firm is able to observe the worker over time, the race of the worker does not provide additional information, and rather the wage should be entirely determined based on the quality of the individual worker.  Hence, we might expect black and white workers' wages to converge to some extent as they increase their tenure at a firm.	
+\end{solution}
+\ddp{(5) for complete answer, (4) good, etc.}
+
+\question Suppose that wages are paid in the labor market according to 
+
+\[w_W = 18 + 1.2\cdot S_W\]
+\[w_B = 11 + 0.7\cdot S_B\]
+
+where the $W$ and $B$ subscripts refer white and black workers, respectively. Assume that schooling, $S$, is the only relevant skill to worker productivity. Suppose that, on average, white workers have 14 years of schooling and black workers have 12 years of schooling.
+
+
+\begin{parts}
+	\part[5] In 2-3 sentences, explain how the wage equations indicate the presence of labor market discrimination.
+\begin{solution}[1.5in]
+	At all levels of schooling, white workers are paid higher than black workers.  This is shown by two things:  First, the wage earned by the ``zero-education'' white worker is greater than the wage earned by the ``zero-education'' black worker (18>11).  Second, the wage premium associated with additional years of schooling is greater for white workers than black workers (1.2 > 0.7).
+\end{solution}
+\ddp{(2.5) for mentioning each component that indicates labor market discrimination (different intercept and different slopes)}
+	\part[2] What is the white-black wage differential in the labor market?
+\begin{solution}[.75in]
+	$\Delta \overline{w} = \overline{w}_W - \overline{w}_B =  [18+1.2(14)] - [11+0.7(12)] = \$15.40$
+\end{solution}
+	\part[5] Using the Oaxaca decomposition, how much of this wage differential is due to discrimination?
+	\begin{solution}[2in]
+		Discrimination component: \[(\alpha_W - \alpha_B) + (\beta_W - \beta_B)\overline{S}_B = (18 - 11) + (1.2 - 0.7)12 = \$13\]
+	\end{solution}
+\ddp{(4) answer, (1) work}
+\end{parts}
+
+
+\end{questions}
+
+
+
+
+\end{document}

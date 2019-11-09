@@ -1,0 +1,504 @@
+\documentclass[pdf]{beamer}
+\usetheme{Frankfurt}  
+\usecolortheme{whale}
+\usepackage{tikz} 
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}              % used for \eqref{} in this document
+\usepackage{dsfont}
+\usepackage{hyperref}
+\usepackage{threeparttable}
+\usepackage{multirow}
+\graphicspath{{Figures/}}
+\usepackage{booktabs}
+\usepackage{tikz}
+\newtheorem{exmp}{Example}[section]
+\usepackage{subcaption}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage[mathscr]{euscript}
+\usepackage{remreset}% tiny package containing just the \@removefromreset command
+\makeatletter
+\@removefromreset{subsection}{section}
+\makeatother
+\setcounter{subsection}{1}
+
+
+\section{Preferences}
+
+%% preamble
+\title{Part IIA: Neoclassical Model of Labor Supply I}
+\author[David A. D\'iaz]{David A. D\'iaz}
+\institute{UNC Chapel Hill}
+\date{}
+
+
+\AtBeginSection[] %Section links on slides
+
+
+\begin{document}
+	
+	
+	\begin{frame}
+		
+		\titlepage
+		
+	\end{frame}
+
+
+\begin{frame}{Motivation} 
+	\begin{itemize}
+			\item Goal: Model individual labor supply decisions with a simple model to explain and help understand stylized facts about the labor market.
+			\item Questions we will try to answer:
+			\begin{itemize}
+				\item How many hours should an individual choose to work?
+				\item What factors motivate a person to enter the labor force in the first place?
+				\item How do individuals respond to tax breaks and other government policies in terms of their labor decisions?
+			\end{itemize}
+	\end{itemize}
+	
+
+			
+\end{frame}
+
+
+\begin{frame}{Model Overview} 
+	\begin{itemize}
+		\item The Neoclassical Model of Labor Supply consists of two general pieces: 
+		\begin{enumerate}
+			\item Worker Preferences
+				\begin{itemize}
+					\item What is an individual's goal when making decisions about how much to work?
+					\item Preferences over goods $\Rightarrow$ utility function
+					\item Individuals wish to maximize \textbf{utility}
+				\end{itemize}
+			\item Constraints
+				\begin{itemize}
+					\item What prevents people from never working and consuming an infinite amount?
+					\item Limited resources (e.g., time \& income) constrain behavior
+				\end{itemize}
+		\end{enumerate}
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}{Choice Variables} 
+	\begin{itemize}
+		\item Individuals are free to choose both
+		\begin{enumerate}
+			\item How much to consume, $C$
+			\begin{itemize}
+				\item Opportunity cost: Leisure time
+				\item Measured in dollar units
+			\end{itemize}
+			\item How much time to engage in leisure, $L$
+			\begin{itemize}
+				\item Opportunity cost: Lost wages
+			\end{itemize}
+		\end{enumerate}
+		\item Trade-off: More leisure time $\Rightarrow$ Less work hours $\Rightarrow$ Less consumption
+	\end{itemize}
+\end{frame}
+	
+\begin{frame}{Worker Preferences} 
+	\begin{itemize}
+		\item Which is better: 100 hours of leisure and \$400 of consumption or 90 hours of leisure and \$600 of consumption per week? 
+		\item Depends on the preferences of a particular worker. 
+		\item Need a way to measure a worker's well-being from their chosen bundle of consumption and leisure $\Rightarrow$ \textbf{utility function}, $U(C,L)$
+		\item The utility function transforms consumption of goods and leisure into an index that measures ``satisfaction''or ``happiness''
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}{Worker Preferences} 
+
+\begin{exmp}
+	A worker's preferences are represented by the utility function $U(C,L) = C^{1/2}L^{1/2}$, where $C$ is measured in dollars and $L$ is measured in hours. How much utility does the worker receive from the bundles above?
+
+\end{exmp}	
+\begin{itemize}
+
+\item Workers \textbf{strictly prefer} bundles with higher levels of utility since more utility $\Rightarrow$ greater well-being
+\item If two bundles give a worker the same level of utility, we say the worker is \textbf{indifferent} between the bundles
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Worker Preferences}
+\begin{itemize}
+	\item We want worker preferences to be rational or ``well-behaved,'' so we assume the following:
+	\begin{enumerate}
+		\item Completeness: Workers can always rank any two bundles as to their desirability 
+		\item Transitivity: Workers are consistent in their ranking of bundles
+		\item Monotonicity: 
+		\begin{itemize}
+			\item A bundle with more of \underline{either} consumption or leisure is always \underline{at least as good} as a bundle with less of either good AND
+			\item A bundle with more of \underline{both} consumption and leisure is always \underline{strictly preferred} to a bundle with less of both goods
+		\end{itemize}
+	\end{enumerate}
+	
+\end{itemize}
+;\end{frame}
+
+
+\begin{frame}{Worker Preferences} 
+	\begin{itemize}
+		\item Preferences can be more easily visualized through indifference curves
+		\item Indifference curves give the set of all bundles $(C,L)$ that provide a particular utility level, $\overline{U}$
+		\item Objective: Reach the highest indifference curve
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Indifference Curves} 
+
+\begin{exmp}
+	Consider ``Cobb-Douglas'' preferences: $U(C,L) = C^{1/2}L^{1/2}$.
+	\begin{enumerate}[a.]
+		\item If a worker consumes \$200 worth of consumption goods, how many hours of leisure must he consume in order to be just as well off as if she consumes \$400 worth of consumption goods and 100 hours worth of leisure in a week?
+		\item Find the equation representing the indifference curve for the utility level $\overline{U}$, solved for $C$.
+	\end{enumerate}
+\end{exmp}
+\end{frame}
+
+\begin{frame}{Indifference Curves} 
+	\begin{figure}
+		\centering 
+		\includegraphics[scale=.5]{02A_1.png}
+		\caption{Sample Indifference Curves for $U=C^{1/2}L^{1/2}$}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Indifference Curve Properties} 
+	\begin{enumerate}
+		\item Indifference curves are downward sloping	
+		\begin{itemize}
+			\item Implied by the strict monotonicity assumption 
+			\item Upward sloping indifference curve would imply that a bundle with more $C$ and $L$ would yield the same level of utility as a bundle with less $C$ and $L$
+			\item The only way to increase either consumption or leisure while holding utility constant is to take away some of the other good
+		\end{itemize}
+		\item Indifference curves further from the origin represent higher utility levels
+		\begin{itemize}
+			\item Implied by monotonicity. 
+			\item Bundles further from the origin contain more of either $C$ and $L$ (or both), so they will yield greater levels of utility than bundles close to the origin
+		\end{itemize}
+	\item Indifference curves are ``thin''
+	\item \textbf{Indifference curves never cross}
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{Indifference Curve Properties} 
+	\begin{itemize}
+		\item Additional assumption: Preferences are convex, meaning that indifference curves are bowed towards the origin
+		\item In words: workers prefer averages to extremes
+		\item Does this make sense? 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Slope of an Indifference Curve} 
+	\begin{itemize}
+		\item As with most economic decisions, we assume workers think on the margin (e.g., ``Should I take \underline{one} more hour of leisure?'')
+		\item \textbf{Marginal Utility of Leisure ($MU_L$):} The increase in utility associated with an additional unit (hour) of leisure (holding $C$ constant)
+		\item \textbf{Marginal Utility of Consumption ($MU_C$):} The increase in utility associated with an additional unit (dollar) of consumption (holding $L$ constant) 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Slope of an Indifference Curve} 
+	\begin{itemize}
+		\item Behavioral implications of convex preferences are best illustrated using the \textbf{marginal rate of substitution:}
+		\[MRS_{L,C} = \frac{MU_L}{MU_C} = \Big|\frac{\Delta C}{\Delta L}\Big|\]
+		\item Graphically: $MRS_{L,C}$ is the (absolute) slope of a given indifference curve $C=f(L)$
+		\item Verbally: $MRS_{L,C}$ is the maximum number of consumption dollars an individual is willing to sacrifice for an additional hour of leisure 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Slope of an Indifference Curve} 
+\begin{itemize}
+
+	\item The convexity assumption implies a \textbf{diminishing marginal rate of substitution:}
+	\begin{enumerate}
+		\item $\uparrow C \Rightarrow \uparrow MRS_{L,C}$
+		\begin{itemize}
+			\item When consumption rises, workers are willing to sacrifice more consumption dollars for an additional leisure hours
+		\end{itemize}
+		\item $\uparrow L \Rightarrow \downarrow MRS_{L,C}$
+		\begin{itemize}
+			\item When leisure rises, workers are willing to sacrifice fewer consumption dollars for an additional hour of leisure
+		\end{itemize}
+	\end{enumerate} 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Readings}
+	\begin{itemize}
+		\item Borjas 2.3
+	\end{itemize}
+\end{frame}
+
+
+\section{Constraints}
+
+\begin{frame}{Labor Supply Constraints} 
+	\begin{itemize}
+		\item In the Neoclassical Model of Labor Supply, an individual chooses bundles of consumption and leisure 
+		\item Each worker is constrained by both (i) their income and (ii) time
+	\end{itemize}
+	
+	
+\end{frame}
+
+
+\begin{frame}{The Consumption Constraint} 
+	\begin{itemize}
+		\item An individual can earn some income independently of how many hours they work (e.g., dividends, property income, etc.)
+		\begin{itemize}
+			\item Referred to as ``non-labor income''
+			\item Denoted $V$
+		\end{itemize}
+		\item The individual can also decide to work some hours, $h$, and earn an hourly wage $w$
+		\item A person's budget constraint is thus 
+		\[C = wh + V,\]
+		where $C$ is ``dollars of consumption''
+		\item Anything missing in this simple constraint?
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}{The Consumption Constraint} 
+	\begin{itemize}
+		\item For now, we will assume that the wage rate is constant for a particular individual
+		\item In reality, the ``marginal'' wage rate generally depends on how many hours an individual has worked 
+		\begin{itemize}
+			\item Progressive taxes
+			\item Overtime pay
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Time Constraint} 
+	\begin{itemize}
+		\item Workers can allot their total time ($T$) between either leisure ($L$) or work ($h$)
+		\item The time constraint is thus
+		\[T = h + L\]
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}{The Budget Constraint} 
+	\begin{itemize}
+		\item We can rewrite the time constraint as $h = T - L$ 
+		\item Plugging this into the consumption constraint allows us to write out the \textbf{budget constraint}:
+		\[C = w(T-L) + V = (wT + V) - wL\]
+	\end{itemize}
+	
+\end{frame}
+
+
+\begin{frame}{The Budget Constraint} 
+\begin{itemize}
+	\item The slope of the budget constraint is ($-w$)
+	\item If a worker chooses not to work ($h = 0$), then $T = L$ and the individual can consume up to $V$ dollars. This point is called the \textbf{endowment point}
+	\item If a worker chooses not to participate in leisure ($L=0$), the worker can consume $wT + V$ dollars
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{The Budget Constraint}
+	\begin{exmp}
+		Suppose there are 110 (non-sleeping) hours in a week available to split between work and leisure. A worker earns \$10 per hour after taxes. Additionally, she also receives \$320 worth of welfare benefits each week regardless of the number of hours she works. Graph her budget line. 
+	\end{exmp}
+\end{frame}
+
+\begin{frame}{The Budget Constraint}
+	\begin{itemize}
+		\item Affordable bundles of consumption and leisure fall on or below the budget constraint
+		\item The set of all affordable bundles is referred to as the \textbf{budget set}
+		\item An individual's goal is to choose the best bundle within their budget set (i.e., choose the affordable bundle that maximizes utility)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Budget Constraint}
+	\begin{itemize}
+		\item What are ``prices'' in this context?
+		\item Recall that the slope of a budget line is the (negative of the) ratio of the two commodities' prices
+		\item Here, the slope is $-w = -\frac{P_L}{P_C} $ 
+		\begin{itemize}
+			\item We defined the price of consumption ($P_C$) as one dollar, so $P_C = 1$
+			\item $P_L$ is the price of leisure. This represents the opportunity cost of an hour of leisure. Hence, $P_L = w$
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Budget Constraint}
+	\begin{itemize}
+		\item ``Exogenous'' changes in the budget constraint are due to 
+		\begin{enumerate}
+			\item Changes in non-labor income ($V$)
+			\item Changes in the wage rate ($w$)
+		\end{enumerate}
+		\item How do changes in each affect the budget line?
+	\end{itemize}
+	
+\end{frame}
+
+
+\begin{frame}{The Budget Constraint}
+	\begin{exmp}
+		Tom earns \$15 per hour for up to 40 hours of work each week. He is paid \$30 per hour for every hour in excess of 40. Tom faces a 20\% tax rate and pays \$4 per hour in child care expenses for each hour he works. Tom receives \$80 in child support payments each week. There are 110 (non-sleeping) hours in the week. Graph Tom's weekly budget line.
+	\end{exmp}
+\end{frame}
+
+
+
+\begin{frame}{The Budget Constraint} 
+\begin{itemize}
+	\item Policy dictates that the net wage, $w = w^G(1 - \tau)$ depends on the income tax rate $\tau$
+	\item Developed nations generally favor progressive tax structures:  earnings of higher income individuals are taxed at an increasing rate. 
+	
+	\begin{figure}
+		\centering 
+		\includegraphics[scale=.45]{02B_1.png}
+		\caption{Single filer Tax Brackets, 2015}
+	\end{figure}
+	
+	\item Implications for budget constraint?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Readings}
+	\begin{itemize}
+		\item Borjas 2.4
+	\end{itemize}
+\end{frame}
+
+
+\section{The Hours Decision}
+
+\begin{frame}{Motivation}
+	\begin{itemize}
+		\item The whole reason we develop this model is to consider the impact of changes in incentives (i.e., policy) 
+		\item Today: 
+		\begin{itemize}
+			\item How does a worker choose the optimal number of work hours?
+			\item How do changes in non-labor income affect the hours-worked decision? 
+			\item How do changes in the wage rate affect the hours-worked decision?  
+		\end{itemize}
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Hours Decision}
+	\begin{itemize}
+		\item Given an individual's wage rate and non-labor income, what is her optimal bundle of $(C,L)$?
+		\item Individual's objective: Find the affordable bundle which yields the highest utility
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{The Hours Decision}
+\begin{itemize}
+	\item Graphically: Which bundle $(C,L)$ within the budget set reaches the highest indifference curve?
+	\item If a worker chooses to work, (i.e., $h>0$), the optimal bundle will lie at the point where the indifference curve is \textbf{tangent} to the budget constraint
+	\begin{itemize}
+		\item We will cover the participation decision next time
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Hours Decision}
+	\begin{itemize}
+		\item Recall from Econ 310/410 that at an interior optimum, the $MRS$ is equal to the price ratio of the two commodities
+		\item In our model at the interior optimum, we have
+		\[MRS_{L,C} = \frac{MU_L}{MU_C} = w\]
+		\item The price of an hour of leisure is forgone wages, $P_L = w$
+		\item The price of consumption is defined as $P_C = 1$
+		\item So, we have that $MRS = $ Price ratio at the interior optimum. 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Hours Decision}
+	\begin{itemize}
+		\item What's the intuition behind the tangency condition?
+		\item Rewrite the condition as 
+		\[\frac{MU_L}{w} = \frac{MU_C}{\$1}\]
+		\item Left hand side gives the number of utils received from spending an additional dollar on leisure (since each hour of leisure costs $w$)
+		\item Right had side gives the number of utils received from spending an additional dollar on consumption
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Hours Decision}
+\begin{itemize}
+	\item If the two were not equal, a worker could rearrange their bundle so as to purchase more of the commodity that yields more utility for the last dollar
+	\item How should a worker rearrange their bundle if 
+	\begin{enumerate}[a.]
+		\item $MRS > w$?
+		\item $MRS < w$?
+	\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{exmp}
+		Shelley's preferences for consumption and leisure can be expressed as $U(C,L) = (C-100)(L-40)$. This implies $MU_L = C - 100$ and $MU_C = L - 40$. There are 110 available hours each week to split between work and leisure. Shelley earns \$10 per hour after taxes and receives \$320 worth of welfare benefits each week regardless of how much she works. 
+		\begin{enumerate}[a.]
+			\item What is the equation for Shelley's budget line?
+			\item What is the equation for Shelley's $MRS_{L,C}$?
+			\item What is Shelley's optimal amount of consumption and leisure?
+		\end{enumerate}
+	\end{exmp}
+\end{frame}
+
+\begin{frame}{Comparative Statics: A Change in Non-Labor Income}
+	\begin{itemize}
+		\item The impact of the change in non-labor income (holding $w$ constant) on the number of hours worked is called the \textbf{income effect}
+		\item Two possible responses in hours worked due to a change in $V$:
+		\begin{enumerate}
+			\item If leisure is \textit{income normal}, $\uparrow V \Rightarrow \uparrow L^*, \downarrow h^*$
+			\item If leisure is \textit{income inferior}, $\uparrow V \Rightarrow \downarrow L^*, \uparrow h^*$
+		\end{enumerate}
+		\item From here forward, we will assume leisure is income-normal (consistent with empirical evidence)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Comparative Statics: A Change in Wages}
+	\begin{itemize}
+		\item Two reasonable responses behind an increase in the wage rate:
+		\begin{enumerate}
+			\item ``An increase in wages increases my income, so I don't need to work as many hours in order to enjoy my desired quality of life''
+			\item ``An increase in wages makes leisure time more costly, so I will work more''
+		\end{enumerate}
+		\item Which one is right?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Comparative Statics: A Change in Wages}
+	\begin{itemize}
+		\item The change in an individual's hours worked from a change in the wage rate can be decomposed into two factors:
+		\begin{enumerate}
+			\item \textbf{Income Effect:} The change in an individual's leisure allocation resulting from the change in the individual's budget set, controlling for the substitution effect
+			\item \textbf{Substitution Effect:} The change in an individual's leisure allocation resulting from the change in the relative price of leisure and consumption, $w$, controlling for the income effect
+		\end{enumerate} 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Comparative Statics: A Change in Wages}
+	\begin{itemize}
+		\item Case 1: Substitution effect dominates the income effect
+		\begin{itemize}
+			\item An increase in the wage rate leads to an increase in the number of hours worked
+		\end{itemize}
+		\item Case 2: Income effect dominates the substitution effect
+		\begin{itemize}
+			\item An increase in the wage rate leads to a decrease in the number of hours worked
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Readings}
+\begin{itemize}
+	\item Borjas 2.5
+\end{itemize}
+\end{frame}
+
+\end{document}

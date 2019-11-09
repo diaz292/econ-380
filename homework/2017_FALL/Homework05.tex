@@ -1,0 +1,325 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\usepackage{threeparttable}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{sgamevar}
+\usepackage{sgame}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah (blank next two lines out for no solutions, unblank #3)
+%\printanswers
+%\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+%\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+\newcommand{\dd}[1]{}  
+\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+
+
+\title{\textbf{Homework 5 \dd{\\Solutions}} \\ \vspace{2 mm} {\large ECON 380} \\ \large{UNC Chapel Hill}}
+\date{}
+\maketitle
+
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\\
+
+\makebox[\textwidth]{ONYEN:\enspace\hrulefill}
+\\
+
+\begin{center}
+	\fbox{\fbox{\parbox{5.5in}{\centering
+				This homework is due on \textbf{November 13} by \textbf{2:25PM}. You must turn in your work on a printed copy of this document in order for it to be graded. Your assignment must be stapled and in the correct order. Non-stapled assignments will automatically receive a 10 point deduction.}}}
+\end{center}
+
+
+\begin{questions}
+	
+	
+\question Suppose a firm's production function is given by 
+\[q = 4(E_M + E_F)^{1/2}\] 
+
+where $E_M$ is the number of males and $E_F$ is the number of females employed by the firm, respectively. Suppose the wage rates for males and females are $w_M = \$25$ and $w_F = \$20$. The price of each unit of output is \$30.
+
+\begin{parts}
+	
+	\part[2] How many units of output does the firm produce if it hires 18 male workers and 18 female workers? How many units of output does it produce if it hires 12 male workers and 24 female workers?
+	\begin{solution}[.75in]
+		\[q(18,18) = 4(18 + 18)^{1/2} = 24\]
+		\[q(12,24) = 4(12 + 24)^{1/2} = 24\]
+	\end{solution}
+	\part[2] Based on the firm's production function and your work in part (a), what is the relationship between male and female labor (complements, substitutes, perfect complements, or perfect substitutes)?
+	\begin{solution}[.5in]
+		Perfect substitutes
+	\end{solution}
+	\part[2] Suppose that this firm is non-discriminatory. What proportion of its labor will come from male workers?
+	\begin{solution}[.5in]
+		$w_F < w_M \Rightarrow$ firm will only hire female workers. 0\% of its labor will come from male workers.
+	\end{solution}
+\newpage
+\uplevel{It can be shown that the marginal product of labor with this production function is 
+\[MP_E = \frac{2}{(E_M + E_F)^{1/2}}\]}
+	\part[4] How many workers would a firm hire if it does not discriminate? How much
+	profit does this non-discriminatory firm earn if there are no other costs?
+	\begin{solution}[2in]
+		$E_M = 0$. Optimal quantity of female labor, $E_F^*$ where $VMP_E = p\times MP_E = w_F$:
+		\[30\Bigg(\frac{2}{E_F^{1/2}}\Bigg) = 20 \Rightarrow 20 E_F^{1/2} = 60 \Rightarrow E_F^* = \Bigg(\frac{60}{20}\Bigg)^2 = 9\]
+		
+		Output produced: $q = 4(9)^{1/2} = 12$
+		
+		Profit:
+		\[\Pi = pq - w_FE_F = \$30(12) - \$20(9) = \$180\]
+	\end{solution}
+	\ddp{(2) optimal employment, (1) profit, (1) work}
+	\part[2] Now, suppose the firm is discriminatory and has a discrimination coefficient of 0.3 attached to female workers, and a discrimination coefficient of 0 attached to male workers. What proportion of the firm's labor will come from male workers?
+		\begin{solution}[.75in]
+		Utility-adjusted female wage: $w_F' = \$20(1+.3) = \$26$
+		\\
+		$w_M < w_F' \Rightarrow$ firm will only hire male workers. 100\% of its labor will come from male workers.
+	\end{solution}
+	\part[4] How many workers does this firm hire? How much profit does it earn?
+		\begin{solution}[2in]
+			$E_F = 0$. Optimal quantity of male labor, $E_M^*$ where $VMP_E = p\times MP_E = w_M$:
+		\[30\Bigg(\frac{2}{E_M^{1/2}}\Bigg) = 25 \Rightarrow 25 E_M^{1/2} = 60 \Rightarrow E_M^* = \Bigg(\frac{60}{25}\Bigg)^2 = 5.76\]
+		
+		Output produced: $q = 4(5.76)^{1/2} = 9.6$
+		
+		Profit:
+		\[\Pi = pq - w_ME_M = \$30(9.6) - \$25(5.76) = \$144\]
+	\end{solution}
+	\ddp{(2) optimal employment, (1) profit, (1) work}
+	\part[4] Explain in 3-4 sentences why we might expect discriminatory firms to exit the market in the long-run, while non-discriminatory firms remain in the market in the long-run.
+		\begin{solution}[1.5in]
+		In a competitive market, economic profits in the long-run should be driven to zero as more firms enter the market. Discriminatory firms earn lower profits than non-discriminatory firms. Non-discriminatory firms should continue to enter the market until there are no longer profit opportunities; when a non-discriminatory firms' economic profits are driven to zero by competition, discriminatory firms should be earning negative profits, leading them to exit the market. Over time, discriminatory firms exit the market, and the market becomes entirely composed of non-discriminatory firms, decreasing the wage gap over time.
+	\end{solution}
+	\ddp{(4) for complete answer mentioning zero profits in the long-run due to entry of firms driving profits of discriminatory firms negative and thus driving them out of the market. (3) for a good answer, etc.}
+\end{parts}
+
+
+\newpage
+
+\question Consider the following competitive labor market:
+
+\begin{itemize}
+	\item There are two types of workers, beagles and retrievers, with respective wage rates of $w_b = \$8$ and $w_r = \$12$. 
+	\item The firms operate in a competitive output market where the price of the good they sell (all natural dog treats) is \$30. 
+	\item The marginal product of labor is the same for beagles and retrievers. At the current market price, the $VMP_E$ curve is given as 
+	
+	\[VMP_E = 32 - \frac{(E_b + E_r)}{2}\]
+	\item Some firms in this labor market are discriminatory and have a distaste for hiring beagles. There is no nepotism.
+\end{itemize}
+
+\begin{parts}
+\part[2] \label{parta} Sketch the $VMP_E$ curve below. 
+\begin{solution}[2in]
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5]{hw5_2}
+	\caption{$VMP_E$ and Labor Choices}
+\end{figure}
+\end{solution}
+
+\part[2] Suppose Mambo's Munchies optimal choice is to only hire retrievers. What is the possible range for the firm's discrimination coefficient? If it is possible find the exact number, state it.
+\begin{solution}[1.5in]
+	Mambo hires more expensive labor: $w_r \le w_b(1+d) \Rightarrow 12 \le 8(1+d) \Rightarrow 0.5 \le d$	
+\end{solution}
+\ddp{(1) work, (1) answer}
+\part[2] How many retrievers does Mambo's Munchies hire? Label this point on your graph in part (\ref{parta}) - both the number of workers on the x-axis and the dollar value on the y-axis.
+
+
+\begin{solution}[1.5in]
+Mambo will set $VMP_E = w_r$:
+
+\[32 - E_r/2 = 12 \Rightarrow E^*_r = 40\]
+	
+\end{solution}
+\ddp{(1) work, (1) answer}
+
+\part[2] Cookie Crumbs is another firm in this labor market. However, their optimal choice is to hire 42 beagles. What is the possible range for the firm's discrimination coefficient? If it is possible find the exact number, state it.
+\begin{solution}[1.5in]
+Cookie optimally hires 42 beagles: Sets $VMP_E = w_b(1+d)$:
+
+\[32 - (42)/2 = 8(1+d) \Rightarrow d = .375\]	
+	
+Perceived beagle wage: $w'_b = 8(1.375) = \$11$
+\end{solution}
+
+\part[2] Label Cookie Crumbs optimal hiring choice on your graph in part (\ref{parta}) - both the number of workers on the x-axis and the dollar value on the y-axis.
+
+
+\begin{solution}[1in]
+	
+\end{solution}
+
+\part[2] Finally, Stella Selects does not discriminate at all ($d=0$). How many workers (and of what type) should this firm hire?  Label this point on your graph in part (\ref{parta}) - both the number of workers on the x-axis and the dollar value on the y-axis.
+
+\begin{solution}[1.5in]
+Stella does not discriminate $\Rightarrow$ only hires beagles. Set $VMP_E = w_b$:
+
+\[32 - E_b/2 = 8 \Rightarrow E^*_b = 48\]
+
+\end{solution}
+
+\part[3] Rank the true short-run profits of each firm below, with 1 having the highest profits and 3 having the lowest. If any firms realize the same profit, write them on the same line.
+
+\begin{enumerate}
+	\item \dd{Stella}
+	\item \dd{Cookie}
+	\item \dd{Mambo}
+\end{enumerate}
+
+\end{parts}
+
+\newpage
+
+\question Suppose that firms statistically discriminate based on sex. Available information about each candidate (e.g., education, GPA, etc.) is used to calculate an individual test score $T$ for each applicant. In order to determine wages, firms take the weighted average of an individual's actual score and their group average as follows:
+
+\[w = \alpha_g T + (1-\alpha_g) \bar{T}_g\]
+
+where $g$ denotes which group an individual belongs, $g \in \{M,F\}$. Finally, firms use historical information to calculate the average score for each group and find that is the same, $\bar{T}_M = \bar{T}_F$.
+
+\begin{parts}
+	
+	\part[2] If test scores for females are ``nosier'' such that firms do not believe individual test scores for females are good predictors of productivity relative to male test scores, what is the relationship between $\alpha_M $ and $\alpha_F$ (i.e., which one is larger, or are they the same)?
+	\begin{solution}[1in]
+		$\alpha_M > \alpha_F$. The weight attached to individual male test scores is greater than that for males.
+		
+		\ddp{Don't need to explain why, just correctly state $\alpha_M > \alpha_F$}
+	\end{solution}
+	\part[2] In Figure \ref{fig6} below, clearly label the earnings curve of each group. 
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.5]{final5}
+		\caption{Earnings as a Function of Test Scores}
+		\label{fig6}
+	\end{figure}
+	
+	\dd{Top box is male, bottom box is female}
+	
+\end{parts}
+
+\question Suppose that wages are paid in the labor market according to 
+
+\[w_W = 18 + 1.2\cdot S_W\]
+\[w_B = 11 + 0.7\cdot S_B\]
+
+where the $W$ and $B$ subscripts refer white and black workers, respectively. Assume that schooling, $S$, is the only relevant skill to worker productivity. Suppose that, on average, white workers have 14 years of schooling and black workers have 12 years of schooling.
+
+\newpage 
+
+\begin{parts}
+	\part[4] In 2-3 sentences, explain how the wage equations indicate the presence of labor market discrimination.
+\begin{solution}[1.5in]
+	At all levels of schooling, white workers are paid higher than black workers.  This is shown by two things:  First, the wage earned by the ``zero-education'' white worker is greater than the wage earned by the ``zero-education'' black worker (18>11).  Second, the wage premium associated with additional years of schooling is greater for white workers than black workers (1.2 > 0.7).
+\end{solution}
+\ddp{(2) each for mentioning components that indicate labor market discrimination (different intercept and different slopes)}
+	\part[2] What is the raw white-black wage differential in the labor market?
+\begin{solution}[.75in]
+	$\Delta \overline{w} = \overline{w}_W - \overline{w}_B =  [18+1.2(14)] - [11+0.7(12)] = \$15.40$
+\end{solution}
+	\part[5] Using the Oaxaca decomposition, how much of this wage differential is due to differences in schooling?
+	\begin{solution}[1in]
+	Pre-market component:\[(\overline{S}_W - \overline{S}_B)\beta_W = (14-12)1.2 = \$2.40\]
+	
+	Or, could do: $\overline{w}_W - w^*_B$ = [18 + 1.2(14)] - [18 + 1.2(12)] = \$2.40
+\end{solution}
+	\part[5] Using the Oaxaca decomposition, how much of this wage differential is due to discrimination?
+	\begin{solution}[1in]
+		Discrimination component: \[(\alpha_W - \alpha_B) + (\beta_W - \beta_B)\overline{S}_B = (18 - 11) + (1.2 - 0.7)12 = \$13\]
+		
+	Or, could do: $w^*_B - \overline{w}_B = [18 + 1.2(12)] - [11 + .7(12)] = \$13.$
+	\end{solution}
+\ddp{(3) answer, (2) work}
+\end{parts}
+
+\uplevel{Directions: Type your answers to the following questions and attach them to the back of this packet.}
+
+
+\question[5] Fryer, Pager, and Spenkuch (2011) estimate that at least one-third of the black-white wage gap is explained by labor market discrimination. Paraphrasing, they find that black workers receive low initial wage offers, but see their wages grow quickly as they spend time at firms, possibly indicating that firms are learning about their productivity. Explain why this pattern is consistent with statistical discrimination.
+
+\begin{solution}
+	Statistical discrimination is based on the idea that firms use characteristics of a demographic group in the wage determination process because they lack information about individuals.  In this case, when a firm first meets a worker it has limited information about the individual and offers a wage based on the individual's race.  However, as the firm is able to observe the worker over time, the race of the worker does not provide additional information, and rather the wage should be entirely determined based on the quality of the individual worker.  Hence, we might expect black and white workers' wages to converge to some extent as they increase their tenure at a firm.	
+\end{solution}
+\ddp{(5) for complete answer, (4) good, etc.}
+
+\question[5] Listen to the podcast \textit{The True Story of the Gender Pay Gap} from Freakonomics Radio. Answer the following questions (2-3 sentences each).
+
+\begin{parts}
+	\part A common phrase when talking about the gender pay gap is something along the lines of ``women earn 77 cents for every dollar a man earns.'' How does Claudia Goldin describe what this phrase actually means? 
+\begin{solution}
+	Goldin states that it is true that comparing the median wage of all full-time males and compared it to the median wage of all full-time female workers and took the ratio, it would indeed be around 0.77. This number is analogous to the ``raw'' wage gap we talked about in class (except we used the mean instead of the median). That is, this number does not control for differences in education, occupation, etc. Once controlling for theses differences, there still remains a wage gap, but Goldin states that this does not necessarily mean that women are receiving lower pay for equal work (though this is not to say you couldn't find examples of this).
+\end{solution}
+	\part What does Goldin believe is the most powerful explanation behind the gender wage gap? How large of a role does she believe outright discrimination plays?
+\begin{solution}
+Goldin views ``temporal flexibility'' as likely to be the most powerful explanation driving the male-female wage gap. Essentially, females are more likely to engage in child-rearing and thus pursue jobs with more flexibility during those years or may work less hours. By and large, reductions in work hours or the need for more flexible hours results in lower pay. 
+\end{solution}
+	\part What does Goldin have to say about the effect of ``occupational sorting'' in driving wage disparities between men and women?
+\begin{solution}
+Although it is true that certain occupations are more male-dominated and other are female-dominated, and often female-dominated professions pay less (e.g., teaching, nursing), most of the differences in pay are actually found within occupations. Overall, females work less hours than males even in similar occupations or pursue more flexibility in work hours, which negatively impacts pay. Thus, even if females selected equally into occupations as males, only about a quarter of the difference in earnings would be reduced.
+\end{solution}
+\end{parts}
+
+\question[5] Listen to the podcast \textit{Reasons to Not Be Ugly} from Freakonomics Radio and watch the following clip from The Daily Show: \href{http://www.cc.com/video-clips/37su2t/the-daily-show-with-jon-stewart-ugly-people-prejudice}{http://www.cc.com/video-clips/37su2t/the-daily-show-with-jon-stewart-ugly-people-prejudice}. Answer the following questions (1-2 sentences each):
+
+\begin{parts}
+	\part What is the ``ugly'' penalty for males in the United States?
+	\begin{solution}
+		For the ``ugliest'' sixth or seventh, the loss earnings all else equal may be between 8 and 10\%. 
+	\end{solution}
+	\part Does Hamermesh find differences in the penalty for ``ugliness'' between males and females? What is the story he tells that may be driving this result?
+	\begin{solution}
+		For females in the US, the penalty seems to be smaller. The story he proposes is that of self-selection: most prime-age males work, while a smaller proportion of females enter the labor market so those penalized the most (``uglier'' females) select to not enter the labor force.
+	\end{solution}
+	\part The Daily Show episode shows Hamermesh listing some policies that could be implemented to reduce looks-based discrimination. What does he state in the podcast in regards to the importance of implementing such policies?
+	\begin{solution}
+	In the Daily Show interview, Hamermesh states that we could extend labor market protections to ugly people (e.g., equal pay laws, affirmative action programs) so they are not discriminated against. In the podcast, he notes that while we \textit{could} do this, he is not in favor of actually implementing such policies because he believes ``looks-challenged'' individuals are not as ``meritorious'' as other groups facing discrimination.
+	\end{solution}
+\end{parts}
+
+\end{questions}
+
+
+\rule{\textwidth}{1pt}
+
+
+\begin{center}
+	\textbf{FOR GRADING:}\\
+	\gradetable[h][questions]
+\end{center}
+
+
+\end{document}

@@ -1,0 +1,519 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{MnSymbol,wasysym}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah
+%\printanswers
+%\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+%\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+\newcommand{\dd}[1]{}  
+\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+
+
+\title{\textbf{Final Exam \dd{\\Solutions}} \\ \vspace{2 mm} {\large ECON 380} \\ \large{Spring 2017} \\ \large{UNC Chapel Hill}}
+\date{}
+\maketitle
+
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\\
+
+\makebox[\textwidth]{ONYEN:\enspace\hrulefill}
+\\
+
+\makebox[\textwidth]{Honor Code Signature:\enspace\hrulefill}
+\\
+
+\begin{center}
+	\fbox{\fbox{\parbox{6in}{\centering
+				\begin{itemize}
+					\item For partial credit, show all of your work on the following pages, and justify your answers where needed.
+					\item Assume preferences are transitive, complete, and monotone.
+					\item Assume that utility functions exhibit diminishing marginal returns to consumption.
+					\item Assume that leisure is income-normal. 
+					\item Assume firms can hire a non-integer number of workers (e.g., 4.25 workers) and can produce/sell a non-integer amount of output (e.g., 2.59 units)
+					\item Round final answers to the nearest hundredth.
+					\item Points available: 80
+					\item Write legibly, write legibly, write legibly!
+					\item Good luck! \smiley{}
+				\end{itemize}
+			}}}
+\end{center}
+
+\newpage
+
+\subsection*{Labor Mobility}
+
+\begin{questions}
+	
+	\question Natasha currently resides in Poland and is deciding whether or not to migrate to England. She just turned 20 years old and will only work until she turns 23. If she decides to stay in Poland, she will be paid at the \underline{end} of each year of work and her yearly wages are a function of her age determined as follows:
+	
+	\[w^P = \$15,000 + \$2,000 \cdot (Age - 20) \]
+	
+	Similarly, if she decides to migrate to England she will be paid at the \underline{end} of each year and her yearly wages are a function of her age determined as follows:
+	
+	\[w^E = \$18,000 + \$2,500 \cdot (Age - 20)\]
+	
+	The costs of migrating are incurred at the time of migration and are \$10,000. Assume Natasha's discount rate is 5\%. 
+	
+
+\begin{parts}
+	\part[4] What is the net present value of Natasha's earnings if she chooses to stay in Poland? Make sure to write out the entire equation.
+	\begin{solution}[2in]
+	 Wages paid at the end of each year:
+	 \[21: w^P = \$15,000 + \$2000(21-20) = \$17,000\]
+	 \[22: w^P = \$15,000 + \$2000(22-20) = \$19,000\]
+	 \[23: w^P = \$15,000 + \$2000(23-20) = \$21,000\]
+	 
+	 NPV:
+	 \[NPV^P = \frac{\$17,000}{(1.05)} + \frac{\$19,000}{(1.05)^2} + \frac{\$21,000}{(1.05)^3} = \$51,565\]
+
+\ddp{Points: (1) earnings at each age, (1) NPV. Minus (1/2) if discounting is wrong.}
+	\end{solution}
+	\part[4] What is the net present value of Natasha's earnings if she chooses to move to England? Make sure to write out the entire equation.
+	\begin{solution}[2in]
+\[21: w^P = \$18,000 + \$2500(21-20) = \$20,500\]
+\[22: w^P = \$18,000 + \$2500(22-20) = \$23,000\]
+\[23: w^P = \$18,000 + \$2500(23-20) = \$25,500\]
+
+NPV:
+\[NPV^E = \frac{\$20,500}{(1.05)} + \frac{\$23,000}{(1.05)^2} + \frac{\$25,500}{(1.05)^3} = \$62,413\]
+
+\ddp{Points: (1) earnings at each age, (1) NPV. If mistakes are similar to (a), can give partial credit for NPV equation.}
+	\end{solution}
+	\part[2] Will Natasha decide to move to England? Explicitly show why.
+\begin{solution}
+Yes, because $NPV^E - NPV^P > C$. Since the MB from moving exceeds the MC, Natasha will move.
+
+\ddp{Full points as long as reasoning is correct and follows from (a) and (b)}
+\end{solution}
+
+\end{parts}
+
+\newpage
+
+\question For each of the following families, state which sector(s) the combined net present value of earnings would fall under in Figure \ref{fig1} below. If multiple sectors apply, state which ones (e.g., either A or B). Additionally, state if each member of the family is a tied stayer, tied mover, or neither.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.52]{final1}
+\caption{Family Decision}
+\label{fig1}
+\end{figure}
+
+\begin{parts}
+	\part[3] Jack (husband) and Jill (wife) decide to migrate as a family to Boston. Individually, both Jack and Jill will choose to migrate.
+	\begin{solution}[.75in]
+	Either A or B. Neither individual is a tied stayer or mover.	
+	\end{solution}
+	\part[3] Brody (husband) and Sarah (wife) decide to stay in Charlotte instead of moving to Chicago. Sarah would earn higher wages in Chicago than in Charlotte.
+\begin{solution}[.75in]
+	Area D. Sarah is a tied stayer. Brody is neither.	
+\end{solution} 
+	\part[3] Johnson (husband) and Carol (wife) decide to move from Wyoming to Montana. Johnson would earn higher wages in Wyoming than in Montana. 
+\begin{solution}[.75in]
+	Area C. Johnson is a tied mover. Carol is neither.
+\end{solution}
+	\part[3] Sam (husband) and Sammy (wife) decide to remain in Seattle rather than move to Oklahoma City. Individually, both Sam and Sammy would choose to remain in Seattle.
+\begin{solution}[.75in]
+	Either Area E or F. Neither individual is a tied stayer or mover.	
+\end{solution}
+
+\ddp{(1) correct area(s), (1) each family member's status}
+
+\end{parts}
+
+ 
+\question Suppose that we are analyzing migration from Malaysia to Australia. Wages are solely a function of skills ($s$) in the two countries and are determined as follows:
+
+\begin{align*}
+w^M & = \$30,000 + \$1000\cdot s \\
+w^A & = \$35,000 + \$500 \cdot s
+\end{align*}
+
+where $w^M$ and $w^A$ are wages in Malaysia and Australia, respectively. Assume that migration costs are zero.
+
+
+\begin{parts}
+	\part[2] Sketch and clearly label the wage-skills line for each country in Figure \ref{fig2} below.
+	
+\ddp{Doesn't have to be exact, but should show that Malaysia starts at \$30,000 and Australia starts at \$35,000 for $s=0$.}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.60]{final2}
+		\caption{Wage-Skills}
+		\label{fig2}
+	\end{figure}
+
+%	\begin{figure}[H]
+%		\centering
+%		\includegraphics[scale=.60]{final2a}
+%		\caption{Wage-Skills}
+%		\label{fig2}
+%	\end{figure}
+
+	\part[3] Is there positive or negative self-selection into migration from Malaysia to Australia? Explain why. Note: A complete answer would explicitly speak to how differences in $w^M$ and $w^A$ lead to self-selection.
+	\begin{solution}[2in]
+	There is negative selection into migration from Malaysia to Australia because the returns to skills are lower in Australia (\$500) than in Malaysia (\$1,000). Only those with skill level $s < s_N$ will move.
+	\end{solution}
+ 	\part[2] What is the lower or upper bound on skill level at which individuals would choose to move (e.g., migrate if $s>x$ or migrate if $s<x$)?
+ 	\begin{solution}[1in]
+ 	Move if $w^M < w^A$:
+ 	\[30,000 + 1000\cdot s < 35,000 + 500\cdot s  \Rightarrow 5,000 > 500s \Rightarrow s < 10\]
+ 	\end{solution}
+	 \uplevel{Suppose that a depression in Malaysia caused a decrease in wages across the distribution of skills so that wages in Malaysia are now given by
+	 
+	 \[w^{M'} = \$25,000 + \$1000\cdot s\]
+	}
+	\part[1] Illustrate this change in your plot above.
+	\ddp{Just have to show downward parallel shift}
+	\part[2] Briefly (3-4 sentences) describe how \underline{and} why (i) the direction of migrant self-selection and (ii) the magnitude of the migration flow are or not affected by this change.
+	\begin{solution}[2in]
+	The direction of self-selection is not affected: The returns to skills are still greater in Malaysia than in Australia, so negative selection will continue. However, there will be more migration as a result of this change because the maximum skill level at which individuals will migrate increases ($s'_N > s_N)$.
+	\end{solution} 
+\end{parts}
+
+\question Suppose we are analyzing the economic performance of migrants over time by looking at census data from 2000. There are three migrant cohorts in the population described as follows:
+
+\begin{enumerate}[i.]
+	\item 1980 cohort: Average skill level $\bar{S}_{80} = 5000$
+	\item 1990 cohort: Average skill level $\bar{S}_{90} = 15000$
+	\item 2000 cohort: Average skill level $\bar{S}_{00} = 25000$
+\end{enumerate}
+
+For simplicity, assume that all migrants in each cohort arrived at age 20. 
+
+Average wages increase with age (i.e., experience) for each group $g$ as follows:
+
+\[\bar{w}_g = \$1\times \bar{S}_g + \$1,000\times Age\]
+
+\begin{parts}
+	\part[3] What is the average wage of each migrant cohort when we observe them in the 2000 census?
+	\begin{solution}[1in]
+		Each migrant cohort arrives at age 20, so we observe the 1980 cohort at age 40, the 1990 cohort at age 30, and the 2000 cohort at age 20:
+		\[\bar{w}_{80}(40) = \$1\times 5,000 + \$1,000\times 40 = \$45,000\]
+		\[\bar{w}_{90}(30) = \$1\times 15,000 + \$1,000\times 30 = \$45,000\]
+		\[\bar{w}_{00}(20) = \$1\times 25,000 + \$1,000\times 20 = \$45,000\]
+	\end{solution}
+	\part[4] In Figure \ref{fig3} below, clearly draw and label the age-earnings profile of each migrant cohort. Additionally, draw the predicted age-earnings profile for migrants if we naively assume that migrant cohorts are equivalent and use only the age-earnings data we observe.
+	
+	\ddp{(1) each line. They don't have to be exact, but they should be parallel to each other and go through \$45,000 at the correct ages. The predicted profile should be flat at \$45,000.}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.6]{final3}
+	\caption{Age-Earnings}
+	\label{fig3}
+\end{figure}
+
+%	\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale=.6]{final3a}
+%	\caption{Age-Earnings}
+%	\label{fig3}
+%\end{figure}
+	\part[4] Is our estimated effect of length of stay on migrant earnings biased? If so, in which direction and why? 
+	\begin{solution}[1.5in]
+		Our estimated effect without taking into account cohort effects is biased downwards (i.e., negatively biased). The slope of the age-earnings profile of each cohort is greater than that of our estimated migrant age-earnings profile (which is flat, i.e., our estimate is that length of stay has no effect on wages), so we are underestimating the effect of length of stay on wages. This is due to the fact that the quality of each migrant cohort is increasing. 
+		
+		\ddp{(1) downward bias, (2) explanation, (1) increasing cohort quality}
+	\end{solution}
+\end{parts}
+
+
+
+\newpage
+
+\question Labor demand for low-skilled workers in the United States is $w = 26 - 0.5E$ where
+E is the number of workers (in millions) and $w$ is the hourly wage. There are
+40 million domestic U.S. low-skilled workers who supply labor inelastically. If the
+U.S. opened its borders to immigration, 5 million low-skill immigrants would enter
+the U.S. and supply labor inelastically. There are no spillover effects and thus the $VMP_E$ of native workers remains the same.
+\begin{parts}
+	\part[2] What is the market-clearing wage if immigration is not allowed? 
+	\begin{solution}[.75in]
+		$w^* = 26 - .5(40) = \$6$
+	\end{solution}
+	\part[2] What is the market-clearing wage with open borders? 
+	\begin{solution}[.75in]
+		$w^{*'} = 26 - .5(45) = \$3.50$
+	\end{solution}
+	\part[4] Draw a graph showing the effect of an open borders policy.
+	\begin{solution}[2in]
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=.5]{final7}
+		\end{figure}
+	\end{solution}
+	\part[2] How much is the immigration surplus when the U.S. opens its borders? Label this on your graph above.
+	\begin{solution}[1in]
+		Immigration surplus = $1/2 \times (5) \times (2.5) = \$6,250,000$
+	\end{solution}
+\end{parts}
+
+\end{questions}
+
+\newpage
+
+\subsection*{Labor Supply}
+
+\begin{questions}
+	
+\question Suppose the wage rate rises. 
+
+\begin{parts}
+	\part[2] Explain how the substitution effect alters an individual's optimal level of hours worked.
+	\begin{solution}[1.5in]
+		The substitution effect will increase an individual's work hours because the opportunity cost of leisure increases with a wage increase.
+	\end{solution}
+	\part[2] Explain how the income effect alters an individual's optimal level of hours worked.
+	\begin{solution}[1.5in]
+		The income effect will decrease an individual's work hours because they can now work less and enjoy the same standard of living (i.e., consumption level).
+	\end{solution}
+	\part[3] Sketch a graphical example showing the case where the income effect dominates the substitution effect. Clearly label each of the following: 
+	\begin{enumerate}[i.]
+		\item The old and new budget lines
+		\item The relevant indifference curves
+		\item Point A: Original optimal bundle of consumption and leisure
+		\item Point B: New optimal bundle of consumption and leisure
+	\end{enumerate}
+	\begin{solution}[2.5in]
+		IE > SE $\Rightarrow h^* \downarrow, L^* \uparrow$
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=.5]{final8}
+		\end{figure}
+	\ddp{(1) show increase in slope of BC, (1) should show increase in $L$ going from A to B, (1) should show tangent indifference curves that do not cross (or look like they will)}
+\end{solution}
+\end{parts}
+
+\newpage
+
+\question[2] Charlie has 5,000 hours per year to allocate between work and leisure. If he works, he can earn a gross hourly wage, $w^G$, and he faces the following marginal tax rates on his gross earnings:
+
+\begin{table}[H]
+	\caption{Marginal Tax Rates}
+	\centering
+	\begin{tabular}{ c| c} 
+		
+		Marginal Tax Rate &  Gross Earnings\\
+		\hline
+		10\% & \$15,000 \\
+		20\% & \$15,001 - \$40,000  \\
+		25\% & \$40,001 - \$90,000 \\
+		30\% & \$90,001+ \\
+	\end{tabular}
+	\label{MC30}
+\end{table}
+
+Charlie earns \$5,000 in non-labor income that is not taxed. Figure \ref{fig4} shows Charlie's budget line for the year, where points B and C are ``kink'' points at which his marginal tax rate changes.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.4]{charlie.png}
+	\caption{Charlie's Budget Line}
+	\label{fig4}
+\end{figure}
+
+In the absence of taxes, how many total consumption dollars would Charlie have if he worked 2,000 hours? Note: By total, I mean including non-labor income.
+
+\begin{solution}[2in]
+	$w^N$ is the (absolute) slope of the budget line. Between $A$ and $B$, $w^N = |(18,500 - 5,000)/(3,500 - 5,000)| = \$9$.
+	
+	$W^G = W^N/(1-\tau) = \$9/(1-.10) = \$10$. 
+	
+	Total pre-tax consumption at $h=2,000$: $\$10 \times 2,000 + \$5,000 = \$25,000$. 
+	
+	\ddp{(1) work, (1) answer}
+\end{solution}
+
+
+\end{questions}
+
+\subsection*{Labor Markets}
+
+\begin{questions}
+	\question The labor market in Saxapahaw is a monopsonistic labor market, where the only firm hiring labor is the Saxapahaw Cotton Mill. This labor market is shown in Figure \ref{partc}.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=.8]{mono}
+		\caption{Saxapahaw Labor Market}
+		\label{partc}
+\end{figure}	
+
+
+
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale=.8]{monoans}
+%	\caption{Saxapahaw Labor Market}
+%	\label{partc}
+%\end{figure}		
+
+
+\begin{parts}
+	\part[3] Suppose the government of Saxapahaw imposes a minimum wage of \$12.   Determine Saxapahaw Cotton Mill's optimal employment level and their wage rate under this policy (write this in the space below).  On Figure \ref{partc} above, label the firm surplus, worker surplus, and any deadweight loss resulting in this scenario.
+	\begin{solution}[.5in]
+		$w = \$12$. $Q = 70$. 
+	\end{solution}
+	\part[2] Does this minimum wage reduce the deadweight loss relative to an unregulated monopsonist? Briefly explain why. What minimum wage should be enacted to maximize total surplus?
+	\begin{solution}[2in]
+		Yes, this minimum wage increases total surplus. This is because it increases the wage the monopsonist pays workers \underline{and} increases employment. The optimal minimum wage is \$10.
+		\ddp{Points: (1) TS increases \& why, (1) optimal minimum wage}
+	\end{solution} 
+\end{parts}
+\end{questions}
+
+\subsection*{Human Capital}
+
+\begin{questions}
+	\question[2] Suppose Mike and Turner have the same innate ability, but that Mike has a greater discount rate than Turner ($r_M > r_T$). Sketch and clearly label the marginal rate of return curves for Mike and Turner as a function of schooling. Show the optimal level of schooling each would obtain.
+\begin{solution}[3in]
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=.5]{final9}
+		\end{figure}
+	
+\ddp{(1) correct graph (should not be wage-schooling locus), (1) $S_M < S_T$}
+\end{solution}
+	\question[2] Suppose Tilda has a higher level of innate ability than Jackson, $A^T > A^J$. Sketch and clearly label the marginal rate of return curves for Tilda and Jackson as a function of schooling. Assume they have the same discount rate and show the optimal level of schooling each would obtain.
+\begin{solution}[3in]
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=.5]{final10}
+		\end{figure}
+	
+\ddp{(1) correct graph (should not be wage-schooling locus), (1) $S_J < S_T$}
+\end{solution}
+\end{questions}
+
+\newpage
+
+\subsection*{Inequality}
+
+\begin{questions}
+	\question Figure \ref{fig5} below shows the Lorenz Curves for the countries $X$ and $Y$. Use the graph to answer the questions that follow.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.5]{final4}
+		\caption{Lorenz Curves}
+		\label{fig5}
+	\end{figure}
+	
+	
+	\begin{parts}
+		\part[2] Write the formula to calculate the Gini coefficient in each country in terms of the areas on the graph (e.g., Area E/Area G).
+		\begin{solution}[1in]
+			Country $X$ = $\frac{B}{B+C+D} = 2B = B/A$ \\
+			
+			Country $Y$ = $\frac{B + C}{B + C + D} = 2(B+C) = (B+C)/A$
+			
+		\ddp{Any of those work out to be the same.}
+		\end{solution}
+		\part[2] Which country demonstrates a greater level of inequality?
+		\begin{solution}[1in]
+			Country $Y$
+		\end{solution}
+	\end{parts}
+\end{questions}
+
+\newpage
+
+\subsection*{Discrimination}
+\begin{questions}
+	\question The labor market in the town of Stellaville is perfectly competitive. There are two types of workers firms can hire: beagles and retrievers. Suppose the wage rates for beagles and retrievers are $w_b = \$14$ and $w_r = \$18$, respectively. The price of each unit of output is \$30.  Finally, the marginal product of labor is the same for both groups and is given by 
+	\[MP_E = \frac{2}{(E_b + E_r)^{1/2}}\]
+	
+Some firms in this labor market are discriminatory and have a distaste for hiring beagles. Consider firms $A$ and $B$ shown in the Figure \ref{fig67} below, which shows their optimal labor employment decision given the going wage rate for each type of worker and the firms' discrimination coefficients. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.55]{final6}
+\caption{Employment Decisions}
+\label{fig67}
+\end{figure}
+
+\newpage
+
+\begin{parts}
+
+\part[2] What is the possible range for the discrimination coefficient of firm $A$ (e.g., 0<$d_A$<.43)? If it is possible find the exact number, state it. What type(s) of worker does the firm hire?
+\begin{solution}[1in]
+Firm $A$ only hires retrievers. $w_b(1+d_A) > 18 \Rightarrow d_A > .29$.
+
+If $d_A = .29$ the firm would be indifferent between beagles and retrievers, but would still hire the point they are now.
+
+\end{solution}
+
+\part[2] What is the possible range for the discrimination coefficient of firm $B$ (e.g., 0<$d_B$<.43)? If it is possible find the exact number, state it. What type(s) of worker does the firm hire?
+\begin{solution}[1in]
+Firm $B$ only hire beagles. $w_b(1+d_B) = 16 \Rightarrow d_B =.14$.
+\end{solution}
+
+
+\part[1] Suppose firm $C$ has a discrimination coefficient of $d_C=0$. Label firm $C$'s optimal employment level on the graph above. What type of worker does firm $C$ hire?
+
+\begin{solution}[1in]
+Firm $C$ only hires beagles.
+\end{solution}
+	
+
+\part Bonus points: How many workers does firm $A$ hire (2 pts)?
+
+\begin{solution}[2in]
+$VMP_E = 18 \Rightarrow E_r = 11.11$
+\end{solution}
+
+
+\part Bonus points: How many workers does firm $C$ hire (2 pts)?
+
+\begin{solution}[2in]
+$E_b = 18.37$
+\end{solution}
+
+
+
+\end{parts}
+
+\end{questions}
+
+\end{document}

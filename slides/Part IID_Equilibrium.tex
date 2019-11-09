@@ -1,0 +1,652 @@
+\documentclass[pdf]{beamer}
+\usetheme{Frankfurt}  
+\usecolortheme{whale}
+\usepackage{tikz} 
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}              % used for \eqref{} in this document
+\usepackage{dsfont}
+\usepackage{hyperref}
+\usepackage{threeparttable}
+\usepackage{multirow}
+\graphicspath{{Figures/}}
+\usepackage{booktabs}
+\usepackage{tikz}
+\newtheorem{exmp}{Example}[section]
+\usepackage{subcaption}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage[mathscr]{euscript}
+\usepackage{remreset}% tiny package containing just the \@removefromreset command
+\makeatletter
+\@removefromreset{subsection}{section}
+\makeatother
+\setcounter{subsection}{1}
+
+
+\section{Market Equilibrium}
+
+%% preamble
+\title{Part IID: Labor Market Equilibrium}
+\author[David A. D\'iaz]{David A. D\'iaz}
+\institute{UNC Chapel Hill}
+\date{}
+
+
+\AtBeginSection[] %Section links on slides
+
+
+\begin{document}
+	
+	\begin{frame}
+		
+		\titlepage
+		
+	\end{frame}
+
+
+\begin{frame}{Motivation}
+\begin{itemize}
+	\item How are wages, employment levels determined?
+	\begin{itemize}
+		\item Interaction of labor supply and labor demand
+	\end{itemize}
+	\item How can we measure the value of social welfare that results from the allocation of resources?
+	\item Is this allocation of resources efficient?
+	\item How do different policies (e.g., immigration, the minimum wage) affect the well-being of workers and firms?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Labor Market Equilibrium}
+\begin{itemize}
+	\item Wages ($w^*$) and the quantity of labor employed ($E^*$) are determined by the interaction of labor supply and demand.
+	\item Labor demand: $\uparrow w \Rightarrow \uparrow (w/r) \Rightarrow \downarrow E$
+	\begin{itemize}
+		\item Labor demand slopes downward
+	\end{itemize}
+	\item Labor supply: $\uparrow w \Rightarrow \uparrow LFPR$
+	\begin{itemize}
+		\item Some ambiguity regarding hours worked (income vs. subst. effects)
+		\item On the whole, still believe labor supply slopes upward: $\uparrow w \Rightarrow \uparrow LFPR \Rightarrow \uparrow E$
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Labor Market Equilibrium}
+\begin{itemize}
+	\item Once the competitive wage is determined, each firm hires workers up to the point where $VMP_E = w^*$
+	\item The total number of workers hired by all firms equals the equilibrium employment level $E^*$
+	\item Recall that the framework of a perfectly competitive labor market, there is no unemployment
+	\begin{itemize}
+		\item At $w^*$, the number of persons who want to work equals the number of workers firms want to hire
+		\item Those individuals not working do not want to work at the going wage rate, so they are out of the labor force
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Efficiency}
+\begin{itemize}
+	\item The labor demand curve gives the $VMP_E$
+	\item Profits accruing to firms, or \textbf{producer surplus}, is given by the area below the demand curve and above $w^*$
+	\item The supply curve gives the wage required to induce additional workers into the labor market.
+	\item \textbf{Worker surplus} is the difference between $w^*$ and the value of the worker's time outside the labor market
+	\item This is given by the area below $w^*$ and above the supply curve.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Efficiency}
+	\begin{itemize}
+		\item The \textbf{total gains from trade} are given by the sum of producer surplus and worker surplus
+		\item Is the allocation of resources under a competitive labor market efficient?
+		\begin{itemize}
+			\item I.e., is total surplus maximized at $E^*$?
+		\end{itemize}
+	\item What if firms decided to hire $E_1 < E^*$ workers?
+	\item What if firms decided to hire $E_2 > E^*$ workers?
+	\item In a competitive labor market with no externalities, total surplus is maximized \textit{in the absence of regulation}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Regulation 1: The Minimum Wage}
+	\begin{itemize}
+		\item Binding minimum wage: 
+		\begin{itemize}
+			\item $\uparrow w$, $\downarrow E$
+			\item Leads to a surplus of labor: $E_S > E_D$
+		\end{itemize}
+		\item How does this affect $PS, WS$, and $TS$?
+		\item Who are the ``winners'' and ``losers?''
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Regulation 2: Wage Subsidies}
+	\begin{itemize}
+		\item Consider a wage subsidy for firms: Government pays $X$ dollars to firms per worker hired
+		\item Effect on labor market?
+			\begin{itemize}
+				\item Increases wage received by workers
+				\item Decreases wage paid by firms
+				\item Increases employment
+			\end{itemize}
+		\item Effect on $PS, WS$, and $TS$?
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Equilibrium Across Labor Markets}
+	\begin{itemize}
+		\item A real economy typically consists of more than one single labor market (e.g., region, industry, etc.)
+		\item Application: Regional wage convergence
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Regional Wage Convergence}
+\begin{itemize}
+	\item Framework: Two geographically isolated regions (e.g., North \& South) with perfectly inelastic short-run labor supply
+	\item Workers have identical skillsets
+	\item One of the two regions (say, the South) initially has lower wages
+	\item Can this wage differential persist in the long-run?
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Regional Wage Convergence}
+	\begin{itemize}
+		\item Workers in the South observe the wage differential and can move to the North in the long-run
+		\begin{itemize}
+			\item Supply of workers in the South decreases
+			\item Supply of workers in the North increases
+		\end{itemize}
+		\item Implication: The free exit \& entry of workers will eventually lead to a single equilibrium wage $w^*$
+		\item If firms could freely enter and exit labor markets, the same result would hold
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Regional Wage Convergence}
+	\begin{figure}
+		\includegraphics[scale=.7]{04A_2.png}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}{Readings}
+\begin{itemize}
+	\item Borjas 4.1-4.2
+\end{itemize}
+\end{frame}
+
+\section{Application: Migration}
+
+\begin{frame}{Motivation}
+	\begin{itemize}
+		\item How does migration affect the welfare of 
+		\begin{itemize}
+			\item Native workers?
+			\item Migrant workers?
+			\item Native firms?
+		\end{itemize}
+		\item Depends greatly on the skill composition of natives and migrants.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Motivation}
+	\begin{itemize}
+		\item The share of workers who are foreign born is higher than their population share because
+		immigrants are more likely to be of working age
+		\item Between 1996 and 2011, immigrants accounted for 51 percent of labor force growth
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.3]{04B_5}
+		\caption{\scriptsize US Foreign Born Workers, 1996-2011 (Orrenius \& Zavodny, 2013)}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}{Immigration Trends}
+	\begin{itemize}
+		\item Large-scale immigration in other developed countries has increased in recent years
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.4]{04B_6}
+		\caption{European Immigration, 1980-2012 (de la Rica, et al., 2013)}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Immigration Trends}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.5]{04B_7}
+		\caption{Source: de la Rica, et al. (2013)}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Migrants and the Labor Market}
+	
+	\begin{itemize}
+		\item Case 1: Perfect substitutes
+		\item Immigrants and natives have the same types of skills
+		\item Short-run: Increases supply of labor, driving down native workers wage
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Migrants and the Labor Market}
+\begin{itemize}
+	\item Consider the case of perfect substitutes if labor is supplied inelastically
+	\item Effect of $M$ immigrants on employment and wages? 
+	\begin{itemize}
+		\item $E^* \uparrow$
+		\item $w^* \downarrow$ 
+	\end{itemize}
+	\item Effect on surplus?
+	\begin{itemize}
+		\item $\downarrow$ Native WS
+		\item $\uparrow$ Native FS
+		\item $\uparrow$ Total surplus
+	\end{itemize}
+	\item Increase in national income accruing to natives is called the \textbf{immigration surplus}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Migrants and the Labor Market}
+\begin{itemize}
+	\item Immigration surplus arises because the wage rate equals the productivity of the \textit{last} immigrant hired
+	\item Essentially, immigrants contribute at least as much as they are paid
+	\item What factors impact the size of the surplus?
+	\begin{itemize}
+		\item Number of immigrants
+		\item Elasticity of labor demand curve
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Migrants and the Labor Market}
+\begin{itemize}
+	\item Long-run: Labor demand shifts too
+	\begin{itemize}
+		\item Labor demand is derived from demand for output
+		\item Increased population of wage-earners raises demand for output
+		\item Raised demand for output raises labor demand $\Rightarrow$ pushes native wages back up (could rise up to native wage prior to immigration)	
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Migrants and the Labor Market}
+	
+\begin{itemize}
+	\item Case 2: Complementary Inputs
+	\item Migration of high-skill individuals may generate human capital externalities or spillovers
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Migrants and the Labor Market}
+\begin{itemize}
+\item In the case of complements, the $VMP_E$ of native workers increases $\rightarrow$ labor demand shifts right
+\item Assume spillover effect is greater than labor supply effect $\rightarrow$ labor demand increases more than labor supply
+\item Effect on employment and wages?
+\begin{itemize}
+	\item $\uparrow E^*$
+	\item $ \uparrow w^*$
+\end{itemize}
+\item Effect on surplus?
+\begin{itemize}
+	\item $\uparrow $ Native WS
+	\item $\uparrow $ Native FS
+\end{itemize}
+\end{itemize}
+\end{frame}
+	
+
+\begin{frame}{Migrants and the Labor Market}
+	\begin{itemize}
+		\item Skill distributions of recent US immigrants vary widely.
+		\item In some cases, skill distributions of immigrants vary widely between groups from similar regions or even same country. 
+		\item Hence, both cases have important implications.  
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Readings}
+	\begin{itemize}
+		\item Borjas 4.5; 8.7-8.8
+	\end{itemize}
+\end{frame}
+
+\section{Application: Monopsony}
+
+\begin{frame}{Non-Competitive Labor Markets}
+	\begin{itemize}
+		\item So far, we've looked at the characteristics of labor market equilibrium in competitive markets
+		\item Competitive markets require:
+		\begin{itemize}
+			\item Large number of firms
+			\item Large number of workers 
+			\item Homogeneous workers and firms
+			\item No search frictions between jobs
+		\end{itemize}
+		\item Firms are price takers $\Rightarrow$ individual firms face a perfectly elastic labor supply curve
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Monopsony}
+	\begin{itemize}
+		\item A market is referred to as a \textbf{monopsony} if there are many sellers, but only one buyer
+		\item In this case, the market supply curve is the same as the individual firm's supply
+		\begin{itemize}
+			\item Monopsony faces an upward sloping labor supply curve
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Perfectly Discriminating Monopsony}
+	\begin{itemize}
+		\item A perfectly discriminating monopsonist can hire different workers at different prices
+		\item Thus, the labor supply curve gives the marginal cost of hiring each worker
+		\item Monopsonist cannot influence prices in the output market
+		\item Revenue from hiring an additional worker: $VMP_E$
+		\item Thus, labor demand curve for monopsonist is given by the $VMP_E$ curve
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Perfectly Discriminating Monopsony}
+	\begin{itemize}
+		\item Firms, regardless of market structure, hire until $MB = MC$ of hiring the last worker
+		\item Market equilibrium will occur where supply equals demand $\Rightarrow$ Perfectly discriminating monopsonist hires the same amount of workers as would be hired in a perfectly competitive labor market
+		\item The wage where supply and demand meet is \textbf{not} the competitive wage, but the wage that the monopsonist pays the last worker hired
+		\item Welfare implications?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Non-Discriminatory Monopsonist}
+	\begin{itemize}
+		\item In the non-discriminatory case, the monopsonist must pay workers the same wage
+		\item If the firm wishes to hire an additional worker, it must raise the wage for \textbf{all} workers
+		\item Implication: $MC > w$ 
+		\begin{itemize}
+			\item Perfectly competitive market: $MC = w$
+			\item Perfectly discriminating monopsonist: $MC_i = w_i$ (for each worker $i$)
+		\end{itemize}
+		\item Optimal hiring rule: $VMP_E = MC_E$ (like always)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Non-Discriminatory Monopsonist}
+	\begin{itemize}
+		\item As the monopsonist hires more workers, the wages rises:
+		\begin{itemize}
+			\item $MC_E$ curve is upward sloping
+			\item $MC_E$ rises faster than the wage
+			\item $MC_E$ curve lies above the supply curve
+		\end{itemize}
+		\item Relative to competitive labor markets, monopsonistic markets result in
+		\begin{itemize}
+			\item lower wages
+			\item lower worker surplus \& higher producer surplus
+			\item Deadweight loss
+		\end{itemize}
+		\item Underemployment in monopsonistic markets $\Rightarrow$ allocation of resources is inefficient
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Monopsony \& The Minimum Wage}
+	\begin{itemize}
+		\item Ambiguous effect on employment, depends on level of minimum wage:
+		\begin{itemize}
+			\item If $w_M<\bar{w}<VMP_M$, leads to:
+			\begin{itemize}
+				\item Increase in employment, wages and worker surplus
+				\item Decrease in firm surplus
+				\item Increase in total surplus
+			\end{itemize}
+			\item If $\bar{w}>VMP_M$, leads to:
+			\begin{itemize}
+				\item Increase in wages
+				\item Decrease in employment and firm surplus
+				\item Could increase or decrease worker surplus
+				\item Decrease in total surplus
+			\end{itemize}
+		\end{itemize}	
+		\item To reach the competitive market equilibrium and maximize total surplus, the government would impose a minimum wage where supply = demand 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Readings}
+	\begin{itemize}
+		\item Borjas 4.8
+	\end{itemize}
+\end{frame}
+
+\section{LMDCs}
+
+
+\begin{frame}{LMDCs}
+	\begin{itemize}
+		\item The term ``developing'' country is broadly used to refer to low and middle-income countries classified by Gross National Income (GNI) per capita
+		\item A lot of heterogeneity across ``developing'' countries in regards to their institutions, labor markets, etc.
+		\begin{itemize}
+			\item Certain characteristics still prominent across many different LMDCs
+		\end{itemize}
+		\item For many households in developing countries, time endowment is their primary asset
+		\item Labor markets are critical to welfare of developing country households
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Motivation}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.9]{04D_2.png}
+		\caption{Extreme Poverty by Classification, 2015 (Fantom \& Serajuddin, 2016)}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}{LMDC Characteristics}
+	\begin{itemize}
+		\item Fields (2011) proposes that LMDCS are characterized by
+		\begin{enumerate}
+			\item Low, but rising, unemployment
+			\item Very low total earnings, but high number of work hours
+			\item A great deal of variation in earnings over time
+			\item A large gender gap in earnings and security
+		\end{enumerate}
+	\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{LMDC Characteristics}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=1.25]{04D_8.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{LMDC Characteristics}
+	\begin{itemize}
+		\item Fields (2011), cont.
+		\begin{enumerate}
+			\setcounter{enumi}{4}	
+			\item Large degree of employment in agriculture and informal services
+			\item Large degree of self-employment and unpaid home production
+		\end{enumerate}
+	\end{itemize}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[scale=1]{04D_5.png}
+	\end{figure}
+	
+\end{frame}
+
+
+\begin{frame}{LMDC Characteristics}
+	\begin{itemize}
+		\item Fields (2011), cont.
+		\begin{enumerate}
+			\setcounter{enumi}{6}	
+			\item ``Excess demand'' for wage employment vs self-employment, formal employment vs informal employment, and public employment vs private employment
+			\item Very few social protections in place
+		\end{enumerate}
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=1]{04D_4.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{LMDC Characteristics}
+	\begin{itemize}
+		\item Fields (2011), cont.
+		\begin{enumerate}
+			\setcounter{enumi}{8}	
+			\item Labor markets are often ``segmented'' or ``dual markets''
+			\item ``What developing countries have is an employment problem...rather than an unemployment problem''
+		\end{enumerate}
+		\item Recent trend: Rise in persistent youth unemployment in middle-income countries
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.95]{04D_6.png}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}{LMDC Characteristics}
+	\begin{itemize}
+		\item Campbell \& Ahmed (2012) distinguish between ``traditional'' and ``modern'' labor markets 
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=1]{04D_9.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{LMDCs - Segmentation}
+	\begin{itemize}
+		\item Informality is a predominant feature in developing countries
+		\item Definitions vary, but generally it refers to either 
+		\begin{itemize}
+			\item Self-employment in informal enterprises and/or
+			\item paid employment from informal jobs (e.g., casual labor, unregistered employment)
+		\end{itemize} 
+		\item Usually ``informal'' economy consists of more labor-intensive jobs with lower earnings and non-existent (or non-compliant) labor regulations 
+		\item Informal economy employs a majority of workers and contributes a significant share of GDP in many developing countries (Campbell \& Ahmed, 2012)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{LMDCs - Segmentation}
+	\begin{itemize}
+		\item Why are markets ``segmented?'' Possible explanations:
+		\begin{enumerate}
+			\item ``Exclusion view'': Self-employed and workers in the informal sector would prefer the higher wages and benefits of the formal sector, but are excluded from participating due to labor market rigidities or other barriers
+			\item Markets are not truly ``segmented,'' but rather workers sort into different labor markets voluntarily due to comparative advantage considerations
+		\end{enumerate}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{LMDCs - Segmentation}
+	\begin{itemize}
+		\item Empirical evidence: Arias \& Khamis (2008)
+		\item Analyze participation and earnings performances in the self-employed, informal, and formal sectors in Argentina
+		\item Method: Marginal treatments effects
+		\begin{itemize}
+			\item Addresses potential heterogeneity of ``treatment'' (formal employment) across individuals due to both observable and unobservable characteristics
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{LMDCs - Segmentation}
+\begin{itemize}
+			\item Result: Evidence for both comparative advantage and segmented market stories
+	\begin{itemize}
+		\item No significant difference between earnings of formally employed and self-employed workers (after accounting for selection) - supports comparative advantage story
+		\item Significant earnings penalty for those employed in informal work, regardless of the propensity to select into formal employment - supports segmentation story 
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{LMDCs - Earnings Variability}
+	\begin{itemize}
+		\item Productivity shocks can have significant impacts on earnings
+		\item These shocks may be especially prominent in developing nations and underdevelopment itself may exacerbate productivity risk for the poor
+		\item Empirical evidence: Jayachandran (2006)
+		\item Labor supply response to a wage drop:
+		\begin{itemize}
+			\item Income effect: Workers supply more work
+			\item Substitution effect: Workers supply less work
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{LMDCs - Earnings Variability}
+\begin{itemize}
+			\item Income effect is likely to be stronger in developing countries due to 
+	\begin{itemize}
+		\item inability to save or borrow $\Rightarrow$ ability to use outside funds in order to smooth consumption is limited
+		\item greater poverty $\Rightarrow$ greater marginal utility of income
+		\item lower worker mobility $\Rightarrow$ workers unable to substitute towards other labor markets
+	\end{itemize} 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{LMDCs - Earnings Variability}
+	\begin{itemize}
+		\item Implication: Inelastic labor supply implies that the poor are made worse off due to large wage fluctuations caused by productivity shocks
+		\item Jayachandran (2006) analyzes data on Indian agricultural wages and crop yields between 1956 and 1987
+		\begin{itemize}
+			\item Isolate exogenous changes in productivity by using local rainfall as an \textbf{instrumental variable}
+		\end{itemize}
+		\item Results?
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{LMDCs - Women in the Labor Force}
+	\begin{itemize}
+		\item Women's labor force participation is typically low in developing countries, but most do engage in household production
+		\item Godin (1995): U-shaped pattern in women's labor force participation
+		\begin{itemize}
+			\item Low economic development: High employment rates in agriculture and self-employment
+			\item As income rises, women leave labor market 
+			\item With greater development (and increases in women's human), white-collar opportunities become available and draw women back into workforce 
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{LMDCs - Women in the Labor Force}
+	\begin{itemize}
+		\item Jensen (2012): Provided three years of recruiting services in randomly selected rural Indian villages in the business process outsourcing industry (BPO) 
+		\begin{itemize}
+			\item Key: Relatively new industry, so awareness of jobs was limited in rural areas
+			\item Thus, intervention identifies the effect of increasing labor market opportunities 
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{LMDCs - Women in the Labor Force}
+\begin{itemize}
+	\item Results:
+	\begin{itemize}
+		\item Labor market: Women aged 15-21 in ``treatment'' villages were more likely to work than those in control villages, both in BPO work and other paid work
+		\item Women also expressed greater interest in working throughout their lives, indicating a shift in aspirations 
+	\end{itemize}
+	\item Results on non-labor market outcomes?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Readings}
+	\begin{itemize}
+		\item *Ahmed \& Campbell (2012). The Labour Market in Developing Countries. Working Paper
+		\item Arias \& Khamis (2008). Comparative Advantage, Segmentation, and Informal Earnings: A Marginal Treatment Effects Approach. \textit{IZA Discussion Paper 3916}
+		\item *Fields, G. (2011). Labor Market Analysis for Developing Countries. \textit{Labour Economics}
+		\item Jayachandran, S. (2006). Selling Labor Low: Wage Responses to Productivity Shocks in Developing Countries. \textit{Journal of Political Economy}
+		\item *Jensen, R. (2012). Do Labor Market Opportunities Affect Young Women's Work and Family Decisions? Experimental Evidence from India. \textit{The Quarterly Journal of Economics}
+	\end{itemize}
+\end{frame}
+	
+\end{document}

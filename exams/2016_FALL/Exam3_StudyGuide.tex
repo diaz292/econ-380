@@ -1,0 +1,141 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\usepackage{threeparttable}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{sgamevar}
+\usepackage{sgame}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah (blank next two lines out for no solutions, unblank #3)
+\printanswers
+\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+%\newcommand{\dd}[1]{}  
+%\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+	
+	
+	\title{\textbf{Exam 3 Study Guide} \\ \vspace{2 mm} {\large ECON 380} \\ \large{UNC Chapel Hill}}
+	\date{}
+	\maketitle
+	
+Stuff to know for exam 3:
+
+\subsection*{Inequality}
+
+\begin{enumerate}
+	\item What has been the trend in US wage inequality since $\sim$1970 (increasing, decreasing, neither)?
+	\item Has the trend in (1) been mostly driven by the changes in the bottom, middle, or top of the wage distribution?
+	\item What the 90-10, 90-50, 50-10, etc. wage gaps measure
+	\item How to draw a Lorenz curve given data on household shares and income (e.g., class example or homework problem)
+	\item How to compute Gini coefficient
+	\item Why might wage inequality be bad? In what ways might it be good?
+	\item Basic gist of possible explanations for recent trend in wage inequality: (i) tax changes, (ii) supply shifts in skilled labor, (iii) skill-based technology change, and (iv) composition effects
+	\item What are the weaknesses of each of the above explanations (e.g., composition effects don't explain the rise in upper tail inequality)?
+\end{enumerate}
+
+\subsection*{Superstars \& Intergenerational Inequality}
+
+\begin{enumerate}
+	\item What is a ``superstar'' in the context of labor economics?
+	\item What characteristics do occupations with superstars generally share?
+	\item Can rising superstar earnings explain much of the wage growth of the top .1\%?
+	\item What is the basic mechanism driving why inequality might persist across generations?
+	\item What is regression towards the mean? Why might we observe this?
+	\item How to compute and interpret the intergenerational correlation coefficient
+	 
+\end{enumerate}
+
+
+\subsection*{Labor Market Discrimination}
+
+\begin{enumerate}
+	\item What is labor market discrimination?
+	\item What are pre-labor market differences?
+	\item What has been the trend in the black-white wage since the 1970s (shrinking gap, rising, neither)?
+	\item What has been the trend in the male-female wage since the 1970s (shrinking gap, rising, neither)? 
+\end{enumerate}
+
+\subsection*{Taste-Based Discrimination}
+
+\begin{enumerate}
+	\item What is taste-based discrimination?
+	\item Know how to do HW6, \#1 
+	\item Know the graphs from class related to employer-based discrimination 
+	\item Who are the ``winners'' and ``losers'' from the presence of discriminatory firms?
+	\item What is the relationship between the profits of discriminatory firms vs ND firms? 
+	\item What is the long-run outcome predicted by employer-discrimination?
+	\item Does employer-based discrimination explain the existence of wage gaps? 
+	\item Does employee-based discrimination explain the existence of wage gaps?
+	\item Does customer-based discrimination explain the existence of wage gaps?
+\end{enumerate}
+
+\subsection*{Statistical Discrimination}
+
+\begin{enumerate}
+	\item What is statistical discrimination?
+	\item Know graphs from class related to statistical discrimination
+	\item Implications of statistical discrimination if average test scores are the same, but the the signal is more ``noisy'' for one group? Who benefits? Who is hurt?
+	\item Can a ``noisy'' signal (even if test scores, on average, are equal) lead to wage gaps? Will average wages be different?
+	\item Implications of statistical discrimination if the average test score of one group is lower than the other (assuming the signal is just as ``noisy'' for each group)? 
+	\item How do different average test scores lead to wage gaps? Does this hold in the long-run? Why?
+\end{enumerate}
+
+\subsection*{Measuring Discrimination}
+
+\begin{enumerate}
+	\item How to interpret linear wage schooling locus
+	\item How different coefficients are evidence of discrimination 
+	\item Oaxaca-Blinder decomposition: pre-market component and discrimination component
+	\item Know graph from class and interpretation: discrimination component is $w_m^* - \bar{w}_m$ (what average minority worker would receive if ``treated as white worker'' minus average minority worker wage); pre-market component is $\bar{w}_w - w_m^*$
+\end{enumerate}
+
+\subsection*{Discrimination Evidence}
+
+\begin{enumerate}
+	\item Know 2-3 of the potential issues that arise when estimating the typical earnings model testing for discrimination
+	\item Neal \& Johnson (1996): What do the authors find drives a large portion of the black-white wage gap? Do they argue the wage gap is largely driven by discrimination or pre-labor market factors?
+	\item Altonji \& Pierret (2001): Do the authors find evidence that firms statistically discriminate on the basis of race? 
+	\item Bertrand \& Mullainathan (2004): Know basic set-up of the study. How did the callback rates for ``white sounding names'' compare to that of ``black sounding names?'' 
+	\item In recent years, how has the role of explicit labor market discrimination in driving different socio-economic outcomes changed? Will policies targeting labor market discrimination or policies targeting school achievement gaps be more effective in closing wage gaps and other differences in socio-economic outcomes?
+	\item What is likely the greatest mechanism driving the gender wage gap? How does the shape of the relative earnings curve between males and females over the life-cycle reflect this?
+	\item What is occupational crowding? Does it necessarily play a large role in driving the gender wage gap?
+\end{enumerate}
+
+
+\end{document}

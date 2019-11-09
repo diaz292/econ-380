@@ -1,0 +1,638 @@
+\documentclass[pdf]{beamer}
+\usetheme{Frankfurt}  
+\usecolortheme{whale}
+\usepackage{tikz} 
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}              % used for \eqref{} in this document
+\usepackage{dsfont}
+\usepackage{hyperref}
+\usepackage{threeparttable}
+\usepackage{multirow}
+\graphicspath{{Figures/}}
+\usepackage{booktabs}
+\usepackage{tikz}
+\newtheorem{exmp}{Example}[section]
+\usepackage{subcaption}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage[mathscr]{euscript}
+\usepackage{remreset}% tiny package containing just the \@removefromreset command
+\makeatletter
+\@removefromreset{subsection}{section}
+\makeatother
+\setcounter{subsection}{1}
+
+
+\section{Labor Market Discrimination}
+
+%% preamble
+\title{Part VA: Discrimination Theories}
+\author[David A. D\'iaz]{David A. D\'iaz}
+\institute{UNC Chapel Hill}
+\date{}
+
+
+\AtBeginSection[] %Section links on slides
+
+
+\begin{document}
+	
+	\begin{frame}
+		
+		\titlepage
+		
+	\end{frame}
+	
+	\begin{frame}{Table of Contents}
+		
+		\tableofcontents
+	\end{frame}
+
+	
+	\begin{frame}{Motivation}
+		\begin{itemize}
+			\item Certain demographic groups receive different average wages.
+			\item In USA:
+			\begin{itemize}
+				\item Black/Hispanic wages are lower than White/Asian wages
+				\item Female wages are lower than male wages
+			\end{itemize}
+			\item Important policy issue:  What causes this, and what should we  do about it?  
+			\item Think historically:  minorities/women represent massive untapped ``talent pool'' in labor market.  
+			\begin{itemize}
+				\item 	Entry of women into workforce one of the major drivers of 20th century growth in US.
+			\end{itemize}
+			\item 	Today:  Things have improved by most measures, but still a major issue.
+			
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Labor Market Discrimination}
+		\begin{itemize}
+			\item Labor Market Discrimination:
+			\begin{itemize}
+				\item 	Two individuals who are alike in every relevant characteristic (schooling, intelligence, experience, etc.) but are paid a different wage due to a factor which does not affect productivity (e.g., race/gender).
+			\end{itemize}
+			\item Race/gender:  Holding other characteristics constant, differences in race/gender should have no effect on productivity.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Labor Market Discrimination}
+		\begin{itemize}
+			\item Pre-Labor Market differences in relevant characteristics are \underline{not} labor market discrimination.
+			\item ``Pre-Labor Market differences''
+			\begin{itemize}
+				\item 	Education quality (e.g., Jim Crow laws)
+				\item Education level
+				\item Preferences for labor/leisure, risky labor, job search
+			\end{itemize}
+			\item These all affect wages, but are determined outside of the labor market
+			\item Pre-Labor Market differences can often arise from some form of discrimination, but not labor market discrimination!
+			
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Motivation}
+		\begin{figure}
+			\centering 
+			\includegraphics[scale=.5]{07A_1}
+			\caption{2008 US Median Weekly Earnings by Race \& Gender (NPR)}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}{A Brief History of Relevant Policy}
+		\begin{itemize}
+			\item Colonization to 1865:  Slavery
+			\item 1896:  Plessy v. Ferguson:  SCOTUS upholds constitutionality of racial segregation in public facilities and schools.
+			\item 1954:  Brown v. Board of Education:  SCOTUS declares state laws establishing separate public schools for black and white students to be unconstitutional.
+			\item 1963:  Equal Pay Act:  Federal law attempting to abolish the gender wage disparity.
+			\item 1964:  Equal Employment Opportunity Act:  Declares it unlawful to (i) fail to hire or to fire an individual on the basis of race, religion, gender, and (ii) limit employment opportunities on the basis of race, religion, gender.
+			
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Racial Wage Gaps}
+		\begin{itemize}
+			\item Black-white wage gap diminished significantly from $\sim$1960 - $\sim$2000.
+			\item Limited progress in past 15 years.
+		\end{itemize}
+		\begin{figure}
+			\centering 
+			\includegraphics[scale=.3]{07A_2}
+			\caption{Source: Lang \& Lehmann (2011)}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}{Racial Wage Gaps}
+		\begin{itemize}
+			\item Earnings disparities (generally in the range of 25\% for black vs. white men) are dwarfed by wealth disparities.
+		\end{itemize}
+		\begin{figure}
+			\centering
+			\includegraphics[scale=.35]{07A_3}	
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}{Racial Wage Gaps}
+		\begin{itemize}
+			\item What generates the racial wage gap?
+			\item Big topic of study. Reasonable possibilities:
+			\begin{itemize}
+				\item Labor market discrimination
+				\item Lack of access to high quality schooling
+				\item Dynamic/long-run effects of prior discriminatory policies
+				\item Peer effects (i.e., extent to which outcomes are results of peers' outcomes) 
+			\end{itemize}
+			\item More on this later
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Gender Wage Gaps}
+		\begin{itemize}
+			\item Male-female wage gap has slowly diminished post-WWII.
+			\item But, limited progress in past decade. 
+		\end{itemize}
+		\begin{figure}
+			\centering 
+			\includegraphics[scale=.5]{07A_4}
+			\caption{Source: NPR}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}{Gender Wage Gaps}
+		\begin{itemize}
+			\item US gender wage gap is around average for developed nations.
+		\end{itemize}
+		\begin{figure}
+			\centering 
+			\includegraphics[scale=.4]{07A_5}
+			\caption{Source: NYT}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}{Gender Wage Gaps}
+		\begin{figure}
+			\centering 
+			\includegraphics[scale=.55]{07A_6}
+			\caption{Source: Bronson (2014)}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}{Gender Wage Gaps}
+		\begin{figure}
+			\centering 
+			\includegraphics[scale=.55]{07A_7}
+			\caption{Source: Bronson (2014)}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}{Gender Wage Gaps}
+		\begin{figure}
+			\centering 
+			\includegraphics[scale=.55]{07A_8}
+			\caption{Source: Bronson (2014)}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}{Gender Wage Gaps}
+		\begin{figure}
+			\centering 
+			\includegraphics[scale=.55]{07A_9}
+			\caption{Source: Bronson (2014)}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}{Gender Wage Gaps}
+		\begin{itemize}
+			\item What generates the gender wage gap? 
+			\item Another big topic. Pay gap is on the scale of about $\sim$20\%
+			\item Differences in other factors may drive some of the wage gap
+			\begin{itemize}
+				\item Education levels:  Young women on average have more years of education than young men, but men disproportionately choose high-paying fields.
+				\item Industry choice:  Female-dominated industries tend to be lower-paying industries.
+				\item Children:  Much recent evidence indicates that gender wage gaps are far greater for women with children.  
+				\begin{itemize}
+					\item 	Wages grow slowly for women with children during important years (ages 25-35).
+				\end{itemize}	
+			\end{itemize}
+			\item Controlling for relevant differences decreases estimates of labor market discrimination, but it still plays a significant role.
+			\item Again, more on this later
+		\end{itemize}
+	\end{frame}
+	
+	
+	\begin{frame}{Readings}
+		\begin{itemize}
+			\item Borjas 9.1
+		\end{itemize}
+	\end{frame}
+
+
+\section{Taste-Based Discrimination}
+
+
+\begin{frame}{Motivation}
+	\begin{itemize}
+		\item Data indicates that certain demographic groups earn less than others.
+		\item Some proportion of the wage gap is unexplained by differences in observable factors (e.g., schooling, occupation, etc.).
+		\item Why do we see this?
+		\item How can we better understand this phenomenon using economic models of discriminatory behavior?
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Theories of Labor Market Discrimination}
+	\begin{enumerate}
+		\item Taste-based: Some people (firms, employees, customers) simply don't like other ``types'' of people or have a preference towards a certain ``type.'' For example,
+		\begin{itemize}
+			\item an employer has a prejudice towards black workers
+			\item other employees do not like working with women
+			\item customers do not like being served by a minority
+		\end{itemize}
+		\item Statistical: Firms use race/gender as a way to estimate worker productivity when they have other limited information.  We will get to this later.
+		
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Taste-Based Discrimination}
+	\begin{itemize}
+		\item Cover three different avenues of taste-based discrimination to see how well each phenomenon might explain the persistence of discriminatory wage gaps.
+		\begin{enumerate}
+			\item Employer-based:  Employers have a distaste for hiring workers from certain demographic groups.
+			\item Employee-based:  Employees have a distaste for having co-workers from certain demographic groups.
+			\item Customer-based:  Customers have a distaste for shopping in stores owned/operated by people from certain demographic groups.
+		\end{enumerate} 
+		\item We'll generally describe these using the most studied wage gaps (white/black, male/female), but they can be applied more generally.
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Employer Discrimination}
+	\begin{itemize}
+		\item Consider two types of workers in a competitive labor market, type $A$ and type $B$
+		\item Prices of labor: $w_A$ and $w_B$
+		\item Disutility from hiring type $B$: Employer acts as if cost of hiring type $B$ is $w_B(1+d)$, where $d>0$ 
+		\item $d$ is the ``discrimination coefficient''
+		\item Going the other way: Nepotism - preference for hiring type $B$ workers
+		\begin{itemize}
+			\item Utility-adjusted cost of hiring: $w_B(1-n)$, where $n > 0$
+			\item $n$ is the ``nepotism'' coefficient
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Employer Discrimination}
+	\begin{itemize}
+		\item Example: Black-white wage gap
+		\item Basic structure:  Firms hire both white and black workers to produce output.
+		\item Market populated by two types of firms:
+		\begin{itemize}
+			\item Type 1:  Non-discriminatory:  Goal is to maximize profits.
+			\item 	Type 2:  Discriminatory:  Cares about maximizing profits, but also has a distaste for hiring black workers.
+		\end{itemize}
+		\item	Key:  Both worker types are equally productive.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Employer Discrimination}
+	\begin{itemize}
+		\item Assumption: Black and white workers are perfect substitutes in production $\Rightarrow$ both types have the same marginal productivity
+		\item Output is a function of total workers employed (no capital for simplicity)
+		\[q = f(E_B,E_W) = f(E_B+E_W)\]
+		\item Output only depends on total number of workers - composition of workers does not matter
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Employer Discrimination}
+	\begin{itemize}
+		\item Let's look at the hiring decisions of non-discriminatory firms
+		\item As always, chooses inputs ($E_B, E_W$) to maximize profits
+		\[\Pi = TR - TC = p\cdot f(E_B,E_W) - w_B \cdot E_B - w_W \cdot E_W\]
+		where $w_B$ and $w_W$ are the market wages earned by black and white workers, respectively
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Employer Discrimination}
+	\begin{itemize}
+		\item Which type of worker is more productive per-dollar spent?
+		\item Whichever is cheaper!
+		\item Hiring decision for non-discriminatory firm:
+		\begin{itemize}
+			\item $w_W < w_B \Rightarrow$ hire only white workers
+			\item $w_W > w_B \Rightarrow$ hire only black workers
+			\item $w_W = w_B \Rightarrow$ hire both types of workers
+		\end{itemize}
+		\item Employment decision: As always, hire labor up to where $w = VMP_E$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Employer Discrimination}
+	\begin{itemize}
+		\item Now let's turn to the behavior of firms that discriminate against black workers, assuming that $w_B < w_W$
+		\item Firm acts as if black wage is $w_B(1+d)$, where $d>0$
+		\item Discriminatory firms compare \textit{perceived costs}, $w_W$ versus $w_B(1+d)$
+		\item Hiring decision:
+		\begin{itemize}
+			\item $w_W < w_B(1+d) \Rightarrow$ hire only white workers
+			\item $w_W > w_B(1+d) \Rightarrow$ hire only black workers
+			\item $w_W = w_B(1+d) \Rightarrow$ hire both types of workers
+		\end{itemize}
+		\item Thus, discriminatory firms are willing to pay a premium to hire an equally productive white worker and will only hire black workers if they can be hired at a significant discount
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Employer Discrimination}
+	\begin{itemize}
+		\item Key question motivating this model:  Can presence of prejudiced firms result in wage gaps between equally productive workers?
+		\item Yes, but with a very important caveat.
+		\item Winners from presence of prejudiced firms: 
+		\begin{itemize}
+			\item White workers, who receive an artificially high wage
+			\item Non-discriminatory firms, who are able to hire black workers at an artificially low wage
+		\end{itemize}
+		\item Losers:
+		\begin{itemize}
+			\item Black workers, who receive an artificially low wage
+			\item Discriminatory firms, who effectively finance their prejudice by decreasing their own profits
+		\end{itemize}
+		\item Firm which hires (more expensive) white labor will earn strictly lower profits than firm which hires (cheaper) black labor.  Hence, ND firms always earn greater profits: $\Pi_{ND} \ge \Pi_D$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Employer Discrimination}
+	\begin{itemize}
+		\item For any firm where $w_B(1+d) > w_W$, hires only white labor, sees strictly lower profits than ND firm
+		\item Even for discriminatory firms where $w_B(1+d) < w_W$ so that they hire only black labor, discriminatory firms hire less black workers than non-discriminatory firms and realize lower profits
+		\item In a market with free entry, profits for the most efficient firms are driven to zero in the long-run.  Inefficient firms earn negative profits, and are pushed out of the market.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Employer Discrimination}
+	\begin{itemize}
+		\item Discriminatory firms represent inefficient firms; they are not producing output in the cheapest possible manner.
+		\item If $\Pi_{ND} > 0$, more ND firms enter the market and continue to enter until $\Pi_{ND} = 0$
+		\item If $\Pi_{ND} = 0$, then $\Pi_D < 0 \Rightarrow$ Discriminatory firms exit the market. 
+		\item In the long-run, only ND firms prevail
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Employer Discrimination}
+	\begin{itemize}
+		\item Recall the purpose of our theory here is to understand how different types of prejudice in the labor market can lead to wage gaps.
+		\item Employer-based discrimination can explain the existence of short-run wage gaps between black/white, male/female, etc.
+		\item But, it can't explain the persistence of long-run wage gaps between black/white, male/female, etc.
+		\item Could other types of prejudice explain long-run wage gaps?  
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Employee Discrimination}
+	\begin{itemize}
+		\item Second possibility: Employees are discriminatory.  
+		\item For example, suppose male employees have a distaste for working with women. Women are indifferent about the composition of workers.
+		\item Males receiving a wage $w_M$ will act as if their wage is only $w_M(1-d)$. Women's actual and perceived wages are $w_F$.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Employee Discrimination}
+	\begin{itemize}
+		\item Implication:  Male workers require a wage premium to work alongside female employees.
+		\item Does a firm have incentives to reward male workers for such preferences? 
+		\item Hence, employee-based discrimination is largely a non-credible means of explaining wage gaps.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Customer Discrimination}
+	\begin{itemize}
+		\item Third possibility:  Discriminatory customers do not like interacting with certain types of producers.
+		\item Example: Suppose some people have a distaste for shopping at a minority-owned store.  These people have a lower willingness-to-pay for same product if it’s sold at minority-owned store.
+		\item Purchasing decision is not based on the actual price of the good $p$, but on the utility-adjusted price $p(1+d)$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Customer Discrimination}
+	\begin{itemize}
+		\item If people, on average, have lower willingness-to-pay for product sold at minority-owned store, those stores will sell identical product for a lower price:  $p_M < p_W$, where $w$ denotes white-owned and $m$ denotes minority-owned.
+		\item In equilibrium, in a competitive market:
+		\begin{itemize}
+			\item $w_W = VMP_W = p_W\cdot MP_W$
+			\item $w_M = VMP_M = p_M\cdot MP_M$
+		\end{itemize}
+		\item Perfect substitutes: $MP_W = MP_M$
+		\item Result: $w_W > w_M$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Customer Discrimination}
+	\begin{itemize}
+		\item If this behavior is prevalent, this can explain why we might observe wage gaps.  But, how important is the magnitude of this effect?
+		\item Tough to say.
+		\item Many occupations don't require direct customer interaction, so this can't explain wage gaps in that many industries.
+		\item Effect of this type of discrimination need not solely appear in wages: Holzer and Ihlanfeldt (1998)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Summary}
+	\begin{itemize}
+		\item Can taste-based theories explain why we observe discriminatory wage gaps?  Sometimes they can, sometimes they can't:
+		\begin{itemize}
+			\item 	Employer-Based:  Explains short-run gaps, but not long-run gaps
+			\item Employee-Based:  Does not explain gaps.
+			\item Customer-Based:  Can explain wage gaps, but only in settings where customers interact with producers.
+		\end{itemize}
+		\item Many economists have argued that the role of taste-based theories in recent years is overstated.  Next, we'll move on to a different theory of discrimination.
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Readings}
+	\begin{itemize}
+	\item	Borjas 9.2 - 9.5
+	\end{itemize}
+\end{frame}
+
+\section{Statistical Discrimination}
+
+
+
+\begin{frame}{Statistical Discrimination}
+	\begin{itemize}
+		\item Criticism of taste-based models of discrimination:
+		\item Why does this behavior persist in equilibrium?
+		\item We can show that if firms are discriminatory, then there may be a wage gap.
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Statistical Discrimination}
+\begin{itemize}
+		\item But, why are firms discriminatory in the first place?
+	\item Shouldn't discriminatory firms be weeded out of the market, as they effectively have higher operating costs?
+	\item For taste-based discrimination to drive wage gaps, we would need a very large measure of discriminatory firms/customers/employees.	
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Statistical Discrimination}
+	\begin{itemize}
+		\item Taste-based theories have significant shortcomings, but why does this matter from a policy standpoint?  Consider:
+		\item Equal pay laws:  Mandate that individuals from different demographic groups who have equal productivity levels receive equal pay.
+		\begin{itemize}
+			\item For the sake of argument, assume these are enforceable (it's tough in reality)
+		\end{itemize}
+		\item Under taste-based discrimination, these should act to close wage gaps.
+		\item If wage gaps are driven by deeper structural issues (e.g., school quality) such laws might not have any effect on wages
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Statistical Discrimination}
+	\begin{itemize}
+		\item Consider the following situation:
+		\item Male and female who are identical outside of gender apply for a particular job
+		\item Both give the exact same answers in an interview
+		\item Why might a firm who is solely interested in maximizing profits have preferences for one over the other?	
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Statistical Discrimination}
+	\begin{itemize}
+		\item Statistical Discrimination:  Example
+		\begin{itemize}
+			\item Both candidates observationally equivalent outside of gender.
+			(Suppose in truth, both have the same long-term plans.)
+		\end{itemize}
+		\item Firms do not observe long-term plans.
+		\item Firm estimates likelihood of employees staying at this job from statistical averages of male/female job quits.
+		\item With perfect information, firm is indifferent between the candidates.
+		\item Incomplete information $\Rightarrow$ estimate the information they don't know by looking at statistical averages.  Choose male candidate due to risk of losing female worker to child-rearing.
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Statistical Discrimination}
+	\begin{itemize}
+		\item More common example: Car insurance pricing
+		\begin{itemize}
+			\item 16 year old male and 16 year old female both apply for insurance
+			\item 	Observationally equivalent, both have clean records, both are equally skilled drivers.
+			\item 	16 year old male pays significantly higher premium
+		\end{itemize}
+		\item	Why?  
+		\begin{itemize}
+			\item 	Insurer knows that on average, the 16-year old male has a higher expected cost to insure than 16 year old female.
+			\item	This particular 16-year old male may be a great driver, but the insurer has imperfect information.  So they estimate his probability of getting in a wreck from the past records of other 16-year old males.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Statistical Discrimination}
+	\begin{itemize}
+		\item Firms:
+		\begin{itemize}
+			\item 	Operate in perfectly competitive market
+			Pay wages equal to expected value of workers' marginal product
+			\item Wages paid based on all available information
+		\end{itemize}
+		\item	Workers:
+		\begin{itemize}
+			\item 	Have productivity level determined before entering labor market (e.g. worker enters labor market having completed schooling, etc.)
+			\item Characterized by membership in one of two groups (black/white, male/female, etc.)
+		\end{itemize}
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Statistical Discrimination}
+	\begin{itemize}
+		\item Firms get job applications from a sample of applicants.
+		\item Applicant has productivity level denoted $Y$
+		\item Firms do not observe $Y$.  Instead, they use available information (interview, resume, etc.) and assign a score to each applicant, denoted $T$.
+		\item $T$ contains some information about applicant's productivity.
+		\item How will profit-maximizing firm determine wages?
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Statistical Discrimination}
+	\begin{itemize}
+		\item What is the firm's best estimate, $\hat{Y}$, based on their observed information?
+		\item Assuming a linear relationship, the firms best estimate is 
+		\[\hat{Y} = \mathbb{E}[Y|T] = \alpha T + (1-\alpha)\bar{T}\]
+		
+		where $0 \le \alpha \le 1$ and $\bar{T}$ denotes the average score of the demographic group
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Statistical Discrimination}
+	\begin{itemize}
+		\item In our model, $\alpha$ is the weight the firm puts on the test score.
+		\item If  $\alpha =0$, firm places no weight on test score, all of weight on group averages.
+		\item If $\alpha = 1$, firm places full weight on test score, no weight on group averages.
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Statistical Discrimination}
+	\begin{itemize}
+		\item How does this lead to wage gaps?  
+		\item If test scores are identical between groups, average wages are the same.  But differences in the wage distribution can still arise:
+		\item Suppose men, women have same average test score.
+		\item However, suppose firms are more confident in their ability to evaluate male candidates (hence, the test conveys more information).
+		\item Implications?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Statistical Discrimination}
+	\begin{itemize}
+		\item Women are paid better in low-skill jobs
+		\item Men are paid better in high-skill jobs
+		\item But, doesn't explain why average wages are different.
+		\item How can we explain the long-run persistence of wage gaps?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Statistical Discrimination}
+	\begin{itemize}
+		\item Prior example assumes both groups start at the same level.  \item What if one group starts at a lower level?
+		\item Example: US differences in school quality by race.
+		\item Suppose white schooling quality is higher on average than black schooling quality.  
+		\item Initial outcome is: $\bar{T}_B < \bar{T}_W$, $\bar{w}_B < \bar{w}_W$
+		What happens to wage gaps in the long-run?
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Statistical Discrimination}
+	\begin{itemize}
+		\item Statistical discrimination as a self-fulfilling prophecy
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.4]{07C_1}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Statistical Discrimination}
+	\begin{itemize}
+		\item This is a better story to explain long-run wage gaps.
+		\item One group starts at ``bad equilibrium,'' continues with ``bad equilibrium''
+		\item One group starts at ``good equilibrium,'' continues with ``good equilibrium''
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Statistical Discrimination}
+	\begin{itemize}
+		\item Bad policies from 
+		$>$50 years ago can still have a large effect on today's racial wage gaps, even in absence of taste-based discrimination.
+		\item Equal pay laws do not close wage gaps here.  Policy aimed at closing educational gaps is more effective if statistical discrimination rather than taste-based drives wage gaps.
+		\item Labor market discrimination can influence skills gaps.  If discrimination decreases return on education for black workers, human capital theory would suggest this leads to lower chosen schooling levels.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Readings}
+	\begin{itemize}
+		\item Borjas 9.6
+	\end{itemize}
+\end{frame}
+	
+\end{document}

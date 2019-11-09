@@ -1,0 +1,419 @@
+\documentclass[pdf]{beamer}
+\usetheme{Frankfurt}  
+\usecolortheme{whale}
+\usepackage{tikz} 
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}              % used for \eqref{} in this document
+\usepackage{dsfont}
+\usepackage{hyperref}
+\usepackage{threeparttable}
+\usepackage{multirow}
+\graphicspath{{Figures/}}
+\usepackage{booktabs}
+\usepackage{tikz}
+\newtheorem{exmp}{Example}[section]
+\usepackage{subcaption}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage[mathscr]{euscript}
+\usepackage{remreset}% tiny package containing just the \@removefromreset command
+\makeatletter
+\@removefromreset{subsection}{section}
+\makeatother
+\setcounter{subsection}{1}
+
+
+\section{The Participation Decision}
+
+%% preamble
+\title{Part IIB: Neoclassical Model of Labor Supply II}
+\author[David A. D\'iaz]{David A. D\'iaz}
+\institute{UNC Chapel Hill}
+\date{}
+
+
+\AtBeginSection[] %Section links on slides
+
+
+\begin{document}
+	
+	
+	\begin{frame}
+		
+		\titlepage
+		
+	\end{frame}
+
+
+\begin{frame}{The Participation Decision}
+\begin{itemize}
+\item Recall that a worker that chooses to not work (i.e., $h = 0$) is at their endowment point $E$
+\item At this point, the worker consumes $L = T$ hours of leisure and $V$ dollars of consumption goods
+\item The worker can choose to enter the labor market and will give up leisure time for earnings which can be used to purchase more consumption goods
+\item What factors motivate an individual to enter the labor force? 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{The Reservation Wage}
+\begin{itemize}
+\item \textbf{Reservation wage:} The wage at which an individual is indifferent between staying out of the labor force (working no hours) and participating in the labor force (working positive hours)
+
+\item The reservation wage is the slope of the indifference curve at the endowment point
+\item Thus, it is given by the $MRS_{L,C}$ at the endowment point where $C = V$ and $L = T$
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Reservation Wage}
+\begin{itemize}
+\item A person will not work at all if the market wage is less than the reservation wage: $w \le w^{res} \Rightarrow h^*=0$
+\item If the market wage is greater than their reservation wage, the worker will enter the labor force: $w > w^* \Rightarrow h^*>0$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{exmp}
+Cindy has the utility function $U(C,L) = C\cdot L$. This functional form implies that Cindy's marginal rate of substitution is $C/L$. Cindy receives \$660 each week from her grandmother, regardless of how much she works. Assuming there are 110 hours each week available to split between work and leisure, what is Cindy's reservation wage?
+\end{exmp}
+\end{frame}
+
+
+\begin{frame}{Comparative Statics: A Change in Non-Labor Income}
+\begin{itemize}
+\item The effect of non-labor income on participation is unambiguous under the assumption that the marginal utility of consumption decreases as consumption rises (``diminishing marginal utility of consumption'')
+\item Assuming diminishing marginal utility of consumption holds, an increase (decrease) in non-labor income will lead to a decrease (increase) in labor force participation
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Comparative Statics: A Change in Wages}
+\begin{itemize}
+\item Effect of change in wage on participation is unambiguous
+\item The increase in the wage rate will raise the wage above the reservation wage for some workers
+\item Thus, an increase in the wage rate increases labor force participation
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Comparative Statics: A Change in Wages}
+\begin{itemize}
+\item An increase in the wage only generates an income effect if the person is already working
+\item For a non-worker, a wage increase only makes leisure time more expensive, and thus is more likely to draw them into the work force
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Readings}
+\begin{itemize}
+\item Borjas 2.6
+
+\end{itemize}
+\end{frame}
+
+\section{The Labor Supply Curve}
+
+\begin{frame}{Labor Supply Elasticity}
+\begin{exmp}
+	Cindy has the utility function $U(C,L) = C\cdot L$. This functional form implies that Cindy's marginal rate of substitution is $C/L$. Cindy receives \$660 each week from her grandmother, regardless of how much she works. Assume there are 110 hours to allocate between consumption and leisure each week. 
+	
+\begin{enumerate}[(a)]
+	\item What is Cindy's reservation wage?
+	\item If the wage rate is \$15 an hour, how many hours will Cindy work?
+	\item If the wage rate is \$20 an hour, how many hours will Cindy work?
+	\item If the wage rate is \$25 an hour, how many hours will Cindy work?
+\end{enumerate}
+\end{exmp}
+\end{frame}
+
+
+\begin{frame}{Labor Supply Elasticity}
+\begin{itemize}
+	\item The relationship between hours of work and the wage rate is the \textbf{labor supply curve}
+	\item A measure of how responsive workers are to changes in the wage rate is given by 
+	\[\varepsilon_{h^*,w} = \frac{\%\Delta h^*}{\%\Delta w} = \frac{\Delta h^*}{\Delta w} \cdot \frac{w_0}{h_0^*}\]
+	\item Hours worked are more responsive to changes in the wage rate the greater the absolute value of the labor supply elasticity
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Labor Supply Elasticity}
+\begin{itemize}
+
+\item If $|\varepsilon_{h^*,w}| < 1$, the labor supply curve is said to be \textit{inelastic}
+\item If  $|\varepsilon_{h^*,w}| > 1$, the labor supply curve is said to be \textit{elastic}.
+\item If the substitution effect dominates the income effect, what does that imply about the sign of labor supply elasticity?
+\item If the income effect dominates the substitution effect, what does that imply about the sign of labor supply elasticity?
+
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Labor Supply Elasticity}
+\begin{itemize}
+	\item Typical empirical model to estimate relationship between hours worked and wages:
+	
+	\[h_i = \beta w_i + \alpha V_i + \text{other variables}\]
+	\item $\alpha$: Effect of \$1 increase in non-labor income on work hours
+	\item $\beta$: Effect of \$1 wage increase on work hours
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Labor Supply Elasticity}
+\begin{itemize}
+	\item What do we expect the sign of $\alpha$ to be?
+	\item What do we expect the sign of $\beta$ to be?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Labor Supply Elasticity}
+\begin{itemize}
+	\item Empirical studies have found numerous estimates for the labor supply elasticity of prime-age males
+	\item Taken together, ``consensus'' estimate of male labor supply elasticity is approximately $-.10$
+	\item Take aways:
+	\begin{itemize}
+		\item Income effect seems to dominate
+		\item Inelastic labor supply curve
+		\item Elasticity likely varies throughout life cycle
+		\item Elasticity likely different between men and women
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Labor Supply Elasticity}
+\begin{itemize}
+	\item Main issues with empirical estimation:
+	\end{itemize}
+	\begin{enumerate}
+	\item Hours of work
+	\begin{itemize}
+		\item Time horizon being considered is important
+		\item Measurement error in self-reported work hours
+	\end{itemize}
+	\item The wage rate
+	\begin{itemize}
+		\item Measurement error 
+		\item No wage observed for non-participants (self-selection)
+	\end{itemize}
+ \item Non-labor Income
+ \begin{itemize}
+ 	\item Non-labor income today may come from previous work savings
+ \end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Readings}
+\begin{itemize}
+\item Borjas 2.7-2.8
+
+\end{itemize}
+\end{frame}
+
+
+\section{Application: Anti-Poverty Policy}
+
+\begin{frame}{Motivation}
+\begin{itemize}
+\item Impact of income maintenance programs is a hotly debated issue
+\item Major part of labor market policy: How can we use policy to mitigate the ills of poverty?
+\item How do individuals react to different policy structures?
+\item Which policies actually work?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Motivation}
+\begin{itemize}
+\item Poverty guidelines are issued each year by the Department of Health and Human Services
+\item Guidelines are used for administrative purposes (e.g., determining financial eligibility for federal programs)
+\item 2016 guidelines were calculated using the 2014 Census Bureau's poverty thresholds and adjusting for inflation by using the CPI
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Motivation}
+\begin{figure}
+\centering
+\includegraphics[scale=.75]{02D_1.png}
+\caption{U.S. Federal Poverty Guidelines, 2016}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Motivation}
+\begin{figure}
+\centering
+\includegraphics[scale=.4]{02D_2.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Motivation}
+\begin{figure}
+\centering
+\includegraphics[scale=.8]{02D_3.png}
+\caption{U.S. Poverty Rates by State, 2013}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Normative vs. Positive Economics}
+\begin{itemize}
+\item Prediction about individuals' responses are ``positive'' statements
+\begin{itemize}
+\item Positive economics address the question: ``What happens?''
+\item In principle, can address these questions without interjecting value judgments about the desirability of the outcome
+\end{itemize}
+\item Lots of policy debate concerns ``normative'' issues
+\begin{itemize}
+\item Normative economics addresses ``What should be?'' questions
+\item Answers to these questions require value judgments 
+\end{itemize}
+\item Something to keep in mind during our analysis
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Impact of Welfare on Labor Supply: AFDC/TANF}
+\begin{itemize}
+\item Aid to Families with Dependent Children (AFDC) paid a lump-sum payment which was phased out with labor earnings
+\item Replaced by Temporary Aid for Needy Families (TANF) in 1996, which placed time limits on program eligibility
+\item Format: 
+\begin{itemize}
+\item Monthly lump-sum transfer payment (varied based on year, state, etc.)
+\item Each dollar earned in the labor market lead to a decrease in the lump-sum payment (often a large decrease, like \$0.67 per \$1.00 earned in the labor market).		
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Impact of Welfare on Labor Supply: AFDC/TANF}
+\begin{itemize}
+\item Two important changes to an individual's budget line due to this type of welfare program:
+\begin{enumerate}
+\item The endowment point shifts up
+\item The (absolute) slope of the budget line decreases
+\end{enumerate}
+\item Model predictions: 
+\begin{enumerate}
+\item Awarding cash grants reduces the probability of individuals entering the labor force
+\item Cash grants also induce workers who remain on the job to reduce their work hours
+\item Tax on labor earnings reduces the price of leisure and lowers the number of hours worked by recipients
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Earned Income Tax Credit}
+\begin{itemize}
+\item Largest current anti-poverty program outside of Medicaid
+\item Format:  Consists of three key pieces:
+\begin{enumerate}
+\item Phase-in area: For first \$X earned in labor market, wages subsidized by \%S
+\item  Plateau area: For next \$Y earned in labor market, 0\% tax/subsidy rate
+\item Phase-out area: For dollars earned over \$X+\$Y, wages taxed by \%$\tau$
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Earned Income Tax Credit}
+\begin{itemize}
+\item Example: 2008, 2 children
+\begin{enumerate}
+\item \$0 - \$10,350: Each dollar earned receives $S=.40$ subsidy
+\item \$10,350-\$13,520: Each dollar earned receives 0\% tax/subsidy
+\item \$13,530-\$33,178: Each dollar earned subject to $\tau$=.2106 tax.
+\end{enumerate}
+\end{itemize}
+\begin{figure}
+\centering
+\includegraphics[scale=.8]{02D_5.png}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{The Earned Income Tax Credit}
+\begin{itemize}
+\item How does the EITC affect labor supply?
+\item Testable predictions:
+\begin{enumerate}
+\item EITC increases labor force participation
+\item Impact on hours worked by those already in the labor market is less clear
+\item Workers bunch at two specific ``kink'' points
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Earned Income Tax Credit: LFPR}
+\begin{itemize}
+\item EITC increases the net wage for non-workers
+\item Thus, for a given reservation wage, EITC increases likelihood the net wage exceeds an individual's reservation wage
+\item EITC should increase the labor force participation rate for targeted groups
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Earned Income Tax Credit: LFPR}
+\begin{itemize}
+\item Empirical evidence: Eissa and Leibman (1996). ``Labor Supply Response to the Earned Income Tax Credit'', Quarterly Journal of Economics 111.2
+\begin{itemize}
+\item EITC increased subsidy to women with children in 1986
+\item How did this change labor force participation?
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Earned Income Tax Credit: LFPR}
+\begin{itemize}
+\item Run a ``difference-in-difference'' calculation, once controlling for demographics, education, etc.
+\item Finding: Increase in EITC subsidy level lead to 2.4 percentage point increase in LFPR among treatment group.		
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Earned Income Tax Credit: LFPR}
+\begin{itemize}
+	\item Run a ``difference-in-difference'' calculation, once controlling for demographics, education, etc.
+	\item Finding: Increase in EITC subsidy level lead to 2.4 percentage point increase in LFPR among treatment group.	
+	\item No significant impact on work hours for those already in the labor force	
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{The Earned Income Tax Credit: Bunching}
+\begin{itemize}
+\item Different preferences lead to different choices of labor and leisure.
+\item But, lots of workers should find optimal bundle lies at one of two ``kink points.''
+\item Prediction is clearly made in our model.  Is it reasonable? Requires workers to:
+\begin{enumerate}
+\item Know the tax code well enough to tailor their decisions to it.
+\item Have the ability to adjust their hours worked in response to the policy.
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Earned Income Tax Credit: Bunching}
+\begin{itemize}
+\item Empirical Evidence: Emmanuel Saez, ``Do Taxpayers Bunch at Kink Points?''.  American Economic Journal:  Economic Policy (2010)
+\item Statistically test whether individuals bunch at kink points.
+\item Basically, test whether the density of workers is really high near the relevant kinks.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Earned Income Tax Credit: Bunching}
+\begin{itemize}
+\item Mixed evidence:
+\item ``Bunching'' occurs, but only at the first kink point, and only among the self-employed.
+\item Why?
+\begin{itemize}
+\item Ability to adjust hours worked
+\item More cynically, tax fraud
+\end{itemize}
+\begin{figure}
+\centering
+\includegraphics[scale=.6]{02D_6.png}
+\end{figure}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Readings}
+\begin{itemize}
+\item Borjas 2.10-2.11
+\end{itemize}
+\end{frame}
+
+
+\end{document}

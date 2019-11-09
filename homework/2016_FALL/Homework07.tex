@@ -1,0 +1,199 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\usepackage{threeparttable}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{sgamevar}
+\usepackage{sgame}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah (blank next two lines out for no solutions, unblank #3)
+%\printanswers
+%\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+%\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+\newcommand{\dd}[1]{}  
+\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+
+
+\title{\textbf{Homework 7 \dd{\\Solutions}} \\ \vspace{2 mm} {\large ECON 380} \\ \large{UNC Chapel Hill}}
+\date{}
+\maketitle
+
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\\
+
+\makebox[\textwidth]{ONYEN:\enspace\hrulefill}
+\\
+
+\begin{center}
+	\fbox{\fbox{\parbox{5.5in}{\centering
+				This homework is due on \textbf{November 30} by \textbf{2:15PM}. You must turn in your work on a printed copy of this document in order for it to be graded. Your assignment must be stapled and in the correct order. Non-stapled assignments will automatically receive a 10 point deduction. There are a total of 50 available points.}}}
+\end{center}
+	
+
+\begin{questions}
+	
+
+\question A worker with an annual discount rate of 8 percent
+currently resides in Nigeria and is deciding whether to remain there
+or move to France. There are three work periods left in the life cycle. If
+the worker remains in Nigeria, he will earn \$25,000 per year in each
+of the three periods. If the worker moves to France, he will earn \$32,000 in
+each of the three periods. 
+
+\begin{parts}
+	\part[4] What is the net present value of the worker's earning if he chooses to stay in Nigeria? Make sure to write out the entire equation.
+\begin{solution}[1in]
+	\[NPV^N = \$25,000 + \frac{\$25,000}{(1.08)} + \frac{\$25,000}{(1.08)^2} = \$69,582\]
+\end{solution}
+\ddp{(2) written equation, (2) answer}
+	\part[4] What is the net present value of the worker's earning if he chooses to move to France? Make sure to write out the entire equation.
+\begin{solution}[1in]
+	\[NPV^F = \$32,000 + \frac{\$32,000}{(1.08)} + \frac{\$32,000}{(1.08)^2} = \$89,064\]
+\end{solution}
+	\part[4] What is the highest cost of migration that this worker is willing to incur and still make the move?
+\begin{solution}[1in]
+	Should move as long as 
+	\[NPV^F - NPV^N > C\]
+	\[\Rightarrow  \$19,482 > C\] 
+\ddp{Full credit as long as it follows from (a) and (b)}
+\end{solution}
+\end{parts}
+
+\question Sally just turned 18 years old and is choosing whether to migrate. If she migrates, she will earn a salary of \$50,000 paid at \underline{end of each year} of work until she retires at age 65  (i.e., at age 19, 20, $\dots$, 64, 65). If she chooses to stay home she will receive \$44,000 each year (also paid at the end of each work year). Her discount rate is r = 0.10. Note: You can do this by hand if you really want to, but Excel is your friend here. I will upload a document you can use as a template for doing this in Excel. You don't need to hand in the excel document, you can just write your answer.
+
+
+\begin{parts}
+	\part[5] What is Sally's net present value of earnings if she chooses to stay home?
+\begin{solution}[.5in]
+	$NPV^H$ = \$435,011.20 
+\end{solution}
+\ddp{(5) correct answer, (4) if they added \$50,000 (i.e., if they assumed there was a payment at age 18); minus 1 for each \$20,000 they are off otherwise}
+	\part[5] What is Sally's net present value of earnings if she chooses to migrate?
+\begin{solution}[.5in]
+	 $NPV^F$ =  \$494,330.90  
+\end{solution}
+\ddp{(5) correct answer, (4) if they added \$44,000 (i.e., if they assumed there was a payment at age 18); minus 1 for each \$20,000 they are off otherwise}
+	\part[3] What is the highest cost of migration that Sally is willing to incur and still make the move?
+\begin{solution}[.5in]
+	\[NPV^F - NPV^H > C\]
+	\[\Rightarrow \$59,319.70 > C\]
+\end{solution}
+\ddp{Full credit as long as it follows from (a) and (b)}
+\end{parts}
+
+\question Suppose that the present value of lifetime earnings of workers who decide to stay at home varies with their skill level and is given by
+
+\[w(s)^h = 20,000 + 500s\] 
+
+where $s$ denotes their level of skill and $s\ge 0$. Additionally, the present value of lifetime earnings of a worker who decides to move is given by
+
+\[w(s)^a = 30,000 + 600s\]
+
+\begin{parts}
+	\part[4] If the cost of migration is \$11,500, what is the lowest skill level at which a worker would choose to migrate?
+\begin{solution}[1in]
+Net gain from moving: 
+\[\Delta w = w(s)^a - w(s)^h = (30,000 + 600s) - (20,000 + 500s) = 10,000 + 100s\] 
+
+Worker chooses to migrate as long as $\Delta w > C$:
+
+\[10,000 + 100 s > 11,500\]
+\[\Rightarrow s > 15\]
+\end{solution}
+\ddp{(2) work, (2) answer}
+	\part[4] Now, suppose that the net present value of migration costs also varies with skill and is given by
+	\[C(s) = 19,000 - 500s\]
+	What is the lowest skill level at which a worker would choose to migrate?
+\begin{solution}[1in]
+	Worker chooses to migrate as long as $\Delta w > C(s)$:
+	
+	\[10,000 + 100 s > 19,000 - 500s\]
+	\[\Rightarrow s > 15\]
+\end{solution}
+\ddp{(2) work, (2) answer}
+	\part[4] A cash transfer program is introduced in the country which reduces the cost of migration by relaxing financial constraints. As a result, the net present value of migration costs is now given by
+	\[C(s) = 16,000 - 500s\]
+	What is the lowest skill level at which a worker would choose to migrate?
+\begin{solution}[1in]
+	Worker chooses to migrate as long as $\Delta w > C(s)$:
+	
+	\[10,000 + 100 s > 16,000 - 500s\]
+	\[\Rightarrow s > 10\]
+\end{solution}	
+\ddp{(2) work, (2) answer}
+\end{parts}
+
+
+\question (Borjas) Patrick and Rachel live in Seattle. Patrick's net present value of lifetime earnings in Seattle is \$125,000, while Rachel's is \$500,000. The one-time cost of moving to Atlanta is \$25,000 \underline{per person}. In Atlanta, Patrick's net present value of lifetime earnings would be \$155,000, while Rachel's would be \$510,000. 
+
+\begin{parts}
+	\part[4] If Patrick and Rachel choose where to live based on their joint well-being, will they move to Atlanta?
+\begin{solution}[1in]
+	\[\Delta PV^P = \$155,000 - \$125,000 - \$25,000 = \$5,000\]
+	\[\Delta PV^R = \$510,000 - \$500,000 - \$25,000 = -\$15,000\]
+	\[\Delta PV^P + \Delta PV^R = -\$10,000 < 0 \]
+	Since the joint NPV of moving is negative, they should not move to Atlanta. 
+\end{solution} 
+\ddp{(2) work, (2) answer}
+	\part[2] Is Patrick a tied mover or a tied stayer or neither? 
+\begin{solution}[.5in]
+	Patrick is a tied stayer (would move individually, but stays for joint well-being of the family)
+\end{solution}
+	\part[2] Is Rachel a tied mover or a tied stayer or neither? 
+\begin{solution}[.5in]
+	Rachel is neither 
+\end{solution}
+\end{parts}
+
+
+
+\question[5] Read the introduction to Borjas (1985). Briefly summarize the findings in Borjas' paper and how they compare to previous studies of migrant wage assimilation. What is a reason Borjas gives as to why previous studies estimated strong assimilation rates?
+
+\ddp{As usual, give full credit if they hit most of the main points. Make sure they answer the second part of the question. Take off 2 points if they don't.}
+
+\begin{solution}
+Borjas uses data from the 1970 and 1980 U.S. Census to study the earnings of within-immigrant cohorts and finds that, for most immigrant groups, the cohort analysis predicts slow rates of earnings growth. This is in contrast to previous cross-sectional studies of migrant earnings growth that found relatively high rates of wage growth. Additionally, the ``overtaking'' point when migrant earnings surpass that of natives takes place much later in the lifecycle than that predicted by previous studies (if overtaking happens at all). Borjas states that a likely driver of these results is the declining ``quality'' of migrant cohorts since 1950.
+\end{solution}
+
+\end{questions}
+
+
+
+
+\end{document}

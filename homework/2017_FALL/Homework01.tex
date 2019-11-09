@@ -1,0 +1,331 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{sgamevar}
+\usepackage{sgame}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah (blank next two lines out for no solutions, unblank #3)
+%\printanswers
+%\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+%\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+\newcommand{\dd}[1]{}  
+\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+
+
+\title{\textbf{Homework 1 \dd{\\Solutions}} \\ \vspace{2 mm} {\large ECON 380} \\ \large{UNC Chapel Hill}}
+\date{}
+\maketitle
+
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\\
+
+\makebox[\textwidth]{ONYEN:\enspace\hrulefill}
+\\
+
+\begin{center}
+	\fbox{\fbox{\parbox{5.5in}{\centering
+				Due date: \textbf{September 8} by \textbf{2:25PM}. You must turn in your work on a printed copy of this document in order for it to be graded. Your assignment must be stapled and in the correct order. Non-stapled assignments or those not on a copy of this document will automatically receive a 10 point deduction.}}}
+\end{center}
+
+\ddp{Grader: Answers in red, grading guidelines in green. Write in points for each question \& the total points on the chart found on the last page (no overall grades on the first page). Make sure to take points off if assignments are not stapled or not on a copy of this document.}
+
+
+\begin{questions}
+	
+
+\subsection*{Labor Force Accounting and Unemployment}
+
+	
+\question[10] Determine the current labor force status (employed, unemployed, or out of the labor force) of the following individuals as determined by the Bureau of Labor Statistics. 
+
+\ddp{2 pts each}
+
+\begin{parts}
+	\part  Corinne reports that she has not worked in the last three months. When interviewed further, she reveals that 3 weeks ago she applied for jobs at a hospital and at a Washington-based NGO. She currently is waiting to hear back from both businesses. 
+	\begin{solution}[.4in]
+	Unemployed
+	\end{solution}
+	\part Jasmine is graduating from college next month. She has submitted applications to four potential employers, but she cannot start work until after she finishes her college program.
+		\begin{solution}[.4in]
+	Out of the labor force (since she is not currently available for work)
+		\end{solution}
+	\part Kristina moved from Charlotte to Boston two weeks ago on the Wednesday of the CPS reference week. On Monday of the reference week, she worked her last day as a hostess at Paradise. Since moving, she has not looked for work in Boston.
+	\begin{solution}[.4in]
+		Employed (worked during the reference week)
+	\end{solution}
+	\part Taylor attends UNC as an undergraduate student. She does not currently have a job, but she has looked at classified ads in the town newspaper in the last month. However, she has yet to reach out to any potential employer. 
+	\begin{solution}[.4in]
+	Out of the labor force (not ``actively'' looking for work)
+	\end{solution}
+	\part DeMario is 19 years old. He works about 20 hours a week on his family farm, though he is not paid. For the last six weeks, he has been contacting potential employers in town and sending them his resume in order to have extra spending money.
+		\begin{solution}[.4in]
+			Employed (worked over 15 hours for a family business. Employment status takes priority over job search)
+		\end{solution}
+\end{parts}
+
+\question[12] Suppose there are 12,500 individuals over age 16 in Waxhaw. Of these individuals,
+
+\begin{itemize}
+	\item 3,500 work full-time in the private sector \dd{E}
+	\item 2,000 work full-time in the public sector (non-military) \dd{E}
+	\item 2,000 work part-time in the private sector \dd{E}. Of these part-time workers, 20\% are working part-time, but would prefer full-time work. \dd{400 part-time for economic reasons}
+	\item 1,500 individuals were laid off 6 months ago due to a plant closing. Of these laid off individuals, 1,000 have actively sought work since being laid off, while 500 searched for work immediately after being laid off, but not in the last four weeks. \dd{1000 U, 500 O (marginally attached workers)}
+	\item 1,000 do not have formal employment and instead choose to stay home to care for children \dd{O}
+	\item 2,500 are retired from work and neither have nor seek employment. \dd{O}
+\end{itemize}
+
+Use this information to answer the following questions. 
+
+\ddp{2 points each}
+
+\begin{parts}
+	\part How many employed persons are there in Waxhaw?
+	\begin{solution}[.6in]
+		$E = 3,500 + 2,000 + 2,000 = 7,500$
+	\end{solution}
+	\part How many unemployed persons are there in Waxhaw?
+		\begin{solution}[.6in]
+			$U = 1,000$
+		\end{solution}
+	\part What is the labor force participation rate?
+	\begin{solution}[.6in]
+		$LFPR = LF/P = (E + U)/P = 8,500/12,500 = 68\%$.
+	\end{solution}
+	\ddp{Full credit should be given if they plugged in incorrect answers from (a) or (b) into the correct equation.}
+	\part Calculate the U3 unemployment rate as defined by the Bureau of Labor Statistics.
+	\begin{solution}[.6in]
+		$UR= U/LF = 1000/8500 = 11.76\%$.
+	\ddp{Full credit should be given if they plugged in incorrect answers from (a) or (b) into the correct equation.}
+	\end{solution}
+	\part Calculate the U5 unemployment rate as defined by the Bureau of Labor Statistics.
+	\begin{solution}[.6in]
+		$U' = 1,000 + 500$ \text{(marginally attached)} $= 1,500.$ $LF' = 8,500 + 500 = 9,000 \Rightarrow U5 = 1,500/9,000 = 17.00\%$
+	\ddp{Points: (1) each for $U'$ and $LF'$}
+	\end{solution}
+	\part Calculate the U6 unemployment rate as defined by the Bureau of Labor Statistics.
+	\begin{solution}[.6in]
+		$U' = 1,000 + 500$ \text{(marginally attached)} $+ 400$ \text{(part-time for economic reasons)} $= 1,900.$ $LF' = 8,500 + 500 = 9,000 \Rightarrow U6 = 1,900/9,000 = 21.11\%$
+	\end{solution}
+	\ddp{Points: (1) each for $U'$ and $LF'$}
+\end{parts}
+
+
+%\newpage
+
+
+\question[10] For each of the following, determine which type of unemployment is present: frictional, seasonal, structural, or cyclical. 
+
+
+\begin{parts}
+	\part Boone, NC experiences low unemployment during the winter due to increased labor demand from ski resorts.
+		\begin{solution}[.6in]
+			Seasonal unemployment
+		\end{solution}
+	\part Jack quit his job a few months ago due to poor work conditions. He is currently seeking work, but it is taking time for him to fill out applications and hear back from interested firms.
+	\begin{solution}[.6in]
+		Frictional unemployment
+	\end{solution}
+	\part NBC lays off all workers under its page program because robots are now able to perform their tasks.
+	\begin{solution}[.6in]
+		Structural unemployment
+	\end{solution}
+	\part Jack has looked for work as an accountant for some time. While demand for accountants doesn't appear to be falling, there seems to be more people applying than there are jobs available.
+	\begin{solution}[.6in]
+		Structural unemployment
+	\end{solution}
+	\part Maya worked as a stockbroker before a recession began, but was laid off. She is looking for work, but demand for labor in the financial industry is low.
+	\begin{solution}[.6in]
+		Cyclical unemployment
+	\end{solution}
+\end{parts}
+
+
+\question[10] \textbf{Directions}: Type your response to this question and attach it to the back of this packet. Non-typed answers will receive zero points.
+\\
+\\
+Listen to the podcast \textit{50 Things that Made the Modern Economy: The Pill} and read sections I-II of the article \textit{More Power to the Pill (2006)} by Martha Bailey found on Sakai.  In 6-7 sentences, summarize the podcast episode and discuss the potential mechanisms through which access to oral contraceptives affected female participation in the labor force. 
+
+\begin{solution}
+In the podcast episode, host Tim Harford discusses the economic impact of the birth control pill. Compared to other birth control methods available at the time, the pill offered three main advantages: it was more effective, it was easy to use, and it was discreet. The pill's increasing availability to unmarried women coincided with an increase in women enrolling in professional degrees that were typically male-dominated. Though the release of the birth control pill coincided with many other factors that influenced women's labor force attachment (e.g., the feminist movement, technological advances in home production, anti-discrimination laws), the pill's impact is still significant. Bailey (2006) looks at the impact of the pill on labor force participation and work hours, finding that access to the pill before the age of 21 increased labor force participation as well as work hours. The main mechanism thought to drive these results is the pill's impact on birth timing. As an effective, low-cost method of delaying childbearing, the pill allowed women to spend more time in school and participate more in the labor force. Indeed, Baily finds that access to the pill before age 21 reduced the likelihood of a first-birth before age 22 by 14 to 18\%. Additionally, the greater control over birth timing and the number of spells out of the labor market increased the expected returns to career investments. 
+\end{solution}
+
+\ddp{(10): Provides a good summary of the podcast and explanation of the mechanisms. Doesn't have to be perfect, but ``good enough.'' (7.5): Provides decent summary and explanation, but is written poorly or doesn't explain in enough detail. (5) Either doesn't summarize podcast or talk about mechanisms. (2.5) Basically didn't try at all and just wrote crap down without listening to the podcast or reading article.}
+
+\newpage 
+\subsection*{Worker Preferences and Constraints}
+
+	
+\question Frank's preferences are represented by the following utility function:  $U(C,L)=4C^{2/5} L^{3/5}$.
+
+\begin{parts}
+	\part[3] Frank's marginal utility of consumption is $MU_C = \frac{8L^{3/5}}{5C^{3/5}}$ and his marginal utility of leisure is $MU_L = \frac{12C^{2/5}}{5L^{2/5}}$. Determine his marginal rate of substitution between leisure and consumption, $MRS_{L,C}$, simplifying your answer as much as possible.
+	\begin{solution}[1.5in]
+		\[MRS_{L,C} = \frac{MU_L}{MU_C} = \frac{\frac{12C^{2/5}}{5L^{2/5}}}{\frac{8L^{3/5}}{5C^{3/5}}} =  \frac{12C^{2/5}}{5L^{2/5}} \times \frac{5C^{3/5}}{8L^{3/5}} = \frac{60(C^{2/5} \times C^{3/5})}{40(L^{2/5}\times L^{3/5})} = \frac{3C}{2L}\]
+	\ddp{(2) work, (1) answer. Partial credit (with explanation) at your discretion for effort.}
+	\end{solution}
+	\part[3] Find the equation representing his indifference curve for the utility level $\overline{U} = 40$, solved for $C$.
+	\begin{solution}[1.5in]
+		Set $\overline{U} = 40 = 4C^{2/5}L^{3/5}$. Solving for $C$:
+		\[10 = C^{2/5}L^{3/5} \Rightarrow 10L^{-3/5} = C^{2/5} \Rightarrow C = 10^{5/2} L^{(-3/5)(5/2)} \Rightarrow C = 10^{5/2}L^{-3/2} = \Big(\frac{100,000}{L^3}\Big)^{1/2}  \]
+		\ddp{(2) work, (1) answer. Partial credit at your discretion for effort.}
+	\end{solution}
+	\part[2] Do Frank's preferences satisfy the property of monotonicity? Why or why not?
+		\begin{solution}[1.5in]
+		Yes, Frank's preferences satisfy monotonicity. Increasing $C$ and holding $L$ constant will increase $U(C,L)$, while increasing $L$ and holding $C$ constant will also increase $U(C,L)$. Increasing both $C$ and $L$ will increase $U(C,L)$ as well. 
+		\ddp{Partial credit at your discretion (with explanation)}
+		\end{solution}
+\end{parts}
+
+\question[4] A worker has preferences given by $U(C,L) = 2C^{1/2}L^{1/2}$. If the worker is indifferent between bundle $A$, given by (\$900, 100 hours), and bundle $B$, given by (\$625, $X$), what is $X$?
+	\begin{solution}[1in] Utility with bundle A: 
+	\[U(900,100) = 2(900)^{1/2}(100)^{1/2} = 600\]
+	
+	If indifferent with bundle B: 
+	\[U(625,X) = 2(625)^{1/2}X^{1/2} = 600 \Rightarrow X = \bigg(\frac{600}{50}\bigg)^2 = 144\]
+	
+	Check: $U(625,144) = 2(625)^{1/2}(144)^{1/2} = 600$
+	
+	\ddp{(2) work, (2) answer}
+\end{solution}
+
+\newpage
+	
+\question Tom earns \$15 per hour and is exempt from paying taxes, regardless of the number of hours he works. Additionally, Tom must pay \$3 per hour in child care expenses for each hour he works and receives \$200 in tax-exempt lottery winnings each week. There are 110 hours in a week for Tom to allocate between work and leisure. 
+
+\begin{parts}
+	\part[4] Write out the equation for Tom's weekly budget line.
+	\begin{solution}[1in]
+	Tom's effective hourly wage: $\$15 - \$3 = \$12$ per hour. $V$ = 200, $T = 110$. 
+	\[C = (wT + V) - wL = (12\times 110 + 200) - 12L = 1520 - 12L\]
+	\ddp{(2) effective hourly wage, (2) budget line}
+	\end{solution}
+	\part[2] Sketch the equation for Tom's weekly budget line. Make sure to label (i) his endowment point and (ii) his total consumption if he took no leisure time.
+	\begin{solution}[3in]
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=.55]{hw1_tom.png}
+			\caption{Tom's Budget Set}
+		\end{figure}
+		
+	\ddp{(1) endowment pt, (1) pt at $L=0$}
+\end{solution}	
+	\part[3] Now, suppose Tom's wage earnings, and only his wage earnings, are taxed at a flat 15\% rate. Write out the new equation for Tom's budget line and sketch it (in a different color) on your plot above, labeling it similarly to (b).
+		\begin{solution}[1in]
+	Tom's effective hourly wage: $\$15(1-.15) - \$3 = \$9.75$
+	\[C = (\$9.75\times 110 + 200) - 9.75L = 1272.5 - 9.75L\]
+	
+	Note that Tom's endowment point remains the same since his non-labor income is unchanged.
+	\ddp{(1) effective wage, (1) budget line equation, (1/2) endowment point, (1/2) pt at $L=0$}
+	\end{solution}
+	\part[2] Suppose there are 50 weeks in a year that Tom could potentially work. Write out the equation for Tom's yearly budget line (under the assumption his wage earnings are taxed at 15\%).
+		\begin{solution}[1in]
+	Yearly total hours (T): $110 \times 50$ = 5,500. Yearly non-labor income (V): $200 \times 50 = \$10,000$
+		\[C = (9.75\times 5,500 + 10,000) - 9.75L = 63,625 - 9.75L\]
+	\ddp{(1) Yearly consumption if $L=0$: $wT+V = 63,625$, (1) budget line equation}
+	\end{solution}
+\end{parts}
+
+\newpage
+
+\question[5] Charlie faces the following marginal tax rates on his gross earnings:
+
+\begin{table}[H]
+	\caption{Marginal Tax Rates}
+	\centering
+	\begin{tabular}{ c| c} 
+		
+		Marginal Tax Rate &  Gross Earnings\\
+		\hline
+		10\% & $\le$ \$15,000 \\
+		20\% & \$15,001 - \$40,000  \\
+		25\% & \$40,001 - \$90,000 \\
+		30\% & \$90,001 - \$200,000 \\
+	\end{tabular}
+	\label{MC30}
+\end{table}
+
+Before taxes, Charlie earns a gross wage of \$7.50 per hour. He also receives a lump sum, tax-exempt \$5,000 per year from his grandmother. Suppose Charlie has 5,000 available hours to split between work and leisure during the year. Draw his budget line in the plot below. Make sure to label (i) his endowment point, (ii) each ``kink'' point in his budget line, (iii) his net wages along each portion of the budget line, and (iv) his total consumption if he took no leisure time. 
+
+\begin{solution}
+	Charlie can make a total of $\$7.50\times 5,000 = \$37,500$ in gross wages each year. He is taxed at 10\% on his first \$15,000 in earnings and at 20\% on his next \$22,500. 
+	\\
+	
+	Charlie's endowment point is at 5,000 hours of leisure and \$5,000 of consumption. \\
+	
+	To earn \$15,000, Charlie has to work \$15,000/\$7.50 = 2,000 hours (i.e., $L=3,000$). This is where the ``kink'' in his budget line will be. \\
+	
+
+	His net wage for his first 2,000 hours of work ($3000 \le L \le 5000$) is $\$7.50(1-.10) = \$6.75$. 
+	\\
+	
+	If he works 2,000, he can consume $\$6.75\times 2,000 + \$5,000 = \$18,500$. \\
+	
+	For the next 3,000 possible hours Charlie could work ($ 0 \le L < 3000$), his net wage is $\$7.50(1-.20) =\$6$. 
+	\\
+	
+	If he works all 5,000 hours, Charlie could consume $\$6.75\times 2,000 + \$6 \times 3,000 + \$5,000 = \$36,500$.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.55]{hw2_1sol.pdf}
+		\caption{Charlie's Budget Set}
+	\end{figure}
+	
+\end{solution}
+
+\ddp{Points: (1) Endowment point, (1) kink at $(L= 3,000,C=\$18,500)$, (2) net wages for $0 \le L < 3000$ and $3000 \le L \le 5000$,(1) pt. at $L=0$}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.55]{hw2_1.pdf}
+	\caption{Charlie's Budget Set}
+\end{figure}
+\vspace{1.75cm}
+\end{questions}
+
+
+\rule{\textwidth}{1pt}
+
+
+\begin{center}
+	\textbf{FOR GRADING:}\\
+	\gradetable[h][questions]
+\end{center}
+
+\end{document}

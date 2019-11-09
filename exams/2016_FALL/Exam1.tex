@@ -1,0 +1,274 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{MnSymbol,wasysym}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah
+\printanswers
+\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+%\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+%\newcommand{\dd}[1]{}  
+\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+
+
+\title{\textbf{Exam 1 \dd{\\Solutions}} \\ \vspace{2 mm} {\large ECON 380} \\ \large{Fall 2016} \\ \large{UNC Chapel Hill}}
+\date{}
+\maketitle
+
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\\
+
+\makebox[\textwidth]{ONYEN:\enspace\hrulefill}
+\\
+
+\makebox[\textwidth]{Honor Code Signature:\enspace\hrulefill}
+\\
+
+\begin{center}
+	\fbox{\fbox{\parbox{6in}{\centering
+				\begin{itemize}
+					\item For partial credit, show all of your work on the following pages, and justify your answers where needed.
+					\item Round answers to the nearest hundredth.
+					\item Assume preferences are transitive, complete, and monotone.
+					\item Assume that utility functions exhibit diminishing marginal returns to consumption.
+					\item Assume that leisure is income normal. 
+					\item Points available: 50
+					\item Write legibly, write legibly, write legibly!
+					\item Good luck! \smiley{}
+				\end{itemize}
+			}}}
+\end{center}
+
+\newpage
+	
+\subsection*{Labor Force Accounting}
+
+\begin{questions}
+	
+
+\question Suppose there are 25,000 individuals living in Candyland. 5,000 of these individuals are under age 16 \dd{[Not in P]}. Of the remaining 20,000 individuals, 
+
+\begin{itemize}
+	\item 8,000 work full-time in the private sector \dd{E}
+	\item 2,000 work full-time in the public sector (non-military) \dd{E}
+	\item 2,000 work part-time. 50\% of these part-time workers would prefer to work full-time \dd{E. 1,000 are part-time for ``economic reasons''} 
+	\item 5,000 have been laid off in the six months. Of these laid off individuals, 4,000 have actively sought work since being laid off, while 1,000 searched for work immediately after being laid off, but not in the last four weeks. \dd{4,000 U, 1,000 O}
+	\item 1,000 do not have formal employment and instead choose to stay home to care for children \dd{O}
+	\item 2,000 are incarcerated. \dd{Not in P}
+\end{itemize}
+
+Use this information to answer the following questions. 
+
+\ddp{Should be straightforward here. If they mess up (a) or (b), make sure that further mistakes using the wrong numbers are not penalized.}
+
+\begin{parts}
+	\part[2] How many employed persons are there in Candyland according to BLS standards?
+	\begin{solution}[.6in]
+		$E = 8,000 + 2,000 + 2,000 = 12,000$
+	\end{solution}
+	\part[2] How many unemployed persons are there in Candyland according to BLS standards?
+	\begin{solution}[.6in]
+		$U = 4,000$
+	\end{solution}
+	\part[2] What is the labor force participation rate according to BLS standards?
+	\begin{solution}[.6in]
+		Working population = $P = 25,000 - \underbrace{5,000}_{\text{Under 16}} - \underbrace{2,000}_{\text{incarcerated}} = 18,000$
+		\\
+		\\
+		$LFPR = LF/P = (E + U)/P = (12,000+4,000)/18,000 = 88.89\%$.
+	\end{solution}
+	\part[2] What is the unemployment rate according to BLS standards?
+	\begin{solution}[.6in]
+		$UR= U/LF = 4,000/16,000 = 25.00\%$.
+	\end{solution}
+	\part[2] If we decide to change the definition of unemployment so that we counted all marginally attached workers as ``unemployed,'' what would be the new unemployment rate?
+	\begin{solution}[.6in]
+		$U' = 5,000 \Rightarrow LF' = 12,000 + 5,000 = 17,000 \Rightarrow UR' = 5,000/17,000 = 29.41\%$
+	\end{solution}
+\end{parts}
+
+\end{questions}
+
+\subsection*{Unemployment}
+
+\begin{questions}
+
+\question For each of the following, determine which type of unemployment is present.
+
+\begin{parts}
+	\part[2] Jonathan decided to leave his job as chocolatier three months ago in order to pursue a career as a pastry chef. He is actively looking for work, but it is taking time for him to search for job openings, fill out applications, and hear back from interested firms. 
+	\begin{solution}[.3in]
+		Frictional unemployment
+	\end{solution}
+	\part[2] Jill worked as a licorice maker for 25 years, but was laid off a year ago because firms in the industry transitioned to automated processes. She has looked for work since then, but has not found employment because her skills as a licorice maker are not readily transferable to other sectors in the economy. 
+	\begin{solution}[.3in]
+		Structural unemployment
+	\end{solution}
+\end{parts}	
+
+\question[4] In 3-4 sentences, state which of the two of unemployment types faced by Jonathan and Jill is of more concern to policy makers and explain why.
+
+\begin{solution}[1.25in]
+Structural unemployment is of more concern to policy makers. Frictional unemployment generally leads to short term unemployment spells and is often ``productive'' in that the search process leads to a better allocation of resources. On the other hand, structural unemployment is caused by a mismatch between the skills workers are supplying and the skills firms need. As a result, it generally leads to longer unemployment spells.
+
+\ddp{Points: (1) structural. For the explanation (3), a good answer would state both the difference in the length of the unemployment spell and give a brief description of what causes each type of unemployment.}
+\end{solution}
+
+\end{questions}
+
+\subsection*{Labor Supply}
+
+\begin{questions}
+	
+\question Charlie has 5,000 hours per year to allocate between work and leisure. If he works, he can earn a gross hourly wage, $w^G$, and he faces the following marginal tax rates on his gross earnings:
+
+\begin{table}[H]
+	\caption{Marginal Tax Rates}
+	\centering
+	\begin{tabular}{ c| c} 
+		
+		Marginal Tax Rate &  Gross Earnings\\
+		\hline
+		10\% & \$15,000 \\
+		20\% & \$15,001 - \$40,000  \\
+		25\% & \$40,001 - \$90,000 \\
+		30\% & \$90,001+ \\
+	\end{tabular}
+	\label{MC30}
+\end{table}
+
+Figure \ref{fig1} shows Charlie's budget line for the year.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.40]{charlie.png}
+	\caption{Charlie's Budget Line}
+	\label{fig1}
+\end{figure}
+
+\begin{parts}
+\part[4] What is Charlie's \textbf{net} wage between points $B$ and $C$ on his budget line?
+\begin{solution}[.5in]
+	$w^N$ is the (absolute) slope of the budget line. Between $B$ and $C$, $w^N = |(38,500 - 18,500)/(1000-3,500)| = \$8$.
+\end{solution}
+\part[4] What is Charlie's \textbf{gross} wage, $w^G$?	
+\begin{solution}[.5in]
+	$w^N = w^G(1-\tau) \Rightarrow w^G = w^N/(1-\tau) = \$8/(1-.20) = \$10$.
+\end{solution}
+\end{parts}
+
+\question Dennis' daily budget line is denoted $B^1$ in Figure \ref{fig2} below. Suppose his marginal rate of substitution is given by $MRS_{L,C} = \frac{2C}{3L}$.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.45]{dennis.png}
+	\caption{Dennis' Budget Line}
+	\label{fig2}
+\end{figure}
+
+\begin{parts}
+\part[2] What is Dennis' reservation wage?
+\begin{solution}[.6in]
+$w^{res} = MRS$ at the endowment point, where $C = V = 100$ and $L = T = 24$. $w^{res} = 2(100)/3(24) = 200/72 = \$2.78$.
+\end{solution}
+\part[4] If bundle $Y$ gives Dennis' optimal choice of consumption and leisure, what is the relationship between the $MRS_{L,C}$ and Dennis' wage ($w$) at point $X$? Explain how Dennis could rearrange his bundle to increase his utility if he were at point $X$.
+\begin{solution}[.75in]
+Bundle $Y$ is the optimal bundle, so $MRS = w$ at point $Y$. At point $X$, Dennis could increase his utility by consuming less dollars and taking more leisure time. That is, the next hour of leisure would yield more utility per dollar spent than the next dollar of consumption spent: $(MU_L/w) > MU_C \Rightarrow (MU_L/MU_C) > w \Rightarrow MRS_{L,C} > w$.
+
+\ddp{Points: (2) $MRS>w$, (2) how to rearrange bundle (increase $L$, decrease $C$)}
+\end{solution}
+
+\part[4] Suppose Dennis' wage changes so that his budget line changes to $B^2$. If Dennis' new optimal bundle of consumption and leisure is given by point $Z$, what does that tell you about the relationship between the income and substitution effects for Dennis? 
+
+\begin{solution}[.75in]
+Dennis' wage increased (since his budget line became steeper). At this higher wage, Dennis will decrease his leisure time, i.e., he increases how many hours he works. Thus, it must be that the substitution effect dominates the income effect. 
+\end{solution}
+\end{parts}
+
+
+\question[4] In 1-2 sentences, explain the prediction the neoclassical model of labor supply makes about the Earned Income Tax Credit's effect on labor force participation.
+
+\begin{solution}[1in]
+The neoclassical model of labor supply predicts the EITC will increase labor force participation, as the wage subsidy will drive the wage for some individuals above their reservation wage.
+\end{solution}
+
+\end{questions}
+
+\subsection*{Labor Demand}
+
+\begin{questions}
+
+\question Art Sloan produces Flip Cups according to the following production function:
+
+\[q=f(K,E)=2K^{1/2}E^{1/2}\]
+
+All markets are perfectly competitive, and Sloan currently has 5 units of capital.  The marginal product of labor is given by $MP_E=\frac{K^{1/2}}{E^{1/2}}$.  His Flip Cups sell for $p=\$20$, the market wage rate is $w=\$10$, and the capital rental rate is $r=\$5$.   
+
+\begin{parts}
+	\part[3] Determine Sloan's optimal short-run level of labor employment.
+\begin{solution}[1in]
+Optimal hiring rule: $VMP_E = w \Rightarrow p\times MP_E = w$. $K=K_0 = 5$.
+\\
+$20\times \frac{5^{1/2}}{E^{1/2}} = 10 \Rightarrow 10E^{1/2} = 20(5^1/2) \Rightarrow E^{1/2} = 2(5^1/2) \Rightarrow E^* = 4\times 5 = 20$.
+\end{solution}
+
+\ddp{Points: (1) $VMP_E = w$, (1) work, (1) $E^*=20$}
+
+	\part[3] Now, assume that Sloan is able to vary his capital stock (i.e., we've moved to the long-run).  He notices that at his current input bundle, $MP_E=0.5$,$MP_K=2$, and prices are still $w=\$10$, $r=\$5$.  Explain how he can alter his inputs to increase his profits.
+\begin{solution}[1in]
+Relative productivity of an additional unit of labor = $MRTS = MP_E/MP_K = .5/2 = .25$. Relative cost of an additional unit of labor = $w/r = 10/5 = 2$. 
+\\
+So, Sloan could reallocate toward the relatively cheap \textit{capital} which gives him greater per-dollar output to lower his costs and increase his profits.
+
+\end{solution}
+\end{parts}
+
+\question[4] In 2-3 sentences, describe how the elasticity of labor demand and labor supply affect each of the following after the imposition of a binding minimum wage: (i) the quantity of workers employed, (ii) the quantity of workers unemployed. You may draw a graph so support your work.
+
+\begin{solution}[2in]
+	For a given minimum wage, the quantity of labor employed is determined by the elasticity of labor demand, while the quantity of labor unemployed is determined by the elasticity of both labor demand and supply. The greater the elasticity of labor demand, the \textit{less} workers will be employed. The greater the elasticity of labor demand and supply, the \textit{more} workers unemployment there will be.
+\end{solution}
+
+
+
+	
+\end{questions}
+
+
+\end{document}

@@ -1,0 +1,255 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\usepackage{threeparttable}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{sgamevar}
+\usepackage{sgame}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah (blank next two lines out for no solutions, unblank #3)
+%\printanswers
+%\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+%\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+\newcommand{\dd}[1]{}  
+\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+
+
+\title{\textbf{Homework 6 \dd{\\Solutions}} \\ \vspace{2 mm} {\large ECON 380} \\ \large{UNC Chapel Hill}}
+\date{}
+\maketitle
+
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\\
+
+\makebox[\textwidth]{ONYEN:\enspace\hrulefill}
+\\
+
+\begin{center}
+	\fbox{\fbox{\parbox{5.5in}{\centering
+				This homework is due on \textbf{December 6} by \textbf{2:25PM}. You must turn in your work on a printed copy of this document in order for it to be graded. Your assignment must be stapled and in the correct order. Non-stapled assignments will automatically receive a 10 point deduction.}}}
+\end{center}
+
+\begin{questions}
+	
+\question Consider an economy with a population of 100,000 households. 60 percent of households report an annual income of \$25,000 (``low earners''), 30 percent of households report an annual income of \$70,000 (``mid earners''), and 10 percent report an annual income of \$110,000 (``high earners'').
+
+\begin{parts}
+\part[2] What is the total income earned by households in this economy?
+\begin{solution}[1in]
+Total Income = 	\[\underbrace{100,000\times.60\times\$25,000}_{\text{Low income group} = \$1.5B} + \underbrace{100,000\times.30\times\$70,000}_{\text{middle income group} = \$2.1B} + \underbrace{100,000\times.10\times\$110,000}_{\text{high income group} = \$1.1B}\]
+
+\[= 100,000\times [(.60\times \$25,000) + (.30\times \$70,000) + (.10\times \$110,000)]\]
+
+\[= \$4.7B\]
+\end{solution}
+\part[2] What is the share of total income accruing to the low earner households?
+\begin{solution}[.75in]
+1.5B/4.7B = 32\%
+\end{solution}
+\part[2] What is the share of total income accruing to the mid earner households?
+\begin{solution}[.75in]
+2.1B/4.7B = 45\%	
+\end{solution}
+\part[2] What is the share of total income accruing to the high earner households?
+\begin{solution}[.75in]
+1.1B/4.7B = 23\%	
+\end{solution}
+
+
+\part[4] Sketch the Lorenz curve for this economy as well as the perfect equality Lorenz curve.
+\begin{solution}[3in]
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5]{lorenz}
+\end{figure}
+\end{solution}
+
+\ddp{(1) labeled axes, (1) perfect equality Lorenz curve (diagonal from (0,0) to (100\%,100\%), (1) pt. at (60\%,32\%), (1) pt. at (90\%, 77\%)}
+
+\part[5] What is the Gini coefficient associated with this economy? Make sure to show your work.
+\begin{solution}[3in]
+\[A = .5(.60)(.32) = .096\]	
+\[B = .5(.30)(.45) = .0675\]
+\[C = .5(.10)(.23) = .0115\]
+\[D = .30(.32) = .096\]
+\[E = .10(.77) = .077\]
+
+Gini coefficient = $2(.5 - (A+B+C+D+E)) = 2(.5-.348) = .304$.
+\end{solution}
+
+\ddp{(2) correct Gini coefficient, (1) work, (1) correct areas calculated (even if graph is wrong)}
+
+\uplevel{Suppose the number of households in the population doubled to 200,000.}
+
+	\part[2] What is the total income earned by households in this economy?
+	\begin{solution}[1in] Total income =
+		\[200,000\times [(.60\times \$25,000) + (.30\times \$70,000) + (.10\times \$110,000)]\]
+		\[= \$9.4B\]
+	
+
+	\end{solution}
+	\part[3] What is the share of total income accruing to the each household income group?
+	\begin{solution}[.75in]
+		32\%, 45\%, and 23\% for the low, middle, and high income groups, respectively. 
+		
+		Notice that the total population size only changes the total income earned in the economy, but not the relative share going to each group (i.e., total population size doesn't matter when calculating the Gini coefficient).
+		
+		\ddp{No need to explain reasoning.}
+	\end{solution}
+		
+	\part[2] What is the Gini coefficient for this economy now?
+	\begin{solution}[.75in]
+		Relative share of income stayed the same, so Gini coefficient is still .304.
+	\end{solution}
+
+\end{parts}
+	
+\question There are two people in the Springfield economy: Homer and Burns. Each individual gets utility from consumption:
+
+\[U(C_H) = \sqrt{C_H}\]
+\[U(C_B) = \sqrt{C_B}\]	
+
+Initially, suppose that Homer produces 10 units of output (hence, with no redistribution, can consume $C_H$ = 10) while Burns produces 90 units of output.
+
+
+\begin{parts}
+	\part[5] Suppose a ``benevolent social planner'' is trying to determine the optimal level of redistribution (in other words, how many units of consumption Burns should give to Homer). To do so, this social planner wishes to maximize the sum of
+	the utilities of Homer and Burns. Define ``social utility'' as
+	
+	\[U_S(C_H,C_B) = \sqrt{C_H} + \sqrt{C_B}\]
+	
+	For now, assume that redistribution does not affect how much each individual produces: Homer still always produces 10, Burns still always produces 90, and the social planner is simply trying to figure out the best way to distribute 100
+	units of output. Fill in the empty cells in the following table. Round the ``social utility'' to the nearest hundredth.
+	
+		\begin{table}[H]
+		\centering
+		\begin{tabular}{c|c|c|c|c}
+			Transfer & Total Production & $C_H$ & $C_B$ & Social Utility \\
+			\hline 
+			0 & 100 & 10 & 90 & 12.65 \\
+			10 & 100 & 20 & 80 & \dd{13.42}\\
+			20 & \dd{100} & \dd{30} & \dd{70} & \dd{13.84} \\
+			30 &  \dd{100} & \dd{40} & \dd{60} & \dd{14.07} \\
+			40 &  \dd{100} & \dd{50} & \dd{50} & \dd{14.14} \\
+			50 &  \dd{100} & \dd{60} & \dd{40} & \dd{14.07} \\
+			60 &  \dd{100} & \dd{70} & \dd{30} & \dd{13.84} \\
+		\end{tabular}
+	\end{table}
+
+\ddp{(1) per correct column. (1) freebie}
+
+\part[2] What is the optimal transfer from Burns to Homer? What are each respective agents' consumption levels after the transfer?
+
+\begin{solution}[.75in]
+Optimal transfer is to completely redistribute: send 40 from Burns to Homer such that each get 50.	
+\end{solution}
+
+\part[5] A common concern among economists is that redistribution affects incentives, so assuming that Burns and Homer still produce just as much output regardless of the transfer program is flawed: For both Burns and Homer, their respective incomes are only partially determined by their own actions, and partially determined by the others' actions, which may decrease their individual efforts to produce output. Now, suppose that transfers are costly: For each 10 units transferred, each individual produces one fewer unit of output. For example, if we transfer 10 units of output,
+then Burns produces 89, Homer produces 9, and final consumption is $89 - 10 = 79$ for Burns and $9 + 10 = 19$ for Homer.
+Fill out the following table, rounding social utility to the nearest hundredth.
+
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c|c}
+		Transfer & Total Production & $C_H$ & $C_B$ & Social Utility \\
+		\hline 
+		0 & 100 & 10 & 90 & 12.65 \\
+		10 & 98 & 19 & 79 & \dd{13.25} \\
+		20 & \dd{96} & \dd{28} & \dd{68} & \dd{13.54} \\
+		30 & \dd{94} & \dd{37} & \dd{57} & \dd{13.63} \\
+		40 & \dd{92} & \dd{46} & \dd{46} & \dd{13.56} \\
+		50 & \dd{90} & \dd{55} & \dd{35} & \dd{13.33} \\
+		60 & \dd{88} & \dd{64} & \dd{24} & \dd{12.90} \\
+	\end{tabular}
+\end{table}
+
+\ddp{(1) per correct column. (1) freebie}
+
+\part[2] What is the optimal transfer from Burns to Homer (of those listed on the table)? What are each respective agents' consumption levels after the transfer?
+
+\begin{solution}[.75in]
+Optimal transfer is to redistribute only 30 from Burns to Homer. Homer consumes 37, Burns consumes 57.	
+\end{solution}
+
+\end{parts}	
+
+
+\uplevel{Directions: Type your answers to the following questions and attach them to the back of this packet.}
+
+\question Read the following article: \hyperref{http://www.becker-posner-blog.com/2011/01/bad-and-good-inequality-becker.html}{category}{name}{Bad and Good Inequality by Gary Becker}
+
+
+\begin{parts}
+	
+\part[4] What does Becker cite as an example of ``good'' inequality? Briefly explain why such inequality can create social value.
+\begin{solution}
+Becker gives the example of schooling. Investments into higher education are costly and also enhance productivity; in absence of a wage system which incentivizes investment into skills, fewer individuals would make these productivity-enhancing investments.
+\end{solution}
+
+\part[4] What does Becker cite as an example of ``bad'' inequality?
+\begin{solution}
+Chinese residence systems; in the past it was extraordinarily difficult for a rural individual in China to gain residence in an urban area. Opportunities in rural areas were hugely limited (and still are), so the gap between the urban rich and rural poor was largely determined at birth.	
+\end{solution}
+\part[4] According to Becker, what has happened to global income inequality over the past 30 years? Given that many developed countries have seen inequality become more severe, what can be inferred about the rate of growth in the developing/undeveloped world compared to the rate of growth in the developed world over this timeframe?
+\begin{solution}
+It's actually decreased. Within-country, income inequality has risen. However, on a global scale, inequality has fallen because the developing/undeveloped world has seen significantly higher growth rates than the developed world.
+Countries like China, South Korea have seen extraordinary growth over the past 40 years, and there are even glimmers of strong development in Africa in more recent years (e.g. Ghana has seen 5-6\% growth for some time now).
+\end{solution}	
+\end{parts}
+
+
+
+
+
+\end{questions}
+
+
+
+\rule{\textwidth}{1pt}
+
+
+\begin{center}
+	\textbf{FOR GRADING:}\\
+	\gradetable[h][questions]
+\end{center}
+
+
+
+
+\end{document}

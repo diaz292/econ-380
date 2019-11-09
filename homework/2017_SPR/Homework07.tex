@@ -1,0 +1,300 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\usepackage{threeparttable}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{sgamevar}
+\usepackage{sgame}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah (blank next two lines out for no solutions, unblank #3)
+%\printanswers
+%\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+%\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+\newcommand{\dd}[1]{}  
+\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+
+
+\title{\textbf{Homework 7 \dd{\\Solutions}} \\ \vspace{2 mm} {\large ECON 380} \\ \large{UNC Chapel Hill}}
+\date{}
+\maketitle
+
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\\
+
+\makebox[\textwidth]{ONYEN:\enspace\hrulefill}
+\\
+
+\begin{center}
+	\fbox{\fbox{\parbox{5.5in}{\centering
+				This homework is due on \textbf{April 28} by \textbf{12:05PM}. You must turn in your work on a printed copy of this document in order for it to be graded. Your assignment must be stapled and in the correct order. Non-stapled assignments will automatically receive a 10 point deduction. There are a total of 50 available points.}}}
+\end{center}
+	
+
+\begin{questions}
+	
+
+\question A worker with an annual discount rate of 8 percent
+currently resides in Nigeria and is deciding whether to remain there
+or move to France. There are three work periods left in the life cycle. If
+the worker remains in Nigeria, he will earn \$25,000 per year in each
+of the three periods. If the worker moves to France, he will earn \$32,000 in
+each of the three periods. Assume all transactions occur at the \underline{beginning} of each period.
+
+\begin{parts}
+	\part[2] What is the net present value of the worker's earning if he chooses to stay in Nigeria? Make sure to write out the entire equation.
+\begin{solution}[1in]
+	\[NPV^N = \$25,000 + \frac{\$25,000}{(1.08)} + \frac{\$25,000}{(1.08)^2} = \$69,582\]
+\end{solution}
+\ddp{(2) written equation, (2) answer}
+	\part[2] What is the net present value of the worker's earning if he chooses to move to France? Make sure to write out the entire equation.
+\begin{solution}[1in]
+	\[NPV^F = \$32,000 + \frac{\$32,000}{(1.08)} + \frac{\$32,000}{(1.08)^2} = \$89,064\]
+\end{solution}
+	\part[2] What is the highest cost of migration that this worker is willing to incur and still make the move?
+\begin{solution}[1in]
+	Should move as long as 
+	\[NPV^F - NPV^N > C\]
+	\[\Rightarrow  \$19,482 > C\] 
+\ddp{Full credit as long as it follows from (a) and (b)}
+\end{solution}
+\end{parts}
+
+\question Sally just turned 18 years old and is choosing whether to migrate. If she migrates, she will earn a salary of \$50,000 paid at \underline{end of each year} of work until she retires at age 65  (i.e., at age 19, 20, $\dots$, 64, 65). If she chooses to stay home she will receive \$44,000 each year (also paid at the end of each work year). Her discount rate is r = 0.10. Note: You can do this by hand if you really want to, but Excel is your friend here. I will upload a document you can use as a template for doing this in Excel. You don't need to hand in the excel document, you can just write your answer.
+
+
+\begin{parts}
+	\part[3] What is Sally's net present value of earnings if she chooses to stay home?
+\begin{solution}[.5in]
+	$NPV^H$ = \$435,011.20 
+\end{solution}
+\ddp{(5) correct answer, (4) if they added \$50,000 (i.e., if they assumed there was a payment at age 18); minus 1 for each \$20,000 they are off otherwise}
+	\part[3] What is Sally's net present value of earnings if she chooses to migrate?
+\begin{solution}[.5in]
+	 $NPV^F$ =  \$494,330.90  
+\end{solution}
+\ddp{(5) correct answer, (4) if they added \$44,000 (i.e., if they assumed there was a payment at age 18); minus 1 for each \$20,000 they are off otherwise}
+	\part[2] What is the highest cost of migration that Sally is willing to incur and still make the move?
+\begin{solution}[.5in]
+	\[NPV^F - NPV^H > C\]
+	\[\Rightarrow \$59,319.70 > C\]
+\end{solution}
+\ddp{Full credit as long as it follows from (a) and (b)}
+\end{parts}
+
+\question Suppose that the present value of lifetime earnings of workers who decide to stay at home varies with their skill level and is given by
+
+\[w(s)^h = 20,000 + 500s\] 
+
+where $s$ denotes their level of skill and $s\ge 0$. Additionally, the present value of lifetime earnings of a worker who decides to move is given by
+
+\[w(s)^a = 30,000 + 600s\]
+
+\begin{parts}
+	\part[2] If the cost of migration is \$11,500, what is the lowest skill level at which a worker would choose to migrate?
+\begin{solution}[1in]
+Net gain from moving: 
+\[\Delta w = w(s)^a - w(s)^h = (30,000 + 600s) - (20,000 + 500s) = 10,000 + 100s\] 
+
+Worker chooses to migrate as long as $\Delta w > C$:
+
+\[10,000 + 100 s > 11,500\]
+\[\Rightarrow s > 15\]
+\end{solution}
+\ddp{(2) work, (2) answer}
+	\part[3] Now, suppose that the net present value of migration costs also varies with skill and is given by
+	\[C(s) = 19,000 - 500s\]
+	What is the lowest skill level at which a worker would choose to migrate?
+\begin{solution}[1in]
+	Worker chooses to migrate as long as $\Delta w > C(s)$:
+	
+	\[10,000 + 100 s > 19,000 - 500s\]
+	\[\Rightarrow s > 15\]
+\end{solution}
+\ddp{(2) work, (2) answer}
+	\part[2] A cash transfer program is introduced in the country which reduces the cost of migration by relaxing financial constraints. As a result, the net present value of migration costs is now given by
+	\[C(s) = 16,000 - 500s\]
+	What is the lowest skill level at which a worker would choose to migrate?
+\begin{solution}[1in]
+	Worker chooses to migrate as long as $\Delta w > C(s)$:
+	
+	\[10,000 + 100 s > 16,000 - 500s\]
+	\[\Rightarrow s > 10\]
+\end{solution}	
+\ddp{(2) work, (2) answer}
+\end{parts}
+
+
+\question (Borjas) Patrick and Rachel live in Seattle. Patrick's net present value of lifetime earnings in Seattle is \$125,000, while Rachel's is \$500,000. The one-time cost of moving to Atlanta is \$25,000 \underline{per person}. In Atlanta, Patrick's net present value of lifetime earnings would be \$155,000, while Rachel's would be \$510,000. 
+
+\begin{parts}
+	\part[2] If Patrick and Rachel choose where to live based on their joint well-being, will they move to Atlanta?
+\begin{solution}[1in]
+	\[\Delta PV^P = \$155,000 - \$125,000 - \$25,000 = \$5,000\]
+	\[\Delta PV^R = \$510,000 - \$500,000 - \$25,000 = -\$15,000\]
+	\[\Delta PV^P + \Delta PV^R = -\$10,000 < 0 \]
+	Since the joint NPV of moving is negative, they should not move to Atlanta. 
+\end{solution} 
+\ddp{(2) work, (2) answer}
+	\part[2] Is Patrick a tied mover or a tied stayer or neither? 
+\begin{solution}[.5in]
+	Patrick is a tied stayer (would move individually, but stays for joint well-being of the family)
+\end{solution}
+	\part[2] Is Rachel a tied mover or a tied stayer or neither? 
+\begin{solution}[.5in]
+	Rachel is neither 
+\end{solution}
+\end{parts}
+
+
+
+\question Suppose we are analyzing the economic performance of migrants over time by looking at census data from 2010. There are three migrant cohorts in the population described as follows:
+
+\begin{enumerate}[i.]
+	\item 1990 cohort: Low-skilled group with average skill level $\bar{S}_{90} = 2,000$
+	\item 2000 cohort: Medium-skilled group with average skill level $\bar{S}_{00} = 6,000$
+	\item 2010 cohort: Highly-skilled group with average skill level $\bar{S}_{10} = 12,000$
+\end{enumerate}
+
+For simplicity, assume that all migrants in each cohort arrived at age 20. Additionally, suppose that the average native skill level is $\bar{S}_N = 6,000$.
+\\
+
+Average wages increase with age (i.e., experience) for each group $g$ as follows:
+
+\[\bar{w}_g = \$1\times \bar{S}_g + \$1,000\times Age\]
+
+\newpage
+
+\begin{parts}
+	\part[3] What is the average wage each migrant cohort received when they first migrate to the U.S?
+	\begin{solution}[1.65in]
+		Each migrant cohort arrives at age 20, so the average wage received is
+		\[\bar{w}_{90}(20) = \$1\times 2,000 + \$1,000\times 20 = \$22,000\]
+		\[\bar{w}_{00}(20) = \$1\times 6,000 + \$1,000\times 20 = \$26,000\]
+		\[\bar{w}_{10}(20) = \$1\times 12,000 + \$1,000\times 20 = \$32,000\]
+	\end{solution}
+	\ddp{(1) each}
+	\part[3] What is the average wage of each migrant cohort when we observe them in the 2010 census?
+	\begin{solution}[1.5in]
+		Each migrant cohort arrives at age 20, so we observe the 1990 cohort at age 40, the 2000 cohort at age 30, and the 2010 cohort at age 20:
+		\[\bar{w}_{90}(40) = \$1\times 2,000 + \$1,000\times 40 = \$42,000\]
+		\[\bar{w}_{00}(30) = \$1\times 6,000 + \$1,000\times 30 = \$36,000\]
+		\[\bar{w}_{10}(20) = \$1\times 12,000 + \$1,000\times 20 = \$32,000\]
+		\ddp{(1) each}
+	\end{solution}
+	\uplevel{In Figure \ref{fig1} below, draw and clearly label each of the following:}
+	\part[2] The age-earnings profile of each migrant cohort as well as the age-earnings profile of native workers. \ddp{(1) each}
+	\part[2] The predicted age-earnings profile for migrants if we naively assume that migrant cohorts are equivalent and use only the age-earnings data we observe. \ddp{(2) as long as their profile matches their data points from (b)}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.55]{hw8_1}
+		\caption{Age-Earnings Profile}
+		\label{fig1}
+	\end{figure}
+	
+%	\begin{figure}[H]
+%		\centering
+%		\includegraphics[scale=.6]{hw8_1sol}
+%		\caption{Age-Earnings Profile}
+%		\label{fig1}
+%	\end{figure}
+	
+	\part[2] Is our estimated effect of length of stay on migrant earnings biased? If so, in which direction and why? 
+	\begin{solution}[1.5in]
+		Our estimated effect without taking into account cohort effects is biased downwards (i.e., negatively biased). The slope of the age-earnings profile of each cohort is greater than that of our estimated migrant age-earnings profile, so we are underestimating the effect of length of stay on wages. This is due to the fact that the quality of each migrant cohort is increasing, yet we are not accounting for that due to only observing cross-sectional data. Notice that we still correctly predict that length of stay has a positive effect on wages, but the magnitude of our predicted effect is smaller than the actual effect. Additionally, if we had even bigger differences in the quality of each cohort (so that earlier cohorts had even smaller skill levels and thus their age-earnings profiles were shifted down further relative to the 2010 cohort), our estimated effect of length of stay could even have been negative even though the effect of length of stay is actually positive for each cohort.
+	\end{solution}
+	
+	\ddp{(2) biased down, (1) different slope, (1) due to increasing migrant quality}
+	
+\end{parts}
+
+\question (Borjas 8.4) Labor demand for low-skilled workers in the United States is $w = 24 - 0.1E$ where
+E is the number of workers (in millions) and $w$ is the hourly wage. There are
+120 million domestic U.S. low-skilled workers who supply labor inelastically. If the
+U.S. opened its borders to immigration, 20 million low-skill immigrants would enter
+the U.S. and supply labor inelastically. 
+\begin{parts}
+	\part[1] What is the market-clearing wage if immigration is not allowed? 
+	\begin{solution}[.75in]
+		$w^* = 24 - .1(120) = \$12$
+	\end{solution}
+	\part[2] Draw a graph showing the effect of an open borders policy.
+	\begin{solution}[2in]
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=.5]{hw8_2}
+		\end{figure}
+	\end{solution}
+	\part[1] What is the market-clearing wage with open borders? 
+	\begin{solution}[.75in]
+		$w^{*'} = 24 - .1(120+20) = \$10$
+	\end{solution}
+	\part[2] How much is the immigration surplus when the U.S. opens its borders? 
+	\begin{solution}[1in]
+		Immigration surplus = $1/2 \times (12-10) \times (140 - 120) = \$20,000,000$
+	\end{solution}
+\end{parts}
+
+\newpage
+
+\uplevel{Directions: Type your answers to the following questions and attach them to the back of this packet.}
+
+\question Read the abstract, introduction, and conclusion in Tunali (2000). 
+
+\begin{parts}
+	\part[3] Briefly (3-4 sentences) describe his findings in regards to (i) the ``rationality hypothesis'' and (ii) the returns to migrants in his analysis.
+	\begin{solution}
+		\begin{enumerate}[i.]
+			\item Tunali finds evidence in support of the ``rationality hypothesis:'' Both migrants and nonmigrants chose the option in which they had a comparative advantage
+			\item The analysis also finds that upon migrating, the majority of individuals in the sample (3/4) realize negative returns from migration, while a small number of migrants realize extremely high returns
+		\end{enumerate}
+	\end{solution} 
+	\part[2] What are the possible reasons stated in the conclusion as to why returns to migration might vary across individuals?
+	\begin{solution}
+		\begin{enumerate}[i.]
+			\item Migration is a risky lottery in that ``lucky'' migrants realize high returns, but most migrants are ``unlucky'' and realize low or negative returns
+			\item Migrants are making mistakes and moving when they should not. In the paper, Tunali finds that migrants from urban areas do better than migrants from rural areas, suggesting that they may have better information about opportunities elsewhere
+		\end{enumerate}
+	\end{solution} 
+\end{parts}
+
+
+\end{questions}
+
+\end{document}

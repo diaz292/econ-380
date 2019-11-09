@@ -1,0 +1,149 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\usepackage{threeparttable}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{sgamevar}
+\usepackage{sgame}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah (blank next two lines out for no solutions, unblank #3)
+\printanswers
+\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+%\newcommand{\dd}[1]{}  
+%\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+	
+	
+	\title{\textbf{Exam 1 Study Guide} \\ \vspace{2 mm} {\large ECON 380} \\ \large{UNC Chapel Hill}}
+	\date{}
+	\maketitle
+	
+Useful stuff to know for exam 1:
+
+\subsection*{Labor Force Accounting \& Unemployment}
+
+\begin{enumerate}
+	\item How to classify individuals - E, U, O, or not in P
+	\item What are discouraged workers? Marginally attached workers?
+	\item How to compute the LFPR
+	\item Differences between U3/U4/U5/U6 unemployment rates and how to compute them
+	\item What are the major issues with the official unemployment rate?
+	\item What are the different types of unemployment? 
+	\item What policies might be most effective at combating different unemployment types? 
+\end{enumerate}
+
+\subsection*{Neoclassical Model of Labor Supply}
+
+\begin{enumerate}
+	\item Properties of indifference curves
+	\item What do $MU_L$ and $MU_C$ measure?
+	\item What is $MRS_{L,C}$ in words? Graphically?
+	\item How to write the equation for an individual's budget constraint and how to graph a budget constraint (CHARLIE)
+	\item What is the price of leisure? 
+	\item How do changes in (i) non-labor income and (ii) wages affect the budget constraint?
+	\item How does a worker choose the optimal number of work hours? Should know how to solve algebraically and how to show graphically.
+	\item What's the intuition behind the tangency condition? How should a worker reallocate his bundle if $MRS_{L,C} < w$? If $MRS_{L,C} > w$?
+	\item How do changes in non-labor income affect the hours-worked decision if leisure is income normal?
+	\item How do changes in the wage rate affect the hours-worked decision? Is the overall impact unambiguous? 
+	\item What happens to hours-worked if the income effect dominates the substitution effect? What if the substitution effect dominates the income effect? What do the graphs look like for each case?
+	\item What is the endowment point? 
+	\item What is the reservation wage (in words)? How to calculate it?
+	\item How do changes in non-labor income affect the reservation wage? Changes in the wage rate?
+	\item How to compute elasticity of labor supply. 
+	\item What does the magnitude of labor supply elasticity tell you? What does the sign tell you?
+	\item What are two of the main issues with empirically estimating the elasticity of labor supply?
+	\item What are the main theoretical predictions under (i) AFDC/TANF and (ii) the Earned Income Tax Credit
+\end{enumerate}
+
+\subsection*{Labor Demand}
+
+\begin{enumerate}
+	\item What do we assume is the goal of a firm?
+	\item What is the condition to find the optimal number of workers to hire in the short-run? 
+	\item Solving for optimal number of workers to hire in SR 
+	\item Condition to optimally allocate labor and capital in the LR.
+	\item How to reallocate labor and capital given $r$, $w$, and $MRTS$. Know how to explain why the reallocation is more efficient
+	\item Relationship between short-run and long-run demand elasticity? Why are they different?
+\end{enumerate}
+
+\subsection*{Competitive Markets}
+
+\begin{enumerate}
+	\item How to find equilibrium wage and employment level given labor supply and demand equations
+	\item How to find employment and unemployment level under a binding minimum wage
+	\item How to find producer, worker, and total surplus from a graph
+	\item How to find producer, worker, total surplus, and DWL under a binding minimum wage
+	\item Be able to explain why the allocation of resources (i.e., the equilibrium employment level) is efficient in a labor market with no externalities
+	\item How the free entry/exit of workers (or firms) across regions will eventually lead to a single equilibrium wage
+\end{enumerate}
+
+\subsection*{Immigration Impacts}
+
+\begin{enumerate}
+	\item Short-run vs long-run wage \& employment effects of migration in the case of perfect substitutes and how to reflect this on a graph
+	\item Short-run vs long-run wage \& employment effects of migration in the case of complements and how to reflect this on a graph
+	\item How to calculate native worker and native firm surplus before and after immigration in the case of perfect substitutes (short-run)
+\item How to calculate immigration surplus
+	\item Welfare implications if migrants are perfect substitutes: who is better off, who is worse off? What is the effect on total welfare?
+\end{enumerate}
+
+\subsection*{Noncompetitive Labor Markets}
+
+\begin{enumerate}
+	\item Welfare implications in a market with a perfectly discriminating monopolist
+	\item Under a non-discriminatory monopolist, what is the relationship between the marginal cost of hiring labor and the wage rate?
+	\item What is the implication of this relationship on the number of workers employed when compared to a perfectly competitive market or perfectly discriminating monopsonist 
+	\item What are the welfare impacts under a non-discriminating monoposonist?
+	\item How to find PS, WS, TS, and DWL from a graph under this structure
+	\item Can a minimum wage improve the allocation of resources in this case?
+	\item What is the ``optimal'' minimum wage that maximizes total surplus?
+\end{enumerate}
+
+\subsection*{LMDCs}
+
+\begin{enumerate}
+	\item Know 2-3 of the main differences between labor markets in developed and developing countries as described by Fields (2011)
+	\item Know 2-3 of the differences between ``traditional'' and ``modern'' labor markets from Campbell \& Ahmed (2012)
+	\item What are the two possible explanations for why labor markets are segmented?
+	\item Arias \& Khamis (2008) found evidence for both segmentation stories. In which sector (self-employed or informal work) did they find evidence for the ``exclusion view'' and in which did they find evidence for the comparative advantage story?
+	\item Why might the income effect due to a wage drop be stronger in developing countries? (Jayachandran 2006)? 
+	\item What were the results on women's labor market participation as a result of the program analyzed in Jensen (2012)?
+\end{enumerate}
+
+\end{document}

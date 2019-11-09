@@ -1,0 +1,316 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{sgamevar}
+\usepackage{sgame}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah (blank next two lines out for no solutions, unblank #3)
+%\printanswers
+%\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+%\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+\newcommand{\dd}[1]{}  
+\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+
+
+\title{\textbf{Homework 3 \dd{\\Solutions}} \\ \vspace{2 mm} {\large ECON 380} \\ \large{UNC Chapel Hill}}
+\date{}
+\maketitle
+
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\\
+
+\makebox[\textwidth]{ONYEN:\enspace\hrulefill}
+\\
+
+\begin{center}
+	\fbox{\fbox{\parbox{5.5in}{\centering
+				Due date: \textbf{October 9} by \textbf{2:25PM}. You must turn in your work on a printed copy of this document in order for it to be graded. Your assignment must be stapled and in the correct order. Non-stapled assignments or those not on a copy of this document will automatically receive a 10 point deduction.}}}
+\end{center}
+
+\begin{questions}
+	
+\subsection*{Labor Market Equilibrium}
+
+
+	\question Suppose demand for low-skilled workers in the United States is given by $E_D = 300 - 10w$ and supply of low skilled workers is given by $E_S = 30w-300$, where $E$ represents the number of workers (in millions) and $w$ is the daily wage rate. 
+	\begin{parts}
+		\part[2] Solve for the equilibrium wage rate and employment level of low-skilled workers.
+		\begin{solution}[.6in]
+		Set $E_D = E_S$ to find the equilibrium wage rate: 
+		\[300 - 10w = 30w - 300 \Rightarrow 40w = 600 \Rightarrow w^* = \$15.\]	
+		Plug into either $E_D$ or $E_S$ to find equilibrium level of employment: \[E^* = 30(15) - 300 = 300 - 10(15) = \text{150 million}\]
+		\ddp{Points: (1) $w^*$, (1) $E^*$}
+		\end{solution}
+		\part[2] Plot the labor demand and labor supply functions on the graph below, labeling each as $E_D$ and $E_S$, respectively.
+		\begin{figure}[H]
+			\centering 
+			\includegraphics[scale=.55]{hw3_1}
+		\end{figure}
+
+		%\begin{figure}[H]
+		%\centering 
+		%\includegraphics[scale=.55]{hw3_1_sol}
+		%\end{figure}
+
+\ddp{(1) correct y-int for each curve, (1) intersection at (15,15)}
+		\part[4] On your plot above, label (i) worker surplus and (ii) firm surplus. Compute their values here.
+		\begin{solution}[1.5in]
+			\[PS = \text{Area between $E_D$ and $w^*$ up to $E^*$} = (1/2)(15)(150,000,000) = \text{\$1.125 billion}\]
+			\[WS = \text{Area between $E_S$ and $w^*$ up to $E^*$} = (1/2)(5)(150,000,000) = \text{\$375 million}\]
+		\end{solution}
+		\ddp{Points: (2) for correctly identifying $PS$ and $WS$ on the graph, (1) each for numerical values of $PS$ and $WS$. Minus (1/2) for incorrect units on either. Don't worry about units after this as long as they are consistent.}
+		\part[2] What is total surplus in the US market for low-skilled labor?
+		\begin{solution}[.6in]
+			\[TS = PS + WS = \text{\$1.5 billion}\]
+		\end{solution}
+\uplevel{Now, suppose the government imposes a \$20 minimum wage in this market.}
+\part[4] Draw the effect of this minimum wage on the plot below, labeling the new (i) worker surplus, (ii) firm surplus, and (iii) any deadweight loss. Note: Assume that the workers with the lowest reservation wages are those that end up employed. This ensures we are calculating the maximum potential surplus as a result of this law.
+
+\ddp{(1) PS, (2) WS, (1) DWL}
+	\begin{figure}[H]
+	\centering 
+	\includegraphics[scale=.55]{hw3_1}
+\end{figure}
+%	\begin{figure}[H]
+%	\centering 
+%	\includegraphics[scale=.55]{hw3_2_sol}
+%\end{figure}
+\part[2] How many workers will be employed as a result of this law? How many workers will be unemployed?
+\begin{solution}
+With the \$20 minimum wage, $E_D = 300 - 10(20) = 100$, so only 100 million workers will be employed ($\bar{E} = 100$ million).
+\\
+
+With the minimum wage, $E_S = 30(20) -300 = 300$ million workers will be willing to work. Since only 100 million will be employed, unemployment = 200 million.
+\end{solution}
+\newpage
+\part[3] What will be the \underline{change} in (i) worker, (ii) firm, and (iii) total surplus as a result? 
+		\begin{solution}[1.5in]
+	 Plug in 100 into $E_S$ to find reservation wage of the 100 millionth worker: $100 = 30w - 300 \Rightarrow w = 13.3$ 
+		 \[PS' = \text{Area between $E_D$ and $\bar{w}$ up to $\bar{E}$} = (1/2)(10)(100,000,000) = \text{\$500 million}\]
+		 \[WS' = \text{Area between $E_S$ and $\bar{w}$ up to $\bar{E}$} \approx \frac{6.7 + 10}{2}\times 10 = \text{\$835 million}\]
+		 \[\Delta WS \approx +\text{\$460 million}\]
+		 \[\Delta TS \approx -\text{\$165 million}\]
+		 \[\Delta PS = -\text{\$625 million}\]
+		Note: My calculations are not exact due to rounding.
+		
+		\end{solution}
+	\ddp{The answers here may differ somewhat from mine depending on their rounding, but it shouldn't be too far off. Make sure they give the \underline{change} in PS, WS, and TS. If the values are wrong, but the signs are right, take a point off. If they just gave the new values (and got them right), give them half credit. If they did not calculate the values at all, but wrote out what happens to each (and got it correct), they can get a point.}
+\part[2] Calculate the labor demand elasticity. 
+
+\begin{solution}[.5in]
+
+\[\varepsilon_{w}^{D} = \frac{\%\Delta E_{d}}{\%\Delta w} = \frac{\Delta E_{d}}{\Delta w} \times \frac{w_0}{E_{d_0}} = \frac{10 - 15}{20 - 15}\times \frac{15}{15} = -1.\]	
+\end{solution}
+	\end{parts}
+
+
+\subsection*{Immigration Impacts}
+
+
+	\question Suppose that after an influx of immigrants, labor supply in the market for low-skilled workers is now given by $E_S = 30w - 180$. Labor demand is still $E_D = 300 - 10w$. The government decided against imposing a minimum wage and the market wage is freely determined by labor supply and demand. 
+	\begin{parts}
+		\part[2] Are the immigrants perfect substitutes or complements for native low-skill labor?
+		\begin{solution}[.5in]
+			Since the migrants increased the supply of labor in the market for low-skilled labor, they are perfect substitutes. If they were complements, then the supply of labor in the unskilled labor market would be unchanged.
+		\end{solution}
+		\part[2] Plot the original market equilibrium along with the new labor supply curve on the plot below, labeling it $E_S^1$.
+	\begin{figure}[H]
+	\centering 
+	\includegraphics[scale=.55]{hw3_1}
+\end{figure}	
+
+%	\begin{figure}[H]
+%	\centering 
+%	\includegraphics[scale=.55]{hw3_3_sol}
+%\end{figure}
+		\part[2] What is the equilibrium wage rate and employment level in the market for low-skilled labor after the influx of immigrants?
+		\begin{solution}[.7in]
+			Again, set $E_S = E_D$ to find $w^*$ and plug in to either to find $E^*$. $(w^*, E^*) = (\$12, \text{180 million})$.
+		\end{solution}
+		\part[2] How many native workers are employed now?
+		\begin{solution}[.5in]
+		For native workers, $E_S = 30w - 300$. At the new wage rate of \$12, the number of natives employed would be $E_N = 30(12)-300 = $ 60 million.
+		\end{solution}	
+	\part[6] Calculate the new native firm and native worker surplus. Label these on your plot.
+	\begin{solution}[1.5in]
+	New Native WS = $(1/2)(2)(60,000,000) = \$60$ million
+	\\
+	New Native PS = $(1/2)(18)(180,000,000) = \$1.62$ billion
+	
+	\ddp{(2) FS on graph, WS on graph, (1) each calculated value}
+\end{solution}
+		\part[2] What is the \underline{change} in total surplus as a result of this immigration wave?
+		\begin{solution}[1in]
+		\[TS' = \text{Area between $E_D$ and the new supply curve} = (1/2)(24)(180,000,000) = \text{\$2.16 billion} \]
+		\[\Delta TS = \text{\$660 million}\]
+		
+		If only looking at new \textit{native} surplus (i.e., the immigration surplus): 
+		
+		\[\Delta \text{Native $TS$} = (1/2)(3)(120,000,000) = \text{\$180 million}\]
+		\end{solution}
+	
+	\ddp{I wasn't 100\% clear on which one to calculate, so either is fine.}
+ 	\end{parts}
+
+
+\subsection*{Non-Competitive Labor Markets}
+
+
+	\question Wrigley is a company town, and the only purchaser of labor in the region is the Wrigley Gum Company (WGC), who produce chewing gum to sell in the market for wholesale gum. WGC employs only labor, and labor is their only expenditure. Because they are a monopsony, they may either choose to pay low wages and hire just a few workers, or pay higher wages to induce more workers to produce gum. Note that the market for wholesale gum is competitive, so WGC must accept the market price of \$35 for each box of gum they produce. Table \ref{SA1} shows the number of labor hours WGC can hire at different wages and how much output is produced by those labor hours.
+
+	\begin{table}[H]
+		\caption{WGC Costs and Production}
+		\centering
+		\begin{tabular}{c|c|c|c|c|c|c} 
+			
+			Wage   & Labor Hours & Total Cost & Marginal Cost & Output & Total Revenue & Marginal Revenue \\
+			\hline
+			\$10 & 5 & \dd{\$50} & --- & 100 & \dd{\$3,500} & ---\\
+			\$12 & 6 & \dd{\$72} & \dd{\$22} & 101 & \dd{\$3,535} & \dd{\$35}\\
+			\$14 & 7 & \dd{\$98} & \dd{\$26} & 102 & \dd{\$3,570} & \dd{\$35}\\
+			\$16 & 8 & \dd{\$128} & \dd{\$30} & 103 & \dd{\$3,605} & \dd{\$35}\\
+			\$18 & 9 & \dd{\$162} & \dd{\$34} & 104 & \dd{\$3,640} & \dd{\$35}\\
+			\$20 & 10 & \dd{\$200} & \dd{\$38} & 105 & \dd{\$3,675} & \dd{\$35}\\
+			\$22 & 11 & \dd{\$242} & \dd{\$42} & 106 & \dd{\$3,710} & \dd{\$35}\\
+			\$24 & 12 & \dd{\$288} & \dd{\$46} & 107 & \dd{\$3,745} & \dd{\$35}\\
+			\$26 & 13 & \dd{\$338} & \dd{\$50} & 108 & \dd{\$3,780} & \dd{\$35}\\
+		\end{tabular}
+		\label{SA1}
+	\end{table}
+	
+\begin{parts}
+	\part[4] Fill in the blank columns in Table \ref{SA1}. 
+	\ddp{One point per correct column.}
+\newpage
+	\part[4] Assuming WGC is a profit maximizing firm, how many hours of labor should they hire? Explain why.
+	\begin{solution}[1.5in]
+	The firm should hire the next hour of labor as long as $VMP_E \ge MC$. In this example, $MP_E = 1$, so $VMP_E = \$35 \times 1 = \$35 = MR$. The firm should hire 9 hours of labor.
+	\end{solution}
+	\part[2] What is the profit earned by WGC if they employ the profit-maximizing number of labor hours?
+\begin{solution}[.6in]
+	\[\Pi = TR - TC = \$3,640 - \$162 = \$3,478\]
+\end{solution}
+	\part[2] Compare the wage rate to the value of the marginal product of labor.  Which is greater (or are they equivalent)?
+\begin{solution}[.6in]
+	$VMP_E = \$35 > w = \$18$. Workers are paid less than the value they bring to the firm.
+\end{solution}
+\part[3] Now, suppose that the town of Wrigley imposes a minimum wage of \$22. In Table \ref{tab2} below, fill in WGC's total cost, marginal cost, and profit. Assume prices and revenues are the same as before.
+	\begin{table}[H]
+		\caption{WGC Costs and Production}
+		\centering
+		\begin{tabular}{c|c|c|c|c} 
+			
+			Wage   & Labor Hours & Total Cost & Marginal Cost & Profit\\
+			\hline
+			\$22 & 5 & \dd{\$110} & --- & \dd{\$3,390} \\
+			\$22 & 6 & \dd{\$132} & \dd{\$22} & \dd{\$3,403} \\
+			\$22 & 7 & \dd{\$154} & \dd{\$22} & \dd{\$3,416} \\
+			\$22 & 8 & \dd{\$176} & \dd{\$22} & \dd{\$3,429}\\
+			\$22 & 9 & \dd{\$198} & \dd{\$22} & \dd{\$3,442} \\
+			\$22 & 10 & \dd{\$220} & \dd{\$22} & \dd{\$3,455} \\
+			\$22 & 11 & \dd{\$242} & \dd{\$22} & \dd{\$3,468} \\
+			\$24 & 12 & \dd{\$288} & \dd{\$46} & \dd{\$3,457} \\
+			\$26 & 13 & \dd{\$338} & \dd{\$50} & \dd{\$3,442} \\
+		\end{tabular}
+		\label{tab2}
+	\end{table}
+	
+\part[2] What happens to the quantity of labor employed after the minimum wage is imposed? How does this compare to the effect of a binding minimum wage in a competitive market?
+\begin{solution}[1.5in]
+The quantity of labor will increase to 11 hours of labor after the imposition of the minimum wage since this is the profit maximizing number of hours to employ. In a competitive market, an increase in the wage rate due to a binding minimum wage would decrease employment.
+\end{solution}
+
+\part[2] What happens to worker surplus as a result of the minimum wage? Explain why. You don't have to calculate the change in worker surplus here, just explain why it changes in the direction it does.
+
+\begin{solution}[1.5in]
+Worker surplus will increase as a result of the minimum wage. Both the number of labor hours employed and the wage rate increased, which will result in an unambiguous increase in worker surplus.
+\end{solution}
+\part[2] What happens to total surplus as a result of the minimum wage (relative to the total surplus without the minimum wage)? Explain why. You don't have to calculate the change in total surplus here, just explain why it changes in the direction it does.
+ 
+\begin{solution}[1.5in]
+Earlier labor employment was low due to the firm's monopsony power.  After the minimum wage is put in place, the firm expands production.  The firm's profits fall, but the gains of the workers make up for it. Under a monopsony, increasing employment will increase total surplus as we will be closer to the optimal employment level where $E_S = VMP_E$.
+\end{solution}
+
+\end{parts}
+
+
+\subsection*{LMDCs}
+
+Directions: Type your response to the following questions and attach them to the back of this packet. Non-typed answers will receive zero points.
+
+\ddp{As long as they wrote something close to what is in the numbered points, they should get full credit here. The additional stuff I wrote is just a mini-review.}
+	\question[4] Read the introduction to Fields (2011). In 5-7 sentences, summarize the evaluation framework outlined by the author to analyze proposed policy interventions.
+	\begin{solution}
+		Fields proposes the following framework in order to analyze policy:
+\[\text{Policy instruments} \rightarrow \text{Model} \rightarrow \text{Outcomes} \rightarrow \text{Policy evaluation critera} \rightarrow \text{Policy evaluation judgement}\]
+
+In step one, the researcher should explicitly identify the policy under consideration (e.g., the specific law). Step two is writing down a model that captures the major real-world implications the policy entails and then in step three use the model to predict outcomes. The next major step outlined is to describe how a policy is to be evaluated. That is, what criteria entails the success of a proposed or past policy. Lastly, one should evaluate the predicted (or realized) outcomes of a policy by the criteria stated in the previous step in order to gauge its success.
+	\end{solution}
+	\question[4] Read the introduction of Jayachandran (2006). In 4-5 sentences, briefly summarize the paper's results in regards to how the wage responded differently to productivity shocks depending on the availability of ``smoothing mechanisms.'' 
+	\begin{solution}
+	Jayachandran finds that agricultural wages in rural India are less sensitive to productivity shocks (instrumented by local rainfall changes over time) if
+		\begin{enumerate}
+			\item an area has a more developed banking sector
+			\item workers are able to migrate away from an area
+			\item workers are landless
+		\end{enumerate}
+	These results support the theoretical prediction that labor supply should be more inelastic if workers cannot save/borrow in order to smooth consumption (i.e., the income effect should be large if you cannot ``weather'' negative wage shocks). Additionally, if workers are ``stuck'' in areas, we again should only see a small change in labor supply if access to other regions is limited or if individuals own land and cannot readily move. These issues are exacerbated further if workers as near subsistence, as is the case in many developing countries, since the marginal utility of income for these workers is high. 
+	\end{solution}
+	\question[4] Read the introduction to Jensen (2012). In 4-5 sentences, briefly summarize the paper's results in regards to how increased labor market opportunities affected young women's labor market participation as well as other outcomes beyond the labor market.
+	
+	\begin{solution}
+	Jensen finds that the recruiting service provided to rural treatment villages in India (a proxy for increasing labor market opportunities) lead to
+	\begin{enumerate}
+		\item women in treatment villages to be 4.6\% more likely to work in a BPO job than women in control villages and 2.4\% more likely to participate in any work outside the home
+		\item women in treatment villages expressing a greater interest in labor force participation throughout their life
+		\item increased investments for women in treatment villages (e.g., higher enrollment in private classes, greater enrollment for younger females and higher BMI)
+		\item women in treatment villages to be 5-6\% less likely to be married or give birth during the treatment period and reporting a desire to have fewer children
+	\end{enumerate}
+	\end{solution} 
+\end{questions}
+
+\rule{\textwidth}{1pt}
+
+
+\begin{center}
+	\textbf{FOR GRADING:}\\
+	\gradetable[h][questions]
+\end{center}
+
+\end{document}

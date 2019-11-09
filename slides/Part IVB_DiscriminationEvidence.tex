@@ -1,0 +1,560 @@
+\documentclass[pdf]{beamer}
+\usetheme{Frankfurt}  
+\usecolortheme{whale}
+\usepackage{tikz} 
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}              % used for \eqref{} in this document
+\usepackage{dsfont}
+\usepackage{hyperref}
+\usepackage{threeparttable}
+\usepackage{multirow}
+\graphicspath{{Figures/}}
+\usepackage{booktabs}
+\usepackage{tikz}
+\newtheorem{exmp}{Example}[section]
+\usepackage{subcaption}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage[mathscr]{euscript}
+\usepackage{remreset}% tiny package containing just the \@removefromreset command
+\makeatletter
+\@removefromreset{subsection}{section}
+\makeatother
+\setcounter{subsection}{1}
+
+
+\section{Measuring Discrimination}
+
+%% preamble
+\title{Part VB: Discrimination Evidence}
+\author[David A. D\'iaz]{David A. D\'iaz}
+\institute{UNC Chapel Hill}
+\date{}
+
+
+\AtBeginSection[] %Section links on slides
+
+
+\begin{document}
+	
+	\begin{frame}
+		
+		\titlepage
+		
+	\end{frame}
+	
+	\begin{frame}{Table of Contents}
+		
+		\tableofcontents
+	\end{frame}
+
+	
+\begin{frame}{Measuring Discrimination}
+	
+	\begin{itemize}
+		\item Wage differentials between two groups (e.g., men and women) (may) result from either/both
+		\begin{enumerate}
+			\item Labor market discrimination
+			\item Pre-market differences
+		\end{enumerate}
+		\item A common empirical goal is to determine the percentage of a wage gap which is attributable to labor market discrimination.
+		\item The Oaxaca-Blinder decomposition is a fairly intuitive method for estimating the role of labor market discrimination on wages.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Measuring Discrimination}
+	
+	\begin{itemize}
+		\item Suppose we observe that
+		\begin{enumerate}
+			\item white workers have a higher average wage than black workers, $\overline{w}_W > \overline{w}_B$
+			\item white workers have higher average years of schooling, $\overline{S}_W > \overline{S}_B$
+		\end{enumerate}
+		\item ``Raw'' mean wage differential:
+		\[\Delta w = \overline{w}_W - \overline{w}_B > 0\]
+		\item What causes wage gap? A characteristic relevant to productivity (schooling) or a characteristic irrelevant to productivity (race)?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Measuring Discrimination}
+	\begin{itemize}
+		\item Consider a simple linear wage-schooling locus for each race:
+		
+		\[w_W = \alpha_W + \beta_W S_W\]
+		\[w_B = \alpha_B + \beta_B S_B\]
+		\item Interpretation of coefficients:
+		\begin{enumerate}
+			\item $\alpha_i$: Wage for worker of type $i$ with $S = 0$
+			\item $\beta_i$: Return to schooling for each additional year for worker of type $i$
+		\end{enumerate}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Measuring Discrimination}
+\begin{itemize}
+		\item Why might $w_W > w_B$? Either or both
+	\begin{enumerate}
+		\item $\alpha_W - \alpha_B > 0$: There is a wage premium for zero-skill white workers relative to zero skill black workers
+		\item $\beta_W - \beta_B > 0$: White workers receive a higher return to schooling than black workers 
+	\end{enumerate} 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Measuring Discrimination}
+	\begin{itemize}
+		\item Mean wages for each worker type:
+		\[\overline{w}_W = \alpha_W + \beta_W \overline{S}_W\]
+		\[\overline{w}_B= \alpha_B + \beta_B \overline{S}_B\]
+		\item Goal:  Decompose wage differential into a ``discrimination'' component and a ``pre-market'' component.
+		\begin{itemize}
+			\item Pre-market: How much of the wage differential is due to differences in mean schooling levels?
+			\item Discrimination: How much of the wage differential is attributable to the structure of the wage equation? (i.e., do we see that $\alpha_W > \alpha_B$ or $\beta_W > \beta_B$?) 
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Measuring Discrimination}
+	\begin{itemize}
+		\item We can write the wage differential as 
+		\[\overline{w}_W - \overline{w}_B = (\alpha_W - \alpha_B) + (\beta_W - \beta_B) \overline{S}_B + (\overline{S}_W - \overline{S}_B)\beta_W\]
+		\item Pre-market component: $(\overline{S}_W - \overline{S}_B)\beta_W$
+		\item Discrimination component: $(\alpha_W - \alpha_B) + (\beta_W - \beta_B) \overline{S}_B$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Measuring Discrimination}
+	\begin{itemize}
+		\item Average black worker is paid \[\overline{w}_B = \alpha_B + \beta_B \overline{S}_B\]
+		\item If the average black worker were ``treated as a white worker,'' \[w^*_B = \alpha_W + \beta_W \overline{S}_B\]
+		\item Discrimination component: $w^*_B - \overline{w}_B$
+		\item Pre-market component: $\overline{w}_W - w^*_B$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Measuring Discrimination}
+	\begin{exmp}
+		Suppose that the average schooling level for white workers is 10 years and for black workers it is 6.7 years. If the wage equations are given by 
+		\[w_W = 5 + .5S_W\]
+		\[w_B = 4 + .45S_B\]
+		how much of the wage differential is due to discrimination? Pre-market factors?
+	\end{exmp}
+\end{frame}
+
+\begin{frame}{Measuring Discrimination}
+	\begin{itemize}
+		\item This gives us an accurate decomposition of our wage differential if we've modeled the situation correctly.
+		\item We often observe experience, schooling, race, and other demographics in data sets.
+		\item We rarely observe (i) quality of education or (ii) academic field of study.  But, some studies have employed these measures.
+		\item Several other reasons this is not great, but the intuition is important and it can be a reasonable first approximation.
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Readings}
+	\begin{itemize}
+		\item Borjas 9.8
+	\end{itemize}
+\end{frame}
+
+
+\section{Discrimination Evidence}
+
+
+
+\begin{frame}{Empirical Analysis of Discrimination}
+	\begin{itemize}
+		\item Empirically testing for labor market discrimination can be difficult
+		\item Often measured as the difference in outcomes between two groups conditional on productive characteristics
+		\item Earnings model: $Y = \alpha M + \beta X + \varepsilon$
+		\begin{itemize}
+			\item $\beta X$ captures set of productive characteristics and their returns
+			\item $M$ is an indicator for minority status (uncorrelated with $\varepsilon$)
+			\item $\alpha<0$ measures discrimination
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Empirical Analysis of Discrimination}
+	\begin{itemize}
+		\item Potential issues:
+		\begin{itemize}
+			\item Variable choice: Including endogenous $X's$ (e.g., schooling and occupation) will reduce gap size
+			\begin{itemize}
+				\item Pre-market discrimination could reduce $X$ for minorities (e.g., lower perceived returns to education $\Rightarrow$ lower education $\Rightarrow$ lower wages)
+			\end{itemize}
+			\item Omitted variable bias: Productivity/skills may not be completely captured by $X$
+			\item Selection into labor force: lower LFPR among minorities may mask even larger wage gap
+			\item Time effects
+			\begin{itemize}
+				\item Historical changes in the wage gap
+				\item Life-cycle effects (e.g., due to statistical discrimination)
+			\end{itemize}
+			\item Distributional effects: Wage gap may vary substantially along earnings distribution
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Empirical Analysis of Discrimination}
+	\begin{itemize}
+		\item Commonly used methods to estimate discrimination:
+		\begin{itemize}
+			\item Regression studies
+			\item Audit studies
+			\item Difference-in-differences
+			\item Lab experiments
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Black-White Wage Gap}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.45]{07F_1}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}{The Black-White Wage Gap}
+	\begin{itemize}
+		\item Why has the black-white gap decreased? Major proposed theories:
+	\end{itemize}
+	\begin{enumerate}
+		\item Increasing levels of human capital accumulation in the black population
+		\item Affirmative action programs
+		\begin{itemize}
+			\item Large increase in black employment
+			\item Impact on wages less clear
+		\end{itemize}
+		\item Decreasing black labor force participation
+		\item Unobserved skill differences 
+		\begin{itemize}
+			\item Neal \& Johnson (1996)
+		\end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{The Black-White Wage Gap}
+	\begin{itemize}
+		\item How much of the wage difference is due to discrimination?
+		\item Choice of controls has a large effect on measure of discrimination
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.45]{07F_2}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}{The Black-White Wage Gap}
+	\begin{itemize}
+		\item Mixed evidence on scope of statistical discrimination
+		\item Altonji \& Pierret (2001): Little
+		evidence for statistical discrimination in wages on the basis of race
+		\item Fryer, et al (2013): At least 1/3 of black-white wage gap explained by labor market discrimination
+		\begin{itemize}
+			\item Unemployed blacks receive significantly lower wage offers than whites.
+			\item Wage gap of black workers decreases as black workers' tenure at a firm rises
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Black-White Wage Gap}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.45]{07F_6}
+		\caption{Source: Fryer, et al (2013)}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Neal \& Johnson (1996)}
+	\begin{itemize}
+		\item ``The Role of Premarket Factors in Black-White Wage Differences''
+		\item Prior research focused on explaining wage gap by controlling for observable productivity characteristics
+		\item Residual ``unexplained'' wage difference taken as measure of labor market discrimination
+		\item Issue: Many characteristics are endogenous and can be affected by labor market discrimination
+		\begin{itemize}
+			\item Occupation, college choice, experience, etc. can all be affected by current and past discrimination
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Neal \& Johnson (1996)}
+	\begin{itemize}
+		\item Another issue: Does not account for differences in skill level between blacks and whites entering the labor market
+		\begin{itemize}
+			\item Controlling for schooling may not entirely capture skill differentials
+			\item Schooling may overstate skill level of black workers given that black children exhibit lower levels of achievement than whites in the same grade 
+		\end{itemize}
+		\item Neal \& Johnson approach:
+		\begin{itemize}
+			\item Everything relevant for wages that happens after secondary school can be affected by discrimination $\Rightarrow$ should exclude these variables from earnings equation
+			\item Human capital attained by late teens is ``pre-determined'' and affects future education and earnings
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Neal \& Johnson (1996)}
+	\begin{itemize}
+		\item Used National Longitudinal Survey of Youth and examined workers in their late 20s
+		\item Measure of human capital: AFQT exam (administered before labor market entry)
+		\item Earnings equation estimated:
+		\[\log(w) = \alpha + \beta_1Age + \beta_2Age^2 + \beta_3 Race + \beta_4 AFQT + \beta_5 Schooling\]
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Neal \& Johnson (1996)}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.7]{07E_1}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Neal \& Johnson (1996)}
+	
+	\begin{itemize}
+		\item Three quarters of the male black-white wage gap explained by AFQT differences.
+		\item All of the female black-white wage gap explained by AFQT differences
+		\item Implication: the black-white wage gap reflects a skill gap, which in turn could exist due to differences in family and school environments.
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Neal \& Johnson (1996)}
+	
+	\begin{itemize}
+		\item Potential issues:
+		\begin{itemize}
+			\item Criticism of many cognitive tests is that they are racially biased, thus under‐predicting
+			productivity or job performance for blacks relative to whites.
+			\item AFQT unlikely to suffer from such a problem. In 1991, National Academy of Sciences completed review of test for racial fairness and concluded it predicts job performance well, and is racially unbiased.
+			\item Models of discrimination suggest blacks with more skill have more difficulty
+			distinguishing themselves to employers than high‐skill whites, and thus the payoff to
+			acquiring skill is lower for blacks
+			\item LFPR for black men are lower than for white men  $\Rightarrow$ exclusion of
+			non‐participants may understate the true differences in wage offer  
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Altonji and	Pierret (2001)}
+	\begin{itemize}
+		\item ``Employer Learning and Statistical Discrimination''
+		\item Do	employers	statistically	discriminate	among	
+		young	workers	on	the	basis	of	easily	
+		observable	variables,	such	as	education	and	
+		race?
+		\item As firms learn about worker productivity, the coefficients on the easily observed measures of productivity should rise, while those on hard-to-observe correlates of productivity should rise
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Altonji and	Pierret (2001)}
+	\begin{itemize}
+		\item Basic model:
+		\begin{itemize}
+			\item Firms form expectations of productivity over observable characteristics
+			\item They do not observe true productivity, but do observe a ``noisy'' signal each period
+		\end{itemize}
+		\item Implications:
+		\begin{itemize}
+			\item As employers learn about productivity, easily observed correlates of productivity will receive less weight and unobserved correlates get more weight
+			\item If firms use race to statistically discriminate, should have less weight as firms observe true productivity 
+			\item If firms do not use race, then race	differential	will	widen	as	experience	accumulates	
+			(because	race	proxies	for	productivity	and	info	is not	used	by	
+			employers)
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Altonji and	Pierret (2001)}
+	\begin{itemize}
+		\item Evidence	suggests	that	employers	do	not	use	
+		race	to	statistically	discriminate	at	beginning	
+		of	employment,	but	gaps	emerge	as	obtain	
+		additional	legal	information	on	worker	
+		productivity
+		\item Other alternative explanations:
+		\begin{itemize}
+			\item Differential	benefits	from	on	the	job	training	related	to	
+			productivity	
+			\item Discrimination-related	differences	in	access	to	training
+			\item Taste-based	discrimination	could	become	more	
+			important	in	higher-level	positions
+		\end{itemize}
+		\item As	firms	obtain	more	information	about	worker,	
+		pay	becomes	more	dependent	on	productivity	
+		and	less	on	easily	observable	credentials	(ex:	
+		schooling)
+		\item Potential issue: Do	not	consider	possible	discrimination	in	hiring
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Bertrand \& Mullainathan (2004)}
+	\begin{itemize}
+		\item ``Are Emily and Greg More Employable
+		than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination''
+		\item Send	resumes	in	response	to	help-wanted	ad	and	
+		measure	call-back	rates	after	randomly	assigning	
+		white	and	African-American	sounding	names
+		\item Also	vary	quality	of	resumes	
+		\item Other common way to study hiring discrimination: audit studies
+		\begin{itemize}
+			\item Both	members	need	to	be	identical	in	all	dimensions	
+			that	affect	productivity	other	than	race	(is	this	
+			possible?)
+			\item Not	double-blind	(auditors	know	purpose	of	study)
+			\item Extremely	expensive
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Bertrand \& Mullainathan (2004)}
+	\begin{itemize}
+		\item Experiment	from	July	2001-Jan	2002	in	Boston	and	July	2001-May	
+		2002	in	Chicago
+		\item Use	ads	in	Sunday	editions	of	Boston	Globe	and	Chicago	Tribune	in	
+		appropriate	occupations
+		\item Randomly	sample	2	high-quality	and	2	low-quality	resumes	for	each	
+		ad
+		\item Compare callback/email response rates between the two groups
+		\item Issues: 
+		\begin{itemize}
+			\item Cannot	capture	wage	discrimination	or	whether	
+			the	applicant	actually	gets	job
+			\item Resumes	do	not	directly	report	race
+			\item Some	employers	may	not	notice	names
+			\item Names	may	not	be	representative	of	average	AfricanAmerican
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Bertrand \& Mullainathan (2004)}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.6]{07E_2}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Bertrand \& Mullainathan (2004)}
+	\begin{itemize}
+		\item Apparent	low	chance	of	callback	for	African	
+		Americans
+		\item Cannot	improve	chances	by	improving	observable	
+		skills	or	credentials
+		\begin{itemize}
+			\item Training	programs	not	enough	to	alleviate	racial	gap	in	
+			labor	market	outcomes
+		\end{itemize}
+		\item Potential confounder: 
+		\begin{itemize}
+			\item Are	employers	discriminating	on	social	
+			background	which	is	reflected	in	race	rather	
+			than	name?
+			\begin{itemize}
+				\item Would	expect	that	blacks	would	be	helped	more	
+				by	better	addresses	than	whites, but not the case
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{The Black-White Wage Gap}
+	\begin{itemize}
+		\item Recently, role of explicit labor market discrimination has likely diminished
+		\item Racial differences in social and economic outcomes are greatly
+		reduced after accounting for educational achievement (Fryer 2011)
+		\item Public school quality tends to be lower in poor, predominantly black areas (inner cities vs. suburbs)
+		\item Achievement gaps as measured by exam scores observed in nearly every grade and on occasion increase with years of schooling
+		\item Policies which work to improve early-childhood schooling outcomes are very important to close wage gaps
+	\end{itemize}
+\end{frame}
+
+
+
+
+
+\begin{frame}{The Male-Female Wage Gap}
+	\begin{itemize}
+		\item Oaxaca decompositions ignore a key determinant of
+		female earnings: different
+		labor market histories.
+		\item Discontinuity in women's labor market attachment may help
+		explain a substantial part of the gender wage gap.
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.45]{07F_3}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{The Male-Female Wage Gap}
+	\begin{itemize}
+		\item Goldin (2014): A Grand Gender Convergence:  Its Last Chapter
+		\item Many high-skill occupations place wage premiums on:
+		\begin{itemize}
+			\item Quantity of hours worked
+			\item Working specific hours (not flexible, example 8 AM – 6 PM)
+		\end{itemize}
+		
+		\item Rigid job structures $\Rightarrow$ large punishment for taking time off to raise kids.
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Male-Female Wage Gap}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.5]{07F_4}
+		\caption{Goldin (2014)}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{The Male-Female Wage Gap}
+	\begin{itemize}
+		\item Big finding in recent years:
+		After controlling for other relevant characteristics, gender gap is very small for women without children, and sizeable for women with children.
+		\item Implication:  Our labor market doesn't so much directly punish women for being women (though anecdotes of this are easy to find), as it punishes them for taking time off to raise children.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Male-Female Wage Gap}
+\begin{itemize}
+	\item Policy implications?
+\begin{itemize}
+	\item Equal pay policies not sufficient to close gender gap, need fundamental change in structure of jobs.
+	\item Many have proposed mandatory maternity leave.  Might help, but as paid vs. unpaid leave does not affect experience accumulation, effects might not necessarily be great in terms of closing gender gap
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Male-Female Wage Gap}
+	\begin{itemize}
+		\item Another possible reasons for gender wage gap: Occupational crowding
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.25]{07F_5}
+		\caption{Source: Borjas}
+	\end{figure}
+	\begin{itemize}
+		\item ``The majority of the current earnings gap comes from within occupation differences in earnings rather than from between occupation differences'' (Goldin 2014)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Readings}
+	\begin{itemize}
+		\item Borjas 9.7; 9.9 - 9.11
+		\item Altonji \& Pierret (2001). Employer Learning and Statistical Discrimination. \textit{The Quarterly Journal of Economics}
+		\item Bertrand \& Mullainathan (2004). Are Emily and Greg More Employable than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination. \textit{The American Economic Review}
+		\item Fryer, Roland, et al (2013). Racial Disparities in Job Finding and Offered Wages. \textit{Journal of Law and Economics}
+		\item Fryer (2010). Racial Inequality in the 21st Century: The Declining Significance of Discrimination. Working Paper.
+		\item Goldin (2014). A Grand Gender Convergence: Its Last Chapter. \textit{The American Economic Review}
+		\item Neal \& Johnson (1996). The Role of Premarket Factors in Black-White Wage Differences. \textit{Journal of Political Economy}
+	\end{itemize}
+\end{frame}
+
+
+	
+\end{document}

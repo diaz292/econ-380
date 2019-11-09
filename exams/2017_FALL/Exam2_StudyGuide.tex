@@ -1,0 +1,162 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\usepackage{threeparttable}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{sgamevar}
+\usepackage{sgame}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah (blank next two lines out for no solutions, unblank #3)
+\printanswers
+\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+%\newcommand{\dd}[1]{}  
+%\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+	
+	
+	\title{\textbf{Exam 2 Study Guide} \\ \vspace{2 mm} {\large ECON 380} \\ \large{UNC Chapel Hill}}
+	\date{}
+	\maketitle
+	
+Stuff to know for exam 2:
+
+
+\subsection*{Human Capital Theory}
+
+\begin{enumerate}
+	\item What has been the trend in the proportion of people without a HS degree over the last 70 years? In the proportion of people with a college degree?
+	\item How has the relative pay of those with a college degree compared to those without a HS degree changed since 1975? What about the relative pay of those with some college compared to those with no HS degree?
+	\item How to find present value and net present value
+	\item How to find an individual's optimal choice from two choices with different costs/future earnings
+	\item What is the relationship between $r$ and an individual's college choice?
+\end{enumerate}
+
+\subsection*{The Schooling Model}
+
+\begin{enumerate}
+	\item How to find $MRR$ given an individual's wage-schooling locus (both from a table or a graph)
+	\item What are the properties of the $MRR$ curve?
+	\item How to find individual stopping choice given $MRR$ schedule and an individual's discount rate (both from a table or a graph)
+	\item How does an individual's choice change with $r$?
+\end{enumerate}
+
+\subsection*{Estimating the Returns to Schooling}
+
+\begin{enumerate}
+	\item Why might two individuals differ in their schooling choices?
+	\item If individuals have different rates of discount, how does that affect their optimal schooling choice? Can we accurately estimate $MRR$ if individuals differ only in their discount rate?
+	\item If individuals have different ability levels, how does that affect their optimal schooling choice? Can we accurately estimate $MRR$ if individuals differ in ability?
+	\item Why might unobserved ability bias $MRR$ estimates upwards? Downwards?
+	\item What methods have been attempted to deal with ability bias? What are some of the drawbacks of each?
+	\item Know 2-3 of the other issues that come up when estimating the returns to schooling 
+\end{enumerate}
+
+\subsection*{Job Market Signaling}
+
+\begin{enumerate}
+	\item What is the basic idea of the signaling model?
+	\item Under a pooling equilibrium, who is better off? Worse off?
+	\item Know how to find threshold level of earnings or school level given information about worker productivity and costs of education (e.g., homework question and example from class)
+	\item Can we easily separate the productivity enhancing component of schooling from the the ``sheepskin effect''? Why or why not?
+\end{enumerate}
+
+\subsection*{Human Capital and Development}
+
+\begin{enumerate}
+	\item Homework 4 questions about Duflo (2001) and Jensen (2010)
+\end{enumerate}
+
+
+\subsection*{Labor Market Discrimination}
+
+\begin{enumerate}
+	\item What is labor market discrimination?
+	\item What are pre-labor market differences?
+	\item What has been the trend in the black-white wage since the 1970s (shrinking gap, rising, neither)?
+	\item What has been the trend in the male-female wage since the 1970s (shrinking gap, rising, neither)? 
+\end{enumerate}
+
+\subsection*{Taste-Based Discrimination}
+
+\begin{enumerate}
+	\item What is taste-based discrimination?
+	\item Know the graphs from class related to employer-based discrimination 
+	\item Who are the ``winners'' and ``losers'' from the presence of discriminatory firms?
+	\item What is the relationship between the profits of discriminatory firms vs ND firms? 
+	\item What is the long-run outcome predicted by employer-discrimination?
+	\item Does employer-based discrimination explain the existence of wage gaps? 
+	\item Does employee-based discrimination explain the existence of wage gaps?
+	\item Does customer-based discrimination explain the existence of wage gaps?
+\end{enumerate}
+
+\subsection*{Statistical Discrimination}
+
+\begin{enumerate}
+	\item What is statistical discrimination?
+	\item Know graphs from class related to statistical discrimination
+	\item Implications of statistical discrimination if average test scores are the same, but the the signal is more ``noisy'' for one group? Who benefits? Who is hurt?
+	\item Can a ``noisy'' signal (even if test scores, on average, are equal) lead to wage gaps? Will average wages be different?
+	\item Implications of statistical discrimination if the average test score of one group is lower than the other (assuming the signal is just as ``noisy'' for each group)? 
+	\item How do different average test scores lead to wage gaps? Does this hold in the long-run? Why?
+\end{enumerate}
+
+\subsection*{Measuring Discrimination}
+
+\begin{enumerate}
+	\item How to interpret linear wage schooling locus
+	\item How different coefficients are evidence of discrimination 
+	\item Oaxaca-Blinder decomposition: pre-market component and discrimination component
+	\item Know graph from class and interpretation: discrimination component is $w_m^* - \bar{w}_m$ (what average minority worker would receive if ``treated as white worker'' minus average minority worker wage); pre-market component is $\bar{w}_w - w_m^*$
+\end{enumerate}
+
+\subsection*{Discrimination Evidence}
+
+\begin{enumerate}
+	\item Know 2-3 of the potential issues that arise when estimating the typical earnings model testing for discrimination
+	\item Neal \& Johnson (1996): What do the authors find drives a large portion of the black-white wage gap? Do they argue the wage gap is largely driven by discrimination or pre-labor market factors?
+	\item Altonji \& Pierret (2001): Do the authors find evidence that firms statistically discriminate on the basis of race? 
+	\item Bertrand \& Mullainathan (2004): Know basic set-up of the study. How did the callback rates for ``white sounding names'' compare to that of ``black sounding names?'' 
+	\item In recent years, how has the role of explicit labor market discrimination in driving different socio-economic outcomes changed? Will policies targeting labor market discrimination or policies targeting school achievement gaps be more effective in closing wage gaps and other differences in socio-economic outcomes?
+	\item What is likely the greatest mechanism driving the gender wage gap? How does the shape of the relative earnings curve between males and females over the life-cycle reflect this?
+	\item What is occupational crowding? Does it necessarily play a large role in driving the gender wage gap?
+\end{enumerate}
+
+
+
+\end{document}

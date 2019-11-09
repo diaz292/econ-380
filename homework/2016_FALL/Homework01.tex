@@ -1,0 +1,239 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{sgamevar}
+\usepackage{sgame}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah (blank next two lines out for no solutions, unblank #3)
+%\printanswers
+%\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+%\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+\newcommand{\dd}[1]{}  
+\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+
+
+\title{\textbf{Homework 1 \dd{\\Solutions}} \\ \vspace{2 mm} {\large ECON 380} \\ \large{UNC Chapel Hill}}
+\date{}
+\maketitle
+
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\\
+
+\makebox[\textwidth]{ONYEN:\enspace\hrulefill}
+\\
+
+\begin{center}
+	\fbox{\fbox{\parbox{5.5in}{\centering
+				This homework is due on \textbf{September 2} by \textbf{2:15PM}. You must turn in your work on a printed copy of this document in order for it to be graded. Your assignment must be stapled and in the correct order. Non-stapled assignments will automatically receive a 10 point deduction. There are a total of 50 available points.}}}
+\end{center}
+
+\ddp{Pretty straight forward to grade this one I think. Answers are in red and a few notes for grading purposes are in green. Make sure to actually take off points if assignments are not stapled!}
+	
+\subsection*{The Econ 101 Story (with Algebra)}
+
+\begin{questions}
+
+\question Suppose that the labor supply in a certain market is given by $Q_S = 25w - 50$ and labor demand is given by $Q_D = 150 - 10w$, where $w$ is the hourly wage rate.
+
+\begin{parts}
+	\part[4] If the wage rate is \$4/hour, what is the quantity of labor supplied and demanded? Is this the equilibrium wage? If not, is the equilibrium wage higher or lower than \$4/hour? Explain why.
+	\begin{solution}[1in]
+		$Q_S(w=4)= 25(4) - 50 =50$. $Q_D(w=4) = 150 - 10(4) = 110$. There is a shortage of labor since $Q_D > Q_S$. Thus, the equilibrium wage is \underline{higher} because as firms compete for the scarce labor, they will bid up the wage.
+	\end{solution}
+	\ddp{Points: (1) $Q_D$, (1) $Q_S$, (1) eq. wage is higher than \$4, (1) explanation. Some students might just say that the equilibrium wage is higher because they found it to be \$5.71 in (b), but that is not a sufficient explanation. They should state that a shortage of labor will drive prices up.}
+	\part[4] If there are no policies in place preventing the market from operating freely, what will be the equilibrium wage and quantity of labor employed in the market?
+	\begin{solution}[1in]
+		The equilibrium wage is the wage such that $Q_D = Q_S \Rightarrow 150 - 10w = 25w - 50 \Rightarrow w^* \approx $ \$5.71/hour. Plug this into either $Q_S$ or $Q_D$ to find $Q^* \approx 92.86$.
+	\end{solution} 
+	\ddp{Points: (1) Set $Q_S = Q_D$, (1) showing work, (1) $w^*$, (1) $Q^*$\\
+		I meant to write $Q_S = 25w - 25$, which would have given a nice answer here. Whoops. Rounding $Q^*$ (up or down) is fine as long as they went through the process correctly!}
+	\part[3] Suppose the government imposes a \$7/hour minimum wage on this market. How many workers are employed? Are there any involuntarily unemployed workers? If so, how many?
+	\begin{solution}
+		$Q_D(w=7) = 150 - 10(7) = 80$. $Q_S(w=7) = 25(7) - 50 = 125$. $Q_E = 80$. Involuntarily unemployed: $Q_U = 125 - 80 = 45$.
+	\end{solution}
+	\ddp{Points: (1) $Q_E$, (1) $Q_S$, (1) $Q_U$}
+\end{parts}
+
+\end{questions}
+
+\newpage
+\subsection*{Labor Force Accounting}
+	
+\begin{questions}
+	
+\question Determine the labor force status (employed, unemployed, or out of the labor force) of the following individuals. \textbf{[2 pts each]}
+
+\begin{parts}
+	\part Eddie left his job one year ago.  He has not had paid employment in the past year, as he now stays home to take care of his triplets.
+	\begin{solution}[.4in]
+	Out of the labor force
+	\end{solution}
+	\part Josh left a lucrative career as an ice-cream maker six months ago.  Since then, he has worked 30 hours per week as an unpaid intern for the Cleveland Browns. 
+		\begin{solution}[.4in]
+		I actually don't like this question, so no worries about what you put here since there is some slight ambiguity as to how to count these individuals.
+		\end{solution}
+	\part Natalie was recently laid-off from her previous position as an executive.  She has searched for work actively since her dismissal.
+	\begin{solution}[.4in]
+		Unemployed
+	\end{solution}
+	\part Shannon was also laid-off from her previous position as an executive.  She decided to retire and has not recently searched for work.
+	\begin{solution}[.4in]
+	Out of the labor force
+	\end{solution}
+	\part Aisling has a PhD in Economics but is unable to find work as an economist.  She currently works ten hours per week as a comedian (he is paid).
+		\begin{solution}[.4in]
+			Employed
+		\end{solution}
+\end{parts}
+
+\question Suppose there are 10,000 individuals over age 16 in Saxapahaw. Of these individuals,
+
+\begin{itemize}
+	\item 3,000 work full-time in the private sector \dd{E}
+	\item 1,000 work full-time in the public sector (non-military) \dd{E}
+	\item 1,000 work part-time in the private sector \dd{E}
+	\item 1,500 individuals were laid off 6 months ago due to a plant closing. Of these laid off individuals, 800 have actively sought work since being laid off, while 700 searched for work immediately after being laid off, but not in the last four weeks. \dd{800 U, 700 O}
+	\item 1,000 do not have formal employment and instead choose to stay home to care for children \dd{O}
+	\item 2,500 are retired from work and neither have nor seek employment. \dd{O}
+\end{itemize}
+
+Use this information to answer the following questions. \textbf{[2 pts each]}
+
+\begin{parts}
+	\part How many employed persons are there in Saxapahaw?
+	\begin{solution}[.6in]
+		$E = 3,000 + 1,000 + 1,000 = 5,000$
+	\end{solution}
+	\part How many unemployed persons are there in Saxapahaw?
+		\begin{solution}[.6in]
+			$U = 800$
+		\end{solution}
+	\part What is the labor force participation rate?
+	\begin{solution}[.6in]
+		$LFPR = LF/P = (E + U)/P = 5,800/10,000 = 58\%$.
+	\end{solution}
+	\part What is the unemployment rate?
+	\begin{solution}[.6in]
+		$UR= U/LF = 800/5800 = 13.8\%$.
+	\end{solution}
+	\part If we decide to change the definition of unemployment so that we counted all discouraged or marginally attached workers as ``unemployed,'' what would be the new unemployment rate?
+	\begin{solution}[.6in]
+		$U' = 1,500 \Rightarrow LF = 5,000 + 1,500 \Rightarrow UR' = 1,500/6,500 = 23.1\%$
+	\end{solution}
+\end{parts}
+
+\end{questions}
+
+
+\subsection*{Unemployment}
+
+\begin{questions}
+
+\question For each of the following, determine which type of unemployment is present: frictional, seasonal, structural, or cyclical. \textbf{[2 pts each]}
+
+\begin{parts}
+	\part Steve recently moved to Florida because of its warmer climate, but it's taking him some time finding a new job.
+	\begin{solution}[.6in]
+		Frictional unemployment
+	\end{solution}
+	\part A worker repairing VHS players was laid off because most of his customers have started using DVD players.
+	\begin{solution}[.6in]
+		Structural unemployment
+	\end{solution}
+	\part Calebe is entertaining job offers after graduating college. He has received several, but has turned them down because he thinks he can find a firm that better matches his tastes and skills.
+	\begin{solution}[.6in]
+		Frictional unemployment
+	\end{solution}
+	\part Peter, a highly skilled construction worker, lost his job when the recession began. He is looking for work, but demand for labor in the construction industry is still low.
+	\begin{solution}[.6in]
+		Cyclical unemployment
+	\end{solution}
+	\part Surf City U.S.A experiences high unemployment during the winter due to less demand for labor.  
+	\begin{solution}
+		Seasonal unemployment
+	\end{solution}
+\end{parts}
+
+\end{questions}
+
+\newpage
+
+\subsection*{Worker Preferences}
+
+Note: This section is intended more as a math review and will be graded for effort.
+\\
+
+\ddp{Grade these for effort. If you spot a mistake and could point it out (without taking off points) that'd be swell!}
+
+\begin{questions}
+	
+\question Frank's preferences are represented by the following utility function:  $U(C,L)=2C^{1/3} L^{2/3}$.
+
+\begin{parts}
+	\part[3] Frank's marginal utility of consumption is $MU_C = \frac{2L^{2/3}}{3C^{2/3}}$ and his marginal utility of leisure is $MU_L = \frac{4C^{1/3}}{3L^{1/3}}$. Determine his marginal rate of substitution between leisure and consumption, $MRS_{L,C}$, and simplify your answer where possible.
+	\begin{solution}[1in]
+		\[MRS_{L,C} = \frac{MU_L}{MU_C} = \frac{\frac{4C^{1/3}}{3L^{1/3}}}{\frac{2L^{2/3}}{3C^{2/3}}} =  \frac{4C^{1/3}}{3L^{1/3}} \times \frac{3C^{2/3}}{2L^{2/3}} = \frac{12C}{6L} = \frac{2C}{L}\]
+		
+		\ddp{I had a typo in the equation for $MU_L$ when I released the homework, so definitely give full points here as long as they tried.}
+	\end{solution}
+	\part[2] Find the equation representing his indifference curve for the utility level $\overline{U} = 20$, solved for $C$.
+	\begin{solution}[1in]
+		Set $\overline{U} = 20 = 2C^{1/3}L^{2/3}$. Solving for $C$:
+		\[10 = C^{1/3}L^{2/3} \Rightarrow 10L^{-2/3} = C^{1/3} \Rightarrow C = 1,000L^{-2}  \]
+	\end{solution}
+\end{parts}
+
+\question Sweet Dee's preferences are represented by the utility function $U(C,L) = 4(C^{1/3} + L^{1/3})^3$.
+
+	\begin{parts}
+		\part[2] Do Dee's preferences satisfy the property of ``strict monotonicity?'' Why or why not?
+		\begin{solution}[1in]
+			Yes. Increasing $C$ and holding $L$ constant will increase $U(C,L)$, while increasing $L$ and holding $C$ constant will also increase $U(C,L)$. Increasing both $C$ and $L$ will also increase $U(C,L)$.
+		\end{solution}
+			\ddp{Since we don't use calculus in this course, they don't have to be very rigorous here. In class we showed strict monotonicity by starting with some bundle (e.g., (10,10)) and showing that $U$ increased both when the bundle was, say, $(11,10)$ or when the bundle was $(10,11)$. This is probably what they will do here, so just make sure that they keep one of $C$ or $L$ constant while increasing the other variable to show that $U$ increases in both cases. If they increase both or increase one and decrease the other, give them 1/2 credit.}
+		\part[2] Find the equation representing her indifference curve for the utility level $\overline{U} = 100$, solved for $C$.
+		\begin{solution}[1in]
+		Set $\overline{U} = 100 = 4(C^{1/3}+L^{1/3})^3$. Solving for $C$:
+		\[25 = (C^{1/3} + L^{1/3})^3 \Rightarrow 25^{1/3} = C^{1/3} + L^{1/3} \Rightarrow C^{1/3} = 25^{1/3} - L^{1/3} \Rightarrow C = (25^{1/3} - L^{1/3})^{3}\]
+		\end{solution}	
+	\end{parts}
+\end{questions}
+
+
+\end{document}

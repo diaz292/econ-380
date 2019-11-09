@@ -1,0 +1,206 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{MnSymbol,wasysym}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah
+%\printanswers
+%\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+%\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+\newcommand{\dd}[1]{}  
+\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+
+
+\title{\textbf{Exam 3b \dd{\\Solutions}} \\ \vspace{2 mm} {\large ECON 380} \\ \large{Fall 2016} \\ \large{UNC Chapel Hill}}
+\date{}
+\maketitle
+
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\\
+
+\makebox[\textwidth]{ONYEN:\enspace\hrulefill}
+\\
+
+\makebox[\textwidth]{Honor Code Signature:\enspace\hrulefill}
+\\
+
+\begin{center}
+	\fbox{\fbox{\parbox{6in}{\centering
+				\begin{itemize}
+					\item For partial credit, show all of your work on the following pages, and justify your answers where needed.
+					\item Assume firms can hire a non-integer number of workers (e.g., 4.25 workers) and can produce/sell a non-integer amount of output (e.g., 2.59 units)
+					\item Round final answers to the nearest hundredth.
+					\item Points available: 50
+					\item Write legibly, write legibly, write legibly!
+					\item Good luck! \smiley{}
+				\end{itemize}
+			}}}
+\end{center}
+
+\newpage
+
+\subsection*{Wage Inequality}
+
+\begin{questions}
+	\question[5] Describe the trend in US wage inequality since the 1970s. Has this trend been driven by changes in the bottom, middle, or upper tail of the earnings distribution?
+\begin{solution}[1.5in]
+	
+	
+\end{solution}
+
+\question Consider a simple economy that contains 1,000 individuals. 600 citizens report an annual after-tax income of \$50,000 (the ``low-income'' group), while the other 400 report an annual after-tax income of \$500,000 (the ``high-income'' group).
+
+\begin{parts}
+\part[5] Draw the Lorenz curve for this economy in the figure below.
+\begin{solution}[.5in]
+\end{solution}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5]{exam3_1}
+\end{figure}
+
+\uplevel{Suppose that, under intense political pressure from the public, the government increases the tax rate for those individuals in the ``high-income'' group. The tax rate for low-income earners remains the same.}
+
+\part[4] Will the post-tax Gini coefficient in this economy increase, decrease, or remain the same? What does this indicate about inequality in this country (i.e., will it fall, rise, or stay the same)?
+\begin{solution}
+\end{solution}
+\end{parts}
+
+\end{questions}
+
+\newpage
+
+\subsection*{Taste-Based Discrimination}
+
+\begin{questions}
+	\question Bunce's Beans production function is given by 
+	\[q = 2\sqrt{E_b + E_w}\]
+	where $E_b$ and $E_w$ refer to black and white workers employed by the firm, respectively.  Suppose the wage rates for whites and blacks are $w_w = \$15$ and $w_b = \$10$. The price of each unit of output is \$25.
+	Finally, the marginal product of labor is given by 
+	\[MP_E = \frac{1}{(E_b + E_w)^{1/2}}\]
+	
+	
+\begin{parts}
+	\part[3] Suppose the firm has some distaste for hiring black workers and has a discrimination coefficient of 0.3. What proportion of the firm's labor will come from white workers? Make sure to state \underline{why}.
+	\begin{solution}[1in]
+	\end{solution}
+	\part[5] How many workers will this firm optimally hire? What will its profits be?
+	\begin{solution}[2in]
+	\end{solution}
+	\part[4] Compare the profit of Bunce's Beans to that of a non-discriminatory firm (i.e., is it smaller, larger, or the same). Explain why the profits are different or the same.
+	\begin{solution}[1.5in]
+\end{solution} 
+	
+\end{parts}
+\end{questions}
+
+\newpage
+
+\subsection*{Statistical Discrimination}
+
+\begin{questions}
+	
+\question[5] In 3-4 sentences, describe how statistical discrimination can lead to \underline{long-run} wage gaps.
+
+	\begin{solution}[2.5in]
+\end{solution}
+
+\question Suppose that firms statistically discriminate based on sex. The average ``test score'' for males and females is the same, but test scores are ``noiser'' for females, i.e., the test score is a bad predictor of female productivity.
+
+\begin{parts}
+	\part[2] Will female workers with lower-than-average test scores receive higher, lower, or the same wages as a ``low-skill'' male worker with the same test score? Briefly explain why.
+	\begin{solution}[2in]
+		Because test scores are more ``noisy'' for females, firms will place more weight on the average score for females rather than on the actual observed worker score. On the other hand, male scores are better predictors of productivity, so the firm will place more relatively more weight on actual observed scores than on the average male score. As a result, ``low-skill'' females will earn a higher wage than similar ``low-skill'' males as their expected productivity is ``brought up'' by the average female score.
+	\end{solution}
+	\part[2] Will female workers with higher-than-average test scores receive higher, lower, or the same wages as a ``high-skill'' male worker with the same test score? Briefly explain why.
+	\begin{solution}[2in]
+		Opposite case to above. Above-average females will be ``brought down'' by the average female test score and they will earn a lower wage than above-average male workers with equivalent scores.
+	\end{solution}
+\end{parts}
+\end{questions}
+
+\subsection*{Measuring Discrimination}
+
+\begin{questions}
+
+\question Suppose the wages of males and females are determined as follows
+
+\[w_m = 12 + 0.7\cdot S_m\]
+\[w_f = 9 + 0.5\cdot S_f\]
+
+where the $m$ and $f$ subscripts refer to males and females, respectively, and  $S$ refers to the number of years schooling a worker obtains. Assume schooling is the only relevant skill to a worker's productivity. Finally, suppose the average years of schooling for males is 14 years and for females it is 12 years.
+
+\begin{parts}
+	\part[2] What is the average male wage? The average female wage? 
+	\begin{solution}[1in]
+		
+	\end{solution}
+	\part[2] What is the raw wage differential between the two groups?
+	\begin{solution}[1in]
+	
+	\end{solution}
+	\part[2] How much would an average female worker earn if ``treated as a male?''
+	\begin{solution}[1in]
+		
+	\end{solution}
+	\part[2] How much of the wage differential can be attributed to differences in schooling?
+	\begin{solution}[1in]
+		
+	\end{solution}
+	\part[2] How much of the wage differential can be attributed to discrimination?
+	\begin{solution}[1in]
+	
+	\end{solution}
+\end{parts}
+\end{questions}
+
+\newpage
+
+\subsection*{Discrimination Evidence}
+
+\begin{questions}
+	
+\question[5] In recent years, how has the role of explicit labor market discrimination in driving different racial socio-economic outcomes likely changed? Will policies targeting labor market discrimination or policies targeting school achievement gaps be more effective in closing the racial wage gap and other differences in socio-economic outcomes? 
+
+\begin{solution}[2in]
+	
+\end{solution}
+\end{questions}
+
+\end{document}

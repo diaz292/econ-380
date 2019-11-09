@@ -1,0 +1,385 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{MnSymbol,wasysym}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+\usepackage{booktabs}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah
+%\printanswers
+%\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+%\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+\newcommand{\dd}[1]{}  
+\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+
+
+\title{\textbf{Exam 2  \dd{\\Solutions}} \\ \vspace{2 mm} {\large ECON 380} \\ \large{Spring 2017} \\ \large{UNC Chapel Hill}}
+\date{}
+\maketitle
+
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\\
+
+\makebox[\textwidth]{ONYEN:\enspace\hrulefill}
+\\
+
+\makebox[\textwidth]{Honor Code Signature:\enspace\hrulefill}
+\\
+
+\begin{center}
+	\fbox{\fbox{\parbox{6in}{\centering
+				\underline{Directions:}
+				\begin{itemize}
+					\item For multiple choice questions, clearly circle the answer choice which best answers the question.
+					\item For short answer questions, show all of your work and justify your answers where needed. 
+					\item Round answers to the nearest hundredth.
+					\item Points available: 50
+					\item Write legibly, write legibly, write legibly!
+					\item Good luck! \smiley{}
+				\end{itemize}
+			}}}
+\end{center}
+
+\newpage
+	
+\subsection*{Multiple Choice \textbf{[2 pts each]}}
+
+
+
+Suppose the supply and demand for low-skilled workers in Atlanta is given by
+
+\[E_D = 15 - \frac{1}{2}w\]
+\[E_S = 2w - 10\]
+
+where $E$ represents the number of workers (in millions) and $w$ is the hourly wage rate. Assume the labor market in Atlanta is perfectly competitive.
+\\
+
+Use this information to answer questions \ref{q1}-\ref{q2}: 
+
+\begin{questions}
+
+\question \label{q1} What is the total surplus in the labor market at the competitive equilibrium?
+
+\begin{choices}
+	\choice \$115 million
+	\CorrectChoice \$125 million
+	\choice \$175 million
+	\choice \$250 million
+	\choice None of the above
+\end{choices}
+
+
+\question The government of Atlanta decides to impose a minimum wage. As a result of this law, the number of employed workers is now 8 million and there are 10 million unemployed workers. What is the hourly minimum wage imposed by the city?
+
+\begin{choices}
+	\CorrectChoice \$14
+	\choice \$12
+	\choice \$8
+	\choice \$15
+	\choice None of the above
+\end{choices}
+
+
+\question \label{q2} What is the deadweight loss associated with this minimum wage?
+
+\begin{choices}
+	\choice \$16 million
+	\choice \$10 million
+	\choice \$20 million
+	\choice \$8 million
+	\CorrectChoice None of the above
+\end{choices}
+
+
+
+\question Which of the following correctly describes the relationship between the \underline{employment} levels in perfectly competitive (PC) labor markets, a labor market with a perfectly discriminating (PD) monopsonist, and a labor market with a non-discriminating (ND) monopsonist?
+
+
+\begin{choices}
+	\choice PC employment > PD monopsonist employment > ND monopsonist employment
+	\choice PC employment > PD monopsonist employment = ND monopsonist employment
+	\CorrectChoice PC employment = PD monopsonist employment > ND monopsonist employment
+	\choice PC employment = PD monopsonist employment = ND monopsonist employment
+\end{choices}
+
+
+\question Campbell \& Ahmed (2012) distinguish between ``traditional'' and ``modern'' labor markets. Which of the following statements does NOT describe a traditional economy typically observed in a low-income nation? A traditional economy is
+
+\begin{choices}
+	\choice more likely to have greater earnings instability.
+	\CorrectChoice more likely to have access to credit.
+	\choice more likely to be more informal.
+	\choice more likely to be deficient in the quality of jobs.
+\end{choices}
+
+
+\question Arias \& Khamis (2008) analyze participation and earnings performances in several sectors in Argentina in order to test whether the labor market is segmented due to ``exclusion'' or comparative advantage considerations. Among which workers did the authors find evidence for the comparative advantage story?
+
+\begin{choices}
+	\CorrectChoice Workers engaged in self-employment.
+	\choice Workers engaged in home production.
+	\choice Workers engaged in informal work.
+	\choice None of the above. The authors did not find evidence for the comparative advantage story.
+\end{choices}
+
+\question Suppose Kandi lives for three periods, t = 1, 2, 3. In period 1, she can either enter directly enter
+to labor force or she can go to college. If she enters the labor force in period 1, she will earn
+\$45,000, \$90,000, and \$80,000 in periods 1, 2, and 3, respectively. Instead, if she goes to college
+she will have to pay \$50,000 in tuition in period 1, but then will earn \$140,000 in both of the
+following periods. 
+\\
+
+Kandi would be indifferent between the two choices if her discount rate was $\sim$10\%. Given this information, which of the following statements is TRUE?
+
+\begin{choices}
+	\choice Kandi will choose to go to college if her discount rate is 15\%.
+	\choice Kandi will choose to directly enter the labor force if her discount rate is 5\%. 
+	\CorrectChoice Kandi will choose to directly enter the labor force if her discount rate is 15\%.
+	\choice Kandi will choose to go to college regardless of her discount rate.
+	\choice Kandi will choose to directly enter the labor force regardless of her discount rate.
+\end{choices}
+
+\question Suppose we observe the wage-schooling outcomes of Kim and Lisa. Kim went to school for 12 years, while Lisa went to school for 15 years. Holding all else constant, how many of the following statements would lead to the different schooling choices made by the two individuals?
+
+\begin{itemize}
+	\item Kim has a higher discount rate than Lisa
+	\item Lisa's actual marginal rate of return per year of schooling is greater than Kim's
+	\item Lisa's perceived marginal rate of return per year of schooling is greater than Kim's
+\end{itemize}
+
+\begin{choices}
+	\choice 0
+	\choice 1 
+	\choice 2
+	\CorrectChoice 3
+\end{choices}
+
+\question Phaedra's wage-schooling locus is presented in the chart below.
+
+\begin{table}[H]
+	\centering
+	\caption{Phaedra's Wage-Schooling Locus}
+	\label{hi2}
+	\begin{tabular}{c|c}
+		Years of Schooling & Earnings \\
+		\hline
+		11 & \$36,000 \\
+		12 & \$40,000 \\
+		13 & \$43,500 \\
+		14 & \$46,000 \\
+		15 & \$48,000 \\
+	\end{tabular}
+\end{table}
+
+What is Phaedra's optimal level of schooling if her discount rate is 5\%?
+
+\begin{choices}
+	\choice 11 years
+	\choice 15 years
+	\choice 12 years
+	\CorrectChoice 14 years
+	\choice None of the above
+\end{choices}
+
+\question Suppose the market is populated by two types of workers.  NeNes have an inherently low productivity level and make up 70\% of the population.  A NeNe produces \$1,000,000 for a firm over their lifetime.  Cynthias, on the other hand, have an inherently high productivity level and make up 30\% of the population and produce \$1,200,000 for a firm over their lifetime. Employers cannot observe a worker's type at the time of hiring.
+\\
+
+Firms follow the rule of
+thumb that workers who obtain at least $\bar{y}$ years of college are assumed
+to be Cynthias and are paid a lifetime salary of \$1,200,000.
+Workers with less than $\bar{y}$ years of education are assumed to be
+NeNes and are paid \$1,000,000. Cynthias
+have a cost of \$30,000 for each year of college, while
+NeNes have a per year cost of \$50,000. Which of the following thresholds will create an equilibrium such that only Cynthias obtain the threshold education level? 
+
+
+\begin{choices}
+	\choice $\bar{y}$ = 7 years
+	\choice $\bar{y}$ = 3 years
+	\choice $\bar{y}$ = 9 years
+	\CorrectChoice $\bar{y}$ = 5 years
+	\choice None of the above
+\end{choices}
+
+\end{questions}
+
+
+\newpage
+
+
+\subsection*{Short Answer}
+
+
+\begin{questions}
+	
+\question Suppose there are two geographically isolated regions, Midtown and Buckhead. Assume the labor supply curves are perfectly inelastic in both regions and workers are perfect substitutes.  
+
+\begin{parts}
+	\part[2] Currently, the wage rate in Midtown is greater than the wage rate in Buckhead ($w_M > w_B$). Draw the labor markets for both regions in the space below.
+	\begin{solution}[2in]
+	\begin{figure}[H]
+\centering 
+\includegraphics[scale=.6]{exam2SA1}
+	\end{figure}
+
+\ddp{Points: (1) for each labor market. Make sure the wage in Midtown is above the wage in Buckhead initially.}
+
+	\end{solution}
+	\part[4] Describe how the free entry/exit of workers across Midtown and Buckhead will affect the labor market in both regions. 
+	\begin{solution}[2in]
+	Workers in Buckhead observe the higher wage in Midtown and decide to move. This will shift the labor supply curve in Buckhead to the left, increasing wages in Buckhead, and will shift the labor supply curve in Midtown to the right, decreasing wages in Midtown. This will continue until wages across the regions are equal (long-run equilibrium). 
+	\end{solution}
+	\part[3] Draw the long-run equilibrium in both labor markets in your plot above. Make sure to explicitly show any curve shifts and any differences in the wage rates between the regions.
+\ddp{Points: (1) for each shift of labor \underline{supply}. (1) For the wages being equal in the long-run.}
+\end{parts}
+
+
+\newpage
+
+\question Porsha's Popcorn is the only employer hiring labor in the town of Buckhead. As a result of her market power, Porsha faces the following labor market structure:
+
+\[E_S = 10w - 50\]
+\[MC_E = .2E + 5\]
+\[VMP_E = 60 - E_D\]
+
+where $MC_E$ is her marginal cost of hiring workers and $E_S$ and $VMP_E$ are the labor supply and demand curves, respectively. 
+\\
+
+The labor market in Buckhead is shown in Figure \ref{fig1}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.7]{exam2fig}
+\caption{Buckhead's Labor Market}
+\label{fig1}
+\end{figure}
+
+\begin{parts}
+\part[2] What type of monopsonist is Porsha's Popcorn? Be specific and briefly explain your reasoning.
+\begin{solution}[1in]
+Porsha is a non-discriminating monopsonist because her $MC$ curve lies above the labor supply curve. 
+\end{solution}
+
+\part[4] If the labor market in Buckhead is unregulated, what is Porsha's optimal employment level and wage rate? Note: Round to two decimal places. Label these values in Figure \ref{fig1}. Note: You should label the points on the graph even if you can't get the actual values.
+\begin{solution}[2in]
+Optimal employment is where $MC_E = VMP_E$:
+
+\[ .2E + 5 = 60 - E \Rightarrow E_M = 45.83\]
+
+ND wage: Plug $E_M$ into labor supply equation.
+
+\[w_M = 5 + \frac{1}{10}(45.83) = \$9.58\]
+
+\ddp{Points: (1) $E_M$, (1) $w_M$, (1) for each point on graph}
+\end{solution}
+
+\part[3] In Figure \ref{fig1} above, label each of the following: Firm surplus, worker surplus, and any deadweight loss resulting in an unregulated market. You don't have to compute these values.
+
+\part[3] Now, suppose that the town of Buckhead wishes to impose a minimum wage $\bar{w}$ in order to  raise total surplus. What are the bounds on $\bar{w}$ so that the minimum wage increases efficiency (e.g., $\$5 < \bar{w} < \$8$)? Label these bounds in Figure \ref{fig1}. Note: You should label the bounds on the graph even if you can't get the actual values.
+\begin{solution}[2in]
+To increase employment, $w_M < \bar{W} < VMP_M$. 
+\\
+
+To find $VMP_M$: Plug $E_M$ into labor demand equation.
+
+\[VMP_M = 60 - 45.83 = \$14.17\]
+
+So, $\$9.58 < \bar{w} < \$14.17$ in order for minimum wage to increase efficiency.
+
+\ddp{Points: (1/2) each bound value, (1) work, (1) each point on graph}
+\end{solution}
+
+\end{parts}
+
+
+\question Table \ref{tab2} shows the marginal rate of return per year of schooling for Shere\'e and Shamea. At their optimal schooling choice, Shere\'e earns \$22,000 and Shamea earns \$27,500.
+
+\begin{table}[H]
+	\centering
+	\caption{Shere\'e and Shamea's MRRs}
+	\label{tab2}
+	\begin{tabular}{c|c|c}
+		Years of Schooling & Shere\'e's MRR & Shamea's MRR \\
+		\hline
+		10 & 8.0\% & 12\% \\
+		11 & 7.2\% & 10\% \\
+		12 & 6.1\% & 7.8\% \\
+		13 & 4.8\% & 5.3\% \\
+		14 & 3.0\% & 3.5\% \\
+	\end{tabular}
+\end{table}
+
+\begin{parts}
+	\part[2] Shere\'e and Shamea have the same discount rate, $r = 7\%$. What is the optimal schooling level for each individual?
+\begin{solution}
+	Shere\'e: 11 years
+	\\
+	Shamea: 12 years
+\end{solution}
+
+\newpage
+
+	\part[4] Suppose we estimate the marginal rate of return by comparing Shere\'e's wage/schooling outcome to
+	Shamea's wage/schooling outcome. What is the estimated MRR?
+\begin{solution}[2in]
+	\[ \widehat{MRR} = \frac{\$27,500 - \$22,000}{12 - 11} \times \frac{1}{\$22,000} = 25\%\]
+	
+	\ddp{Points: (1) MRR equation, (3) Answer. Can give full points if mistake followed from (a).}
+\end{solution}
+	\part[3] Briefly explain why our estimated MRR is or is not biased. If the estimate is biased, state which direction it is biased.
+\begin{solution}[1in]
+	Our estimated MRR is biased because it is assuming that Shere\'e and Shamea have the same MRR schedules (i.e., the same level of ability) even though in reality they do not. Our estimate is biased upwards as we are overstating the MRR for the 12th year of schooling for both individuals (25\% versus 6.1\% and 7.8\%). 
+	
+	\ddp{Points: Full credit as long as they explain it somewhat decently. They shouldn't just say ``ability bias'' though, they need to talk about what it is. (1/2) credit if ability bias is the only justification. }
+\end{solution}
+\end{parts}
+
+\end{questions}
+
+\newpage 
+
+\section*{Scratch Paper}
+
+\newpage
+
+
+\section*{Scratch Paper}
+
+\end{document}

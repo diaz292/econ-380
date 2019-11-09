@@ -1,0 +1,302 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{sgamevar}
+\usepackage{sgame}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah (blank next two lines out for no solutions, unblank #3)
+%\printanswers
+%\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+%\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+\newcommand{\dd}[1]{}  
+\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+
+
+\title{\textbf{Homework 2 \dd{\\Solutions}} \\ \vspace{2 mm} {\large ECON 380} \\ \large{UNC Chapel Hill}}
+\date{}
+\maketitle
+
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\\
+
+\makebox[\textwidth]{ONYEN:\enspace\hrulefill}
+\\
+
+\begin{center}
+	\fbox{\fbox{\parbox{5.5in}{\centering
+				This homework is due on \textbf{September 19} by \textbf{2:15PM}. You must turn in your work on a printed copy of this document in order for it to be graded. Your assignment must be stapled and in the correct order. Non-stapled assignments will automatically receive a 10 point deduction. There are a total of 50 available points.}}}
+\end{center}
+	
+\subsection*{Budget Constraints}
+
+\begin{questions}
+
+
+\question[4] Charlie faces the following marginal tax rates on his gross earnings:
+
+	\begin{table}[H]
+		\caption{Marginal Tax Rates}
+		\centering
+		\begin{tabular}{ c| c} 
+			
+			Marginal Tax Rate &  Gross Earnings\\
+			\hline
+			10\% & \$15,000 \\
+			20\% & \$15,001 - \$40,000  \\
+			25\% & \$40,001 - \$90,000 \\
+			30\% & \$90,001 - \$200,000 \\
+			35\% & \$200,001 - \$450,000 \\
+			40\% & \$450,001+ \\
+		\end{tabular}
+		\label{MC30}
+	\end{table}
+	
+Before taxes, Charlie earns a gross wage of \$7.50 per hour. He also receives non-labor income of \$5,000 per year. Suppose Charlie has 5,000 available hours to split between work and leisure during the year. Draw his budget set in the plot below.
+
+\begin{solution}
+Charlie can make a total of $\$7.50\times 5,000 = \$37,500$ in gross wages each year. He is taxed at 10\% on his first \$15,000 in earnings and at 20\% on his next \$22,500. To earn \$15,000, Charlie has to work \$15,000/\$7.50 = 2,000 hours. This is where the ``kink'' in his budget line will be. \\
+
+Charlie's endowment point is at 5,000 hours of leisure and \$5,000 of consumption. \\
+
+His net wage for his first 2,000 hours of work is $\$7.50(1-.10) = \$6.75$. If he works 2,000, he can consume $\$6.75\times 2,000 + \$5,000 = \$18,500$. \\
+
+For the next 3,000 possible hours Charlie could work, his net wage is $\$7.50(1-.20) =\$6$. If he works all 5,000 hours, Charlie could consume $\$6.75\times 2,000 + \$6 \times 3,000 + \$5,000 = \$36,500$.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.45]{hw2_1sol.pdf}
+	\caption{Charlie's Budget Set}
+\end{figure}
+
+\end{solution}
+
+\ddp{Points: (1) Endowment point, (1) kink at \$18,500, (1) pt. at \$36,500, (1) budget line}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.45]{hw2_1.pdf}
+	\caption{Charlie's Budget Set}
+\end{figure}
+
+
+\end{questions}
+
+\subsection*{Neoclassical Model of Labor Supply}
+
+\begin{questions}
+	
+\question Artemis earns \$25 per hour as an actress. In addition to her labor market income, she receives \$100 per day in lottery winnings. She allocates her 24 hours each day between work and leisure, and spends all of her income on consumption.
+
+\begin{parts}
+	\part[2] What is the equation for Artemis' budget constraint?
+	\begin{solution}[.5in]
+	$C = 700 - 25L$
+	\end{solution}
+	\part[2] Draw her budget constraint in the graph below. Label it $B^0$.
+	\begin{solution}
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=.45]{hw2_2sol.pdf}
+				\caption{Artemis' Budget Set}
+			\end{figure}
+	\end{solution}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.45]{hw2_2.pdf}
+		\caption{Artemis' Budget Set}
+	\end{figure}
+\uplevel{Suppose the government imposes a subsidy program similar to the earned income tax credit. For the first 8 hours Artemis works, she receives a 50\% wage subsidy (i.e., her net wage is 1.5 times her gross wage for these hours). For the next 8 hours, the government gives no wage subsidy, and instead makes individuals pay a wage tax of 50\%. Wages earned after 16 hours of work are neither taxed nor subsidized. For example, if Artemis works 18 hours, her net earnings would be $8\times(\$25\cdot 1.5) + 8\times (\$25\cdot .50) + 2\times (\$25 \cdot 1) = \$450$.}
+
+\part[2] What is the (absolute) slope of her new budget set when $16\le L \le 24?$
+\begin{solution}[.5in]
+Artemis receives a net wage of $\$25 \times 1.5 = \$37.5$ for the first 8 hours she works, so the absolute slope of her budget set is 37.5 for  $16\le L \le 24$.
+\end{solution}
+
+\part[2] What is the (absolute) slope of her new budget set when $8\le L < 16?$
+\begin{solution}[.5in]
+	Artemis receives a net wage of $\$25 \times .50 = \$12.5$ for the next 8 hours she works, so the absolute slope of her budget set is 12.5 for  $8\le L < 16$.
+\end{solution}
+
+\part[2] What is the (absolute) slope of her new budget set when $0 \le L < 8?$
+\begin{solution}[.5in]
+The policy is phased out for these hours, so Artemis earns a net wage of \$25 for the last 8 hours she works. The absolute slope of her budget set is 25 for  $0\le L < 8$.
+\end{solution}
+\part[2] On the same graph as (b), draw her budget set after the enactment of this policy. Label it $B^1$.
+\ddp{Points: (1) pt. at (16,400), (1) pt. at (8,500)}
+\part[2] Suppose that Artemis' preferences are convex, monotone, complete, and transitive. Further, suppose that her reservation wage is \$30. Using indifference curves, show that she will work 0 hours before the policy is enacted, but work positive (>0) hours after the policy is enacted. Draw the indifference curves on your earlier graph, but give your explanation here.
+\begin{solution}[1in]
+Before the program is enacted, Artemis' reservation wage is \$30, which is greater than the market wage. On the graph, this can be seen as the slope of $U_0$ is $-30$ at point $A$ (as best as I could draw it), which she chooses and works zero hours. After the policy is enacted, her reservation wage of \$30 is below her new net wage of \$37.5; she can move up to point $B$ on indifference curve $U_1$, where she works for 2 hours.
+\ddp{Points: (1) ICs on graph, (1) explanation}
+\end{solution}
+\end{parts}
+
+\question Many states offer child-care grants for low-income single mothers (e.g. New York), as opposed to (or in addition to) standard cash grants. The primary purpose of this type of policy is to invoke single mothers, who likely need to be compensated with a high wage to offset childcare costs, into the labor force.
+First, consider the daily labor supply decision of Sarah, who has preferences dictated by $U(C,L) = 2C^{2/3}L^{1/3}$, who faces a wage rate of $w=\$8$ and earns non-labor income of $V = \$200$.
+
+\begin{parts}
+\part[2] Sarah's marginal rate of substitution is given by $MRS_{L,C} = C/2L$. Compute her reservation wage. Will she work at the market wage rate?
+\begin{solution}[.75in]
+	The reservation wage is the $MRS$ at the endowment point where $C = V = 200$ and $L=T =24$:
+	\[w^{res} = \frac{V}{2T} = \frac{200}{2(24)} = \$4.17 \]
+	
+	Since $w^{res} < w$, Sarah will choose to work.
+\end{solution}
+
+\ddp{Points: (1) reservation wage, (1) Sarah will work}
+\newpage
+\part[4] What is Sarah's optimal bundle of leisure hours and consumption dollars?
+\begin{solution}[1in]
+	Optimal interior bundle is where $MRS_{L,C} = w$:
+	\[\frac{C}{2L} = 8 \Rightarrow C = 16L\]
+	
+From the budget constraint: $C = (8(24) + 200) - 8L = 392 - 8L$. Setting these equal to each other:
+
+\[16L = 392 - 8L \Rightarrow L^* = 16.33\]
+
+So, $C^* = 16L^* = \$261.33$.
+\end{solution}
+\ddp{Points: (1) Set MRS = w, (1) show work, (1) $L^*$, (1) $C^*$}
+\uplevel{Now, consider Sarah's twin sister Tara, who has a child. Like Sarah, Tara has non-labor income of $V$=\$200, a wage rate of $w=\$8$, and preferences represented by $U(C,L) =2C^{2/3}L^{1/3}$. However, Tara faces a ``fixed cost'' to participating in the labor force. If she does not participate (choosing $h = 0$), she does not have to pay for childcare. If she chooses to participate and work $h> 0$ hours, she must pay $P_C=\$100$ each day for childcare.} 
+
+\part[2] What is her non-labor income if she does not participate in the labor force? What is her effective non-labor income if she does participate in the work force and has to pay for child care?
+\begin{solution}[.75in]
+	If she does not participate in the labor force, $V = \$200$. \\
+	If she does participate, she effectively loses \$100 in non-labor income and so $V = \$100$.
+\end{solution}
+
+\part[2] On the graph below, plot Tara's budget constraint, and label it $B^0$. (Hint: Think carefully about how much consumption income she has, less her childcare costs, at 0 labor hours, 1 labor hour, 0.01 labor hours, etc.).
+\begin{solution}
+	
+Note that $B^0$ (in black) is piece-wise: If she works $h=0$, Tara earns \$200 of non-labor income. At any hours above this, she only earns \$100 of non-labor income.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=.45]{hw2_3sol.pdf}
+			\caption{Tara's' Budget Set}
+		\end{figure}
+\end{solution}
+\ddp{Points: (1) pt. $B$, (1) budget line}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.45]{hw2_2.pdf}
+		\caption{Tara's' Budget Set}
+	\end{figure}
+
+\part[2] Using indifference curves (you don't need to use her preferences, just general, convex indifference curves), illustrate why Tara would likely prefer to stay out of the work force, as opposed to entering the work force and incurring the childcare costs. 
+\begin{solution}[.75in]
+If she enters the labor force, she must work at least 12.5 hours to break even on her childcare. On the above graph, the indifference curves indicate that the best she can do if she enters the labor force is point A on $U0$, while if she stays out she can reach point B on the higher indifference curve $U1$. Basically, for such an individual (single-parent, low-income), it often takes a lot of time to break even on childcare costs, so they may prefer to stay out of the labor force.
+\end{solution}
+
+\part[2] Now, suppose the government offers a \$100 childcare payment to Tara which she receives if, and only if, she works $h>0$ hours. Plot her new budget constraint, and label this constraint $B^1$. Briefly explain how this effectively gives her the same labor force incentives as Sarah; in other words, explain why this would lead her to return to the labor force.
+\begin{solution}[1in]
+This basically eliminates the ``fixed cost'' of working; the government foots the bill for her childcare. Her budget constraint shifts out to the red line on the graph above, and her new optimal bundle is the same as Sarah's at point $C$.
+\end{solution}
+	
+\end{parts}
+	
+\end{questions}
+
+\subsection*{Short-Run Labor Demand}
+
+\begin{questions}
+
+\question Paddy's Pub produces hand-crafted wooden chairs in the perfectly competitive market for hand-crafted wooden chairs using woodshops ($S$) at rental rate \$200 and labor ($E$) at wage rate \$10 according to the production function $f(S,E) = 5S^{3/4}E^{1/4}$. Suppose that Paddy's Pub currently has four woodshops, and the market price of a hand-crafted wooden chair is \$125. The markets for labor and woodshops are also competitive. Note: When necessary, round to two decimals.
+
+\begin{parts}
+
+\part[2] What is the (approximate) marginal product of the $10^{th}$ unit of labor? Explain the meaning of this number.
+\begin{solution}[.5in]
+	$f(4,10) - f(4,9) = 5(4^{3/4})(10^{1/4}) - 5(4^{3/4})(9^{1/4}) \approx .65$.
+	
+	This means that Paddy's Pub is able to produce an additional .65 chairs as a result of hiring the $10^{th}$ unit of labor (all else constant).
+\end{solution}
+\part[2] What is the (approximate) value of the marginal product of the $10^{th}$ unit of labor? Explain the meaning of this number.
+\begin{solution}[.5in]
+	Value of the marginal product of labor = $p\times MP_E = \$125 \times .65 = \$81.25$.
+	
+	This means that Paddy's Pub is able to earn an additional \$81.25 of revenue as a result of hiring the $10^{th}$ unit of labor (all else constant).
+\end{solution}
+\part[4] How many hours of labor should Paddy's Pub employ in the short-run to maximize profits? The equation for the marginal product of labor is given by $MP_E = \frac{5}{4}(\frac{S}{E})^{3/4}$. Label this number $E_0^*$. (Note: In this example, the number of woodshops is fixed in the short-run).
+\begin{solution}[1in]
+	Optimal hiring rule: $p\times MP_E = w$. 
+	
+	Solving for $E^*_0$:
+	
+	\[125 \Big(\frac{5}{4}\Big) \Big(\frac{4}{E}\Big)^{3/4} = 10 \Rightarrow 125\Big(\frac{5}{4}\Big) \Big(4^{3/4}\Big) = 10 E^{3/4} \Rightarrow E^*_0 = \Big[\Big(\frac{125}{10}\Big)\Big(\frac{5}{4}\Big)\Big(4^{3/4}\Big)\Big]^{4/3} = 156.25\]
+\end{solution}
+\ddp{Points: (1) Set $p\times MP_E = w$, (2) work, (1) $E^*_0$}
+\part[2] Now suppose that the wage rate rises to \$12. Assuming we're still in the short-run, how many hours of labor should Paddy's Pub employ at the new higher wage rate? Label this number $E_1^*$.
+\begin{solution}[1in]
+	Same as above, just with $w=12$.
+		\[ E^*_1 = \Big[\Big(\frac{125}{12}\Big)\Big(\frac{5}{4}\Big)\Big(4^{3/4}\Big)\Big]^{4/3} = 122.53\]
+\end{solution}
+\part[2] From your calculations in (c) and (d), compute the company's short-run elasticity of labor demand. If necessary, round to two decimals.
+\begin{solution}
+	\[\varepsilon_{w}^{d,sr} = \frac{E_1^* - E_0^*}{w_1 - w_0} \times \frac{w_0}{E_0^*} = \frac{-33.72}{2} \times \frac{10}{156.25} \approx -1.08\]
+\end{solution}
+\newpage
+\part[2] In 2-3 sentences, explain why labor demand is more elastic in the long-run.
+\begin{solution}[1in]
+	In the short-run, Paddy's Pub reoptimizes under the constraint that they cannot change their woodshop employment level, so they lay off a few employees. In the long-run, the company can replace even more workers with woodshops; this extra freedom to switch away from workers leads to Paddy's Pub being more responsive to changes in the wage rate in the long-run.
+\end{solution}	
+\end{parts}
+
+\end{questions}
+
+\subsection*{Long-Run Labor Demand}
+
+\begin{questions}
+	
+\question Cricket produces dog food using labor and ovens, but he's not particularly good at allocating his resources. Suppose the price of labor ($E$) is $w = \$10$ and the price of ovens ($O$) is $r = \$30$.
+
+\begin{parts}
+	\part[2] Suppose that initially Cricket is employing both labor and ovens, and at his current bundle of inputs, the marginal rate of technical substitution is given by $MRTS_{E,O} = \frac{MP_E}{MP_O} = 1/2$. Explain how he could reallocate his resources to increase his profits.
+	\begin{solution}[1in]
+		At this bundle, an additional unit of labor is 50\% as productive as an additional unit of capital, but only costs 33\% as much. So, he could reallocate toward the relatively cheap \textit{labor} which gives him greater per-dollar output to lower his costs and increase his profits.
+	\end{solution}
+	\part[2] Now, suppose that Cricket is still employing both labor and ovens, but at this new bundle of inputs, the marginal rate of technical substitution if given by $MRTS_{E,O} = \frac{MP_E}{MP_O} = 1/10$. Explain how, once again, he could reallocate his resources on increase his profits.
+	\begin{solution}[1in]
+		At this new bundle, the last unit of labor is 10\% as productive as the last unit of capital, but costs 33\% as much. So, he could reallocate toward the relatively cheap \textit{capital} which gives him greater per-dollar output to lower his costs and increase his profits.
+	\end{solution}
+\end{parts}
+
+\end{questions} 
+
+\end{document}

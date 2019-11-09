@@ -1,0 +1,330 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{MnSymbol,wasysym}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah
+%\printanswers
+%\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+%\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+\newcommand{\dd}[1]{}  
+\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+	
+	
+	\title{\textbf{Exam 2 \dd{\\Solutions}} \\ \vspace{2 mm} {\large ECON 380} \\ \large{Fall 2017} \\ \large{UNC Chapel Hill}}
+	\date{}
+	\maketitle
+	
+	\makebox[\textwidth]{Name:\enspace\hrulefill}
+	\\
+	
+	\makebox[\textwidth]{ONYEN:\enspace\hrulefill}
+	\\
+	
+	\makebox[\textwidth]{Honor Code Signature:\enspace\hrulefill}
+	\\
+	
+	\begin{center}
+		\fbox{\fbox{\parbox{6in}{\centering
+					\underline{Directions:}
+					\begin{itemize}
+						\item Fill in your name (Last, first) and PID on your scantron.
+						\item For multiple choice questions, clearly circle the answer choice which best answers the question and bubble in the corresponding choice on your scantron.
+						\item For short answer questions, show all of your work and justify your answers where needed. 
+						\item Assume firms are risk-averse.
+						\item Round answers to the nearest hundredth.
+						\item Points available: 50
+						\item Write legibly, write legibly, write legibly!
+						\item Good luck! \smiley{}
+					\end{itemize}
+		}}}
+	\end{center}
+	
+	\newpage
+	
+	\subsection*{Multiple Choice \textbf{[2 pts each]}}
+	
+\begin{questions} 
+	
+\question Jensen (2010) argues that the perceived rate of return to education is likely different than the actual rate of return to education, especially in developing countries. In his study, Jensen found that 8th grade students in the Dominican Republic had extremely low perceptions of the returns to schooling. After randomly selecting schools and providing information to students about the true returns to schooling, the paper found that students provided with the information reported higher perceived returns when re-interviewed in 4-6 after the intervention. Additionally, those students on average completed
+
+\begin{choices}
+	\choice the same amount of education as students who were not provided this information over the next four years.
+	\choice more years of schooling relative to the control group over the next four years, with an especially strong effect amongst the poorest students.
+	\CorrectChoice more years of schooling relative to the control group over the next four years, but there was no effect amongst the poorest students.
+	\choice less years of schooling relative to the control group, with an especially strong effect amongst the poorest students.
+	\choice less years of schooling relative to the control group, but there was no effect amongst the poorest students.
+\end{choices}
+
+
+
+\question According to Claudia Goldin in \textit{The True Story of the Gender Wage Gap}, the greatest factor driving differences in wages between males and females is 
+
+\begin{choices}
+	\CorrectChoice differences in the desire for ``temporal flexibility'' in work hours.
+	\choice discrimination by employers/employees/customers. 
+	\choice differences in skills/characteristics obtained prior to labor market entry.
+	\choice Occupational sorting/selection into lower paying fields.
+\end{choices}
+
+	
+\question Carrie is choosing a career path. She can either become a microbiologist or a chemist. She lives for two periods. In period one, she obtains the necessary training, incurring a cost, and in period two she works and gets paid. If she becomes a microbiologist, she will pay \$45,000 in the first period and receive \$200,000 in the second. If she becomes a chemist, she will pay \$55,000 in the first period and receive \$225,000 in the second period. All payments occur at the beginning of each period. If Carrie's discount rate is 6\%, what career should she choose?
+
+\begin{choices}
+	\choice She should become a microbiologist.
+	\CorrectChoice She should become a chemist.
+	\choice She is indifferent between the two choices. 
+\end{choices}
+
+\uplevel{Leslie's wage-schooling locus is presented in the chart below.
+
+\begin{table}[H]
+	\centering
+	\caption{Leslie's Wage-Schooling Locus}
+	\label{hi2}
+	\begin{tabular}{c|c|c}
+		Years of Schooling & Earnings & MRR \\
+		\hline 
+		11 & \$36,000 & -----\\
+		12 & \$40,000 & \dd{11.1\%} \\
+		13 & \$43,500 & \dd{8.8\%} \\
+		14 & \$46,000 & \dd{5.7\%} \\
+		15 & \$48,000 & \dd{4.3\%} \\
+	\end{tabular}
+\end{table}
+
+Use this information for questions \ref{q1} and \ref{q2}.}
+
+\question \label{q1} What is Leslie's MRR for her 14th year of schooling?
+
+\begin{choices}
+	\choice 4.30\%
+	\choice 5.00\%
+	\choice 5.45\%
+	\CorrectChoice 5.75\%
+\end{choices}
+
+\question \label{q2} Suppose Leslie optimally chooses to go to school for 13 years. Her discount rate \underline{could} be 
+
+\begin{choices}
+	\choice 5.00\%.
+	\CorrectChoice 7.00\%.
+	\choice 9.00\%
+	\choice 11.00\%
+\end{choices}
+
+
+\question Suppose firms operate in perfectly competitive markets for labor and output. They can hire either Johns or Sallys, with respective wage rates of $w_J = \$10$ and $w_S = \$14$. Assume Johns and Sallys are perfect substitutes. Finally, there are four types of firms in this labor market (Types W, X, Y, and Z), some of which have a distaste for hiring Johns. All firms have the same production function and labor is their only input. Their respective discrimination coefficients are $d_w = 0, d_x = 0.25, d_y = 0.45$ and $d_z = 0.55$. 
+\\
+
+Which of the following shows the correct ranking of the \underline{number} of workers hired by each firm?
+
+\begin{choices}
+	\choice Type W > Type X > Type Y > Type Z
+	\choice Type W > Type X = Type Y = Type Z
+	\CorrectChoice Type W > Type X > Type Y = Type Z
+	\choice Type W > Type X = Type Y > Type Z
+	\choice None of the above
+\end{choices}
+
+\newpage
+
+
+\question There are two types of workers in the world: low-productivity and high-productivity. Workers are born one of either type and cannot change. 
+\\
+
+Firms do not observe a worker's type, but they offer a certificate program as a screening device. The total cost of the program for high-productivity workers is \$5,000. Low-productivity workers must study harder/expend more effort to finish the program, and so their total cost is \$8,000. 
+\\
+
+Firms intend to use the certificate as a signaling device: if a worker obtains the certificate, the firm will assume they are high-productivity. Firms follow a rule of thumb that high-productivity workers are paid \$$X$ over their lifetime, while low-productivity workers are paid \$75,000. For the certificate program to be an effective screening device, how many of the following \underline{could} be $X$?
+
+\begin{itemize}
+	\item \$82,000
+	\item  \$76,000
+	\item \$84,000
+	\item  \$78,000
+\end{itemize} 
+
+\begin{choices}
+	\CorrectChoice 1
+	\choice 2
+	\choice 3
+	\choice 4
+	\choice 0
+\end{choices}
+	
+
+\question Suppose the average wages of males and females are determined as follows
+
+\[w_m = 7 + 0.85\cdot S\]
+\[w_f = 6.5 + 0.70\cdot S\]
+
+where the $m$ and $f$ subscripts refer to males and females, respectively, and  $S$ refers to the number of years schooling a worker obtains. Assume schooling is the only relevant skill to a worker's productivity. Finally, suppose the average years of schooling for males is 14 years and for females it is 10 years.
+\\
+
+Using the Oaxaca-Blinder decomposition, how much of the raw average wage gap can be attributed to discrimination?
+
+\begin{choices}
+	\choice \$3.40
+	\choice \$2.40
+	\choice \$2.80
+	\CorrectChoice \$2.00
+\end{choices}
+	
+ 
+\uplevel{Firms can hire either white or black workers. Each candidate is assigned a score ($T_i$) based on productivity-enhancing observable attributes shown through a worker's resume and interview. Firms do not observe a candidates true productivity, so they use a worker's group average score ($\bar{T}_g$) in conjunction with a their actual test score to estimate productivity for each worker $i$ in group $g \in \{w,b\}$ as follows:
+
+\[\hat{Y}_{i,w} =  0.45T_i + 0.55\bar{T}_w\]
+\[\hat{Y}_{i,b} =  0.25T_i + 0.75\bar{T}_b\]
+
+Assume a worker's initial pay increases with predicted productivity. Use this information to answer questions \ref{q3} and \ref{q4}.}
+
+\question \label{q3} Given the difference in relative weights attached to individual scores versus group averages between whites and blacks, 
+\begin{choices}
+	\choice there is more variation in white test scores (i.e., more ``noise'').
+	\CorrectChoice there is more variation in black test scores (i.e., more ``noise'').
+	\choice the amount of variation within groups is the same for blacks and whites.
+	\choice we cannot say anything about the difference in variation between the groups.
+\end{choices}
+
+\question \label{q4} Under the assumption that average test scores are the same between the groups, $\bar{T}_w = \bar{T}_b$, which of the following is TRUE?
+\begin{choices}
+	\choice A black worker with an individual score of zero will be paid less than a white worker with an individual score of zero.
+	\choice Black workers with individual scores below the average will be paid less than white workers with equivalent individual scores.
+	\CorrectChoice Black workers with individual scores above the average will be paid less than white workers with equivalent individual scores.
+	\choice A black worker with an individual score equal to the average will be paid less than a white worker with an individual score equal to the average. 
+\end{choices}
+
+\end{questions}
+
+\newpage
+
+\subsection*{Short Answer}
+
+\begin{questions}
+
+
+\question Suppose wages are solely a function of schooling and ability. Ability is exogenous and Nathan is endowed with a greater stock than Alice. Finally, assume that discount rates are always constant for both individuals. Consider their wage-schooling locus and $MRR$ schedules:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.55]{exam2_haha}
+	\caption{Alice and Nathan's Wage-Schooling Loci}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.55]{exam2_haha2}
+	\caption{Alice and Nathan's MRR Curves}
+\end{figure}
+
+
+\begin{parts}
+	\part[6] Complete the following table. 
+	
+	\begin{table}[H]
+		\centering
+		\label{hi}
+		\begin{tabular}{c|c|c|}
+			Years of Schooling & Alice's MRR & Nathan's MRR \\
+			\hline 
+			9 & --- & --- \\
+			10 &  &  \\
+			11 &  &  \\
+			12 &  &  \\
+		\end{tabular}
+	\end{table}
+	
+	
+	\part[2] Alice and Nathan's discount rate is the same, $r = 10\%$. What are the optimal schooling choices of each individual? 
+	\begin{solution}[1.5in]
+		
+	\end{solution}
+	\part[2] On Figure 1 above, label the point on each respective wage locus that a researcher would observe.
+
+	\part[3] Suppose we estimate the marginal rate of return by comparing Alice's wage/schooling outcome to Nathan's wage/schooling outcome. What is the estimated MRR?
+\begin{solution}[1in]
+	
+\end{solution}
+	\part[2] Does this estimate overstate or understate Alice and Nathan's true MRR (or is it unbiased)?.
+\begin{solution}[1in]
+	Our estimated MRR is biased because it is assuming that Shere\'e and Shamea have the same MRR schedules (i.e., the same level of ability) even though in reality they do not. Our estimate is biased upwards as we are overstating the MRR for the 12th year of schooling for both individuals (25\% versus 6.1\% and 7.8\%). 
+	
+	\ddp{Points: Full credit as long as they explain it somewhat decently. They shouldn't just say ``ability bias'' though, they need to talk about what it is. (1/2) credit if ability bias is the only justification. }
+\end{solution}
+	\begin{solution}[1in]
+		
+	\end{solution}
+\end{parts}
+
+\newpage
+
+	\question Bunce's Beans production function is given by 
+	\[q = 2\sqrt{E_b + E_w}\]
+	where $E_b$ and $E_w$ refer to black and white workers employed by the firm, respectively.  Suppose the wage rates for whites and blacks are $w_w = \$12$ and $w_b = \$10$. The price of each unit of output is \$50.
+	Finally, the marginal product of labor is given by 
+	\[MP_E = \frac{1}{(E_b + E_w)^{1/2}}\]
+	
+	
+	\begin{parts}
+		\part[3] Suppose the firm has some distaste for hiring black workers and has a discrimination coefficient of 0.30. What proportion of the firm's labor will come from white workers? Make sure to state \underline{why}.
+		\begin{solution}[1in]
+		\end{solution}
+		\part[4] How many workers will this firm optimally hire? 
+		\begin{solution}[1.5in]
+		\end{solution}
+		\part[2] How much output will the firm produce? 
+		\begin{solution}[1.5in]
+		\end{solution}
+		\part[2] How much actual profit will the firm realize? 
+	\begin{solution}
+	\end{solution}
+\newpage
+\uplevel{The graph below shows the $VMP_E$ curve for Bunce's Beans (and all other firms in this market).}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.85]{exam2_blah}
+\end{figure}
+		\part[2] On the graph, label Bunce's Beans optimal labor choice. Make sure to label the number of workers (and type) on the x-axis and the dollar value on the y-axis.
+		\part[2] Consider another firm in this labor market, Bogg's Beans. This firm also has a distaste for black workers, and their discrimination coefficient is 0.50. On the graph, label Bogg's optimal labor choice. Make sure to label the number of workers (and type) on the x-axis and the dollar value on the y-axis.
+	\end{parts}
+
+\end{questions}
+
+\end{document}

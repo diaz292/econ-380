@@ -1,0 +1,250 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\usepackage{threeparttable}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{sgamevar}
+\usepackage{sgame}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah (blank next two lines out for no solutions, unblank #3)
+%\printanswers
+%\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+%\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+\newcommand{\dd}[1]{}  
+\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+
+
+\title{\textbf{Homework 4 \dd{\\Solutions}} \\ \vspace{2 mm} {\large ECON 380} \\ \large{UNC Chapel Hill}}
+\date{}
+\maketitle
+
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\\
+
+\makebox[\textwidth]{ONYEN:\enspace\hrulefill}
+\\
+
+\begin{center}
+	\fbox{\fbox{\parbox{5.5in}{\centering
+				This homework is due on \textbf{March 8} by \textbf{12:05PM}. You must turn in your work on a printed copy of this document in order for it to be graded. Your assignment must be stapled and in the correct order. Non-stapled assignments will automatically receive a 10 point deduction. There are a total of 50 available points.}}}
+\end{center}
+	
+	
+\subsection*{Present Value}
+
+\begin{questions}
+\question Suppose Mallory lives for two periods, $t=1,2$. In period 1, she could either directly enter the labor force and earn \$30,000, or she could enroll in college where her costs would be \$45,000. In period 2, Mallory will either earn \$30,000 if she chose to enter the workforce in period 1, or \$120,000 if she went to college in the first period. All transactions occur at the \underline{beginning} of each period.
+
+\begin{parts}
+	\part[2] What is the net present value of Mallory's earnings if she decides to directly enter the labor force in period 1 and her discount rate is 5\%?
+	\begin{solution}[1in]
+		\[NPV_N = \$30,000 + \frac{\$30,000}{(1.05)} = \$58,571\]
+	\end{solution}
+	\ddp{Points: (1) NPV formula, (1) answer}
+	\part[2] What is the net present value of Mallory's earnings if she decides to go to college in period 1 and her discount rate is 5\%?
+	\begin{solution}[1in]
+		\[NPV_C = -\$45,000 + \frac{\$120,000}{(1.05)} = \$69,286\]
+	\end{solution}
+	\part[2] At a discount rate of 5\%, what path (college vs. non-college) maximizes Mallory's present value of lifetime earnings?
+	\begin{solution}[.5in]
+		With $r=5\%$, $NPV_C > NPC_N$. Going to college maximizes her NPV of earnings.
+	\end{solution}
+	\part[4] At a discount rate of 25\%, what path (college vs. non-college) maximizes Mallory's present value of lifetime earnings?
+	\begin{solution}[1.5in]
+		\[NPV_N = \$30,000 + \frac{\$30,000}{(1.25)} = \$54,000\]
+		\[NPV_C =  -\$45,000 + \frac{\$120,000}{(1.25)} =  \$51,000\]
+		With $r=25\%$, going straight into the labor force maximizes her NPV of earnings.
+	\end{solution}
+	\ddp{Points: (1) $NPV_N$, (1) $NPV_C$, (2) optimal choice}
+	\part[4] At what discount rate would Mallory be indifferent between directly entering the labor force and going to college? Call this rate $r_{id}$. 
+	\begin{solution}[1.5in]
+		Mallory would be indifferent between the choices if $NPV_N = NPV_C$:
+		\[30,000 + \frac{30,000}{(1+r_{id})} = -45,000 + \frac{120,000}{(1+r_{id})} \Rightarrow\]
+		\[75,000 + \frac{30,000}{(1+r_{id})} = \frac{120,000}{(1+r_{id})} \Rightarrow\]
+		\[75,000(1+r_{id}) + 30,000 = 120,000 \Rightarrow 75,000(1+r_{id}) = 90,000\Rightarrow\]
+		\[1+r_{id} = 1.2 \Rightarrow r_{id} = .2 = 20\%\]
+	\end{solution}
+	\ddp{Points: (1) $NPV_N = NPV_C$, (2) work, (1) $r_{id}$}
+	\part[4] How does Mallory's optimal decision change depending on the relationship between her discount rate $r$ and $r_{id}$? That is, what is Mallory's choice if $r<r_{id}$? What if $r>r_{id}$? 
+	\begin{solution}[1.5in]
+		If $r<r_{id}$, Mallory's optimal choice would be to go to college since $NPV_C > NPV_N$. If $r>r_{id}$, Mallory's optimal choice would be to directly enter the labor force since $NPV_C < NPV_N$.
+	\end{solution}
+\end{parts}
+
+\end{questions}
+
+\subsection*{Schooling Model and Ability Bias}
+
+\begin{questions}
+\question	Consider the wage-schooling locus described in Table \ref{hi}.
+		\begin{table}[H]
+		\centering
+		\caption{Cyril and Pam's Wage-Schooling Locus}
+		\label{hi}
+		\begin{tabular}{c|c|c}
+			Years of Schooling & Earnings & MRR \\
+			\hline 
+			11 & \$20,000 & -----\\
+			12 & \$25,000 & \dd{25\%}\\
+			13 & \$29,000 & \dd{16\%}\\
+			14 & \$32,500 & \dd{12.1\%}\\
+			15 & \$34,500 & \dd{6.2\%}\\
+			16 & \$36,000 & \dd{4.3\%}\\
+			17 & \$37,000 & \dd{2.8\%}\\
+		\end{tabular}
+	\end{table}
+
+
+\begin{parts}
+	\part[3] Fill in the marginal rate of return to schooling for years 12 - 17.
+	\ddp{1/2 point for each year's $MRR$}
+	\part[2] Suppose Cyril follows this wage-schooling locus. His discount rate is $r_C = 9\%$. What is his optimal level of schooling?
+	\begin{solution}[.5in]
+		Cyril optimally chooses 14 years of schooling (his resulting wage is \$32,500).
+	\end{solution}
+	\part[2] Suppose Pam follows this wage-schooling locus. Her discount rate is $r_P = 15\%$. What is her optimal level of schooling?
+\begin{solution}[.5in]
+	Pam optimally chooses 13 years of schooling (her resulting wage is \$29,000).
+\end{solution}
+	\uplevel{Suppose Archer has the same discount rate as Cyril, $r_A = 9\%$. However, Archer has a higher ability level than Cyril, $A^A > A^C$ and his wage-schooling locus is shown in Table \ref{hi2}.}
+	
+	
+		\begin{table}[H]
+		\centering
+		\caption{Archer's Wage-Schooling Locus}
+		\label{hi2}
+		\begin{tabular}{c|c|c}
+			Years of Schooling & Earnings & MRR \\
+			\hline 
+			11 & \$22,000 & -----\\
+			12 & \$32,000 & \dd{45.4\%}\\
+			13 & \$40,000 & \dd{25\%}\\
+			14 & \$47,000 & \dd{17.5\%}\\
+			15 & \$53,000 & \dd{12.8\%}\\
+			16 & \$58,000 & \dd{9.4\%}\\
+			17 & \$62,000 & \dd{6.9\%}\\
+		\end{tabular}
+	\end{table}
+	
+	\part[3] Fill in Archer's marginal rate of return to schooling for years 12 - 17.
+	\part[2] What is Archer's optimal schooling level?
+	\begin{solution}[.5in]
+		Archer optimally chooses 16 years of schooling (his resulting wage is \$58,000).
+	\end{solution}
+	\part[4] Suppose we don't account for the differing wage-schooling loci of these individuals and estimate the marginal rate of return by comparing Cyril's wage/schooling outcome to Archer's wage/schooling outcome. What is the estimated MRR?
+	\begin{solution}[1in]
+		We observe in the data that Archer chooses 16 years of schooling and earns \$58,000. Cyril chooses 14 years of schooling and earns \$32,500. If we naively estimate the MRR based on these results (i.e., we would be incorrectly assuming they are on the same wage-schooling locus), we would estimate the MRR per year to be
+		
+		\[\widehat{MRR}= \frac{58,000 - 32,500}{2}\times \frac{1}{32,500} = 39.2\%\]
+		
+		\ddp{(2) set-up, (2) answer.}
+	\end{solution}
+	\part[4] Compare your naive estimate of the marginal rate of return from part (f) to the true marginal rate of return to the 15$^{th}$ year of education for Cyril and Archer. Is our estimate higher than the true marginal rate of return, or lower than the true marginal rate of return for the 15$^{th}$ year of education for these individuals?
+	\begin{solution}[1in]
+		This estimated MRR is way higher than either of their true MRR's around the year they end schooling. Hence, failing to
+		account for selection of schooling based on ability makes it appear as if the return to schooling is much higher than it
+		actually is (this is why we often overestimate the true return on education).
+	\end{solution}
+\end{parts}
+
+
+\end{questions}
+
+\subsection*{Signaling Model}
+
+\begin{questions}
+\question[4] Suppose there are two types of persons: high and low-ability. A particular diploma costs a high-ability person \$15,000 and costs a low-ability person \$25,000. Firms wish to use education as a screening device where they intend to pay \$40,000 to workers without a diploma and $\$K$ to those with a diploma. In what range must $K$ be to make this an effective screening device?
+\begin{solution}[1.5in]
+	In order to be an effect screening device, $K$ must be large enough to induce high-ability workers to obtain a diploma, but not so high that it also induces low-ability workers to obtain a diploma.
+	\\
+	
+	For low-ability workers, their earnings without a degree must be higher than their net earnings would be with a degree in order for them to forgo the diploma:
+	\[\underbrace{40,000}_\text{Earnings without a degree} > \underbrace{K}_\text{Earnings with a degree} - \underbrace{25,000}_\text{Cost of obtaining degree}\]
+	\[\Rightarrow  K < \$65,000\]	
+	For high-ability workers, their earnings without a degree must be lower than their net earnings would be with a degree in order for them to get a diploma:
+	\[\underbrace{40,000}_\text{Earnings without a degree} < \underbrace{K}_\text{Earnings with a degree} - \underbrace{15,000}_\text{Cost of obtaining degree} \]
+	\[\Rightarrow  K > \$55,000\]
+		
+	Thus, $\$55,000 < K < \$65,000$ in order for this screening device to be effective.
+\end{solution}
+\ddp{Points: (1) lower bound, (1) upper bound, (2) work}
+\end{questions}
+
+\subsection*{Human Capital and Development}
+
+Directions: Type your answers to the following questions and attach them to the back of this packet.
+
+\begin{questions}
+\question[4] Read Borjas 6.6 and the introduction to Duflo (2001). In 4-6 sentences, briefly summarize (i) the policy experiment analyzed in the paper and (ii) the results regarding how the policy affected schooling and labor market outcomes. What is estimated range of the rate of return to schooling?
+\begin{solution}
+	\begin{itemize}
+		\item Policy: Large school construction program (INPRES) in Indonesia. Between 1973 and 1979, more than 61,000 primary schools were built, especially focused in areas with relatively low enrollment rates.
+		\item Results: Years of education increased by .12 to .19 years (.11 using the DID approach in Borjas). Earnings for the first cohort affected by the program were also 1.5-2.7\% higher (3\% using the DID approach in Borjas)
+		\item Estimated return to schooling:  6.8\% to 10.6\%
+	\end{itemize}
+\end{solution}
+\question Read the introduction to Jensen (2010) and answer the following questions.
+
+\begin{parts}
+	\part[2] Jensen argues that the perceived rate of return to education is likely different than the actual rate of return to education, especially in developing countries. In 3-4 sentences, describe two of the factors he provides that might drive this difference and explain which rate of return (perceived versus actual) is likely smaller in low-income nations.
+	\begin{solution}
+			\begin{itemize}
+			\item Decision to drop out often made at a younger age
+			\item Harder to obtain information (e.g., no guidance counselors or little information may available on labor market earnings)
+			\item Perceived returns influenced by surroundings
+			\begin{itemize}
+				\item Rural individuals may not know true potential returns in urban sector
+				\item Segregation by earnings income may depress perceived returns to schooling
+			\end{itemize} 
+		\end{itemize}
+	The perceived return to education is likely smaller than the actual return to education in developing countries.
+	\end{solution}
+	\part[2] In 4-6 sentences, briefly describe (i) the intervention analyzed in the paper and (ii) the results of the intervention. Is the estimated effect of the intervention the same for students across income groups?
+	\begin{solution}
+		\begin{itemize}
+		\item Intervention: Students were asked about their perceived returns to schooling. In randomly selected schools, students were also provided information about the true returns to schooling. 
+		\item Results: Students in treatment schools reported much higher perceived returns to education upon reinterview. Additionally, treated individuals on average completed .20 more years of schooling over the next four years
+		\item The effect varied across income groups. Low income individuals saw a large effect on schooling (.33 additional years of schooling), but there was no effect on the poorest students. Both groups' perceived $MRR$ increased by the same amount.
+		\end{itemize}
+	\end{solution}
+\end{parts}
+
+\end{questions}
+
+\end{document}

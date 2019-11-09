@@ -1,0 +1,462 @@
+\documentclass[pdf]{beamer}
+\usetheme{Frankfurt}  
+\usecolortheme{whale}
+\usepackage{tikz} 
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}              % used for \eqref{} in this document
+\usepackage{dsfont}
+\usepackage{hyperref}
+\usepackage{threeparttable}
+\usepackage{multirow}
+\graphicspath{{Figures/}}
+\usepackage{booktabs}
+\usepackage{tikz}
+\newtheorem{exmp}{Example}[section]
+\usepackage{subcaption}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage[mathscr]{euscript}
+\usepackage{remreset}% tiny package containing just the \@removefromreset command
+\makeatletter
+\@removefromreset{subsection}{section}
+\makeatother
+\setcounter{subsection}{1}
+
+
+\section{The Short-Run}
+
+%% preamble
+\title{Part IIC: Labor Demand}
+\author[David A. D\'iaz]{David A. D\'iaz}
+\institute{UNC Chapel Hill}
+\date{}
+
+
+\AtBeginSection[] %Section links on slides
+
+
+\begin{document}
+	
+	\begin{frame}
+		
+		\titlepage
+		
+	\end{frame}
+	
+\begin{frame}{Labor Market Equilibrium}
+	\begin{itemize}
+		\item Earlier:  Developed theory of labor supply.  
+		\item But, policy analysis only considered one side of market!
+		\item Many questions remain:
+		\begin{itemize}
+		\item Where does the wage offered to workers come from in the first place?
+		\item How can we explain many real-world properties of labor markets?
+		\begin{itemize}
+		\item Differences in wages due to (i) skills differences, (ii) irrelevant factors e.g. race
+		\item Unemployment:  Why can’t workers always find a firm willing to hire at the market rate?
+		Etc.
+		\end{itemize}
+		\item Need a model of firm behavior to consider these questions.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+	
+\begin{frame}{The Firm's Objective}
+\begin{itemize}
+	\item What is the firm's goal?
+	\begin{itemize}
+		\item To maximize \textbf{profit}: $\Pi = TR - TC$
+	\end{itemize}
+	\item Assumption: The markets for inputs (e.g., labor \& capital) and output (the product the firm is producing) are competitive
+	\begin{itemize}
+		\item Firms are price takers
+		\item Market price of output is $p$
+		\item Market price of labor is $w$
+		\item Market price of capital is $r$ 
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Firm's Constraint}
+	\begin{itemize}
+		\item Total costs: $TC = rK + wE$, where $K$ is the stock of capital used and $E$ is the number of employee-hours hired
+	\item Total revenue: $TR = pq$, where $q$ is the output quantity
+		\item Firms produce output using labor ($E$) and capital ($K$) according to the firm's production function,
+		\[q = f(K,E)\]
+	
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Firm's Constraint}
+\begin{itemize}
+
+	\item Assumptions about $E$:
+	\begin{itemize}
+		\item $E$ = We will generally simplify $E$ to just be the number of workers hired by the firm
+		\item $E$ aggregates all different types of workers into one measure. Ignores potential heterogeneity in productivity across workers.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Production Function}
+	\begin{itemize}
+		\item From the production function, we can define 
+		\begin{enumerate}
+			\item \textbf{The marginal product of labor ($MP_E$)}: The change in output resulting from hiring an additional worker (holding $K$ constant)
+			\item \textbf{The marginal product of capital ($MP_K$)}: The change in output resulting from a one-unit increase in the capital stock (holding $E$ constant)
+			\item \textbf{The average product of labor ($AP_E$)}: The amount of output produced by the typical worker. $AP_E = q/E$
+		\end{enumerate}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{The Production Function}
+\begin{itemize}
+		\item Assumptions: 
+\begin{itemize}
+	\item $f(K,E)$ is increasing in $K$ and $E$, so $MP_K$ and $MP_E$ are both positive.
+	\item $MP_K$ and $MP_E$ \textit{eventually} decline (i.e., follow the \textbf{law of diminishing returns})
+\end{itemize}		
+\item What is the relationship between $MP_E$ and $AP_E$?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Labor Demand in the SR}
+	\begin{itemize}
+		\item \textbf{The short run:} A time span sufficiently short such that the firm cannot adjust its capital stock. $K=K_0$. The firm can adjust $E$.
+		\item \textbf{The long run:} Capital and labor can both be adjusted by the firm.
+		\item Implicitly, labor is more mobile than capital.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Labor Demand in the SR}
+	\begin{itemize}
+		\item Short-run decision: Given a fixed level of capital $K_0$, how many units of labor should the firm hire in order to maximize profits?
+		\item Marginal cost of hiring an additional worker: $MC_E = w$
+		\item Marginal benefit of hiring: The increase in revenue brought about from hiring an additional worker
+		\item Per the usual, should hire until $MB = MC$ 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Labor Demand in the SR}
+	\begin{itemize}
+		\item How do we define the marginal benefit?
+		\item Because the firm is a price taker, $\Delta TR = p\times \Delta q$
+		\item The marginal product of labor is given by
+		\[MP_E = \frac{\Delta q}{\Delta E}\]
+		\item After a one unit increase in $E$, 
+		\[MP_E = \Delta q \Rightarrow \Delta TR = p\times MP_E\]
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Labor Demand in the SR}
+	\begin{itemize}
+			\item \textbf{Value of the Marginal Product of Labor ($VMP_E$):} The dollar value of what each additional worker produces (holding $K$ constant).
+			\[VMP_E = p \times MP_E\]
+			\item $VMP_E$ is the change in revenue that results from a one unit increase in labor (holding $K$ constant)
+			\item \textbf{Value of the average product of labor ($VAP_E$):} The dollar value of output per worker.
+			\[VAP_E = p\times AP_E\]
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Labor Demand in the SR}
+	\begin{itemize}
+		\item Optimal hiring rule: Hire until $MB = MC \Rightarrow VMP_E = w$
+		\item Additional condition: $VMP_E$ must be declining.
+		\item Moreover, the firm will only hire along points of the $VMP_E$ curve that lie \textit{below} the point where $VMP_E$ and $VAP_E$ meet.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Labor Demand in the SR}
+\begin{itemize}
+		\item This is referred to as the \textbf{marginal productivity condition}
+	\item This condition is identical to the condition you have seen before where the firm produces until $MR = MC$
+	\begin{itemize}
+		\item The condition telling firms when to stop producing output is the same as the condition telling firms to stop hiring workers.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Labor Demand in the SR}
+\begin{exmp}
+Suppose the hourly wage is \$10 and the price of each unit of capital is \$25. The price of output is constant at \$50. The production function is given by 
+\[f(E,K) = E^{1/2}K^{1/2},\]
+
+which implies that $MP_E = (1/2)(K/E)^{1/2}$. If the current capital stock is fixed at 1,600 units, how much labor should the firm hire in the short run? How much profit will the firm earn?
+\end{exmp}
+\end{frame}
+
+\begin{frame}{Short-Run Labor Demand}
+	\begin{itemize}
+		\item Recall that a labor demand curve gives the firm’s chosen level of employment as a function of the wage rate.
+		\item Graphically, the short-run labor demand curve ($E_{SR}$) is just the downward-sloping portion of the $VMP_E$ curve
+		\item The ``height'' of the labor demand curve depends on the price ($p$) of the output
+		\begin{itemize}
+			\item Positive relationship between short-run employment and $p$
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Short-Run Labor Demand}
+	\begin{itemize}
+		\item An important implication of the marginal productivity condition:
+		\begin{itemize}
+			\item At the margin, workers are paid a wage equivalent to what they earn for the firm.
+			\item Workers are paid precisely what they're worth to the firm!
+		\end{itemize}
+		\item This condition does not hold if labor markets are not competitive.
+		\begin{itemize}
+			\item Competitive markets provide workers with high level of surplus.
+			\item Do we believe labor markets are competitive?
+			\item How can we reinterpret this condition in a non-competitive market?
+			\item More on this later.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Short-Run Labor Demand Elasticity}
+	\begin{itemize}
+		\item Elasticity of labor demand: A measure of the responsiveness of employment to changes in the wage rate
+		\[\varepsilon_{w}^{D,SR} = \frac{\%\Delta E_{SR}}{\%\Delta w} = \frac{\Delta E_{SR}}{\Delta w} \times \frac{w_0}{E_{SR0}}\]
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Readings}
+\begin{itemize}
+	\item Borjas 3.1-3.2
+\end{itemize}
+\end{frame}
+
+
+\section{The Long-Run}
+
+	
+\begin{frame}{Labor Demand: Long versus Short-Run}
+	\begin{itemize}
+		\item Recall that in the short-run, the firm's capital stock is fixed at $K = K_0$
+		\item In the short-run, the firm chooses $E$ to maximize profits since it takes $K_0$ as given:
+		\[\max TR - TC = p q - wE - rK_0 \hspace{2mm}\text{s.t} \hspace{2mm} q = f(K,E)\]
+		\item Long-run: Firm is free to vary capital, hence it must choose \textbf{both} the optimal labor level and the optimal capital level:
+		\[\max TR - TC = p q - wE - rK \hspace{2mm}\text{s.t} \hspace{2mm} q = f(K,E)\]
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Long-Run Optimality Conditions: Labor}
+	\begin{itemize}
+		\item Should hire labor until $VMP_E = w$
+		\item Same intuition as the short-run case: Hire an additional unit of labor if, and only if, the marginal benefit ($VMP$) outweighs the marginal cost ($w$)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Long-Run Optimality Conditions: Capital}
+	\begin{itemize} 
+		\item Optimal capital hiring must satisfy a similar condition:
+		\[VMP_K = p\times MP_K = r\]
+		\item Intuition: Hire the next unit of capital if, and only if, the marginal benefit ($VMP$) outweighs the marginal cost ($r$)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Long-Run Optimality Conditions: MRTS Condition}
+	\begin{itemize}
+		\item Combining the optimality conditions for labor and capital, we get that optimal bundles of labor must satisfy:
+		\[\frac{MP_E}{MP_K} = \frac{w}{r}\]
+		\item The ratio of $MP_E$ and $MP_K$ is called the \textbf{marginal rate of technical substitution}.
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Interpreting the MRTS Condition}
+	\begin{itemize}
+			\item Thus, in the long-run optimal bundles of labor and capital must satisfy $MRTS_{E,K} = w/r$ 
+	\item This condition is largely the reason long-run labor demand behaves differently than short-run labor demand
+		\item The intuition behind the $MRTS$ condition can be seen by re-writing it as
+		\[\frac{MP_E}{w} = \frac{MP_K}{r}\]
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Interpreting the MRTS Condition}
+\begin{itemize}
+		\item The condition essentially states that the last dollar spent on labor must yield as much output as the last dollar spent on capital
+	\item How should we reallocate resources if $MRTS < w/r$?
+	\item How should we reallocate resources if $MRTS > w/r$?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Long-Run Labor Demand}
+	\begin{itemize}
+		\item Consider the dynamics of labor demand in response to  $\uparrow w$.
+		\item Short-run: $VMP_E = w \Rightarrow \uparrow w \Rightarrow \downarrow E$
+		\item Long-run: Free to vary capital. Because $\uparrow w$, now we have:
+		\[\frac{MP_E}{MP_K} < \frac{\uparrow w}{r}\]
+		so the firm must decrease $E$ \textit{even further} in order to re-balance the $MRTS$ condition
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Long-Run Labor Demand Elasticity}
+	\begin{itemize}
+		\item Long-Run Labor Demand elasticity is the percentage change in the firm's labor level ($E$) which results from a one percent increase in the wage rate ($w$), while the firm is free to vary capital:
+		\[\varepsilon_w^{D,LR} = \frac{\%\Delta E^*_{LR}}{\%\Delta w} = \frac{\Delta E^*_{LR}}{\Delta w} \times \frac{w_0}{E^*_{LR0}}\]
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Long-Run versus Short-Run Labor Demand Elasticity}
+	\begin{itemize}
+		\item In the long-run, firm's have the option of substituting between labor and capital
+		\item Hence, the firm can effectively replace some of its labor with capital if the wage rate rises. 
+		\item Implication: $|\varepsilon_w^{D,LR}| > |\varepsilon_w^{D,SR}|$
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Long-Run versus Short-Run Labor Demand Elasticity}
+\begin{itemize}
+	\item In words: Firms are more able to adjust their level of employment in response to changes in wages in the long-run
+	\item Effect of policy changes may be different in long-run than short-run. E.g. The minimum wage
+	\begin{itemize}
+		\item Data indicate that firms do not significantly reduce E in short-run.
+		\item Possible that firms do reduce E in the long-run.
+	\end{itemize}
+	
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Readings}
+	\begin{itemize}
+		\item Borjas 3.3-3.4
+	\end{itemize}
+\end{frame}
+
+
+\section{Application: The Minimum Wage}
+
+\begin{frame}{The Minimum Wage}
+	\begin{itemize}
+		\item Introduced by the Fair Labor Standards Act (FSLA) in 1938
+		\item Coverage was initially small ($\sim$45\% of nonsupervisory work), but now most workers are covered by the legislation
+		\item The minimum wage is updated at irregular intervals and is not indexed to inflation or productivity growth
+		\begin{itemize}
+			\item Implication: The \textit{real} minimum wage declines between the time it is set and the next time it is raised
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.6]{03C_1.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.3]{03C_2.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{The Minimum Wage: Universal Coverage}
+	\begin{itemize}
+		\item Standard analysis under universal coverage: A minimum wage set above the equilibrium wage leads to a surplus of labor (i.e., unemployment)
+		\begin{itemize}
+			\item Firms demand less labor at the hire wage
+			\item Some workers are displaced from their current job and become unemployed
+			\item The higher wage increases the quantity of labor supplied
+			\item These additional workers enter the labor market, but cannot find jobs and so increase unemployment 
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Minimum Wage: Universal Coverage}
+	\begin{itemize}
+		\item For a given minimum wage, the level of employment depends on the elasticity of labor demand 
+		\item The level of unemployment depends on the elasticity of labor demand and the elasticity of labor supply
+		\item The greater the elasticities of each curve, the greater impact the minimum wage will have on the labor market
+		\begin{itemize}
+			\item Implication: The effect of the minimum wage will be greater in the long run
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{The Minimum Wage: Evidence}
+	\begin{itemize}
+		\item Card \& Krueger, ``Minimum Wages and Employment: A Case Study of the Fast-Food Industry in NJ and PA,'' AER (1994)
+		\item New Jersey increased their minimum wage in 1992
+		\item Pennsylvania (a neighboring state) kept the minimum wage at the federally mandated level
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Minimum Wage: Evidence}
+\begin{itemize}
+	\item Control group: Fast food establishments in PA 
+	\item Treatment group: Fast food establishments in NJ (same franchises)
+	\item Strategy: Difference-in-differences
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Minimum Wage: Evidence}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.6]{03C_3.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{The Minimum Wage: Evidence}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.6]{03C_4.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{The Minimum Wage: Evidence}
+	\begin{itemize}
+		\item Neumark \& Wascher (2000) performed the same exercise, but used (probably better) pay-roll record data
+		\item Finding: Minimum wage increase lead to a small decrease in employment in NJ relative to PA 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Minimum Wage: Evidence}
+	\begin{itemize}
+		\item Card \& Krueger (2000) performed the same exercise, again, but used even more detailed data from BLS
+		\item Finding: ``The increase in New Jersey’s minimum wage probably had no effect on total employment in New Jersey's fast-food industry, and possibly had a small positive effect.''
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Minimum Wage: Evidence}
+	\begin{itemize}
+		\item Caveats:
+		\begin{enumerate}
+			\item Long-run vs. Short-run labor demand
+			\begin{itemize}
+				\item Long-run impacts may be larger if firms are more able to adjust inputs from labor to capital
+			\end{itemize}
+			\item Magnitude of minimum wage changes
+			\begin{itemize}
+				\item Most minimum wage changes are small, so it estimated effects on employment are likely small and difficult to estimate with precision 
+			\end{itemize}
+			\item Inconsistency of evidence
+			\begin{itemize}
+				\item Lots of ``noise'' in estimates. On average, estimates probably indicate that there is a fairly small disemployment effect
+			\end{itemize}
+		\end{enumerate}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Minimum Wage: Evidence}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.6]{03C_5.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Readings}
+	\begin{itemize}
+		\item Borjas 3.10
+	\end{itemize}
+\end{frame}
+	
+\end{document}

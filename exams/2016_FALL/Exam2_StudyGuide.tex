@@ -1,0 +1,148 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\usepackage{threeparttable}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{sgamevar}
+\usepackage{sgame}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah (blank next two lines out for no solutions, unblank #3)
+\printanswers
+\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+%\newcommand{\dd}[1]{}  
+%\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+	
+	
+	\title{\textbf{Exam 2 Study Guide} \\ \vspace{2 mm} {\large ECON 380} \\ \large{UNC Chapel Hill}}
+	\date{}
+	\maketitle
+	
+Stuff to know for exam 2:
+
+\subsection*{Competitive Markets}
+
+\begin{enumerate}
+	\item How to find equilibrium wage and employment level given labor supply and demand equations
+	\item How to find employment and unemployment level under a binding minimum wage
+	\item How to find producer, worker, and total surplus from a graph
+	\item How to find producer, worker, total surplus, and DWL under a binding minimum wage
+	\item Be able to explain why the allocation of resources (i.e., the equilibrium employment level) is efficient in a labor market with no externalities
+	\item How the free entry/exit of workers (or firms) across regions will eventually lead to a single equilibrium wage
+\end{enumerate}
+
+\subsection*{Immigration Impacts}
+
+\begin{enumerate}
+	\item Short-run vs long-run effects of migration in the case of perfect substitutes and how to reflect this on a graph
+	\item Short-run vs long-run effects of migration in the case of complements and how to reflect this on a graph
+	\item Welfare implications if migrants are perfect substitutes: who is better off, who is worse off? What is the effect on total welfare?
+\end{enumerate}
+
+\subsection*{Noncompetitive Labor Markets}
+
+\begin{enumerate}
+	\item Welfare implications in a market with a perfectly discriminating monopolist
+	\item Under a non-discriminatory monopolist, what is the relationship between the marginal cost of hiring labor and the wage rate?
+	\item What is the implication of this relationship on the number of workers employed when compared to a perfectly competitive market or perfectly discriminating monopsonist 
+	\item What are the welfare impacts under a non-discriminating monoposonist?
+	\item How to find PS, WS, TS, and DWL from a graph under this structure
+	\item Can a minimum wage improve the allocation of resources in this case?
+	\item What is the ``optimal'' minimum wage that maximizes total surplus?
+\end{enumerate}
+
+\subsection*{LMDCs}
+
+\begin{enumerate}
+	\item Know 2-3 of the main differences between labor markets in developed and developing countries as described by Fields (2011)
+	\item Know 2-3 of the differences between ``traditional'' and ``modern'' labor markets from Campbell \& Ahmed (2012)
+	\item What are the two possible explanations for why labor markets are segmented?
+	\item Arias \& Khamis (2008) found evidence for both segmentation stories. In which sector (self-employed or informal work) did they find evidence for the ``exclusion view'' and in which did they find evidence for the comparative advantage story?
+	\item Why might the income effect due to a wage drop be stronger in developing countries? (Jayachandran 2006)? 
+	\item What were the results on women's labor market participation as a result of the program analyzed in Jensen (2012)?
+\end{enumerate}
+
+\subsection*{Human Capital Theory}
+
+\begin{enumerate}
+	\item What has been the trend in the proportion of people without a HS degree over the last 70 years? In the proportion of people with a college degree?
+	\item How has the relative pay of those with a college degree compared to those without a HS degree changed since 1975? What about the relative pay of those with some college compared to those with no HS degree?
+	\item How to find present value and net present value
+	\item How to find an individual's optimal choice from two choices with different costs/future earnings
+	\item What is the relationship between $r$ and an individual's college choice?
+\end{enumerate}
+
+\subsection*{The Schooling Model}
+
+\begin{enumerate}
+	\item How to find $MRR$ given an individual's wage-schooling locus (both from a table or a graph)
+	\item What are the properties of the $MRR$ curve?
+	\item How to find individual stopping choice given $MRR$ schedule and an individual's discount rate (both from a table or a graph)
+	\item How does an individual's choice change with $r$?
+\end{enumerate}
+
+\subsection*{Estimating the Returns to Schooling}
+
+\begin{enumerate}
+	\item Why might two individuals differ in their schooling choices?
+	\item If individuals have different rates of discount, how does that affect their optimal schooling choice? Can we accurately estimate $MRR$ if individuals differ only in their discount rate?
+	\item If individuals have different ability levels, how does that affect their optimal schooling choice? Can we accurately estimate $MRR$ if individuals differ in ability?
+	\item Why might unobserved ability bias $MRR$ estimates upwards? Downwards?
+	\item What methods have been attempted to deal with ability bias? What are some of the drawbacks of each?
+	\item Know 2-3 of the other issues that come up when estimating the returns to schooling 
+\end{enumerate}
+
+\subsection*{Job Market Signaling}
+
+\begin{enumerate}
+	\item What is the basic idea of the signaling model?
+	\item Under a pooling equilibrium, who is better off? Worse off?
+	\item Know how to find threshold level of earnings or school level given information about worker productivity and costs of education (e.g., homework question and example from class)
+	\item Can we easily separate the productivity enhancing component of schooling from the the ``sheepskin effect''? Why or why not?
+\end{enumerate}
+
+\subsection*{Human Capital and Development}
+
+\begin{enumerate}
+	\item Homework 4 questions about Duflo (2001) and Jensen (2010)
+	\item What was the intervention analyzed in Miguel \& Kremer (2004)? At what level was the intervention randomized (e.g., individual, school, village)? What were the impacts of the intervention on treated children? Untreated children?
+	\item How has access to healthcare changed in low-income countries in recent years? What two tools are generally used to measure the quality of healthcare? Broadly speaking, how is the quality of care in developing countries? (Das, et al. 2008)
+\end{enumerate}
+
+\end{document}

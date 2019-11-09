@@ -1,0 +1,451 @@
+\documentclass[pdf]{beamer}
+\usetheme{Frankfurt}  
+\usecolortheme{whale}
+\usepackage{tikz} 
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}              % used for \eqref{} in this document
+\usepackage{dsfont}
+\usepackage{hyperref}
+\usepackage{threeparttable}
+\usepackage{multirow}
+\graphicspath{{Figures/}}
+\usepackage{booktabs}
+\usepackage{tikz}
+\newtheorem{exmp}{Example}[section]
+\usepackage{subcaption}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage[mathscr]{euscript}
+\usepackage{remreset}% tiny package containing just the \@removefromreset command
+\makeatletter
+\@removefromreset{subsection}{section}
+\makeatother
+\setcounter{subsection}{1}
+
+
+\section{Signaling}
+
+%% preamble
+\title{Part IIIB: Signaling Model; HC and Development}
+\author[David A. D\'iaz]{David A. D\'iaz}
+\institute{UNC Chapel Hill}
+\date{}
+
+
+\AtBeginSection[] %Section links on slides
+
+
+\begin{document}
+	
+	\begin{frame}
+		
+		\titlepage
+		
+	\end{frame}
+
+
+
+\begin{frame}{Review: Human Capital Theory}
+	\begin{itemize}
+		\item Firms observe individual productivity 
+		\item Wages are higher for more productive individuals; $w = w(S;A)$
+		\item Attend school $\Rightarrow$ increase productivity $\Rightarrow$ increase wages
+		\item Individuals attend school only if schooling raises their productivity
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Importance of Information}
+	\begin{itemize}
+		\item What do firms know about a job candidate?
+		\begin{itemize}
+			\item Education
+			\item Previous experience
+			\item Information from references
+		\end{itemize}
+		\item What do candidates know about themselves?
+		\begin{itemize}
+			\item All of the above, plus
+			\item Work ethic
+			\item Intelligence
+			\item etc.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Importance of Information}
+	\begin{itemize}
+		\item Basic idea of signaling:
+		\begin{itemize}
+			\item Workers try to present employers with information that makes them look as productive as possible (``signals of productivity'')
+			\begin{itemize}
+				\item Signaling may be costly: Time spent in school, unpaid internships, extracurriculars, etc.
+			\end{itemize}
+			\item Firms hiring workers try to take signals presented by potential worker to estimate productivity
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Job Market Signaling}
+	\begin{itemize}
+		\item Is it possible to describe an economic environment where
+		\begin{enumerate}
+			\item schooling does not directly increase productivity and
+			\item firms pay well-educated workers higher wages?
+		\end{enumerate}
+		\item Yes!
+		\item Note: This does not mean schooling doesn't increase productivity. Rather, it just means that increasing productivity is not the only way schooling can increase wages
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Job Market Signaling}
+	\begin{itemize}
+		\item Suppose there are two types of workers:
+		\begin{itemize}
+			\item High productivity make up a proportion $(1-q)$ of the population
+			\item Low productivity make up $q$ of the population
+		\end{itemize}
+		\item Productivity differences between the workers exist since birth and \textit{do not depend on how much schooling a worker gets}
+		\item For illustrative purposes, assume high-ability workers have a present value of lifetime productivity = \$300,000
+		\item Low-ability workers have PV of lifetime productivity = \$200,000
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Job Market Signaling}
+	\begin{itemize}
+		\item Case 1: Perfect information
+		\begin{itemize}
+			\item Employers observe which workers are high-ability and low-ability
+			\item Pay high-ability workers \$300,000, low-ability workers \$200,000 over the life cycle
+			\item Not often the case. In real-world, there is \textbf{asymmetric information}
+		\end{itemize}
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Job Market Signaling}
+	\begin{itemize}
+		\item Case 2: ``Pooling equilibrium''
+		\begin{itemize}
+			\item No information about productivity available to firms and they do not observe a worker's type
+			\item Firms will pool all applicants together and treat them equally
+			\item Average wage will be a weighted average of the two worker type productivities: \\
+			\text{Average salary} = $(300,000)(1-q) + 200,000q = 300,000 - 100,000q$
+			\item Good for low-ability workers, bad for high-ability workers and firms
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Job Market Signaling}
+	\begin{itemize}
+		\item Case 3: ``Separating Equilibrium''
+		\begin{itemize}
+			\item Firms do not observe a worker's type
+			\item High-productivity workers may be able to signal their productivity to firms through some form of information (e.g., a threshold education level)
+			\item Assumption: Costs to obtain signaling information is higher for low-productivity workers
+			\begin{itemize}
+				\item Merit-based scholarships awarded to high productivity individuals
+				\item Lower-productivity individuals may need to put in greater effort to obtain degree
+				\item Lower-productivity individuals may incur greater psychic cost to obtain degree
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Job Market Signaling}
+	\begin{itemize}
+		\item Assume costs to obtain a degree are as follows
+		\begin{itemize}
+			\item \$80,000 for high-productivity individuals
+			\item \$160,000 for low-productivity individuals 
+		\end{itemize}
+		\item Firms pay \$300,000 to those with a degree, \$200,000 to those without a degree
+		\item Is it worth it for individuals to get a degree?
+		\begin{itemize}
+			\item Yes, but only for the high-productivity type!
+		\end{itemize}
+		\item Education level is a perfect signal of worker productivity, even though firms do not actually observe this
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Job Market Signaling}
+	\begin{exmp}
+		Suppose that there are two types of workers in an economy, low-productivity and high-productivity. Firms follow the rule of thumb that workers who obtain at least $\bar{y}$ of college are assumed to be highly productive and are paid a lifetime salary of \$400,000. Workers with less than $\bar{y}$ years of education are assumed to be low-productivity and are paid \$250,000. High-productivity workers have a cost of \$25,000 for each year of college, while low-productivity workers have a per year cost of \$30,001. What is the range of $\bar{y}$ that firms can choose as the threshold education level so that only high-productivity workers go to college?
+	\end{exmp}
+\end{frame}
+
+\begin{frame}{HC Theory vs Signaling}
+	\begin{itemize}
+		\item Consider two individuals, John and Allie, who are seemingly identical in every way except that
+		\begin{itemize}
+			\item John completed 3.99 years of college
+			\item Allie completed 4 years of college
+		\end{itemize}
+		\item What does Human Capital Theory say about their earnings?
+		\item What does Signaling Theory say about their earnings?
+		\item In a signaling framework, individuals can be rewarded for passing threshold level of education
+		\begin{itemize}
+			\item Referred to as a ``Sheepskin Effect''
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{HC Theory vs Signaling}
+	\begin{itemize}
+		\item Very difficult to empirically separate productivity-enhancing component of schooling from ``sheepskin effect'' 
+		\begin{itemize}
+			\item Under both frameworks, one would observe that more education leads to higher earnings
+		\end{itemize}
+		\item Policy implications much different under each framework
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Readings}
+	\begin{itemize}
+		\item Borjas 6.9
+	\end{itemize}
+\end{frame}
+
+
+\section{Human Capital and Development}
+
+\begin{frame}{Human Capital and Development}
+	\begin{itemize}
+		\item How can education improve the welfare of individuals in low-income countries?
+		\begin{enumerate}
+			\item Productivity-enhancing component increases private returns to schooling
+			\item Both private and social returns to schooling estimated to be high in developing countries
+			\item Education may also aid individuals adopting new technologies $\Rightarrow$ greater productivity
+			\item Education can be a means to improve health outcomes
+		\end{enumerate}
+		\item Mixed evidence on the causal effect of education on overall economic growth
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Human Capital and Development - Trends}
+	\begin{itemize}
+		\item Tremendous increase in overall school enrollment rates since 1960 across developing countries (Glewwe \& Kremer, 2006)
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.6]{05E_1}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Human Capital and Development - Trends}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.45]{05E_2}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}{Human Capital and Development - Trends}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.55]{05E_3}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Human Capital and Development - Trends}
+	\begin{itemize}
+		\item School attainment and literary rates have also increased since 1960s
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.45]{05E_4}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}{Human Capital and Development - Trends}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.5]{05E_5}
+	\end{figure}
+\end{frame}
+
+
+
+\begin{frame}{Human Capital and Development - Trends}
+	\begin{itemize}
+		\item Gender disparities in access to education are significant in certain regions
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.45]{05E_6}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Human Capital Demand}
+\begin{itemize}
+	\item Human capital investments in schooling respond to (among other things) the price of education 
+	\item Basic framework: Continue schooling as long as $MRR \ge MC$
+	\item Knowing how individuals respond to changes in the price of education (e.g., how sensitive individuals are to changes in prices) is important when designing policy 
+	\begin{itemize}
+		\item Subsidies and grants
+		\item Scholarships
+		\item Conditional cash transfers
+		\item Etc.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Human Capital Demand}
+	\begin{itemize}
+		\item Kremer, et al. (2009)
+		\item Study randomized trial in Kenyan primary schools
+		\begin{itemize}
+			\item Treatment schools enacted scholarship program for girls who scored well on academic exams
+			\item Scholarship paid for school fees and provided a grant
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Human Capital Demand}
+\begin{itemize}
+	\item Girls showed substantial exam score gains 
+\item Positive program effects among girls with low pretest scores who were unlikely to win
+\item Boys (who were ineligible for the award) show slightly higher test scores
+\item These positive externalities are likely to be due to higher teacher attendance or positive peer effects among students (or both)
+\item Find no evidence for weakened intrinsic motivation
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Human Capital Demand}
+\begin{itemize}
+	\item Schultz (2004)
+	\item \textit{Progressa} conditional cash transfer program in Mexico
+\end{itemize}
+\begin{figure}
+	\centering
+	\includegraphics[scale=.4]{05E_7}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Human Capital Demand}
+\begin{itemize}
+	\item Randomized trial: Program was randomly allocated among an initial group of  localities
+	\item Evaluation: Compare mean enrollment rates of those eligible for assistance in the treatment and control villages (Difference-in-differences)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Human Capital Demand}
+	\begin{figure}
+	\centering
+		\includegraphics[scale=.6]{05E_8}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Human Capital Demand}
+	\begin{figure}
+	\centering
+	\includegraphics[scale=.6]{05E_9}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Human Capital Demand}
+\begin{itemize}
+	\item Framework assumes individuals know the true $MRR$ to schooling when making optimal choice
+	\item May not always be true, especially in developing countries (Jensen, 2010)
+	\begin{itemize}
+		\item Decision to drop out often made at a younger age
+		\item Little information may available on labor market earnings
+		\item Perceived returns influenced by surroundings - rural individuals may not true potential realize returns in urban sector
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Human Capital Demand}
+\begin{itemize}
+	\item Intervention: Students at randomly selected schools were provided information about the returns to education
+\item Relative to those not provided with the information, students reported a higher perceived return to education when re-interviewed 
+\item Treatment group completed an average of .20 more years of schooling than control group over next 4 years
+\item Heteregenous effects: Large effect among poor students, but no effect on the poorest students 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{HC Supply \& Political Economy}
+\begin{itemize}
+	\item Focus so far has been on the quantity of education (e.g., enrollment or years completed)
+	\item Quality of education is also important in order to enhance productivity
+	\item In general, the quality of education in developing countries is very low
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{HC Supply \& Political Economy}
+	\begin{figure}
+	\centering
+	\includegraphics[scale=.6]{05E_10}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{HC Supply \& Political Economy}
+	\begin{figure}
+	\centering
+	\includegraphics[scale=.60]{05E_11}
+\end{figure}
+\end{frame}
+
+\begin{frame}{HC Supply \& Political Economy}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.55]{05E_12}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{HC Supply \& Political Economy}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.55]{05E_13}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}{HC Supply \& Political Economy}
+\begin{itemize}
+	\item Contributing causes: 
+	\begin{itemize}
+		\item Lack of infrastructure
+		\item Lack of resources (e.g., materials, teachers)
+		\item Low teacher quality
+		\item Low teacher effort 
+	\end{itemize} 
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Healthcare}
+\begin{itemize}
+	\item Health is part of human capital
+	\item Health, education, and learning intimately related
+	\item Das, et al., 2008
+	\item Healthcare has improved drastically in developing countries
+	\item \textit{Quality} of healthcare still very low 
+	\item Similar issues: low quality doctors, low effort, lack of access for poor individuals
+	\item Spillovers: Miguel \& Kremer (2004)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Readings}
+	\begin{itemize}
+		\item Das, et al. (2008). The Quality of Medical Advice in Low-Income Countries. \textit{The Journal of Economic Perspectives}
+		\item Jensen (2010). The (Perceived) Returns to Education and the Demand for Schooling. \textit{The Quarterly Journal of Economics}
+		\item Kremer, et al. (2009). Incentives to Learn. \textit{The Review of Economics and Statistics}
+		\item Miguel \& Kremer (2004). Worms: Identifying Impacts on Education and Health in the Presence of Treatment Externalities
+		\item Schultz (2004). School Subsidies for the Poor: Evaluating the Progresa Poverty Program. \textit{Jounal of Development Economics}
+	\end{itemize}
+\end{frame}
+
+
+	
+\end{document}

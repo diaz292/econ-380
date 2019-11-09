@@ -1,0 +1,389 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{MnSymbol,wasysym}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah
+%\printanswers
+%\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+%\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+\newcommand{\dd}[1]{}  
+\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+
+
+\title{\textbf{Exam 3 \dd{\\Solutions}} \\ \vspace{2 mm} {\large ECON 380} \\ \large{Spring 2017} \\ \large{UNC Chapel Hill}}
+\date{}
+\maketitle
+
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\\
+
+\makebox[\textwidth]{ONYEN:\enspace\hrulefill}
+\\
+
+\makebox[\textwidth]{Honor Code Signature:\enspace\hrulefill}
+\\
+
+\begin{center}
+	\fbox{\fbox{\parbox{6in}{\centering
+				\underline{Directions:}
+				\begin{itemize}
+					\item For multiple choice questions, clearly circle the answer choice which best answers the question.
+					\item For short answer questions, show all of your work and justify your answers where needed. 
+					\item Round answers to the nearest hundredth.
+					\item Assume firms operate in perfectly competitive markets for labor and output.
+					\item Points available: 50
+					\item Write legibly, write legibly, write legibly!
+					\item Good luck! \smiley{}
+				\end{itemize}
+	}}}
+\end{center}
+
+\newpage
+
+\subsection*{Multiple Choice \textbf{[2 pts each]}}
+
+\begin{questions}
+	
+\question Which of the following best describes the trend in US earnings inequality since the 1970s?
+
+\begin{choices}
+	\choice Inequality has substantially decreased, mostly due to changes at the top  of the income distribution.
+	\choice Inequality has substantially increased, mostly due to changes at the bottom of the income distribution.
+	\choice Inequality has substantially decreased, mostly due to changes at the bottom of the income distribution.
+	\CorrectChoice Inequality has substantially increased, mostly due to changes at the top of the income distribution.
+\end{choices}
+
+
+\question Suppose that the earnings of two households are \$50,000 and \$80,000. If the intergenerational earnings correlation coefficient is 0.60, what is the expected percent earnings difference between the households \underline{two} generations from now?
+
+\begin{choices}
+	\CorrectChoice 22\%
+	\choice 36\%
+	\choice 13\%
+	\choice 24\%
+	\choice None of the above.
+\end{choices}
+
+\uplevel{Consider the following theories of labor market discrimination for questions \ref{q1} and \ref{q2}.}
+
+\begin{itemize}
+	\item Employer discrimination
+	\item Employee discrimination
+	\item Customer discrimination
+	\item Statistical discrimination
+\end{itemize}
+
+\question \label{q1} How many of the theories can explain observed wage gaps in the \underline{short-run}?
+
+\begin{choices}
+	\choice 0
+	\choice 1
+	\choice 2
+	\CorrectChoice 3
+	\choice 4
+\end{choices}
+
+\question \label{q2} How many of the theories can explain observed wage gaps in the \underline{long-run}?
+
+\begin{choices}
+	\choice 0
+	\choice 1
+	\CorrectChoice 2
+	\choice 3
+	\choice 4
+\end{choices}
+
+\uplevel{Use the following for questions \ref{q3} and \ref{q4}. Suppose the wages of males and females are determined as follows
+
+\[w_m = 10 + 0.65\cdot S\]
+\[w_f = 8.5 + 0.40\cdot S\]
+
+where the $m$ and $f$ subscripts refer to males and females, respectively, and  $S$ refers to the number of years schooling a worker obtains. Assume schooling is the only relevant skill to a worker's productivity. Finally, suppose the average years of schooling for males is 16 years and for females it is 14 years.}
+
+\question \label{q3} How much of the wage differential can be attributed to differences in schooling (i.e., pre-market factors)?
+
+\begin{choices}
+	\choice \$1.50
+	\choice \$0.80
+	\choice \$3.50
+	\CorrectChoice \$1.30
+	\choice None of the above
+\end{choices}
+
+
+\question \label{q4} How much of the wage differential can be attributed to discrimination?
+
+\begin{choices}
+	\choice \$6.50
+	\CorrectChoice \$5.00
+	\choice \$5.50
+	\choice \$6.30
+	\choice None of the above
+\end{choices}
+
+\question Which of the following statements is an example of statistical discrimination?
+
+\begin{choices}
+	\choice Jax tends bar and gets disutility from working with Hispanics, so will only work with them if he is paid more.
+	\choice Stassi perceives the price of drinks at PUMP to be 5\% higher than they truly are because most employees are male. 
+	\CorrectChoice Lisa chooses to employ Lala over James because on average locals tend to stay in the business longer than foreigners.
+	\choice Tom is paid less than Tequila Katie because she has been working in the bar industry for longer.
+	\choice None of the above.
+\end{choices}
+
+\newpage
+
+\question Neal \& Johnson (1996) analyze the role of pre-labor market factors in the black-white wage gap. Which of the following most accurately describes their main findings?
+
+\begin{choices}
+	\choice Differences in AFQT scores explain much of the male white-black wage gap, but almost none of the female white-black wage gap.
+	\CorrectChoice Differences in AFQT scores explain much of the male white-black wage gap, and all of the female white-black wage gap.
+	\choice Differences in AFQT scores explain much of the female white-black wage gap, and all of the male white-black wage gap.
+	\choice Differences in AFQT scores explain much of the female white-black wage gap, but almost none of the male white-black wage gap.
+	\choice None of the above
+\end{choices}
+
+
+\question Suppose a researcher is analyzing the racial wage gap through the earnings model 
+
+\[Y = \alpha B + \beta X + \varepsilon\]
+
+where $X$ contains a set of productive characteristics (e.g., schooling, experience) and $B$ is an indicator variable equal to one if an individual is black. If the researcher is concerned that $X$ does not contain every relevant characteristic determining wages, what is this issue called?
+
+\begin{choices}
+	\CorrectChoice Omitted variable bias
+	\choice Self-selection
+	\choice Variable endogeneity
+	\choice Life-cycle effect bias
+	\choice None of the above
+\end{choices}
+
+
+\question Which of the following is FALSE regarding skill-based technology change (SBTC) and its proposed role in driving US wage inequality?
+
+\begin{choices}
+	\choice SBTC proposes that as new technologies substituted for low-skill labor, the decrease in wages to low-skill workers and increase in wages to high-skill labor increased the wage gap. 
+	\choice SBTC predicts that technology intensive industries should have significant wage growth relative to non-technology intensive industries.
+	\CorrectChoice Wage inequality growth within industries rather than between industries would support the SBTC theory.
+	\choice SBTC predicts that wage inequality should increase fastest during technological booms.
+	\choice None of the above is false.
+\end{choices}
+	
+\end{questions}
+
+
+
+
+\newpage 
+
+\subsection*{Short Answer}
+
+
+\begin{questions}
+
+
+\question Consider the economy of Vanderpump. It contains 1,000 individuals, of which 800 report an annual after-tax income of \$37,500 (the ``low-income'' group), while the other 200 report an annual after-tax income of \$100,000 (the ``high-income'' group).
+
+\begin{parts}
+\part[3] Draw the Lorenz curve for this economy in the space below along with the perfect equality Lorenz curve. It does not need to be scaled correctly, but you should label any relevant points and each axis. 
+\begin{solution}[3.5in]
+	
+``Low-income'' group makes up 80\% (800/1000) of households. ``High-income'' group makes up 20\% (200/1000) of households.
+
+Total income earned by ``low-income'' group: \$37,500 $\times$ 800 = \$30M
+\\
+Total income earned by ``high-income'' group: \$100,000 $\times$ 200 = \$20M
+\\
+Total income earned by both groups: \$50M
+\\
+Share of income earned by ``low-income'' group: \$30/\$50 = 60\%
+\\
+Share of income earned by ``high-income'' group: \$20/\$50= 40\%
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5]{exam3_sa}
+	\caption{Lorenz Curve}
+	\label{fig9}
+\end{figure}
+
+\ddp{(1) Labeled both axis, (1) Each coordinate of Lorenz curve: (80\%, 60\%)}
+\end{solution}
+
+
+\part[3] What is the Gini coefficient in this economy?
+
+\begin{solution}[1.5in]
+	
+	Area A = $1/2(.80)(.60) = .24$ \\
+	Area B = $1/2(.20)(.40) = .04$ \\
+	Area C = $.20(.60) = .12$ \\
+	
+Area D = $1/2$ -- (Area A + Area B + Area C) = $.50 - .40 = .10$
+
+Gini Coefficient = $\frac{\text{Area D}}{.50} = \frac{.10}{.50} = .20$.
+	
+\ddp{(1) Area D, (1) Gini coefficient, (1) work}
+\end{solution}
+
+
+\part[3] Suppose that, under intense political pressure from the plebes, the government increases the tax rate for those individuals in the ``high-income'' group. The tax rate for low-income earners remains the same. Will the post-tax Gini coefficient in this economy increase, decrease, or remain the same? What does this indicate about post-tax inequality in this country (i.e., will it fall, rise, or stay the same)?
+
+
+\begin{solution}[1in]
+Increasing taxes for the high-income group will lower their after-tax income. In turn, their \underline{share} of total income will fall, while that of the low-income group will rise. This will shift the Lorenz curve inwards (towards the perfect equality Lorenz curve), which will decrease the post-tax Gini coefficient. A lower Gini coefficient indicates lower inequality.
+\end{solution}
+\end{parts}
+
+
+
+	\question The production function for SUR is given by 
+	\[q = 8 \cdot (E_b + E_w)^{1/2}\]
+	where $E_b$ and $E_w$ refer to black and white workers employed by the firm, respectively.  Suppose the wage rates for whites and blacks are $w_w = \$21$ and $w_b = \$10$. The price of each unit of output is \$20. Finally, the marginal product of labor is given by 
+	\[MP_E = \frac{4}{(E_b + E_w)^{1/2}}\]
+	
+	
+\ddp{Jiadong: I had a pretty big typo on this question that wasn't pointed out until late during the exam. The wage rate for white workers should have been written $w_w = \$21$, but it was written as $w_w= 12$. Given that $d=.26$, the firm should have only hired white workers at the stated wage rates. If you see a lot of people messing up because of this, let me know and I will grade this problem myself. Thanks!}
+	
+\begin{parts}
+	\part[3] The firm maximizes its utility-adjusted profit by hiring exactly 40 black workers and zero white workers. What is SUR's discrimination coefficient, $d$?
+	\begin{solution}[1.5in]
+		Optimal level of employment where $VMP_E = w_b(1+d)$:
+		
+		\[VMP_E = p \cdot MP_E\ = 20 \frac{4}{\sqrt{40}} = 12.65\]
+		
+		\[12.65 = 10(1+d) \Rightarrow d = .26\]
+			
+		\ddp{(1) $VMP_E = w(1+d)$, (1) $d = .26$, (1) work}
+	\end{solution}
+
+	\part[3] What is the firm's actual profit (i.e., only considering their true out-of-pocket costs)?
+	\begin{solution}[1in]
+	\[q = 8\sqrt{40} = 50.6\]
+	\[\Pi = \$20 \cdot 50.6 - \$10 \times 40 = \$612\]
+	
+	\ddp{(1) $q = 50.60$, (1) $\Pi = \$612$, (1) work}
+	\end{solution}
+
+	
+	
+	\part[2] Compare the workforce composition and employment level of SUR to that of a non-discriminatory firm (i.e., is it smaller, larger, or the same). Explain why they are different or the same. You don't need to numerically calculate anything for this part.
+\begin{solution}[1.5in]
+		A non-discriminatory (ND) firm will also \underline{only} employ black labor since $w_b < w_w$, but because an ND does not perceive the black wage to be higher than it really is ($d=0$ for ND firm), the ND firm will employ \underline{more} black workers than SUR.
+	\ddp{(1) SUR employs less labor, (.5) ND firm only hires black workers, (.5) explanation.}
+\end{solution}	
+
+	\part[2] Compare the profit of SUR to that of a non-discriminatory firm (i.e., is it smaller, larger, or the same). Explain why they are different or the same. You don't need to numerically calculate anything for this part.
+	
+\begin{solution}[1in]
+	The actual profit of SUR will be \underline{smaller} than that of a ND firm. This is because SUR hires a less-than-optimal amount of labor and thus produces less output than they should. Note: The true out-of-pocket cost per worker is the \underline{same} for both firms.
+	
+\ddp{(1) SUR has smaller profit, (1) for explanation. Some people might say that the cost of labor for SUR is larger, but that is not true: out-of-pocket costs per worker are the same.}
+\end{solution}
+
+\end{parts}
+	
+
+\newpage
+
+\question Suppose that firms statistically discriminate based on sex. Available information about each candidate (e.g., education, GPA, etc.) is used to calculate an individual test score $T$ for each applicant. In order to determine wages, firms take the weighted average of an individual's actual score and their group average as follows:
+
+\[w = \alpha_g T + (1-\alpha_g) \bar{T}_g\]
+
+where $g$ denotes which group an individual belongs, $g \in \{M,F\}$. Finally, firms use historical information to calculate the average score for each group and find that is the same, $\bar{T}_M = \bar{T}_F$.
+
+\begin{parts}
+
+\part[2] If test scores for females are ``nosier'' such that firms do not believe individual test scores for females are good predictors of productivity relative to male test scores, what is the relationship between $\alpha_M $ and $\alpha_F$ (i.e., is one larger, or are they the same)?
+\begin{solution}[1in]
+	$\alpha_M > \alpha_F$. The weight attached to individual male test scores is greater than that for males.
+	
+\ddp{Don't need to explain why, just correctly state $\alpha_M > \alpha_F$}
+\end{solution}
+\part[3] In Figure \ref{fig6} below, clearly label the earnings curve of each group. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5]{final5}
+	\caption{Earnings as a Function of Test Scores}
+	\label{fig6}
+\end{figure}
+
+\ddp{(1.5) each curve}
+
+\end{parts}
+
+
+
+\newpage
+
+
+\question Consider the following excerpt from the podcast \emph{50 Things That Made the Modern Economy}:\footnote{Hartford, Tim. ``Gramophone.'' Audio blog post. 50 Things That Made the Modern Economy. BBC World Service, 24 Mar. 2017.}
+
+ 
+ \begin{quotation}
+Soon enough, the application of the new technology [the gramophone/phonograph] became clear: you could record the best singers in the world and sell the recordings. At first, making a recording was a bit like making carbon copies on a typewriter. A single performance could only be captured on three or four different phonographs at once\dots When Emile Berliner introduced recordings on a disc rather than Edison's cylinder, this opened the way to mass production. Then came radio and film. Performers like Charlie Chaplin could reach a global market just as easily as the men of industry Alfred Marshall had described. 
+
+
+For the Charlie Chaplins and Elton Johns of the world, new technologies meant wider fame - and more money. But, for the journeymen singers it was a disaster. In Elizabeth Billington's day, many half decent singers made a living performing live in music halls. Mrs. Billington, after all, couldn't be everywhere. But when you can listen at home to the best performers in the world, why pay to hear a merely competent tribute act in person?\dots Small gaps in quality became vast gaps in income\dots Inequality remains alive and well. The top 1\% of artists take more than five times more money from concerts than the bottom 95\% put together.
+ \end{quotation}
+
+\begin{parts}
+\part[2] What is this type of phenomenon is known as in labor economics?	
+\begin{solution}[1in]
+Superstar economics, superstar effect, the economics of superstars, superstar economy, superstar phenomenon, etc.
+\end{solution}
+
+\part[4] State and briefly describe the \underline{two} reasons discussed in class why this type of phenomenon might exist.
+
+\begin{solution}[3in]
+\begin{enumerate}
+	\item Increasing returns to scale: The cost to broadcast talent to a wide audience is extremely small. For example, television, radio, etc. allows artists to reach a global audience cheaply and without much added cost for each additional viewing.
+	\item Large demand differentials: Sellers are not perfect substitutes. Consumers are willing to pay a large premium for the best talent, and not very much for even the second-best alternative. For example, individuals are willing to pay large sums for premium concert tickets so that we observe the top 1\% of artists taking home an inordinate amount of concert ticket revenue.
+\end{enumerate}	
+\end{solution}
+\end{parts}
+
+
+\end{questions}
+	
+
+\end{document}

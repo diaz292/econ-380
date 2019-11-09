@@ -1,0 +1,915 @@
+\documentclass[pdf]{beamer}
+\usetheme{Frankfurt}  
+\usecolortheme{whale}
+\usepackage{tikz} 
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}              % used for \eqref{} in this document
+\usepackage{dsfont}
+\usepackage{hyperref}
+\usepackage{threeparttable}
+\usepackage{multirow}
+\graphicspath{{Figures/}}
+\usepackage{booktabs}
+\usepackage{tikz}
+\newtheorem{exmp}{Example}[section]
+\usepackage{subcaption}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage[mathscr]{euscript}
+\usepackage{remreset}% tiny package containing just the \@removefromreset command
+\makeatletter
+\@removefromreset{subsection}{section}
+\makeatother
+\setcounter{subsection}{1}
+
+
+\section{Class Information}
+
+%% preamble
+\title{Part I: Introduction to Labor Economics}
+\author[David A. D\'iaz]{David A. D\'iaz}
+\institute{UNC Chapel Hill}
+\date{}
+
+
+
+\AtBeginSection[] %Section links on slides
+
+
+\begin{document}
+ 
+	
+	\begin{frame}
+		
+		\titlepage
+		
+	\end{frame}
+
+	
+\begin{frame}{About Me (Less Fun)}
+	\begin{itemize}
+		\item Economics PhD student at UNC
+		\item Appalachian State University alumnus
+		\begin{itemize}
+			\item Majors: Actuarial Science, Economics
+			\item Minors: Stats, Physics
+		\end{itemize}
+		\item Research interests: Migration, development, labor, demography
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{About Me (More Fun)}
+	\begin{itemize}
+		\item Fav. Music: Glass Animals, T\O P, Misterwives, Two Door Cinema Club, Childish Gambino (allegedly ``angsty'')
+		\begin{itemize}
+			\item Current Anthem: Glass Animals - Youth
+		\end{itemize}
+		\item Fav. TV: Rick \& Morty, It's Always Sunny, Archer, Real Housewives of Atlanta
+		\item Fav. Movies: Fantastic Mr. Fox , Kiss Kiss Bang Bang, The Social Network, No Country for Old Men
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{About Me (More Fun)}
+	\begin{itemize}
+		\item Fav. Team: FC Barcelona 
+\item Celebrity Crush: Kevin Spacey
+\item B\ae s: Elizabeth (main) \& Stella
+\item Likes: Beer, t-shirts, normal shoes, Tina Fey
+\item Dislikes: Gyms, loud chewing, open-toed shoes, students packing up early $\sim$ shade emoji $\sim$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{B\ae s}
+\begin{figure}
+			\centering
+			\includegraphics[scale=.14]{baes.jpg}
+			\caption{Stella Artois D\'iaz \& Elizabeth}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Class Details}
+	
+	\begin{itemize}
+	\item \textbf{Email:} \url{diazda@live.unc.edu}
+	\item \textbf{Office:} Phillips \underline{Annex} 103A
+	\item \textbf{Office Hours:} Monday \& Wednesday, 2:30-3:30PM
+	\item \textbf{Website:} \href{https://sakai.unc.edu/portal/site/8456c8f3-2ffa-4262-84e9-5993c613ddb9
+	}{https://sakai.unc.edu}
+	\item \textbf{Prerequisites:} ECON 101 \& ECON 310/410
+				
+	\end{itemize}
+	
+\end{frame}
+
+
+\begin{frame}{Class Details}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.6]{annex.jpg}
+		\caption{The Annex}
+	\end{figure}
+\end{frame}
+
+
+
+
+	\begin{frame}{Textbook}
+		\begin{itemize}
+			\item George Borjas, \textit{Labor Economics}, 8$^{th}$ edition
+			\begin{itemize}
+				\item Note: Older editions should work fine, but it is your responsibility to match up content.
+				\item Any assigned readings from the text are fair game for exams unless told otherwise.
+				\item Any assigned readings outside the text or from homework are also fair game unless told otherwise.
+			\end{itemize}
+	\end{itemize}
+	\end{frame}
+
+
+\begin{frame}{Grading Scale}
+	\begin{itemize}
+		\item The grading scale is as follows:
+	\end{itemize}
+	\begin{center}
+		\begin{tabular}{ p{3.5cm} p{3.5cm} }
+			A : 93 -- 100 &  C+ : 77 -- 79.99\\
+			A-- : 90 -- 92.99 & C : 73 -- 76.99\\
+			B+ : 87 -- 89.99 & C-- : 70 -- 72.99\\
+			B : 83 -- 86.99 & D+ : 65 -- 69.99\\
+			B-- : 80 -- 82.99 & D : 60 -- 64.99\\
+			& F : $<$ 60		
+		\end{tabular}
+	\end{center}
+	\begin{itemize}
+		\item Grades will be regularly updated on Sakai. Please bring up any discrepancies in a timely manner (within 1 week). 
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Grade Components}
+	\begin{itemize}
+			\item Homework: 25\%
+		\item Midterm 1: 20\%
+		\item Midterm 2: 20\%
+		\item Final Exam: 35\%
+	\end{itemize}
+\end{frame}
+
+
+
+	
+	\begin{frame}{Homework}
+		\begin{itemize}
+			\item Six (potentially seven) homework assignments will be assigned throughout the semester.
+			\item Homework is due by the end of class on the assigned date.
+			\item You are encouraged to work together, but everyone should turn in an individual assignment.
+			\item No late homework will be accepted without prior approval.
+		\end{itemize}
+	\end{frame}
+	
+
+	
+		\begin{frame}{Exams}
+			
+			\begin{itemize}
+				\item Two in-class exams will take place during regular class hours. Each is worth 20\% of the final grade.
+				\item Dates for the in-class midterms will be determined at least a week ahead of time. 
+				\item The cumulative final exam is scheduled for 12PM on Monday December 11. 
+				\item All exams will be closed book/note. You will be allowed the use of a \textbf{non-graphing} calculator. 
+			\end{itemize}
+			
+		\end{frame}
+	
+\begin{frame}{Policies \& Expectations}
+	
+		\begin{itemize}
+			
+			\item Regular attendance and participation is strongly encouraged. It is \textbf{your} responsibility to get any notes/announcements you may have missed from a classmate.
+			\item Be respectful to both me and your classmates.
+			\item Emails should be written in a professional manner.
+				\begin{itemize}
+					\item Use your UNC email, as email from other clients may end up in spam.
+					\item I will do my best to respond to emails within 24 hours. If you have not heard back in 48 hours, please follow up to make sure your email was received.
+				\end{itemize}  
+			
+		\end{itemize}
+
+	
+\end{frame}
+
+\begin{frame}{Lectures}
+\begin{itemize}
+	\item Slides and the board will both be used to present material throughout the course.
+		\begin{itemize}
+			\item Data and concepts will mostly be presented on slides.
+			\item Exposition, diagrams, and math will usually be done on the board.
+		\end{itemize}
+	\item Slides will generally be posted at least 24 hours before the corresponding class meeting.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{General Advice}
+	
+\begin{itemize}
+	\item This course does not use calculus, but you will be required to use algebra, including:
+		\begin{itemize}
+			\item Setting up equations.
+			\item Solving equations.
+			\item Interpreting mathematical expressions.
+			\item Etc.
+		\end{itemize}
+	\item Get in touch with me early if you are struggling with the material.
+	\item Try each homework assignment on your own at least once before working through it with others.
+	\item Ask questions if you have them! When? Any time - during lecture, before/after class, during office hours, or through email.
+\end{itemize}
+		
+\end{frame}
+
+\begin{frame}{General Advice}
+	\begin{figure}
+	\centering
+	\includegraphics[scale=.23]{Grad_Questions.png}
+\end{figure}
+\end{frame}
+
+
+\section{Introduction to Labor Economics}
+
+\begin{frame}{Introduction to Labor Economics}
+	
+\begin{itemize}
+	\item We will study various aspects of labor markets. Our goal is to gain insight into labor market behavior by applying concepts from microeconomic theory.
+	\item Throughout the course, we will apply what we learn to various real-world policy issues such as the minimum wage, immigration, and wage inequality.
+	\item Though our focus will be on the U.S. labor market and applicable policies, we will also look at some labor market issues in developing nations for certain topics.
+\end{itemize}
+	
+\end{frame}
+
+\begin{frame}{Actors in the Labor Market}
+	\begin{itemize}
+	\item In their simplest form, labor markets have three actors:
+		\begin{itemize}
+			\item Workers
+			\begin{itemize}
+				\item Objective: Maximize utility by choosing education, labor force participation, effort level, occupation, etc.
+				\item Contribute to \textbf{labor supply}.
+			\end{itemize}
+			\item Firms
+				\begin{itemize}
+					\item Objective: Maximize profits by employing labor and capital.
+					\item Contribute to \textbf{labor demand}.
+				\end{itemize}
+			\item Government
+				\begin{itemize}
+					\item Sets regulatory structure of labor markets.
+					\item Enacts policies such as income tax, education subsidies, minimum wages, workplace safety regulations, etc.
+				\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Labor Economics: The ECON 101 Story}
+	
+	\begin{itemize}
+		\item Each point on the labor supply curve represents a worker's reservation price for selling labor.
+			\begin{itemize}
+				\item Higher wage $\Rightarrow$ more individuals willing to sell labor $\Rightarrow$ higher quantity of labor supplied.
+				\item Thus, the labor supply curve slopes upward.
+			\end{itemize}
+		\item Each point on the labor demand curve represents a firm's reservation price for purchasing labor.
+			\begin{itemize}
+				\item Higher wage $\Rightarrow$ fewer firms willing to purchase labor $\Rightarrow$ lower quantity of labor demanded.
+				\item Thus, the labor demand curve slopes downward.
+			\end{itemize}
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}{Labor Economics: The ECON 101 Story}
+	\begin{itemize}
+		\item Labor markets can be analyzed just like any other market through the supply and demand framework.
+		\item Implications:
+			\begin{itemize}
+				\item Tax equivalence: Payroll tax on firms has the same effect as an income tax on workers.
+				\item Markets clear in the absence of regulation: No \textit{involuntary} unemployment in the simplest framework.
+				\item Law of One Price holds: Market bears a sole equilibrium wage paid to all workers of a particular skill level.
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Labor Economics in 380}
+	\begin{itemize}
+		\item Real-world labor markets exhibit much richer (and interesting!) behavior such as:
+			\begin{itemize}
+				\item Wage dispersion due to differences in job characteristics, education levels, demographics, bargaining, and willingness to ``search'' for better opportunities.
+				\item Market rigidities which prevent the market from clearing leading to significant levels of involuntary unemployment and a costly search and matching process between workers and firms.
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Road Map}
+	\begin{itemize}
+		\item Part I: Labor Market Basics and the U.S. Labor Market
+			\begin{itemize}
+				\item Overview of the U.S. labor market.
+				\item How do we measure the labor force, employment, and unemployment? 
+				\item Does the unemployment rate accurately reflect economic conditions?
+				\item What are the different types of unemployment?
+			\end{itemize}
+		\item Part II: Neoclassical Labor Supply and Demand
+			\begin{itemize}
+				\item Model of individual and firm labor market behavior.
+				\item How do firms and workers interact to drive market outcomes?
+				\item How do firms and workers respond to changes in their incentives (e.g., minimum wage policies)?
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Road Map}
+\begin{itemize}
+	\item Part III: Human Capital
+	\begin{itemize}
+		\item How do workers choose their particular set of acquired skills that they offer employers?
+		\item Why do firms value educated workers?
+		\item What information is conveyed by our willingness to spend more time in school?
+	\end{itemize}
+	\item Part IV: Wage Inequality
+\begin{itemize}
+	\item What factors determine the shape of the wage distribution?
+	\item Why is wage inequality rising?
+	\item Why do some industries display exceptional wage dispersion?
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Road Map}
+	\begin{itemize}
+		\item Part V: Labor Market Discrimination
+		\begin{itemize}
+				\item Why do different demographic groups earn different average wages?
+				\item What are the different way in which discrimination can take place?
+				\item How can we measure the extent of discrimination in the labor market?
+		\end{itemize}
+			\item Part VI: Selected Topics
+			\begin{itemize}
+				\item Human capital: The supply side
+				\item Social interactions \& social networks
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Readings}
+\begin{itemize}
+	\item Borjas 1.1-1.3
+\end{itemize}
+\end{frame}
+
+
+
+\section{The U.S. Labor Force}
+
+\begin{frame}{Measuring the Labor Force}
+	\begin{itemize}
+		\item What are we trying to measure?
+		\begin{itemize}
+			\item Micro-level: Number of hours individuals are willing to work at a given wage rate.
+			\item Macro-level: Total amount of labor supplied in the economy.
+			\begin{itemize}
+				\item Different ways to measure: total number of workers, proportion of the population who works, etc.
+			\end{itemize}
+			\item Today we will consider how to measure this in practice.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Measuring Labor Supply: CPS}
+	\begin{itemize}
+		\item \textbf{Current Population Survey (CPS)} is conducted monthly by the Bureau of the Census for the \textbf{Bureau of Labor Statistics (BLS)}
+		\begin{itemize}
+			\item $\sim$ 60,000 households are questioned about their work activities during a particular week (``reference'' week) of the month.
+			\item Goal: Elicit employment status of household members
+		\end{itemize}  
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Measuring Labor Supply: Working Population}
+	
+	\begin{itemize}
+		\item Most members of the population aged 16 or older make up the \textbf{working population (P)}. 
+		\item Excluded from \textbf{P} are 
+		\begin{itemize}
+			\item people living in institutions (e.g., jail, nursing homes)
+			\item those on active duty in the Armed Forces
+		\end{itemize}
+	    \item Individuals in \textbf{P} are further classified as either
+		\begin{enumerate}
+			\item in the labor force \textbf{(L)} 
+			\item out of the labor force \textbf{(O)}
+		\end{enumerate} 		
+	\end{itemize}
+	
+\end{frame}
+
+
+
+\begin{frame}{Measuring Labor Supply: The Labor Force}
+	\begin{itemize}
+		\item An individual who is in \textbf{LF} is further categorized as either
+		 \textbf{Employed (E)} or \textbf{Unemployed (U)}
+		\item To be classified as employed, an individual must have
+			\begin{itemize} 
+				\item worked at least one hour as a paid employee (including self-employment) OR
+				\item worked at least 15 hours in an unpaid role for a family business OR
+				\item a job but is on temporary leave due to illness, maternity leave, etc.
+			\end{itemize} 
+		\end{itemize}
+\end{frame}
+
+\begin{frame}{Measuring Labor Supply: The Labor Force}
+\begin{itemize}
+	\item To be classified as unemployed, an individual must 
+		\begin{itemize}
+			\item have had no employment during the reference week AND
+			\item be currently available for work AND
+			\item have \underline{actively} looked for work in the four-week period prior to the reference week
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Measuring Labor Supply: The Labor Force}
+\begin{itemize}
+	\item The out of the labor force group, \textbf{O}, includes:
+	\begin{itemize}
+		\item Retirees
+		\item Students
+		\item Non-market laborers (e.g., stay at home parents)
+		\item ``Off-the-books'' laborers
+		\item Black market laborers
+		\item \textbf{Marginally attached workers:} Have searched for a job in the past 12 months, but not in the past 4 weeks regardless of the reason
+		\item \textbf{Discouraged workers:} Have searched for a job in the past 12 months, but not the past 4 weeks because they believe they won't find a job in their line of work.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Measuring Labor Supply: The Labor Force}
+\scriptsize
+\begin{exmp}
+	Classify the labor force status of the following individuals (\textit{How the Government Measures Unemployment}, BLS 2014).
+	\begin{enumerate}
+		\item Lisa spends most of her time taking care of her home and children, but she helps in
+		her husband's computer software business all day Friday and Saturday. 
+		\item Ms. Jenkins tells the interviewer that her teenage daughter, Katherine Marie, was
+		thinking about looking for work in the prior 4 weeks but knows of no specific efforts
+		she has made.
+		\item Last week, Megan, who was working for a comic book store, went to a home
+		electronics store on her lunch hour to be interviewed for a higher paying job. 
+		\item Avery lost her full-time job at a book store on Wednesday of the survey reference
+		week. She submitted several applications with other local retailers on Thursday and
+		Friday but had not obtained a new job by the end of the week
+	\end{enumerate}
+\end{exmp}
+\end{frame}
+
+
+\begin{frame}{Measuring Labor Supply: The Labor Force}
+	\begin{itemize}
+		\item The Labor Force trends upwards with population growth.
+	\end{itemize}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.3]{01B_1.png}
+		\caption{US Labor Force (thousands), 1948 - 2017}
+	\end{figure}
+	
+	
+\end{frame}
+
+
+\begin{frame}{Measuring Labor Supply: The Labor Force}
+	\begin{itemize}
+		\item Employed workers generally trend upwards with population growth, but dips during recessions.
+	\end{itemize}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.3]{01B_2.png}
+		\caption{US Employed Workers (thousands), 1948 - 2017}
+		\item 
+	\end{figure}
+	
+	
+\end{frame}
+
+\begin{frame}{Measuring Labor Supply: The Labor Force}
+	\begin{itemize}
+		\item Unemployed workers spike during recessions.
+	\end{itemize}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.3]{01B_3.png}
+		\caption{US Unemployed Workers (thousands), 1948 - 2017}
+		\item 
+	\end{figure}
+	
+\end{frame}
+
+
+
+
+\begin{frame}{Levels or Rates?}
+	
+	\begin{itemize}
+		
+		\item Tough to distinguish most of these trends from population growth.
+		\item Labor force data generally makes more sense as a rate versus a level.
+		\begin{itemize}
+			\item e.g., Texas had more unemployed workers than Michigan during the 2009 recession, but had a lower unemployment \textit{rate}.
+		\end{itemize}  
+		
+	\end{itemize}
+	
+	
+\end{frame}
+
+
+\begin{frame}{Measuring Labor Supply: The Labor Force}
+
+\begin{itemize}
+	\item \textbf{The Labor for Participation rate} measures the proportion of the working population who is in the labor force.
+	\[\textbf{LFPR = LF/P = (E+U)/(E+U+O)}\]
+\end{itemize}
+\begin{exmp} 
+	\small
+	A country has a population of 160 million. 30 million are under the age of 16, and 10\% of the adult population is either in the military or institutionalized. If 70 million people have jobs and 5 million are looking for work, what is the labor force participation rate in this country? 
+\end{exmp}
+\end{frame}
+
+\begin{frame}{Measuring Labor Supply: The Labor Force}
+\begin{exmp} 
+	What effect do each of the following scenarios have on the labor force participation rate?
+	\begin{enumerate}
+		\item Sue lost her job and begins looking for a new one. 
+		\item Jon, a steelworker who has been out of work since his mill closed last year, becomes discouraged and gives up looking for work. 
+		\item Sam, the sole earner in his family of 5, just lost his \$80,000 job as a research scientist. Immediately, he takes a part-time job at McDonald's until he can find another job in his field.
+		\item Robert comes out of retirement and begins working at a proctoring center.
+	\end{enumerate}
+\end{exmp}
+\end{frame}
+
+\begin{frame}{Measuring Labor Supply: The Labor Force}
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=.3]{01B_11.png}
+	\caption{US Labor Force Participation Rate, 1948 - 2017}
+\end{figure}
+
+\begin{itemize}
+	\item Why has the LFPR fallen since 2000?
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Measuring Labor Supply: Falling LFPR}
+\begin{itemize}
+	\item Aging population.
+	\begin{itemize}
+		\item Perhaps most important factor.
+		\item ``Baby-boomer'' generation aging out of workforce.
+	\end{itemize}
+\end{itemize}
+\begin{figure}
+	\centering
+	\includegraphics[scale=.4]{01B_9.png}
+	\caption{LFPR and Demographics, 1948-2006}
+	\item 
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Measuring Labor Supply: Falling LFPR}
+\begin{itemize}
+\item Education
+\begin{itemize}
+	\item Decision to stay in or go back to school significant driver in decline of LFPR in 16-24 year old group.
+\end{itemize}
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics[scale=.8]{01B_8.png}
+\caption{LFPR for 16-19 year olds, 1948-2006}
+\item 
+\end{figure}
+
+\end{frame}
+
+
+\begin{frame}{Measuring Labor Supply: Falling LFPR}
+\begin{itemize}
+	\item Declining male participation since 1940s
+	\item Declining female participation since $\sim$2000
+\end{itemize}
+\begin{figure}
+	\centering
+	\includegraphics[scale=.3]{01B_17.png}
+	\caption{LFPR Males and Females, 1948-2006}
+	\item 
+\end{figure}
+\end{frame}
+
+\begin{frame}{Measuring Labor Supply: Falling LFPR}
+\begin{itemize}
+\item Cyclical effects: Marginally attached/discouraged workers are much more prevalent during recession/recovery periods.
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics[scale=.8]{01B_4.png}
+\caption{US Discouraged Workers (thousands), 2005 - 2016}
+\item 
+\end{figure}
+
+\end{frame}
+
+
+\begin{frame}{Measuring Labor Supply: Trends}
+\begin{itemize}
+	\item Tough to explain fall in the LFPR among prime-age males.
+\end{itemize}
+\begin{figure}
+	\centering
+	\includegraphics[scale=.5]{01B_13.png}
+	\caption{Prime-Age Male LFPR, 1948-2014}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Measuring Labor Supply: Trends}
+\begin{figure}
+	\centering
+	\includegraphics[scale=.5]{01B_10.png}
+	\caption{Prime-Age Male LFPR by Education, 1948-2014}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Measuring Labor Supply: Trends}
+\begin{itemize}
+	\item Tremendous rise in labor force participation of women since 1950s
+\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.3]{01B_14.png}
+		\caption{Female LFPR 1948-2015}
+	\end{figure}
+	
+\end{frame}
+
+
+\begin{frame}{Measuring Labor Supply: Trends}
+\begin{itemize}
+	\item Labor force participation increased both within and across birth cohorts
+	\begin{itemize}
+		\item Women within cohorts participated more as they aged
+		\item More recent cohorts has larger participation rates
+	\end{itemize}
+	\item Key determinants?
+	\begin{itemize}
+		\item Rising real wages
+		\item Lower fertility rates 
+		\item Technological advances in household production
+		\item Cultural and legal changes
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Measuring Labor Supply: Trends}
+\begin{figure}
+	\centering
+	\includegraphics[scale=.4]{femwages.png}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Measuring Labor Supply: Trends}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.6]{01B_7.png}
+		\caption{LFPR by Race/Ethnicity, 1980-2008}
+		\item 
+	\end{figure}
+	
+\end{frame}
+
+\begin{frame}{Readings}
+\begin{itemize}
+	\item Borjas 2.1-2.2; 2.9
+	\item Toossi, Mitra (2012). Projections of the labor force to 2050: 
+	A Visual Essay. \textit{Monthly Labor Review}.
+	\item US Bureau of Labor Statistics (2014). How the Government
+Measures Unemployment.
+\end{itemize}
+\end{frame}
+
+
+\section{Unemployment}
+
+
+\begin{frame}{Unemployment: Measuring the Unemployed}
+	\begin{itemize}
+		\item \textbf{Unemployed:} A person that had no employment in the reference week AND has ``actively looked for work'' in the past four weeks.
+		\item The \textbf{unemployment rate (UR)} is the proportion of individuals who are in the labor force, but are unemployed.
+	\[ \textbf{UR = U/LF = U/(E + U)} \]
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}{Unemployment: Trends}
+\begin{figure}
+	\centering
+	\includegraphics[scale=.3]{01B_3.png}
+	\caption{US Unemployed Workers (thousands), 1948 - 2017}
+	\item 
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Unemployment: Measuring the Unemployed}
+	\begin{exmp} 
+	What effect do each of the following scenarios have on the unemployment rate?
+	\begin{enumerate}
+		\item Sue lost her job and begins looking for a new one. 
+		\item Jon, a steelworker who has been out of work since his mill closed last year, becomes discouraged and gives up looking for work. 
+		\item Sam, the sole earner in his family of 5, just lost his \$80,000 job as a research scientist. Immediately, he takes a part-time job at McDonald's until he can find another job in his field.
+		\item Robert comes out of retirement and begins working at a proctoring center.
+	\end{enumerate}
+\end{exmp}
+\end{frame}
+
+
+
+\begin{frame}{Measuring Labor Supply: Unemployment}
+\begin{figure}
+	\centering
+	\includegraphics[scale=.8]{01B_16.png}
+	\caption{US Unemployment Rate, 2005 - 2016}
+	\item 
+\end{figure}
+\end{frame}
+
+\begin{frame}{Unemployment: Trends}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.6]{01C_3.png}
+		\caption{Unemployment Rate by Sex, 2006-2013}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Unemployment: Trends}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.5]{01C_1.png}
+		\caption{Unemployment Rate by Race, 1973-2014}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Unemployment: Trends}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.4]{01C_2.png}
+		\caption{Unemployment Rate by Education, 1992-2012}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}{The Unemployment Rate: Issues}
+	\begin{itemize}
+		\item Is the unemployment rate a good measure of joblessness? What's missing? 
+	\end{itemize}
+	\begin{figure}
+	\centering
+	\includegraphics[scale=.55]{NY_Unemployment}
+\end{figure}
+\end{frame}
+
+\begin{frame}{The Unemployment Rate: Issues}
+	\begin{itemize}
+		\item Discouraged/marginally attached workers are considered out of the labor force
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.4]{01C_10.png}
+		\caption{Marginally Attached Workers (thousands), 2005-2016}
+	\end{figure}
+	
+\end{frame}
+
+\begin{frame}{The Unemployment Rate: Issues}
+	\begin{itemize}
+		\item Underemployment is not taken into account
+		\begin{itemize}
+			\item Highly skilled workers in low paying jobs
+			\item Highly skilled workers in low skill jobs  
+			\item Part-time workers who would prefer to be full time.
+		\end{itemize}
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.4]{01C_12.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{The Unemployment Rate: Issues}
+	\begin{itemize}
+		\item Length of unemployment not taken into account
+		\begin{itemize}
+			\item Short spells indicate labor market fluidity
+			\item Long spells indicate more serious issues
+		\end{itemize}
+		\begin{figure}
+			\centering
+			\includegraphics[scale=.5]{01C_4.png}
+		\end{figure}	
+	\end{itemize}
+\end{frame}	
+
+\begin{frame}{The Unemployment Rate: Issues}
+	\begin{itemize}
+		\item These factors are more severe during recessions
+		\item Official \textbf{U3} unemployment rate may understate the depths of recessions and state of economic hardship 
+		\item Alternative measures of labor underutilization:
+		\begin{itemize}
+			\item U4 unemployment rate: Essentially classifies discouraged workers (previously in \textbf{O}) as unemployed 
+			\item U5 unemployment rate: Classifies marginally attached workers (previously in \textbf{O}) as unemployed
+			\item U6 unemployment rate: Classifies both marginally attached (previously in \textbf{O}) and part-time workers for economic reasons (previously in \textbf{E}) as unemployed 
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The Unemployment Rate: Issues}
+	\begin{figure}
+	\centering
+	\includegraphics[scale=.5]{01C_5.png}
+	\caption{Alternative Measures of Unemployment, 1994-2015}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Unemployment Types}
+	\begin{itemize}
+		\item Frictional unemployment
+		\begin{itemize}
+			\item Arises due to the time it takes for workers and firms to match
+			\item Generally leads to short unemployment spells 
+		\end{itemize}
+		\item Seasonal unemployment
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Unemployment Types}
+\begin{itemize}
+	\item Cyclical unemployment
+	\begin{itemize}
+		\item Structural imbalance between the number of workers looking for
+		jobs and the number of jobs available
+		\item There is an excess supply of workers and the market does not clear because the wage is sticky and cannot adjust downward
+	\end{itemize}
+	\item Structural unemployment
+	\begin{itemize}
+		\item Can arise because of a mismatch between the skills that workers are supplying and the skills that firms are demanding
+		\item May result because of long-lasting shocks to permanent features of an economy
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Unemployment Types}
+	\begin{itemize}
+		\item Natural unemployment rate
+		\begin{itemize}
+			\item The average level of unemployment that is expected to prevail in an economy 
+			\item Combination of frictional and structural unemployment 
+		\end{itemize}
+		\begin{figure}
+			\centering
+			\includegraphics[scale=.4]{01C_14.png}
+			\caption{Natural Unemployment Rate, 1985-2012}
+		\end{figure}  
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Readings}
+\begin{itemize}
+	\item Borjas 12.1-12.2
+	\item Brundage, Vernon (2014). Trends in unemployment and other labor
+	market difficulties. \textit{Beyond the Numbers}, US Bureau of Labor Statistics.
+\end{itemize}
+\end{frame}
+
+\end{document}

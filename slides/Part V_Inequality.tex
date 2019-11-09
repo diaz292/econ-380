@@ -1,0 +1,662 @@
+\documentclass[pdf]{beamer}
+\usetheme{Frankfurt}  
+\usecolortheme{whale}
+\usepackage{tikz} 
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}              % used for \eqref{} in this document
+\usepackage{dsfont}
+\usepackage{hyperref}
+\usepackage{threeparttable}
+\usepackage{multirow}
+\graphicspath{{Figures/}}
+\usepackage{booktabs}
+\usepackage{tikz}
+\newtheorem{exmp}{Example}[section]
+\usepackage{subcaption}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage[mathscr]{euscript}
+\usepackage{remreset}% tiny package containing just the \@removefromreset command
+\makeatletter
+\@removefromreset{subsection}{section}
+\makeatother
+\setcounter{subsection}{1}
+
+
+\section{The Wage Distribution}
+
+%% preamble
+\title{Part IV: Inequality}
+\author[David A. D\'iaz]{David A. D\'iaz}
+\institute{UNC Chapel Hill}
+\date{}
+
+
+\AtBeginSection[] %Section links on slides
+
+
+\begin{document}
+	
+	\begin{frame}
+		
+		\titlepage
+		
+	\end{frame}
+	
+	\begin{frame}{Table of Contents}
+		
+		\tableofcontents
+	\end{frame}
+
+
+
+
+\begin{frame}{Introduction}
+	\begin{itemize}
+		\item Consider a couple of common metrics for economic well-being:
+		\begin{itemize}
+			\item GDP
+			\item Per capita income adjusted for PPP
+		\end{itemize}
+		\item At best, these can only capture average economic status
+		\item Aggregate economic well-being also depends on how GDP is distributed	
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Introduction}
+	\begin{itemize}
+		\item Does per capita GDP Measure Economic well-being?
+		\item Undoubtedly, it’s positively correlated with economic wellbeing.  But consider...	
+		
+		\begin{figure}
+			\centering
+			\includegraphics[scale=.35]{06A_6}
+		\end{figure}
+		
+		\item Issue: Per Capita GDP does not account for distribution of income!
+	\end{itemize}
+	
+\end{frame}
+
+
+
+\begin{frame}{The US Wage Distribution}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.45]{06A_1}
+		\caption{US Wage Distribution, 2012}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Measuring Inequality}
+	\begin{itemize}
+		\item Wage Percentile Differences: Compare wages between different percentiles of the distribution, usually expressed in percentage terms.
+		\begin{itemize}
+			\item E.g. How much more does a worker in the 90th percentile of the wage distribution earn than one in the 50th percentile of the wage distribution?
+			\item E.g. How much more does a worker in the 90th percentile of the wage distribution earn than one in the 10th percentile of the wage distribution?
+		\end{itemize} 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Measuring Inequality}
+	\begin{itemize}
+		\item Gini Coefficient 
+		\item Lorenz Curve: Reports cumulative share of income accruing to percentiles of households.
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.45]{06A_7}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Measuring Inequality}
+	\begin{itemize}
+		\item Gini coefficient takes ratio of: Area between perfect equality Lorenz curve (red) and country's Lorenz curve (purple) to 
+		area under perfect equality Lorenz curve
+		\begin{figure}
+			\centering
+			\includegraphics[scale=.4]{06A_8}
+		\end{figure}
+		\item The Gini coefficient is thus defined as:
+		\[\frac{\text{Area A}}{\text{Area A + B}}\]
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Measuring Inequality}
+	\begin{exmp}
+		Suppose a simple economy is comprised of 50,000 individuals. Of these individuals, 60\% report an annual income of \$30,000, 30\% report an annual income of \$80,000, and 10\% report an annual income of \$200,000. What is the Gini coefficient associated with this economy?
+	\end{exmp}
+\end{frame}
+
+
+\begin{frame}{US Trends}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.45]{06A_2}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{US Trends}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.55]{06A_3}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{US Trends}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.55]{06A_4}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{US Trends}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.45]{06A_9}
+		\caption{US Gini Coefficient, 1970-2005 (Heathcote et al., 2009)}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{World Comparison}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.3]{06A_5}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}{Is Inequality Bad?}
+	\begin{itemize}
+		\item Mainstream economists would generally agree that a perfectly even income distribution is suboptimal.
+		\item Big disagreement over exactly how much income inequality is optimal.	
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Is Inequality Bad?}
+	\begin{itemize}
+		\item Cronyism:  The practice of favoring one’s close friends, especially in political appointments.
+		\begin{itemize}
+			\item Examples:  Political lobbying for favorable industrial treatment, firms hiring less qualified friends/family, etc.
+		\end{itemize}
+		\item Discrimination
+		\begin{itemize}
+			\item Wage inequality resulting from differential pay according to characteristics irrelevant to the production process.
+		\end{itemize}
+		\item Inequality at Birth
+		\begin{itemize}
+			\item Wage inequality resulting from differential access to schooling, quality of schooling, bad infrastructure, etc.
+		\end{itemize}
+		\item All of these are associated with economic inefficiencies, not to mention ethical issues. 	
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Is Inequality Bad?}
+	\begin{itemize}
+		\item Existence of wage inequality can also provide strong incentives to increase productivity and output.
+		\item Investments in human capital spurred by desire to increase future earnings increase individuals' productivity.
+		\item Discovery of new ideas responsible for much economic growth; presence of financial rewards for successful innovation incentivizes valuable innovations.
+		\item Key here is that inequality can foster increases in aggregate productivity and output.
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Is Inequality Bad?}
+	\begin{itemize}
+		\item Previous argument highlights the basic issue:
+		Inequality can foster productive behavior, but it can also foster unproductive (rent-seeking) behavior.
+		\item How should policy be written to weigh the costs and benefits?
+		\item How much of the inequality in the world today results from each of the (broadly speaking) ``good'' and ``bad'' inequality?
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Readings}
+	\begin{itemize}
+		\item Borjas 7.1 - 7.3
+		\item Separate and Unequal: ``The Price of Inequality'' by Thomas Edsall, \textit{The New York Times}
+		\item Bad and Good Inequality by Gary Becker, \textit{The Becker-Posner Blog}
+	\end{itemize}
+\end{frame}
+
+\section{Why is Inequality Rising?}
+
+\begin{frame}{Why is Inequality Rising?}
+	\begin{itemize}
+		\item Any way you slice it: wage inequality has greatly increased in the US over the past thirty years.
+		\item Why has this happened?
+		\item We'll discuss a few theories which attempt to explain rising inequality in the US.	
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Institutional Changes}
+	\begin{itemize}
+		\item Straightforward argument:  Decreasing tax rate on high income earners $\Rightarrow$ higher levels of post-transfer wage inequality.
+		\item Are taxation trends consistent with this?
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Institutional Changes}
+	\begin{itemize}
+		\item Tax rates on top earners have decreased significantly post-WWII.
+	\end{itemize}
+	\begin{figure}
+		\centering 
+		\includegraphics[scale=.4]{06B_1}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Institutional Changes}
+	\begin{itemize}
+		\item Magnitude of tax changes for the rest of the income distribution is small by comparison.	
+	\end{itemize}
+	
+	\begin{figure}
+		\centering 
+		\includegraphics[scale=.5]{06B_2}
+	\end{figure}
+	
+\end{frame}
+
+\begin{frame}{Institutional Changes}
+	\begin{itemize}
+		\item Policy shifts may explain some of the overall changes in the post-transfer wage distribution. 
+		\item But, 
+		\begin{itemize}
+			\item overall level of redistribution is not lower today than in the past; difference in Gini pre-tax vs. post-tax is similar today to the 1980's.
+			\item We've seen significant growth in pre-tax inequality
+			\item Factors outside of policy can also have major effects
+		\end{itemize} 	
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Institutional Changes}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.45]{06B_7}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}{Institutional Changes}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.3]{06A_5}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Institutional Changes}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.45]{06B_6}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Institutional Changes}
+	\begin{itemize}
+		\item Why is inequality more severe in US than Europe?
+		\begin{itemize}
+			\item It's almost entirely due to policy differences.
+			\item EU spends far more of GDP on redistribution than US.
+			\item Pre-Tax Gini coefficients look very similar between US and major European economies.
+			\item Post-Tax/Transfer Gini coefficients look very different.
+			\item In short, Europe has historically been more aggressive with redistribution.
+			
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Institutional Changes}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.55]{07H}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Supply Shifts in Skilled Labor Market}
+	\begin{itemize}
+		\item Basic idea:
+		\begin{itemize}
+			\item Relative wages of skilled and unskilled workers determined by supply curves for skilled and unskilled workers.
+			\item 	Increase in supply of skilled workers $\Rightarrow$ decrease in relative wage of skilled workers $\Rightarrow$ decrease in inequality
+			\item Decrease in supply of skilled workers $\Rightarrow$ increase in relative wage of skilled workers $\Rightarrow$ increase in inequality
+		\end{itemize}
+		\item Need to look at supply shocks over the past 40 years and see if this story makes sense.
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Supply Shifts in Skilled Labor Market}
+	\begin{itemize}
+		\item 1970's: Baby boomers $\Rightarrow$ outward supply shift of college graduates
+		\begin{itemize}
+			\item Result: Decrease in the wage premium paid to college graduates
+		\end{itemize}
+		\item	1980's: Decrease in supply of college graduates
+		\begin{itemize}
+			\item Result: Increase in the wage premium paid to college graduates
+		\end{itemize}
+		\item 1980's: Increase in number of unskilled immigrants
+		\begin{itemize}
+			\item Result: Increased relative number of workers at the bottom of the skill distribution
+		\end{itemize}
+		\item This would seem to support the supply shift hypothesis.
+		
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Supply Shifts in Skilled Labor Market}
+	\begin{itemize}
+		\item But, what if supply shifts in unskilled labor went the same direction?
+		\begin{itemize}
+			\item Baby Boomers: Increase in supply of both skilled and unskilled labor
+			\item Not necessarily clear that these supply shifts should decrease the wage premium paid to college educated workers
+			
+		\end{itemize}
+		\item Overall, the number of college graduates
+		relative to the number of high school graduates continued to rise in the 1980s at the same time that the relative wage of college graduates was rising
+		\item Supply shifts may explain some, but not all of rising inequality
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Supply Shifts in Skilled Labor Market}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.9]{06B_3}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Skill-Biased Technological Change}
+	\begin{itemize}
+		\item Over past 40+ years, economy has shifted from a manufacturing economy towards a technology-based economy
+		\item New technologies good substitutes for low-skill labor, but complements to high-skill labor	
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Skill-Biased Technological Change}
+	\begin{itemize}
+		\item Ex: Mechanization of industrial production
+		\item Decrease in demand for low-skill workers who physically build products
+		\item Increase in demand for high-skill workers (engineers, programmers) needed to run new machines
+		\item Low-skill workers' wages fall
+		\item High-skill workers' wages rise
+		\item Increase in income inequality from this		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Skill-Biased Technological Change}
+	\begin{itemize}
+		\item Prediction:  We should find significant wage growth in those industries which employ advanced technology.
+		\item Problem with this explanation:  Tech-intensive industries have seen significant inequality growth.  But, so have industries which are not traditionally thought of as tech-intensive.
+		\item In essence, SBTC should cause increase in inequality between industries, but data shows significant increase in inequality within industries.
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Skill-Biased Technological Change}
+	\begin{itemize}
+		\item Prediction:  Wage inequality should increase fastest during tech booms.
+		\item Ex:  IT Revolution, 1990 - 2000.
+		\item Puzzle:  Inequality increased in 1980's and 2000's, but actually did not increase all that much from late '80s to early '00s.
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Skill-Biased Technological Change}
+	\begin{figure}
+		\centering 
+		\includegraphics[scale=.55]{06B_4}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Skill-Biased Technological Change}
+	\begin{itemize}
+		\item Very popular story of rising income inequality.
+		\item But, surprisingly difficult to see the effects of this in the data.
+		\item Difficult to say how large the effect of SBTC is on increasing inequality (lots of disagreement among researchers on this topic).
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Labor Force Composition}
+	\begin{itemize}
+		\item Autor, Katz, and Kearney (2005): Rising Wage Inequality: The Role of Composition and Prices
+		\item Consider the following:
+		\begin{itemize}
+			\item Older workers (age 40 - 60) generally have greater variance in wages.
+			\item Younger workers (age 20 - 40) generally have lower variance in wages.
+			\item Between 1970 and 1990, the proportion of Americans in the older group rose, while the proportion in the younger group fell.
+		\end{itemize}
+		\item This type of ``composition effect'' could drive wage inequality, as economy composed of more individuals in high wage variance group.
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Labor Force Composition}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.7]{06B_5}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Labor Force Composition}
+	\begin{itemize}
+		\item Consider other groups which have different wage variances:
+		\begin{itemize}
+			\item College graduates: High wage variance
+			\item HS graduates: Lower wage variance
+		\end{itemize}
+		\item 1970: 70\% had at most HS education, 14\% had college degree
+		\item 1996: 40\% had at most HS education, 28\% had college degree
+		\item Once again: Economy composed of greater proportion of high wage variance group $\Rightarrow$ increase in wage inequality
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Labor Force Composition}
+	\begin{itemize}
+	\item Composition effects might explain bulk of increase in inequality if wage variance within education groups were similar now and 40 years ago.
+\item Problem with this explanation:
+\item Most of the increase in variation can be attributed to between-group price changes
+\item Both (i) the premium and (ii) the variance of wages paid to college graduates has risen greatly over the past 40 years.
+\item So how much is due to composition effects?	
+	\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Labor Force Composition}
+	\begin{itemize}
+		\item Autor, Katz, and Kearney:
+		\item A decent amount of the increase in the lower tail (50/10) wage gap is explained by composition effects.
+		\item very little of the increase in the upper tail (90/50) wage gap is explained by composition effects.
+		\item Composition does seem to have an effect, but can't explain the rise in upper tail income inequality.
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Readings}
+	\begin{itemize}
+		\item Borjas 7.4
+		\item Autor, Katz, and Kearney (2005). Rising Wage Inequality: The Role of Composition and Prices. \textit{NBER Working Paper No. 11628}
+	\end{itemize}
+\end{frame}
+
+\section{Superstars and Intergenerational Inequality}
+
+
+
+\begin{frame}{Occupational Wage Dispersion}
+	\begin{itemize}
+		\item Previous analysis tended to focus on economy-wide wage inequality.
+		\item Or, inequality within demographic groups (composition effects and age).
+		\item A finer question:  Why do some occupations exhibit far more inequality than others?
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Occupational Wage Dispersion}
+	\begin{itemize}
+		\item Motivating feature of the data:
+		Biggest growth in inequality is captured by growth in wages of extreme right tail, i.e., top 0.1\%, top 0.01\%, or top 400 families
+		\item Earlier theories mostly explain growth in wage dispersion between $\sim$5th percentile and 95th percentile, not the extremes.
+		\item Fundamental question:  How is it possible for an individual to be worth 50x, 100x, 1000x times as much as a typical individual to some firm?
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Occupational Wage Dispersion}
+	\begin{itemize}
+		\item Certain industries have relatively low wage dispersion. 
+		\begin{itemize}
+			\item 	Entry-level PhD economist:  $\sim$\$100,000
+			\item 	Nobel-laureate economist:  $\sim$\$300,000 - \$400,000
+		\end{itemize}
+		\item Top 0.1\% earn roughly 3x wage of ``median'' economist
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Occupational Wage Dispersion}
+	\begin{itemize}
+		\item Other industries have massive wage dispersion.  
+		\begin{itemize}
+			\item Barcelona's Lionel Messi: \$53,400,000
+			\item New York City FC's Tommy McNamara (\$85,000).
+		\end{itemize}
+		\item We refer to such individuals as ``superstars'' in labor economics; workers who command a wage 50x, 100x, 1000x what their peers receive.
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Superstars}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.5]{06C_1}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}{Superstars}
+	\begin{itemize}
+		\item Many other industries have superstar wage earners.  Classic example is entertainment (including sports) industry:
+		\begin{itemize}
+			\item Robert Downey Jr $\sim$\$80M 
+			\item Jennifer Lawrence $\sim$\$55M 
+			\item Taylor Swift $\sim$\$40M
+			\item Aaron Rodgers:  $\sim$\$22M
+		\end{itemize}
+		\item What characteristics do these occupations share?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Superstars}
+	\begin{itemize}
+		\item Increasing returns to scale
+		\item Compare: 
+		\begin{itemize}
+			\item Cost function for Ford when producing F-250s
+			\item Cost function for NFL when streaming games
+		\end{itemize}
+		\item This characteristic essentially enables top talent to distribute their skills to a wider audience.
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Superstars}
+	\begin{itemize}
+		\item Large demand differentials
+		\begin{itemize}
+			\item Willingness to pay for BMW 3-Series vs. Honda Accord: ``First-Best'' only costs about 50\% more than ``Second-Best''
+			\item Willingness to pay for football tickets: 	
+			\begin{itemize}
+				\item Manchester City vs Borussia Monchengladbach (Champions League): Starting at $\sim$ \$100 
+				\item Manchester City vs Middlesborough (English Premier League): Starting at $\sim$ \$55
+				\item Average League Two tickets: $\sim$ \$17
+			\end{itemize}
+		\end{itemize}
+		\item 	Industries with ``superstars'' tend to exhibit significant difference in willingness to pay between top products and other products.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Superstars}
+	\begin{itemize}
+		\item How important is this? Could it explain much of the wage growth of the top 0.1\%?
+		\item Maybe some. But bulk of growth seems to be due to increasing wages of business tycoons, CEO's, etc.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Inequality Across Generations}
+	\begin{itemize}
+		\item Basic question:  How mobile is income across generations?
+		\item Relates back to question of whether inequality has resulted because of
+		\begin{itemize}
+			\item Enterprising behavior (schooling investments, etc.)
+			\item Cronyism
+		\end{itemize}	
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Inequality Across Generations}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.55]{07J}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Inequality Across Generations}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.55]{07K}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Inequality Across Generations}
+	\begin{itemize}
+		\item Human capital investment decisions often made by parents
+		\item High-income parents typically invest more $\Rightarrow$ positive correlation between socioeconomic outcomes of the parents and the outcomes of their children
+		\item Regression towards the mean: A tendency for income differences across families to decrease over time as families move toward the mean income in the population
+		\begin{itemize}
+			\item Not all parental income is invested in children
+			\item Diminishing returns to education
+			\item Regression toward the mean in ability
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Inequality Across Generations}
+	\begin{itemize}
+		\item Intergenerational Earnings Elasticity: Gives estimated effect of one percent rise in parents' earnings on child's earnings.
+		\item Recent studies: intergenerational coefficient of $\sim 0.3-0.4$.
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Inequality Across Generations}
+	\begin{exmp}
+		Consider two families, one with a yearly income of \$60,000 and the other with a yearly income of \$108,000. If the intergenerational correlation coefficient is 0.3, what is the expected difference in earnings of the children in the two families? What if it was 0.6?
+	\end{exmp}
+\end{frame}
+
+
+
+\begin{frame}{Readings}
+	\begin{itemize}
+		\item Borjas 7.5-7.6
+		\item American Inequality in Six Charts by John Cassidy, \textit{The New Yorker}.
+		\item Krueger, Alan (2005). The Economics of Real Superstars: The Market for Rock Concerts in the Material World. \textit{Journal of Labor Economics}.
+		\item How Superstars' Pay Stifles Everyone Else, \textit{The New York Times}
+		\item Gabaix, Xavier \& Augustin Landier (2007). Why has CEO Pay Increased So Much? \textit{The Quarterly Journal of Economics}.
+	\end{itemize}
+\end{frame}
+	
+\end{document}

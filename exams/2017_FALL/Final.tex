@@ -1,0 +1,653 @@
+\documentclass[addpoints,11pt]{exam}
+
+\usepackage{alltt}
+\usepackage[margin=1in]{geometry}   % set up margins
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumerate}              % fancy enumerate
+\usepackage{amsmath}                % used for \eqref{} in this document
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{verbatim}               % useful for \begin{comment} and \end{comment}
+\usepackage{eurosym}                % used for euro symbol
+\usepackage{caption} 
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{MnSymbol,wasysym}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{colorlinks=true, citecolor=ForestGreen, linkcolor=BlueViolet, urlcolor=Magenta}
+
+\usepackage{array}
+\newcolumntype{H}{@{}>{\lrbox0}l<{\endlrbox}}
+
+
+%Solutions or nah
+%\printanswers
+%\newcommand{\dd}[1]{{\textbf{\textcolor{red}{#1}}}}
+%\newcommand{\ddp}[1]{\par {\textcolor{ForestGreen}{#1}}}
+
+\newcommand{\dd}[1]{}  
+\newcommand{\ddp}[1]{}
+
+\setlength\parindent{0pt}
+\unframedsolutions
+\SolutionEmphasis{\color{red}}
+\CorrectChoiceEmphasis{\color{red}}
+\renewcommand{\choicelabel}{(\alph{choice})}
+\newcommand{\blank}[0]{\underline{\hspace{3cm}}}
+\pointformat{\bfseries[\thepoints]}
+\pointpoints{pt}{pts}
+\pointsinrightmargin
+
+\begin{document}
+	
+	
+	\title{\textbf{Final Exam \dd{\\Solutions}} \\ \vspace{2 mm} {\large ECON 380} \\ \large{Fall 2017} \\ \large{UNC Chapel Hill}}
+	\date{}
+	\maketitle
+	
+	\makebox[\textwidth]{Name:\enspace\hrulefill}
+	\\
+	
+	\makebox[\textwidth]{ONYEN:\enspace\hrulefill}
+	\\
+	
+	\makebox[\textwidth]{Honor Code Signature:\enspace\hrulefill}
+	\\
+	
+	\begin{center}
+		\fbox{\fbox{\parbox{6in}{\centering
+					\underline{Directions:}
+					\begin{itemize}
+						\item Fill in your name (Last, First) and PID on your scantron.
+						\item For multiple choice questions, clearly circle the answer choice which best answers the question and bubble in the corresponding choice on your scantron.
+						\item For short answer questions, show all of your work and justify your answers where needed.
+						\item Scratch sheets are provided in the back of the exam packet. You must label the corresponding question your work relates to if you use these sheets.
+						\item Assume preferences are transitive, complete, monotone, and convex.
+						\item Assume that leisure is income-normal.  
+						\item Assume firms are risk-averse.
+						\item Round answers to the nearest hundredth.
+						\item Points available: 100
+						\item Write legibly, write legibly, write legibly!
+						\item Good luck! \smiley{}
+					\end{itemize}
+		}}}
+	\end{center}
+	
+	\newpage
+	
+	\subsection*{Multiple Choice \textbf{[2 pts each]}}
+	
+\begin{questions} 
+	
+\question Consider the following workers: James and Elyse are high school students (both are 17 years old). James works after school at a fast food restaurant, and Elyse is seeking a part-time job at the same establishment (also after school). According to BLS labor force classification standards, James would be classified as \blank and Elyse would be \blank.
+
+\begin{choices}
+	\choice employed; out of the labor force
+	\choice out of the labor force; out of the labor force
+	\CorrectChoice employed; unemployed
+	\choice not in the working population; not in the working population
+\end{choices}
+
+
+
+\question Suppose there are 15,000 individuals in the town of Weaverville. Of these individuals,
+
+\begin{itemize}
+	\item 4,000 work full-time in the private sector \dd{E}
+	\item 1,500 work full-time in the public sector (non-military) \dd{E}
+	\item 3,000 work part-time in the private sector \dd{E}. Of these part-time workers, 20\% are working part-time, but would prefer full-time work \dd{400 part-time for economic reasons}
+	\item 2,800 individuals were laid off 6 months ago due to a plant closing. Of these laid off individuals, 1,700 have actively sought work since being laid off, while 1,100 searched for work immediately after being laid off, but not in the last four weeks \dd{1000 U, 500 O (marginally attached workers)}
+	\item 1,000 do not have formal employment and instead choose to stay home to care for children \dd{O}
+	\item 1,400 are retired from work and neither have nor seek employment. \dd{O}
+	\item 300 are in jail or otherwise institutionalized 
+	\item 1,000 are under age 16
+\end{itemize}
+
+What is the official $U3$ unemployment rate in Weaverville as calculated by the BLS?
+
+\begin{choices}
+	\CorrectChoice 17\%
+	\choice 13\% 
+	\choice 20\%
+	\choice 15\%
+	\choice None of the above
+\end{choices}
+
+	
+\question Which of the following is FALSE?
+\begin{choices}
+	\choice The official unemployment rate may understate the severity of a recession by excluding marginally attached and discouraged workers.
+	\CorrectChoice The official unemployment rate takes into account underemployment by adjusting for workers who are part-time for ``economic reasons.''  
+	\choice Alternative measures of labor underutilization such as the U6 unemployment rate tend to follow the overall trend in the official unemployment rate over time.
+	\choice The official unemployment rate does take into account an individual's length of unemployment.
+\end{choices}
+
+\uplevel{Consider the following figure for questions \ref{q1} and \ref{q2}. Leisure time is measured in hours.
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.55]{finalmc1.png}
+	\caption{Sarah's Labor Supply Model}
+\end{figure}
+
+
+}
+
+\question \label{q1} Which of the following represents Sarah's budget line?
+
+\begin{choices}
+	\choice $C = 533.28 - 22.22L$
+	\choice $C = 800 - 25L$
+	\choice $C = 600 - 25L$
+	\CorrectChoice $C = 733.28 - 22.22L$
+	\choice Impossible to state without more information
+\end{choices}
+
+\question \label{q2}  At point B, the relationship between the $MRS$ and the wage rate is
+
+\begin{choices}
+	\choice $MRS > w$
+	\CorrectChoice $MRS < w$
+	\choice $MRS = w$
+	\choice impossible to state without more information
+\end{choices}
+
+
+\question Jonathan has 24 hours per day to spend between leisure and work. Consider two bundles Jonathan can choose between:
+
+\begin{itemize}
+	\item Bundle A: Work 8 hours, consume \$500
+	\item Bundle B: Work $X$ hours, consume \$700
+\end{itemize}
+
+Jonathan's utility function is given by 
+
+\[U(C,L) = 5 + C^{1/2}L^{1/2}\]
+
+\newpage
+
+If Jonathan is indifferent between bundle A and B, then $X$ must be
+
+\begin{choices}
+	\choice 11.43
+	\choice 12.74
+	\CorrectChoice 12.57 
+	\choice 11.26
+	\choice 13.44
+\end{choices}
+
+\uplevel{Mackenzie produces hand-crafted tutus in a perfectly competitive market  using sewing machines ($S$) at rental rate \$5 and labor ($E$) at wage rate \$15. Assume that she cannot vary her sewing machine level in the short-run. Suppose that she currently leases 6 machines, and the market price of a hand-crafted tutu is \$80. The markets for labor and sewing are also competitive. Note: When necessary, round to two decimals. Mackenzie faces the $MP_E$ curve given by
+
+\[MP_E = \frac{1}{2}\Big(\frac{S}{E}\Big)^{1/2}\]
+
+Use this information for questions \ref{q3} and \ref{q4}.}
+
+\question \label{q3} In the short-run, what is the optimal number of workers to employ?
+
+\begin{choices}
+	\CorrectChoice 42.67
+	\choice 44.32
+	\choice 40.21
+	\choice 45.88
+	\choice None of the above.
+\end{choices}
+
+\question \label{q4} If the wage rate rises to \$20, Mackenzie's optimal employment level falls by 43.75\%. As such, we can say that Mackenzie's short-run labor demand curve is \blank between these two points.
+
+\begin{choices}
+	\choice inelastic
+	\CorrectChoice elastic
+	\choice unit elastic
+\end{choices}
+
+\question Tom employs labor and capital to produce widgets. At his current bundle of capital and labor, Tom is maximizing his long-run profit. If $MP_E = .25$, $MP_K = 2$, and $w=\$15$ at this bundle, what is the rental rate of capital, $r$?
+
+\begin{choices}
+	\choice \$60 
+	\choice \$100
+	\choice \$180
+	\choice \$110
+	\CorrectChoice None of the above
+\end{choices}
+
+\newpage
+
+\question All else equal, which of the following correctly describes the relationship between the number of workers employed in perfectly competitive (PC) labor market, a labor market with a perfectly discriminating (PD) monopsonist, and a labor market with a non-discriminating (ND) monopsonist?
+
+
+\begin{choices}
+	\choice PC employment = PD monopsonist employment < ND monopsonist wage
+	\CorrectChoice PC employment = PD monopsonist employment > ND monopsonist employment
+	\choice PC employment > PD monopsonist employment = ND monopsonist employment
+	\choice PC employment > PD monopsonist employment > ND monopsonist employment
+\end{choices}
+
+\uplevel{Labor demand for low-skilled workers in the United States is $w = 48 - 0.5E$ where
+E is the number of workers (in millions) and $w$ is the hourly wage. There are
+40 million domestic U.S. low-skilled workers who supply labor inelastically. If the
+U.S. opened its borders to immigration, 6 million low-skill immigrants would enter
+the U.S. and supply labor inelastically. There are no spillover effects and thus the $VMP_E$ of low-skill native workers remains the same.
+
+Use this information to answer questions \ref{q5} and \ref{q6}.}
+
+\question \label{q5} What is the market-clearing wage with open borders? 
+
+
+\begin{choices}
+	\CorrectChoice \$25
+	\choice \$30
+	\choice \$22
+	\choice \$28
+	\choice None of the above
+\end{choices}
+
+\question \label{q6} What is the value of the immigration surplus if the U.S. opens its borders?
+
+
+\begin{choices}
+	\choice \$15M
+	\choice \$18M
+	\CorrectChoice \$9M
+	\choice \$8M
+	\choice None of the above
+\end{choices}
+
+\question Kristina lives for three periods. In period 1, she pays \$25,000 for college up front \underline{at the start} of the period and then attends school until the end of period 1. At the start of periods 2 and 3, she begins to work and continues to do so until the end of each period. She is paid \$45,000 \underline{at the end} of periods 2 and 3. If Kristina has a discount rate of 6\%, the net present value of her college choice evaluated at the beginning of period 1 is 
+
+\begin{choices}
+	\choice $NPV = \frac{-\$25,000}{(1.06)} + \frac{\$45,000}{(1.06)^2} + \frac{\$45,000}{(1.06)^3}$
+	\choice $NPV = -\$25,000 + \frac{\$45,000}{(1.06)} + \frac{\$45,000}{(1.06)^2}$
+	\choice $NPV = \frac{-\$25,000}{(1.06)^2} + \frac{\$45,000}{(1.06)^2} + \frac{\$45,000}{(1.06)^3}$
+	\CorrectChoice $NPV = -\$25,000 + \frac{\$45,000}{(1.06)^2} + \frac{\$45,000}{(1.06)^3}$
+\end{choices}
+
+\newpage
+
+\question James lives for two periods and is choosing between two career paths: baker vs chef. In either career, he must invest money in training at the start of period 1. Baking school costs \$20,000, while chef's training costs \$24,000. At the start of period 2, James would be paid \$40,000 if he became a baker and \$45,000 if he became a chef. At what discount rate would James be indifferent between these two career paths?
+
+\begin{choices}
+	\CorrectChoice 25\%
+	\choice 20\%
+	\choice 15\%
+	\choice 30\%
+	\choice None of the above
+\end{choices}
+
+\question Consider the true $MRR$ curves for Kenny and Eric shown below:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.55]{finalmc2.png}
+	\caption{Kenny \& Eric's MRR Curves}
+\end{figure}
+
+Assume each individual knows their true MRR from schooling so their perceived MRR is equivalent to the curves shown above. Kenny's optimal schooling level is 12 years, while Eric's optimal schooling level is 10 years. If both individuals have constant rates of discount regardless of their schooling level, then which of the following can explain their different school choices?
+
+\begin{choices}
+	\choice Eric and Kenny must have the same discount rate.
+	\choice Eric must have a lower discount rate than Kenny.
+	\CorrectChoice Kenny must have a lower discount rate than Eric. 
+	\choice Kenny's earnings must be higher than Eric's earnings at their optimal school choice.
+	\choice Kenny's earnings must be lower than Eric's earnings at their optimal school choice.
+\end{choices}
+
+
+\question Suppose the market is populated by two types of workers.  Barts have an inherently low productivity level. Lisas, on the other hand, have an inherently high productivity level. Earning a college degree costs \$250,000 for a Bart, while the same degree costs \$100,000 for a Lisa.
+
+Firms do not observe a worker's type, but do observe their schooling level and know the costs of schooling for each type. How many of the following payment structures would create a separating equilibrium where only Lisas would obtain a college degree?
+
+\begin{itemize}
+	\item Pay those with degrees \$1.3M; Pay those without degrees \$1.0M
+	\item Pay those with degrees \$1.4M; Pay those without degrees \$1.2M
+	\item Pay those with degrees \$1.5M; Pay those without degrees \$1.0M
+\end{itemize}
+
+\begin{choices}
+	\choice 0
+	\choice 1
+	\choice 2
+	\choice 3
+\end{choices}
+
+
+\question Which of the following statements is an example of statistical discrimination?
+
+\begin{choices}
+	\choice Jax tends bar and gets disutility from working with Hispanics, so will only work with them if he is paid more.
+	\choice Stassi perceives the price of drinks at PUMP to be 5\% higher than they truly are because most employees are male. 
+	\CorrectChoice Lisa chooses to employ Lala over James because on average locals tend to stay in the business longer than foreigners.
+	\choice Tom is paid less than Tequila Katie because she has been working in the bar industry for longer.
+	\choice None of the above.
+\end{choices}
+
+\uplevel{Use the following for questions \ref{q7} and \ref{q8}. Suppose the wages of males and females are determined as follows
+	
+	\[w_m = 10 + 0.65\cdot S\]
+	\[w_f = 8.5 + 0.40\cdot S\]
+	
+	where the $m$ and $f$ subscripts refer to males and females, respectively, and  $S$ refers to the number of years schooling a worker obtains. Assume schooling is the only relevant skill to a worker's productivity. Finally, suppose the average years of schooling for males is 16 years and for females it is 14 years.}
+
+\question \label{q7} How much of the wage differential can be attributed to differences in schooling (i.e., pre-market factors)?
+
+\begin{choices}
+	\choice \$1.50
+	\choice \$0.80
+	\choice \$3.50
+	\CorrectChoice \$1.30
+	\choice None of the above
+\end{choices}
+
+
+\question \label{q8} How much of the wage differential can be attributed to discrimination?
+
+\begin{choices}
+	\choice \$6.50
+	\CorrectChoice \$5.00
+	\choice \$5.50
+	\choice \$6.30
+	\choice None of the above
+\end{choices}
+
+\question Firms can hire either black or Hispanic workers. Each candidate is assigned a score ($T_i$) based on productivity-enhancing observable attributes shown through a worker's resume and interview. Firms do not observe a candidates true productivity, so they use a worker's group average score ($\bar{T}_g$) in conjunction with a their actual test score to estimate productivity for each worker $i$ in group $g \in \{b,h\}$ as follows:
+
+\[\hat{Y}_{i,b} =  0.55T_i + 0.45\bar{T}_b\]
+\[\hat{Y}_{i,h} =  0.35T_i + 0.65\bar{T}_h\]
+
+Assume a worker's initial pay increases with predicted productivity $\hat{Y}$. Based on historic information and the current pool of candidates, the firm calculates that the average test score for black workers is $\bar{T}_b = 50$, while the average test score for Hispanic workers is $\bar{T}_h = 45$. 
+
+How many of the following statements are TRUE?
+
+\begin{itemize}
+	\item A black worker with an individual score of zero will be paid more than a Hispanic worker with an individual score of zero.
+	\item All black workers with individual scores above the \underline{Hispanic} average test score will be paid more than Hispanic workers with equivalent individual scores.
+	\item All Hispanic workers with individual scores below 30 will be paid more than black workers with equivalent individual scores.
+	\item All Hispanic workers with individual scores below the \underline{black} average test score will be paid less than black workers with equivalent individual scores.
+\end{itemize}
+
+\begin{choices}
+	\choice 0
+	\choice 1
+	\CorrectChoice 2
+	\choice 3
+	\choice 4
+\end{choices}
+
+\newpage 
+
+\uplevel{Use the following figure, which shows the Lorenz curves of Cloud City and LaLa Land, to answer questions \ref{q9} and \ref{q10}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.55]{finalmc3.png}
+	\caption{LaLa Land \& Cloud City}
+\end{figure}
+
+}
+
+\question \label{q9} Which of the following correctly calculates the Gini coefficient for LaLa Land?
+
+\begin{choices}
+	\choice $\frac{B+C}{D}$
+	\choice $2B$
+	\CorrectChoice $\frac{B+C}{B+C+D}$ 
+	\choice $2(B+C+D)$
+\end{choices}
+
+\question \label{q10} Which country exhibits more income inequality as measured by their Gini coefficient?
+
+\begin{choices}
+	\CorrectChoice LaLa Land because their Gini coefficient is larger.
+	\choice Cloud City because their Gini coefficient is larger.
+	\choice LaLa Land because their Gini coefficient is smaller.
+	\choice Cloud City because their Gini coefficient is smaller.
+	\choice Neither. LaLa Land and Cloud City have the same Gini coefficient.
+\end{choices}
+
+\newpage
+
+\question Which of the following is FALSE regarding skill-based technology change (SBTC) and its proposed role in driving US wage inequality?
+
+\begin{choices}
+	\choice SBTC proposes that as new technologies substituted for low-skill labor, the decrease in wages to low-skill workers and increase in wages to high-skill labor increased the wage gap. 
+	\choice SBTC predicts that technology intensive industries should have significant wage growth relative to non-technology intensive industries.
+	\CorrectChoice Wage inequality growth within industries rather than between industries would support the SBTC theory.
+	\choice SBTC predicts that wage inequality should increase fastest during technological booms.
+	\choice None of the above is false.
+\end{choices}
+
+\question Which of the following best explains the difference in post-tax/transfer Gini coefficients between the United States and many European nations?
+
+\begin{choices}
+	\choice The United States has more aggressive taxation and transfer policies towards redistribution.
+	\CorrectChoice Many European nations have more aggressive taxation and transfer policies towards redistribution.
+	\choice Taxes for the highest earners have steadily increased in the US, while they have largely fallen in Europe.
+	\choice None of the above. Post-tax Gini coefficients are largely the same when comparing the US and most European economies.
+\end{choices}
+
+\question The superstar phenomenon is largely observed in industries that exhibit both \blank and \blank.
+
+\begin{choices}
+	\choice decreasing returns to scale; large demand differentials
+	\choice increasing returns to scale; small demand differentials
+	\choice decreasing returns to scale; small demand differentials
+	\CorrectChoice increasing returns to scale; large demand differentials
+\end{choices}
+
+\end{questions}
+
+\newpage
+
+\subsection*{Short Answer}
+
+\begin{questions}
+
+\question Sheldon is a chef at a local establishment. His wage rate is \$20 per hour and he has 110 hours to allocate between leisure and work each week. Additionally, Sheldon's wage is taxed at a flat 12\% and his aunt sends him \$500 per week (tax-exempt) because he is her favorite nephew. Finally, Sheldon's preferences over consumption and leisure give rise to an $MRS = C/3L$. 
+
+\begin{parts}
+	\part[1] Write the equation for Sheldon's weekly budget line.
+	\begin{solution}[.75in]
+		
+	\end{solution}
+	\part[1] What is Sheldon's reservation wage?
+	\begin{solution}[.75in]
+		
+	\end{solution}
+	\part[2] What is Sheldon's optimal bundle of consumption and leisure? 
+	\begin{solution}[2in]
+		
+	\end{solution}
+	\part[3] Suppose the gross wage rate for chef's rises to \$22 per hour and taxes remain the same. What is Sheldon's new optimal bundle of consumption and leisure? 
+	\begin{solution}[2.25in]
+		
+	\end{solution}
+	\part[1] Which effect is larger: the income or the substitution effect?
+	\begin{solution}[.75in]
+		
+	\end{solution}
+	\part[2] Use your answers from (c) and (d) to calculate the elasticity of Sheldon's labor supply curve at these optimal points.
+	\begin{solution}[1.5in]
+		
+	\end{solution}	
+	
+	
+\end{parts}
+
+
+\question The supply and demand for workers in Algeria is shown below:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.45]{Exam1_MC16.pdf}
+	\caption{Algerian Labor Market}
+\end{figure}
+
+
+where "quantity" represents the number of workers (in millions) and the "price" is the hourly wage rate in Algerian dinars (DA). Assume this labor market is perfectly competitive.
+
+Suppose the government imposes a minimum wage of \$900 DA. 
+
+\begin{parts}
+	\part[1] How many workers will be employed after the minimum wage is enacted?
+	\begin{solution}[.5in]
+	\end{solution}
+	\part[1] How many workers will be involuntarily unemployed? 
+	\begin{solution}[.5in]
+	\end{solution}
+	\part[2] Calculate the deadweight loss due to the minimum wage.
+	\begin{solution}[.75in]
+	\end{solution}
+\end{parts}
+
+	\question The labor market in Saxapahaw is a monopsonistic labor market, where the only firm hiring labor is the Saxapahaw Cotton Mill. This labor market is shown in Figure \ref{partc}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.8]{mono}
+	\caption{Saxapahaw Labor Market}
+	\label{partc}
+\end{figure}	
+
+
+
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale=.8]{monoans}
+%	\caption{Saxapahaw Labor Market}
+%	\label{partc}
+%\end{figure}		
+
+
+\begin{parts}
+	\part[1] In the absence of any regulation, what is the (approximate) optimal number of workers the cotton mill should hire and approximately what wage will they pay?
+	\begin{solution}[.5in]
+	$w = \$12$. $Q = 70$. 
+\end{solution}
+	\part[3] Suppose the government of Saxapahaw imposes a minimum wage of \$12.   Determine Saxapahaw Cotton Mill's optimal employment level and their wage rate under this policy (write this in the space below).  On Figure \ref{partc} above, label the firm surplus, worker surplus, and any deadweight loss resulting in this scenario.
+	\begin{solution}[.5in]
+		$w = \$12$. $Q = 70$. 
+	\end{solution}
+	\part[2] Does this minimum wage reduce the deadweight loss relative to an unregulated monopsonist? Briefly explain why. What minimum wage should be enacted to maximize total surplus?
+	\begin{solution}[2in]
+		Yes, this minimum wage increases total surplus. This is because it increases the wage the monopsonist pays workers \underline{and} increases employment. The optimal minimum wage is \$10.
+		\ddp{Points: (1) TS increases \& why, (1) optimal minimum wage}
+	\end{solution} 
+\end{parts}
+
+\newpage 
+
+\question Leslie's wage-schooling locus is presented in the chart below.
+
+\begin{table}[H]
+	\centering
+	\caption{Leslie's Wage-Schooling Locus}
+	\label{hi2}
+	\begin{tabular}{c|c|c}
+		Years of Schooling & Earnings & MRR \\
+		\hline 
+		11 & \$36,000 & -----\\
+		12 & \$40,000 & \dd{11.1\%} \\
+		13 & \$43,500 & \dd{8.8\%} \\
+		14 & \$46,000 & \dd{5.7\%} \\
+		15 & \$48,000 & \dd{4.3\%} \\
+	\end{tabular}
+\end{table}
+
+\begin{parts}
+	\part[3] Fill in the chart with Leslies's marginal rate of return for years 12 through 15.
+	\part[2] Suppose that Leslie's discount rate is r = 6\%.  Determine her optimal level of schooling attainment. 
+	\begin{solution}[.25in]
+		Leslie should go to school for an additional year as long as $MRR \ge r$. Thus, she should obtain 13 years of schooling.
+	\end{solution} 
+
+\uplevel{Suppose we do not observe Leslie's full wage-schooling locus, but only her actual years of schooling and earnings as found in part (b). We also observe Ron's wage-schooling outcome: he goes to school for 14 years and earns \$48,000. Assume Ron also has a discount rate of 6\%.} 
+	\part[3] Suppose we naively calculated the MRR using only the observed data from Leslie and Ron. What is the estimated MRR?
+	\begin{solution}[1in]
+		
+	\end{solution}
+	\part[2] Is this estimated MRR biased? If so, is it upwards or downwards biased?
+	\begin{solution}[1in]
+	
+	\end{solution}
+\end{parts}
+
+\newpage
+
+
+	\question Bunce's Beans production function is given by 
+	\[q = 2\sqrt{E_b + E_w}\]
+	where $E_b$ and $E_w$ refer to black and white workers employed by the firm, respectively.  Suppose the wage rates for whites and blacks are $w_w = \$18$ and $w_b = \$16$. The price of each unit of output is \$50.
+	Finally, the marginal product of labor is given by 
+	\[MP_E = \frac{1}{(E_b + E_w)^{1/2}}\]
+		
+	Suppose the firm has some distaste for hiring black workers and has a discrimination coefficient of 0.10.
+	
+	\begin{parts}
+		\part[1] What percent of the workers hired by the firm will be black?
+		\begin{solution}[.5in]
+		\end{solution}
+		\part[2] How many workers will this firm optimally hire? 
+		\begin{solution}[2in]
+		\end{solution}
+		\part[2] How much actual profit will Bunce's Beans earn in the short-run?
+		\begin{solution}
+	\end{solution}
+\newpage
+\uplevel{The graph below shows the $VMP_E$ curve for Bunce's Beans (and all other firms in this market).}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.85]{exam2_blah}
+\end{figure}
+		\part[2] On the graph, label Bunce's Beans optimal labor choice. Make sure to label the number of workers (and type) on the x-axis and the dollar value on the y-axis.
+		\part[2] Consider another firm in this labor market, Bogg's Beans. This firm does not have a distaste for either worker, and their discrimination coefficient is 0. On the graph, label Bogg's optimal labor choice. You do not need to find the exact number of workers Bogg's will hire, but label the type of worker the firm will hire at the approximate number of workers.
+		\part[1] Which firm will realize higher profits in the short-run? 
+		\begin{solution}[.5in]
+		\end{solution}
+	\end{parts}
+
+\question Consider a simple economy where 60\% of citizens report an annual after-tax income of \$50,000 (the ``low-income'' group), while the other 40\% report an annual after-tax income of \$90,000 (the ``high-income'' group). 
+
+\begin{parts}
+	\part[2] What is the share of total income accruing each income group? Hint \#1: Does the population size matter when calculating the relative shares of income? Hint \#2: The answer to Hint \#1 is no.
+\newpage
+	\part[3] Sketch the Lorenz curve for this economy in the figure below, making sure to 
+	\begin{enumerate}[i.]
+		\item label each axis,
+		\item draw the perfect equality Lorenz curve, and
+		\item label any relevant points on the economy's actual Lorenz curve.
+	\end{enumerate}
+	\begin{solution}[3.5in]
+	\end{solution}
+	\part[3] Calculate the Gini coefficient for this economy. Make sure to label any areas you calculate in your graph above.
+\end{parts}
+\end{questions}
+
+
+\newpage
+
+\centering
+
+\section*{SCRATCH SHEET}
+
+
+\newpage
+
+\centering
+
+\section*{SCRATCH SHEET}
+
+
+\newpage
+
+\centering
+
+\section*{SCRATCH SHEET}
+
+
+\end{document}
